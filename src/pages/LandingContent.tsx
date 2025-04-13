@@ -1,0 +1,141 @@
+import React from "react";
+import * as MUI from '@mui/material';
+import { makeStyles, createStyles } from '@mui/styles';
+import { Grid, Typography, Theme } from '@mui/material';
+import { animations } from "../styles/animations";
+import { Link } from "../components/Link";
+import { SuspenseImg } from "../components/SuspenseImg";
+import { deviceIcons, landingPageItems } from "../data/landing-data";
+
+const useStyles = makeStyles((theme: Theme) =>
+    createStyles({
+        container: {
+            overflowX: "hidden",
+            textAlign: "center",
+            overflowY: "scroll",
+            padding: "0 60px",
+            minHeight: "calc(100vh - 120px)",
+            [theme.breakpoints.down("sm")]: {
+                height: "auto",
+                padding: "0 20px",
+            },
+            [theme.breakpoints.down("lg")]: {
+                paddingTop: "40px"
+            },
+            "&::-webkit-scrollbar": {
+                width: "6px",
+            },
+            "&::-webkit-scrollbar-thumb": {
+                backgroundColor: "rgba(255, 255, 255, .13)",
+                borderRadius: "4px",
+            }
+        },
+        item: {
+            position: "relative",
+            color: "white",
+        },
+        padding: {
+            padding: "0 5px",
+        },
+        imgContainer: {
+            position: "relative",
+            overflow: "hidden",
+            width: "100%",
+            height: "40vh",
+            [theme.breakpoints.down("sm")]: {
+                height: "200px",
+            },
+            marginBottom: "10px",
+            margin: "0 auto",
+        },
+        img: {
+            backgroundColor: "#000",
+            objectFit: "cover",
+            height: "100%",
+            width: "100%",
+            color: "white",
+            borderRadius: "5px",
+            transition: "transform .6s ease-in",
+            "&:hover": {
+                transform: "scale(1.2)",
+                transition: "transform .6s ease-out",
+            },
+        },
+        iconsContainer: {
+            position: "absolute",
+            right: 0,
+            top: "4px",
+            display: "flex",
+            columnGap: "5px"
+        },
+        blur: {
+            filter: "blur(25px)",
+            overflow: "hidden",
+        },
+        blurOff: {
+            filter: "blur(25px)",
+            animation: `$no-filter .15s linear forwards`,
+        },
+        footer: {
+            textAlign: "center",
+            height: "100%",
+            width: "100%",
+        },
+        ...animations,
+    })
+);
+
+
+export const LandingContent: React.FC = () => {
+    const classes = useStyles();
+
+    return (
+        <Grid
+            container
+            spacing={6}
+            alignItems="center"
+            justifyContent="space-evenly"
+            className={classes.container}
+        >
+            {Object.entries(landingPageItems).map(([key, item]) => (
+                <Grid
+                    key={key}
+                    item
+                    xs={12}
+                    lg={4}
+                    className={classes.item}
+                >
+                    <Link key={key} to={`/${key}`}>
+                        <div className={classes.imgContainer}>
+                            <SuspenseImg
+                                alt={item.name}
+                                img={{
+                                    img: item.image,
+                                    className: `${classes.img} ${classes.blurOff}`,
+                                }}
+                                fallback={{
+                                    img: item.image,
+                                    className: `${classes.img} ${classes.blur}`,
+                                }}
+                            />
+                        </div>
+                        <Typography variant="h6" position="relative">
+                            {item.name}
+                            <div className={classes.iconsContainer}>
+                                {item.devices.map((device) => {
+                                    const Icon = deviceIcons[device];
+                                    return (
+                                        <MUI.Tooltip arrow title={`Available on ${device}`} placement="top">
+                                            <Icon fontSize="small" key={device} />
+                                        </MUI.Tooltip>
+                                    );
+                                })}
+                            </div>
+                        </Typography>
+                        <Typography variant="body1">{item.description}</Typography>
+                    </Link>
+                </Grid>
+            ))}
+        </Grid>
+    );
+};
