@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, createStyles, withStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Select as MUISelect, SelectChangeEvent, Theme, Box, Typography, FormControl, MenuItem } from '@mui/material';
 
-const Select = withStyles((_theme: MUI.Theme) => ({
+const Select = withStyles((_theme: Theme) => ({
     root: {
         padding: "10px 26px 10px 12px",
         color: "rgba(255, 255, 255, .87) !important",
@@ -11,9 +11,9 @@ const Select = withStyles((_theme: MUI.Theme) => ({
     outlined: {
         borderColor: "rgba(255, 255, 255, .6)",
     },
-}))(MUI.Select);
+}))(MUISelect);
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         navtitle: {
             display: "flex",
@@ -49,7 +49,7 @@ export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, prim
     const classes = useStyles();
 
     const handleChange = React.useCallback(
-        (event: MUI.SelectChangeEvent<unknown>, _child: React.ReactNode) => {
+        (event: SelectChangeEvent<unknown>, _child: React.ReactNode) => {
             const val = Number(event.target.value);
             if (isNaN(val)) {
                 return;
@@ -60,20 +60,20 @@ export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, prim
     );
 
     return (
-        <MUI.Box className={classes.navtitle}>
-            <MUI.Typography className={classes.title}>
+        <Box className={classes.navtitle}>
+            <Typography className={classes.title}>
                 {primaryMeasureName}
-            </MUI.Typography>
+            </Typography>
 
-            <MUI.FormControl variant="outlined" className={classes.formControl}>
+            <FormControl variant="outlined" className={classes.formControl}>
                 <Select id="select-item" value={index} onChange={handleChange} className={classes.select}>
                     {items.map((item: string, i: number) => (
-                        <MUI.MenuItem key={i} value={i}>
+                        <MenuItem key={i} value={i}>
                             {item}
-                        </MUI.MenuItem>
+                        </MenuItem>
                     ))}
                 </Select>
-            </MUI.FormControl>
-        </MUI.Box>
+            </FormControl>
+        </Box>
     );
 };

@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Box, Grid, Hidden, Theme, Typography } from '@mui/material';
 import { animations } from "../styles/animations";
 import { BackNav } from "./BackNav";
 import { fontSizes } from "../styles/themes";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         logoBar: {
             marginTop: "2vh",
@@ -92,7 +92,7 @@ export const TitleBar = ({ title }: TitleProps) => {
     const classes = useStyles();
 
     return (
-        <MUI.Grid
+        <Grid
             item
             xs={12}
             container
@@ -100,10 +100,10 @@ export const TitleBar = ({ title }: TitleProps) => {
             alignItems="flex-start"
             className={classes.topBar}
         >
-            <MUI.Typography color="inherit" className={classes.title}>
+            <Typography color="inherit" className={classes.title}>
                 {title}
-            </MUI.Typography>
-        </MUI.Grid>
+            </Typography>
+        </Grid>
     );
 };
 
@@ -131,29 +131,29 @@ export const TitleLogoBar: React.FC<TitleLogoProps> = ({
     }
 
     return (
-        <MUI.Box className={classes.topBar}>
-            <MUI.Box className={classes.headerTitle}>
+        <Box className={classes.topBar}>
+            <Box className={classes.headerTitle}>
                 {backIcon && <BackNav to="/" tooltipText="Back to main screen" />}
-                <MUI.Box>
-                    <MUI.Typography fontSize={fontSizes.h2} color="inherit" className={classes.title}>
-                        <MUI.Hidden mdDown>{title || ""} </MUI.Hidden>
-                        <MUI.Hidden lgUp>{titleShort || ""} </MUI.Hidden>
+                <Box>
+                    <Typography fontSize={fontSizes.h2} color="inherit" className={classes.title}>
+                        <Hidden mdDown>{title || ""} </Hidden>
+                        <Hidden lgUp>{titleShort || ""} </Hidden>
                         {titleSuffix && (
-                            <MUI.Typography
+                            <Typography
                                 color="error"
                                 component="span"
                                 className={classes.title}
                             >
                                 {` (${titleSuffix})`}
-                            </MUI.Typography>
+                            </Typography>
                         )}
-                    </MUI.Typography>
-                    <MUI.Typography fontSize={fontSizes.h2} color="inherit" variant="h6" className={classes.subtitle}>
-                        <MUI.Hidden smDown>{subtitle || ""}</MUI.Hidden>
-                        <MUI.Hidden mdUp>{subtitleShort || ""}</MUI.Hidden>
-                    </MUI.Typography>
-                </MUI.Box>
-            </MUI.Box>
-        </MUI.Box>
+                    </Typography>
+                    <Typography fontSize={fontSizes.h2} color="inherit" variant="h6" className={classes.subtitle}>
+                        <Hidden smDown>{subtitle || ""}</Hidden>
+                        <Hidden mdUp>{subtitleShort || ""}</Hidden>
+                    </Typography>
+                </Box>
+            </Box>
+        </Box>
     );
 };

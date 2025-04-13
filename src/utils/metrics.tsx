@@ -8,7 +8,7 @@ const filterByPositiveSales = (
     timebox: string
 ): MetricTypes.DataItem[] => {
     return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueByTimebox[timebox]) > 0);
-}
+};
 
 const filterByDimension = (
     data: MetricTypes.ChartBreakdownItem[],
@@ -141,11 +141,11 @@ export const getUnique = (res: MetricTypes.Data, key: 'slideName' | 'columnName'
     }
     
     return unique;
-}
+};
 
 export const getUniqueTimeboxes = (res: MetricTypes.Data): string[] => {
     return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueByTimebox)).flat(1))];
-}
+};
 
 export const convertToMapMobile = (res: MetricTypes.Data): MetricTypes.StateDataMapMobile => {
     const productSlides = getUnique(res, 'slideName');

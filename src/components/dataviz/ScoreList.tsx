@@ -50,7 +50,7 @@ interface Props {
     rankColor?: "primary" | "secondary";
 }
 
-export const ScoreList = ({ data }: Props) => {
+export const ScoreList: React.FC<Props> = ({ data }) => {
     const classes = useStyles();
 
     const filteredData = React.useMemo(

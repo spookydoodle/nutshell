@@ -69,7 +69,7 @@ interface Props {
   setTicker: (on: boolean) => void;
 }
 
-export const PlayerSales = ({
+export const PlayerSales: React.FC<Props> = ({
   init,
   play,
   setPlay,
@@ -83,17 +83,9 @@ export const PlayerSales = ({
   setOpenDialog,
   tickerOn,
   setTicker,
-}: Props) => {
+}) => {
   const classes = useStyles();
-
-  /* 
-    Users can pin the player to be always shown
-  */
   const [pin, setPin] = useState(false);
-
-  /* 
-    Show player for one second when mouse moves
-  */
   const [show, setShow] = useState(false);
 
   useEffect(() => {
@@ -117,15 +109,11 @@ export const PlayerSales = ({
   useEffect(() => {
     window.addEventListener("mousemove", onMouseMove, false);
 
-    // Clean up hook
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
     };
   }, []);
 
-  /* 
-    On player hover - always show player
-  */
   const [hover, setHover] = useState(false);
   const onHover = (_event: React.MouseEvent<HTMLDivElement>) => {
     if (hover === false) {
@@ -139,9 +127,6 @@ export const PlayerSales = ({
     }
   };
 
-  /* 
-    Settings
-  */
   const [openSettings, setOpenSettings] = useState(false);
 
   const handleSettingsOpen = () => {
@@ -173,7 +158,6 @@ export const PlayerSales = ({
               justifyContent="center"
               alignItems="center"
             >
-              {/* Play button, previous, n / length, next */}
               <PlayerButtons
                 play={play}
                 setPlay={setPlay}
@@ -182,7 +166,6 @@ export const PlayerSales = ({
                 length={length}
               />
 
-              {/* Slide duration - small version of the component for small screens */}
               <Hidden mdUp only="xs">
                 <PlayerSettingsButton
                   pin={pin}
@@ -192,10 +175,7 @@ export const PlayerSales = ({
               </Hidden>
             </Grid>
 
-            {/* Slider (progress indicator) and slide duration - to be hidden on small screens */}
             <Hidden smDown>
-              {/* Slider */}
-
               <Grid item container direction="column" xs={12} md={5} lg={6}>
                 <Slider
                   index={index}
@@ -206,7 +186,6 @@ export const PlayerSales = ({
                 />
               </Grid>
 
-              {/* Slide duration for large screens */}
               <Grid
                 item
                 xs={4}
@@ -216,16 +195,12 @@ export const PlayerSales = ({
                 alignItems="center"
                 className={classes.settingsButtonsContainer}
               >
-                {/* Slide duration component */}
-
-                {/* Pin and settings icons */}
                 <PlayerSettingsButton
                   pin={pin}
                   setPin={setPin}
                   handleSettingsOpen={handleSettingsOpen}
                 />
 
-                {/* <PlayerInput duration={duration} setDuration={setDuration} /> */}
                 <Tooltip title="Data source information" arrow>
                   <IconButton
                     onClick={onInfoIconClick}
@@ -240,7 +215,6 @@ export const PlayerSales = ({
         </Slide>
       </Box>
 
-      {/* Settings dialog window */}
       <SettingsDialog
         openSettings={openSettings}
         handleSettingsClose={handleSettingsClose}

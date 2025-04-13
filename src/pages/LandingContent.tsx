@@ -1,7 +1,6 @@
 import React from "react";
-import * as MUI from '@mui/material';
+import { Grid, Typography, Theme, Tooltip } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
-import { Grid, Typography, Theme } from '@mui/material';
 import { animations } from "../styles/animations";
 import { Link } from "../components/Link";
 import { SuspenseImg } from "../components/SuspenseImg";
@@ -125,9 +124,9 @@ export const LandingContent: React.FC = () => {
                                 {item.devices.map((device) => {
                                     const Icon = deviceIcons[device];
                                     return (
-                                        <MUI.Tooltip arrow title={`Available on ${device}`} placement="top">
+                                        <Tooltip arrow title={`Available on ${device}`} placement="top">
                                             <Icon fontSize="small" key={device} />
-                                        </MUI.Tooltip>
+                                        </Tooltip>
                                     );
                                 })}
                             </div>

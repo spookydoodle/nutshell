@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Typography } from '@mui/material';
 import { BackNav } from "../../../layouts/BackNav";
 import { ColumnButtons } from "./ColumnButtons";
 import { CategoryDropdown } from "./CategoryDropdown";
 import { fontSizes } from "../../../styles";
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         navbar: {
             padding: "8px 16px",
@@ -55,17 +55,17 @@ export const MobileHeader: React.FC<Props> = ({
     const classes = useStyles();
 
     return (
-        <MUI.Box className={classes.navbar}>
-            <MUI.Box className={classNames(classes.navtitle, classes.spacingBottom)}>
-                <MUI.Typography fontSize={fontSizes.h3} className={classes.title}>
+        <Box className={classes.navbar}>
+            <Box className={classNames(classes.navtitle, classes.spacingBottom)}>
+                <Typography fontSize={fontSizes.h3} className={classes.title}>
                     <BackNav to="/" tooltipText="Back to main screen" />
                     _NUTSHELL
-                </MUI.Typography>
-                <MUI.Typography fontSize={fontSizes.h3} className={classes.title}>xo</MUI.Typography>
-            </MUI.Box>
+                </Typography>
+                <Typography fontSize={fontSizes.h3} className={classes.title}>xo</Typography>
+            </Box>
 
             <CategoryDropdown items={timeboxes} index={timeboxIndex} onChange={handleTimeboxChange} primaryMeasureName={primaryMeasureName} />
             <ColumnButtons buttons={columnNames} index={chanIndex} onChange={handleColumnNameChange} />
-        </MUI.Box>
+        </Box>
     );
 };

@@ -1,11 +1,10 @@
-import React from "react";
 import classNames from "classnames";
 import { Img } from "react-image";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Grid, Typography, Tooltip } from '@mui/material';
 import * as Types from "../../types/types";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         imgContainer: {
             overflow: "hidden",
@@ -107,31 +106,31 @@ export const ImgTile: React.FC<Props> = ({ variant = "md", i, value }) => {
     const { name, description, img, link } = value;
 
     return (
-        <MUI.Grid item xs={12} container className={classes.container}>
-            <MUI.Grid item xs={4}>
+        <Grid item xs={12} container className={classes.container}>
+            <Grid item xs={4}>
                 {img && (
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                        <MUI.Box className={classes.imgContainer}>
+                        <Box className={classes.imgContainer}>
                             <Img alt={`${name}-${i}`} src={img.src} className={classNames(classes.img, variant === "sm" ? classes.sm : classes.md)} />
-                        </MUI.Box>
+                        </Box>
                     </a>
                 )}
-            </MUI.Grid>
+            </Grid>
 
-            <MUI.Grid item xs={8} className={classes.contentContainer}>
-                <MUI.Tooltip title={`Go to ${link}`} arrow placement="top">
+            <Grid item xs={8} className={classes.contentContainer}>
+                <Tooltip title={`Go to ${link}`} arrow placement="top">
                     <a href={link} target="_blank" rel="noopener noreferrer">
-                        <MUI.Typography gutterBottom component="span" className={classes.linkUnderlineAnim}>
+                        <Typography gutterBottom component="span" className={classes.linkUnderlineAnim}>
                             {name}
-                        </MUI.Typography>
+                        </Typography>
                     </a>
-                </MUI.Tooltip>
-                <MUI.Box className={classes.description}>
-                    <MUI.Typography variant="caption" gutterBottom>
+                </Tooltip>
+                <Box className={classes.description}>
+                    <Typography variant="caption" gutterBottom>
                         {description}
-                    </MUI.Typography>
-                </MUI.Box>
-            </MUI.Grid>
-        </MUI.Grid>
+                    </Typography>
+                </Box>
+            </Grid>
+        </Grid>
     );
 };

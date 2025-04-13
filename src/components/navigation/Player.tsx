@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Grid, Slide, Hidden, Theme } from '@mui/material';
 import { Slider } from "./Slider";
 import { PlayerButtons } from "./PlayerButtons";
-import { PlayerInput } from "./PlayerInput";
+import { SlideDurationInput } from "./SlideDurationInput";
 import { PlayerSettingsButton } from "./PlayerSettingsButton";
 import { SettingsDialog } from "./SettingsDialog";
 
@@ -136,7 +136,7 @@ export const Player: React.FC<Props> = ({
 
 							<Grid item xs={4} md={3} container justifyContent="space-around" alignItems="center" className={classes.settingsButtonsContainer}>
 								<Hidden xlDown>
-									<PlayerInput duration={duration} setDuration={setDuration} />
+									<SlideDurationInput duration={duration} setDuration={setDuration} />
 								</Hidden>
 
 								<PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />

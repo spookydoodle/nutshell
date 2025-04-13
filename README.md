@@ -3,13 +3,13 @@
 This application is an automated transitioning presentation
 of data around various topics:
 
+- Example company sales
 - Solar System
 - Need for Speed video games franchise
-- Current stock prices
 
 ## Data sources
 
-Data was collected manually for demo purposes. It is possible to connect it to an API server.
+Data was either faked or collected manually for demo purposes.
 
 ## Requirements
 
@@ -24,14 +24,6 @@ Run the following command to install all dependencies:
 
 ```
 yarn install
-```
-
-## Testing
-
-To run all tests once:
-
-```
-yarn test
 ```
 
 ## Running the app

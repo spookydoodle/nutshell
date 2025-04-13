@@ -1,4 +1,3 @@
-import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Typography, Theme } from '@mui/material';
@@ -103,7 +102,7 @@ interface Props {
     animationsInitialized?: boolean;
 }
 
-export const SmallScreenMessage = ({ variant }: Props) => {
+export const SmallScreenMessage: React.FC<Props> = ({ variant }) => {
     const classes = useStyles();
 
     const ref = useSpringRef();

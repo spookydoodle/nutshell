@@ -6,7 +6,7 @@ interface Props {
   children: React.ReactElement;
 }
 
-const HideOnScroll: React.FC<Props> = ({ window, children }) => {
+export const HideOnScroll: React.FC<Props> = ({ window, children }) => {
   const trigger = useScrollTrigger({ target: window && window() });
 
   return (
@@ -15,5 +15,3 @@ const HideOnScroll: React.FC<Props> = ({ window, children }) => {
     </Slide>
   );
 };
-
-export default HideOnScroll;

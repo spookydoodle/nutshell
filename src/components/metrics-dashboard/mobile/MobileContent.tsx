@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box } from '@mui/material';
 import { MobileTile as Tile } from "./MobileTile";
 import { ScoreList } from "../../dataviz/ScoreList";
 import { NestedScoreList } from "../../dataviz/NestedScoreList";
@@ -10,7 +10,7 @@ import { Tabstrip } from "../Tabstrip";
 import * as Utils from "../../../utils";
 import * as MetricTypes from "../types";
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         swiperContainer: {
             width: "100vw",
@@ -78,19 +78,19 @@ export const MobileContent: React.FC<Props> = ({
     );
 
     return (
-        <MUI.Box className={classes.swiperContainer}>
-            <MUI.Box className={classes.spacing} />
+        <Box className={classes.swiperContainer}>
+            <Box className={classes.spacing} />
 
             {mobileData ? (
-                <MUI.Box className={classes.swiper} style={{ transform: `translateX(${-100 * chanIndex}%)`, }}>
+                <Box className={classes.swiper} style={{ transform: `translateX(${-100 * chanIndex}%)`, }}>
                     {columnNames.map((columnName) => (
-                        <MUI.Box key={`${columnName}-box`} id={`${columnName}-box`} className={classes.swipeItem}>
-                            <MUI.Box className={classNames(classes.card, classes.borderRadiusAll)}>
+                        <Box key={`${columnName}-box`} id={`${columnName}-box`} className={classes.swipeItem}>
+                            <Box className={classNames(classes.card, classes.borderRadiusAll)}>
                                 <Tile
                                     name={`${columnName} ${primaryMeasureName} ${timeboxes[timeboxIndex]}`}
                                     data={mobileData?.get(timeboxes[timeboxIndex])?.get(columnName)?.tile}
                                 />
-                            </MUI.Box>
+                            </Box>
 
                             <Tabstrip
                                 expandable={true}
@@ -142,10 +142,10 @@ export const MobileContent: React.FC<Props> = ({
                             />
 
                             <MobileProducts data={mobileData?.get(timeboxes[timeboxIndex])?.get(columnName)?.products || []} />
-                        </MUI.Box>
+                        </Box>
                     ))}
-                </MUI.Box>
+                </Box>
             ) : null}
-        </MUI.Box>
+        </Box>
     );
 };

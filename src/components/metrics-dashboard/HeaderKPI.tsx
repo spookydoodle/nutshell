@@ -1,10 +1,10 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Typography } from '@mui/material';
 import * as MetricTypes from "./types";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         header: {
             color: "rgba(255, 255, 255, .87)",
@@ -47,18 +47,18 @@ export const HeaderKPI: React.FC<Props> = ({ name, item }) => {
     const { tile } = item;
 
     return (
-        <MUI.Box className={classes.spaceBetween}>
-            <MUI.Typography className={classes.header} paragraph>
+        <Box className={classes.spaceBetween}>
+            <Typography className={classes.header} paragraph>
                 {name}
-            </MUI.Typography>
-            <MUI.Box>
-                <MUI.Typography noWrap className={classes.value}>
+            </Typography>
+            <Box>
+                <Typography noWrap className={classes.value}>
                     {tile?.primary
                         ? (tile?.primaryFormatted ?? tile.primary)
                         : 0}
-                </MUI.Typography>
+                </Typography>
 
-                <MUI.Typography
+                <Typography
                     noWrap
                     className={classNames(classes.delta, {
                         [classes.deltaNeg]: tile?.primaryIsBad,
@@ -66,8 +66,8 @@ export const HeaderKPI: React.FC<Props> = ({ name, item }) => {
                     })}
                 >
                     {tile?.primaryDeltaFormatted ?? tile?.primaryDelta ?? "-"}
-                </MUI.Typography>
-            </MUI.Box>
-        </MUI.Box>
+                </Typography>
+            </Box>
+        </Box>
     );
 };

@@ -1,12 +1,12 @@
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Hidden, Grid, Typography, Tooltip } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { fontSizes } from "../../styles/themes";
 import { BreadCrumbs } from "./BreadCrumbs";
 import { Header } from "../../types/types";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         cardHeader: {
             marginTop: "2vh !important",
@@ -93,7 +93,7 @@ interface Props {
     primaryMeasureName: string;
 }
 
-export const NavTitlesSales = ({
+export const NavTitlesSales: React.FC<Props> = ({
     animationsInitialized = true,
     current,
     // next,
@@ -105,21 +105,21 @@ export const NavTitlesSales = ({
     sequences,
     currentSequence,
     primaryMeasureName
-}: Props) => {
+}) => {
     const classes = useStyles();
 
     const onSeqClick = (i: number) => () => onSequenceClick?.(i);
 
     return (
-        <MUI.Grid
+        <Grid
             item
             container
             justifyContent="space-between"
             xs={12}
             className={classNames(classes.cardHeader, { [classes.pauseAnim]: animationsInitialized })}
         >
-            <MUI.Grid item xs={12} sm={8} lg={4} className={classNames(classes.cardHeaderTitle, classes.underline)}>
-                <MUI.Typography
+            <Grid item xs={12} sm={8} lg={4} className={classNames(classes.cardHeaderTitle, classes.underline)}>
+                <Typography
                     fontSize={fontSizes.h3}
                     color="inherit"
                     component="span"
@@ -127,10 +127,10 @@ export const NavTitlesSales = ({
                     noWrap
                 >
                     {current.titlePrimary}
-                </MUI.Typography>
+                </Typography>
                 {current?.titleSecondary && (
                     <>
-                        <MUI.Typography
+                        <Typography
                             fontSize={fontSizes.h3}
                             color="secondary"
                             component="span"
@@ -138,8 +138,8 @@ export const NavTitlesSales = ({
                             noWrap
                         >
                             {" // "}
-                        </MUI.Typography>
-                        <MUI.Typography
+                        </Typography>
+                        <Typography
                             fontSize={fontSizes.h3}
                             color="inherit"
                             component="span"
@@ -147,13 +147,13 @@ export const NavTitlesSales = ({
                             noWrap
                         >
                             {current.titleSecondary}
-                        </MUI.Typography>
+                        </Typography>
                     </>
                 )}
-            </MUI.Grid>
+            </Grid>
 
-            <MUI.Hidden lgDown>
-                <MUI.Grid item xs={4}>
+            <Hidden lgDown>
+                <Grid item xs={4}>
                     <BreadCrumbs
                         animationsInitialized={animationsInitialized}
                         play={play}
@@ -162,37 +162,37 @@ export const NavTitlesSales = ({
                         onBreadClick={onBreadClick}
                         primaryMeasureName={primaryMeasureName}
                     />
-                </MUI.Grid>
-            </MUI.Hidden>
+                </Grid>
+            </Hidden>
 
-            <MUI.Hidden only="xs">
-                <MUI.Grid item xs={4} className={classes.breadCrumbsContainer}>
+            <Hidden only="xs">
+                <Grid item xs={4} className={classes.breadCrumbsContainer}>
                     {current?.titleSecondaryShort && (
-                        <MUI.Tooltip
+                        <Tooltip
                             title={current.titleSecondary || current.titleSecondaryShort}
                             placement="top"
                             arrow
                         >
-                            <MUI.Typography
+                            <Typography
                             fontSize={fontSizes.h3}
                                 color="inherit"
                                 component="span"
                                 className={classes.breadCrumbsText}
                             >
                                 {current.titleSecondaryShort}
-                            </MUI.Typography>
-                        </MUI.Tooltip>
+                            </Typography>
+                        </Tooltip>
                     )}
 
                     {sequences &&
                         sequences.map((sequence, i) => (
-                            <MUI.Tooltip
+                            <Tooltip
                                 key={i}
                                 title={sequence === currentSequence ? sequence : `Change to ${sequence}`}
                                 placement="top"
                                 arrow
                             >
-                                <MUI.Typography
+                                <Typography
                                     fontSize={fontSizes.h3}
                                     color="inherit"
                                     component="span"
@@ -205,11 +205,11 @@ export const NavTitlesSales = ({
                                     onClick={onSeqClick(i)}
                                 >
                                     {sequence}
-                                </MUI.Typography>
-                            </MUI.Tooltip>
+                                </Typography>
+                            </Tooltip>
                         ))}
-                </MUI.Grid>
-            </MUI.Hidden>
-        </MUI.Grid>
+                </Grid>
+            </Hidden>
+        </Grid>
     );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import * as MUI from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import { useStyles } from "./styles";
 import { BarProps } from "./types";
 
@@ -26,7 +26,7 @@ export const BarChartRowAbsDeltaMulti: React.FC<BarProps> = ({
     );
 
     return value ? (
-        <MUI.Grid
+        <Grid
             id={`chart-row-${category}-${i}`}
             container
             item
@@ -34,58 +34,58 @@ export const BarChartRowAbsDeltaMulti: React.FC<BarProps> = ({
             direction="row"
             className={classNames(classes.row, { [classes.hide]: filler })}
         >
-            <MUI.Grid container item xs={5}>
-                <MUI.Typography
+            <Grid container item xs={5}>
+                <Typography
                     component="span"
                     noWrap
                     className={classNames(classes.labels, textClassName, classes.paddingLeft)}
                 >
-                    <MUI.Typography
+                    <Typography
                         component="span"
                         color="textSecondary"
                         className={`${classes.labels} ${textClassName
                             } ${classes.rank} ${classes.paddingLeft}`}
-                    >{`${i + 1}. `}</MUI.Typography>
+                    >{`${i + 1}. `}</Typography>
                     {category}
-                </MUI.Typography>
-            </MUI.Grid>
+                </Typography>
+            </Grid>
 
-            <MUI.Grid item container xs={7}>
-                <MUI.Grid
+            <Grid item container xs={7}>
+                <Grid
                     item
                     xs={absPosition === "behind-bar" ? 5 : 4}
                     className={classes.barContainer}
                 >
-                    <MUI.Box
+                    <Box
                         width={`${(value / max) * (absPosition === "behind-bar" ? 50 : 100)}%`}
                         className={classNames(classes.bar, classes.neutralPrimary)}
                     />
 
                     {absPosition === "behind-bar" && (
-                        <MUI.Typography
+                        <Typography
                             component="span"
                             // noWrap
                             className={classNames(classes.labels, classes.label, textClassName)}
                         >
                             {valueFormatted ? valueFormatted : value}
-                        </MUI.Typography>
+                        </Typography>
                     )}
-                </MUI.Grid>
+                </Grid>
 
                 {absPosition === "align-column" && (
-                    <MUI.Grid item container justifyContent="flex-start" xs={1}>
-                        <MUI.Typography noWrap className={classNames(classes.labels, classes.label, textClassName)}>
+                    <Grid item container justifyContent="flex-start" xs={1}>
+                        <Typography noWrap className={classNames(classes.labels, classes.label, textClassName)}>
                             {valueFormatted ? valueFormatted : value}
-                        </MUI.Typography>
-                    </MUI.Grid>
+                        </Typography>
+                    </Grid>
                 )}
 
-                <MUI.Grid container item xs={12} lg={7} className={classes.barContainer}>
+                <Grid container item xs={12} lg={7} className={classes.barContainer}>
                     {/* Negative delta */}
-                    <MUI.Grid item container justifyContent="flex-end" xs={6}>
+                    <Grid item container justifyContent="flex-end" xs={6}>
                         {delta && delta < 0 ? (
                             <>
-                                <MUI.Typography
+                                <Typography
                                     component="span"
                                     noWrap
                                     className={classNames(classes.labels, classes.delta, textClassName, {
@@ -94,9 +94,9 @@ export const BarChartRowAbsDeltaMulti: React.FC<BarProps> = ({
                                     })}
                                 >
                                     {deltaFormatted ? deltaFormatted : delta}
-                                </MUI.Typography>
+                                </Typography>
 
-                                <MUI.Box
+                                <Box
                                     width={`${(Math.abs(delta < -100 ? -100 : delta) / 100) * 50}%`}
                                     className={classNames(classes.bar, delta < -100 ? classes.negExceed : classes.neg, classes.marginLeft)}
                                 />
@@ -104,34 +104,34 @@ export const BarChartRowAbsDeltaMulti: React.FC<BarProps> = ({
                         ) : (
                             <></>
                         )}
-                    </MUI.Grid>
+                    </Grid>
 
                     {/* Positive delta */}
-                    <MUI.Grid item container justifyContent="flex-start" xs={6}>
+                    <Grid item container justifyContent="flex-start" xs={6}>
                         {delta && delta > 0 ? (
                             <>
-                                <MUI.Box
+                                <Box
                                     width={`${(Math.abs(delta > 100 ? 100 : delta) / 100) * 50}%`}
                                     className={`${classes.bar} ${delta > 100 ? classes.posExceed : classes.pos
                                         } ${classes.marginRight}`}
                                 />
 
-                                <MUI.Typography
+                                <Typography
                                     component="span"
                                     noWrap
                                     className={`${classes.labels} ${classes.delta} ${isDeltaGood ? classes.deltaPos : undefined
                                         } ${delta >= 1000 ? classes.deltaMax : ""}`}
                                 >
                                     {deltaFormatted ? deltaFormatted : delta}
-                                </MUI.Typography>
+                                </Typography>
                             </>
                         ) : (
                             <></>
                         )}
-                    </MUI.Grid>
-                </MUI.Grid>
-            </MUI.Grid>
-        </MUI.Grid>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     ) : (
         <div></div>
     );

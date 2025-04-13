@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from "classnames";
 import { makeStyles, createStyles, withStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Accordion as MUIAccordion, AccordionSummary as MUIAccordionSummary, AccordionDetails as MUIAccordionDetails, Theme, Box, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ScoreList } from "./ScoreList";
 import { BarChartData, DataRow } from "../../logic/datavizTypes";
@@ -12,7 +12,7 @@ const Accordion = withStyles(() => ({
         border: "none",
         boxShadow: "none",
     },
-}))(MUI.Accordion);
+}))(MUIAccordion);
 
 const AccordionSummary = withStyles(() => ({
     root: {
@@ -25,16 +25,16 @@ const AccordionSummary = withStyles(() => ({
     expanded: {
         margin: 0,
     },
-}))(MUI.AccordionSummary);
+}))(MUIAccordionSummary);
 
 const AccordionDetails = withStyles(() => ({
     root: {
         margin: "10px 5px",
         padding: 0,
     },
-}))(MUI.AccordionDetails);
+}))(MUIAccordionDetails);
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         container: {
             width: "100%",
@@ -78,7 +78,7 @@ interface Props {
     rankColor?: "primary" | "secondary";
 }
 
-export const NestedScoreList = ({ data }: Props) => {
+export const NestedScoreList: React.FC<Props> = ({ data }) => {
     const classes = useStyles();
 
     const filteredData = React.useMemo(
@@ -89,7 +89,7 @@ export const NestedScoreList = ({ data }: Props) => {
     );
 
     return (
-        <MUI.Box className={classes.container}>
+        <Box className={classes.container}>
             {data &&
                 filteredData.map((row, i) => (
                     // See performance section in https://material-ui.com/components/accordion/#accordion
@@ -99,27 +99,27 @@ export const NestedScoreList = ({ data }: Props) => {
                             aria-controls="panel1a-content"
                             id="panel1a-header"
                         >
-                            <MUI.Box className={classes.row}>
+                            <Box className={classes.row}>
                                 {/* Header */}
-                                <MUI.Box className={classNames(classes.rowCol, classes.head)}>
-                                    <MUI.Typography noWrap>
+                                <Box className={classNames(classes.rowCol, classes.head)}>
+                                    <Typography noWrap>
                                         {row.category}
-                                    </MUI.Typography>
-                                    <MUI.Typography noWrap className={classes.opacity} fontSize={14}>
+                                    </Typography>
+                                    <Typography noWrap className={classes.opacity} fontSize={14}>
                                         {row.subcategory}
-                                    </MUI.Typography>
-                                </MUI.Box>
+                                    </Typography>
+                                </Box>
 
                                 {/* KPI */}
-                                <MUI.Box className={classes.rowCol}>
-                                    <MUI.Typography className={classNames(classes.main)}>
+                                <Box className={classes.rowCol}>
+                                    <Typography className={classNames(classes.main)}>
                                         {row.valueFormatted}
-                                    </MUI.Typography>
-                                    <MUI.Typography className={row.isDeltaGood ? classes.deltaPos : classes.deltaNeg}                    >
+                                    </Typography>
+                                    <Typography className={row.isDeltaGood ? classes.deltaPos : classes.deltaNeg}                    >
                                         {row.deltaFormatted}
-                                    </MUI.Typography>
-                                </MUI.Box>
-                            </MUI.Box>
+                                    </Typography>
+                                </Box>
+                            </Box>
                         </AccordionSummary>
                         {((row?.subitems?.length ?? 0) > 0) && (
                             <AccordionDetails>
@@ -128,6 +128,6 @@ export const NestedScoreList = ({ data }: Props) => {
                         )}
                     </Accordion>
                 ))}
-        </MUI.Box>
+        </Box>
     );
 };

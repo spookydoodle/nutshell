@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Typography } from '@mui/material';
 import { fontSizes } from "../../../styles";
 
 const FOOTER_HEIGHT = 20;
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         offset: {
             height: `${FOOTER_HEIGHT}px`,
@@ -38,11 +38,10 @@ export const Footer: React.FC<Props> = ({ text }) => {
 
     return (
         <>
-            <MUI.Box className={classes.offset} />
-
-            <MUI.Box className={classes.footer}>
-                <MUI.Typography fontSize={fontSizes.h6} className={classes.text}>{text}</MUI.Typography>
-            </MUI.Box>
+            <Box className={classes.offset} />
+            <Box className={classes.footer}>
+                <Typography fontSize={fontSizes.h6} className={classes.text}>{text}</Typography>
+            </Box>
         </>
     );
 };

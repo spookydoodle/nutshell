@@ -122,11 +122,11 @@ interface Props {
   children?: React.ReactNode;
 }
 
-export const NFSPanel = ({ 
+export const NFSPanel: React.FC<Props> = ({ 
   // skew = false, 
   style, 
   children 
-}: Props) => {
+}) => {
   const classes = useStyles();
 
   return (
