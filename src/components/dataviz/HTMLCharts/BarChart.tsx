@@ -1,8 +1,7 @@
 import React from "react";
 import { animateScroll } from "react-scroll";
 import classNames from "classnames";
-import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from "@mui/material";
+import { Box } from "@mui/material";
 import { BarChartRowAbsDelta } from "./BarChartRowAbsDelta";
 import { BarChartRowDeltaAbs } from "./BarChartRowDeltaAbs";
 import { BarChartRowAbsDeltaMulti } from "./BarChartRowAbsDeltaMulti";
@@ -166,7 +165,7 @@ const BarChart: React.FC<Props> = ({
     );
 
     return (
-        <MUI.Box
+        <Box
             id={scrollID}
             className={classNames(type === "abs-delta" ? classes.container : classes.containerSm, {
                 [classes.fadeOutIn]: blink
@@ -193,7 +192,7 @@ const BarChart: React.FC<Props> = ({
                     />
                 )}
             </div>
-        </MUI.Box>
+        </Box>
     );
 };
 

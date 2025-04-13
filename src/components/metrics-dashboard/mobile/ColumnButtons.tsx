@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Button } from '@mui/material';
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         selector: {
             width: "100%",
@@ -48,9 +48,9 @@ export const ColumnButtons: React.FC<Props> = ({ buttons, index, onChange }) => 
     );
 
     return (
-        <MUI.Box className={classes.selector}>
+        <Box className={classes.selector}>
             {buttons.map((columnName: string, i: number) => (
-                <MUI.Button
+                <Button
                     key={columnName}
                     variant="contained"
                     size="medium"
@@ -60,8 +60,8 @@ export const ColumnButtons: React.FC<Props> = ({ buttons, index, onChange }) => 
                     className={i === index ? classes.active : classes.inactive}
                 >
                     {columnName}
-                </MUI.Button>
+                </Button>
             ))}
-        </MUI.Box>
+        </Box>
     );
 };

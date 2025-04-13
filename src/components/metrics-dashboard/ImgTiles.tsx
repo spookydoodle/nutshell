@@ -1,11 +1,11 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Grid, Typography} from '@mui/material';
 import { fontSizes } from "../../styles/themes";
 import { ImgTile } from "./ImgTile";
 import * as Types from "../../types/types";
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         topTitle: {
             fontSize: fontSizes.h5,
@@ -31,18 +31,18 @@ const ImgTiles: React.FC<Props> = ({ title, variant = "md", data, topN = 3 }) =>
     return (
         <>
             {title && (
-                <MUI.Typography gutterBottom color="textSecondary" className={classes.topTitle}>
+                <Typography gutterBottom color="textSecondary" className={classes.topTitle}>
                     {title}
-                </MUI.Typography>
+                </Typography>
             )}
 
-            <MUI.Grid container>
+            <Grid container>
                 {data
                     ?.filter((_value, i) => i < topN)
                     .map((value, i: number) => (
                         <ImgTile variant={variant} key={`${value.name}-${i}`} i={i} value={value} />
                     ))}
-            </MUI.Grid>
+            </Grid>
         </>
     );
 };

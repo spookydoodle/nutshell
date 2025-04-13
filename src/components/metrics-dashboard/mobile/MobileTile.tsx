@@ -1,11 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Typography } from '@mui/material';
 import * as MetricTypes from "../types";
 import { fontSizes } from "../../../styles";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         container: {
             textAlign: "center",
@@ -43,22 +43,22 @@ export const MobileTile: React.FC<Props> = ({ name, data }) => {
     const classes = useStyles();
 
     return (
-        <MUI.Box className={classes.container}>
+        <Box className={classes.container}>
             {name && (
-                <MUI.Typography fontSize={fontSizes.h6} noWrap className={classes.title}>
+                <Typography fontSize={fontSizes.h6} noWrap className={classes.title}>
                     {name?.toUpperCase()}
-                </MUI.Typography>
+                </Typography>
             )}
 
-            <MUI.Typography fontSize={fontSizes.h6} noWrap className={classes.value}>
+            <Typography fontSize={fontSizes.h6} noWrap className={classes.value}>
                 {data?.primary
                     ? data?.primaryFormatted
                         ? data.primaryFormatted
                         : data.primary
                     : 0}
-            </MUI.Typography>
+            </Typography>
 
-            <MUI.Typography
+            <Typography
                 fontSize={fontSizes.h6}
                 noWrap
                 className={classNames(classes.delta, {
@@ -69,7 +69,7 @@ export const MobileTile: React.FC<Props> = ({ name, data }) => {
                 {data?.primaryDeltaFormatted
                     ? data.primaryDeltaFormatted
                     : data?.primaryDelta || "-"}
-            </MUI.Typography>
-        </MUI.Box>
+            </Typography>
+        </Box>
     );
 };

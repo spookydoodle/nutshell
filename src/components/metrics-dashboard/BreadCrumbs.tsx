@@ -1,14 +1,14 @@
 import React from 'react';
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Grid, Tooltip, Typography } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { fontSizes } from "../../styles/themes";
 import PublicIcon from "@mui/icons-material/Public";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         grid: {
             columnGap: '15px'
@@ -109,35 +109,35 @@ export const BreadCrumbs: React.FC<Props> = ({
     );
 
     return (
-        <MUI.Grid
+        <Grid
             container
             justifyContent="center"
             className={classNames(classes.grid, classes.slideUp, { [classes.pauseAnim]: animationsInitialized })}
         >
             {items.map((item, i) => (
-                <MUI.Tooltip
+                <Tooltip
                     key={item.name}
                     title={`Switch to ${primaryMeasureName} by ${item.name}`}
                     placement="top"
                     arrow
                 >
-                    <MUI.Box
+                    <Box
                         className={classNames(classes.breadCrumb, {
                             [color === "white" ? classes.activeWhite : classes.active]: index === i,
                         })}
                         onClick={handleClick(i)}
                     >
                         {item.icon}
-                        <MUI.Typography
+                        <Typography
                             color="inherit"
                             noWrap
                             className={classes.breadCrumbText}
                         >
                             {item.name}
-                        </MUI.Typography>
-                    </MUI.Box>
-                </MUI.Tooltip>
+                        </Typography>
+                    </Box>
+                </Tooltip>
             ))}
-        </MUI.Grid>
+        </Grid>
     );
 };

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Grid, Hidden } from '@mui/material';
 import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
 import { NavTitlesSales } from "./NavTitlesSales";
@@ -10,7 +10,7 @@ import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         content: {
             width: "98vw",
@@ -106,11 +106,11 @@ export const Slideshow: React.FC<Props> = ({
     const getComponents = (name: string) =>
         slides.map((slide, ind) => {
             const entries = [...(slide.data.get(name)?.main.entries() || [])];
-            return <MUI.Box className={classes.spaceEvenly}>
+            return <Box className={classes.spaceEvenly}>
                 {entries
                     .map(([key, val], i) => {
                         return val.type === "bar-chart" ? (
-                            <MUI.Box key={`chart-${name}-${key}-${i}`} className={classes.chartContainer}>
+                            <Box key={`chart-${name}-${key}-${i}`} className={classes.chartContainer}>
                                 <BarChart
                                     variant="scroll"
                                     // variant="fade"
@@ -134,12 +134,12 @@ export const Slideshow: React.FC<Props> = ({
                                     maxRows={getMaxRows(index)}
                                     applySort={true}
                                 />
-                            </MUI.Box>
+                            </Box>
                         ) : val.type === "items" && val.data.length > 0 ? (
                             <Bestsellers key={`items-${name}-${ind}-${i}`} title={key} data={val.data} divider={i < entries.length - 1} />
                         ) : null;
                     })}
-            </MUI.Box>;
+            </Box>;
         });
 
     const [tickerOn, setTicker] = useState(true);
@@ -174,8 +174,8 @@ export const Slideshow: React.FC<Props> = ({
     };
 
     return (
-        <MUI.Grid container justifyContent="center">
-            <MUI.Grid container item className={classes.content}>
+        <Grid container justifyContent="center">
+            <Grid container item className={classes.content}>
                 <NavTitlesSales
                     animationsInitialized={animationsInitialized}
                     current={slides[index].headers}
@@ -192,7 +192,7 @@ export const Slideshow: React.FC<Props> = ({
 
                 {[...slides[index].data.entries()].map(([name, value], i) => (
                     // TODO: Responsiveness: hide selected columnNames on smaller viewports where they no longer fit
-                    <MUI.Hidden key={`${name}-${i}`} mdDown={i > 0} lgDown={i === 1}>
+                    <Hidden key={`${name}-${i}`} mdDown={i > 0} lgDown={i === 1}>
                         <Content
                             animationsInitialized={animationsInitialized}
                             name={name}
@@ -200,17 +200,17 @@ export const Slideshow: React.FC<Props> = ({
                             components={getComponents(name)}
                             index={index}
                         />
-                    </MUI.Hidden>
+                    </Hidden>
                 ))}
 
                 {tickerData && tickerOn ? (
-                    <MUI.Hidden lgDown>
+                    <Hidden lgDown>
                         <Ticker
                             animationsInitialized={animationsInitialized}
-                            text="Turbocharged by Spooky Doodle"
+                            text="Turbocharged by spookydoodle"
                             data={tickerData}
                         />
-                    </MUI.Hidden>
+                    </Hidden>
                 ) : null}
 
                 <Player
@@ -229,7 +229,7 @@ export const Slideshow: React.FC<Props> = ({
                     tickerOn={tickerOn}
                     setTicker={setTicker}
                 />
-            </MUI.Grid>
-        </MUI.Grid>
+            </Grid>
+        </Grid>
     );
 };

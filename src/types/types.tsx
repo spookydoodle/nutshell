@@ -18,16 +18,40 @@ export interface ImgSrc {
 
 export interface Value {
   name: string;
-  primary?: number; // Provide already with units, prefix, suffix, e.g. '$ 234 K'
-  primaryFormatted?: string; // Provide already with units, prefix, suffix, e.g. '$ 234 K'
-  primaryDelta?: number; // Provide already with prefix and suffix, e.g. '+10.2% VS LY'
-  primaryDeltaFormatted?: string; // Provide already with prefix and suffix, e.g. '+10.2% VS LY'
+  /**
+   * Provide already with units, prefix, suffix, e.g. '$ 234 K'
+   */
+  primary?: number;
+  /**
+   * Provide already with units, prefix, suffix, e.g. '$ 234 K'
+   */
+  primaryFormatted?: string;
+  /**
+   * Provide already with prefix and suffix, e.g. '+10.2% VS LY'
+   */
+  primaryDelta?: number;
+  /**
+   * Provide already with prefix and suffix, e.g. '+10.2% VS LY'
+   */
+  primaryDeltaFormatted?: string;
   primaryIsGood?: boolean;
   primaryIsBad?: boolean;
-  secondary?: number; // Provide already with units, prefix, suffix, e.g. '$ 234 K'
-  secondaryFormatted?: string; // Provide already with units, prefix, suffix, e.g. '$ 234 K'
-  secondaryDelta?: number; // Provide already with prefix and suffix, e.g. '+10.2% VS LY'
-  secondaryDeltaFormatted?: string; // Provide already with prefix and suffix, e.g. '+10.2% VS LY'
+  /**
+   *  Provide already with units, prefix, suffix, e.g. '$ 234 K'
+   */
+  secondary?: number;
+  /**
+   * Provide already with units, prefix, suffix, e.g. '$ 234 K'
+   */
+  secondaryFormatted?: string;
+  /**
+   * Provide already with prefix and suffix, e.g. '+10.2% VS LY'
+   */
+  secondaryDelta?: number;
+  /**
+   * Provide already with prefix and suffix, e.g. '+10.2% VS LY'
+   */
+  secondaryDeltaFormatted?: string;
   secondaryIsGood?: boolean;
   secondaryIsBad?: boolean;
   attributePrimary?: Dimension;

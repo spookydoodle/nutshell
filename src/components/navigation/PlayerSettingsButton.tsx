@@ -28,11 +28,11 @@ interface Props {
   handleSettingsOpen: () => void;
 }
 
-export const PlayerSettingsButton = ({
+export const PlayerSettingsButton: React.FC<Props> = ({
   pin,
   setPin,
   handleSettingsOpen,
-}: Props) => {
+}) => {
   const classes = useStyles();
   const PinIcon = pin ? PinIconOutlined : PinIconFilled;
 

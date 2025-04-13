@@ -37,13 +37,13 @@ interface Props {
   tickerData?: Map<string, TickerData>;
 }
 
-export const SlideshowSolar = ({
+export const SlideshowSolar: React.FC<Props> = ({
   animationsInitialized,
   play,
   setPlay,
   data,
   tickerData
-}: Props) => {
+}) => {
   const classes = useStyles();
   const appId = Hooks.useAppId();
   const [duration, setDuration] = useState(15000);
@@ -128,7 +128,6 @@ export const SlideshowSolar = ({
       </>
     ));
 
-  // Ticker on/off
   const [tickerOn, setTicker] = useState(true);
 
   return (
@@ -173,7 +172,7 @@ export const SlideshowSolar = ({
             <Hidden lgDown>
               <Ticker
                 animationsInitialized={animationsInitialized}
-                text="Turbocharged by Spooky Doodle"
+                text="Turbocharged by spookydoodle"
                 data={tickerData}
               />
             </Hidden>

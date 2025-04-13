@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Typography, Theme } from '@mui/material';
 import { fontSizes } from "../../styles/themes";
@@ -36,7 +35,7 @@ interface Props {
   next?: string;
 }
 
-const Pagination = ({ currentInd, maxInd, next }: Props) => {
+const Pagination: React.FC<Props> = ({ currentInd, maxInd, next }) => {
   const classes = useStyles();
 
   return (

@@ -1,9 +1,8 @@
-import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Tooltip, Theme } from '@mui/material';
-import { Link } from "../components/Link";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "../components/Link";
 import { fontSizes } from "../styles/themes";
 
 const useStyles = makeStyles((theme: Theme) =>

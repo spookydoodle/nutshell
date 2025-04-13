@@ -107,9 +107,7 @@ export const NutshellContent: React.FC<Props> = ({
             ) : undefined}
 
             {header}
-
             {children}
-
             {footer}
         </Box>
     );

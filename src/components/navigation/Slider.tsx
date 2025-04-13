@@ -37,13 +37,13 @@ interface Props {
   sequences: Array<string>;
 }
 
-export const Slider = ({
+export const Slider: React.FC<Props> = ({
   index,
   length,
   setIndex,
   labels,
   sequences,
-}: Props) => {
+}) => {
   const classes = useStyles();
   const marks = labels?.map((label, i) => ({
     value: i + 1,

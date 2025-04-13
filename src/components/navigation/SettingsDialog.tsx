@@ -7,7 +7,6 @@ import {
     Dialog,
     DialogActions,
     DialogContent,
-    DialogContentText,
     DialogTitle,
     useMediaQuery,
     ImageList,
@@ -17,7 +16,7 @@ import {
     FormControlLabel,
     Checkbox, Theme, useTheme
 } from '@mui/material';
-import { PlayerInput } from "./PlayerInput";
+import { SlideDurationInput } from "./SlideDurationInput";
 import { images } from "../../layouts/images";
 import * as AppState from "../../state";
 import * as Hooks from '../../hooks';
@@ -63,14 +62,14 @@ interface Props {
     setTicker: (on: boolean) => void;
 }
 
-export const SettingsDialog = ({
+export const SettingsDialog: React.FC<Props> = ({
     openSettings,
     handleSettingsClose,
     duration,
     setDuration,
     tickerOn,
     setTicker,
-}: Props) => {
+}) => {
     const classes = useStyles();
     const location = useLocation();
     const imgArr = images[location.pathname.substring(1)] ?? [];
@@ -135,8 +134,7 @@ export const SettingsDialog = ({
                     />
                 </Box>
 
-                {/* Slide duration */}
-                <PlayerInput
+                <SlideDurationInput
                     duration={duration}
                     setDuration={setDuration}
                     fullWidth={true}

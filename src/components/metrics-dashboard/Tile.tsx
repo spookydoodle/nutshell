@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Typography, Tooltip, Theme } from '@mui/material';
 import { fontSizes } from "../../styles/themes";
@@ -49,7 +48,7 @@ interface Props {
   data?: Value;
 }
 
-export const Tile = ({ name, data }: Props) => {
+export const Tile: React.FC<Props> = ({ name, data }) => {
   const classes = useStyles();
 
   return (

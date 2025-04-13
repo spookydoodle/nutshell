@@ -33,9 +33,7 @@ export const Transitions: React.FC<Props> = ({
     className,
 }: Props) => {
     const classes = useStyles();
-
-    // if index is greater than the length of the slidesData array, show the last slide
-    const ind = index < components.length ? index : components.length - 1;
+    const ind = Math.min(index, components.length - 1);
 
     const transitionsDef = {
         none: {

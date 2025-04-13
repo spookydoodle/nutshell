@@ -1,4 +1,3 @@
-import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Typography, Tooltip, Theme } from '@mui/material';
@@ -58,7 +57,7 @@ interface Props {
   value: MetricTypes.Datum;
 }
 
-const ProductTileCol = ({ size = "md", i, value }: Props) => {
+const ProductTileCol: React.FC<Props> = ({ size = "md", i, value }) => {
   const classes = useStyles();
   const tooltip = `${value?.attributePrimary?.key} = ${value?.attributePrimary?.text} - ${value?.attributeSecondary?.text}`;
 

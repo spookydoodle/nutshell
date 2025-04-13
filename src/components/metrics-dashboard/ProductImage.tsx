@@ -1,14 +1,14 @@
 import React, { Suspense } from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Skeleton } from '@mui/material';
 import { ImageComponent, ImgErrorBoundary } from "../SuspenseImg";
 import * as MetricTypes from "./types";
 import { IMG_SERVER } from "../../img/cmd";
 const imgServer = `${IMG_SERVER}/misc`;
 const notFoundImg = `${imgServer}/not-found.png`;
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         skeleton: {
             borderRadius: "10px",
@@ -64,7 +64,7 @@ export const ProductImage: React.FC<Props> = ({ size = "md", i, value }) => {
                         : classes.md
             )}
         >
-            <MUI.Skeleton variant="rectangular" animation="wave" width={125} height={125} />
+            <Skeleton variant="rectangular" animation="wave" width={125} height={125} />
         </div>
     );
 

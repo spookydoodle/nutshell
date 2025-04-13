@@ -1,4 +1,3 @@
-import React from "react";
 import classNames from "classnames";
 import { useSpring, useChain, config, SpringRef, useSpringRef, AnimatedComponent } from "@react-spring/web";
 import { makeStyles, createStyles } from '@mui/styles';
@@ -88,14 +87,14 @@ const useAnimation = (newRef: SpringRef): Style => {
   return spring;
 };
 
-export const TitlePanels = ({
+export const TitlePanels: React.FC<Props> = ({
   primary,
   primaryContent,
   secondary,
   tertiary,
   quaternary,
   applyStyle = true,
-}: Props) => {
+}) => {
   const classes = useStyles();
 
   const ref1 = useSpringRef();

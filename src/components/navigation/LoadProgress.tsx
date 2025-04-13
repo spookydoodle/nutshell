@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Typography, Theme } from '@mui/material';
 
@@ -40,7 +39,7 @@ interface Props {
   length: number;
 }
 
-export const LoadProgress = ({ index, length }: Props) => {
+export const LoadProgress: React.FC<Props> = ({ index, length }) => {
   const classes = useStyles();
   const progress = index / length;
 

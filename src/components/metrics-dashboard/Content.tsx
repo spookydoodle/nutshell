@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Grid, Box } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { Tile } from "./Tile";
 import { Transitions } from "./Transitions";
 import * as Types from "../../types/types";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         card: {
             zIndex: 10,
@@ -60,14 +60,14 @@ export const Content: React.FC<Props> = ({
     const classes = useStyles();
 
     return (
-        <MUI.Grid container item sm={12} md={6} lg={4}>
-            <MUI.Box className={classNames(classes.card, classes.tiles, { [classes.pauseAnim]: animationsInitialized })}>
+        <Grid container item sm={12} md={6} lg={4}>
+            <Box className={classNames(classes.card, classes.tiles, { [classes.pauseAnim]: animationsInitialized })}>
                 <Tile name={name} data={tileData} />
-            </MUI.Box>
+            </Box>
 
-            <MUI.Box className={classNames(classes.card, classes.charts, { [classes.pauseAnim]: animationsInitialized })}>
+            <Box className={classNames(classes.card, classes.charts, { [classes.pauseAnim]: animationsInitialized })}>
                 <Transitions components={components} index={index} />
-            </MUI.Box>
-        </MUI.Grid>
+            </Box>
+        </Grid>
     );
 };

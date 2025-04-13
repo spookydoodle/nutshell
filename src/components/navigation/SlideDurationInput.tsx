@@ -31,7 +31,7 @@ interface Props {
     fullWidth?: boolean;
 }
 
-export const PlayerInput = ({ duration, setDuration, fullWidth }: Props) => {
+export const SlideDurationInput: React.FC<Props> = ({ duration, setDuration, fullWidth }) => {
     const classes = useStyles();
     const minVal = 5000;
     const maxVal = 60000;

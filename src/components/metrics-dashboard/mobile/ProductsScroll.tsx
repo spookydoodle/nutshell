@@ -1,13 +1,13 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Typography, useTheme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ProductImageTile } from "./ProductImageTile";
 import * as MetricTypes from "../types";
 import { fontSizes } from "../../../styles";
 
-const useStyles = makeStyles((_theme: MUI.Theme) =>
+const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         horizontalScroll: {
             display: "flex",
@@ -32,14 +32,14 @@ interface Props {
 
 export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
     const classes = useStyles();
-    const theme = MUI.useTheme();
+    const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.only("xs"));
 
     return values.length > 0 ? (
         <>
-            <MUI.Typography fontSize={fontSizes.h3} className={classes.header} paragraph>
+            <Typography fontSize={fontSizes.h3} className={classes.header} paragraph>
                 {title}
-            </MUI.Typography>
+            </Typography>
             <Swiper
                 slidesPerView={isXs ? 2.4 : 4.4}
                 spaceBetween={10}

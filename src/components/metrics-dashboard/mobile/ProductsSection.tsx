@@ -1,4 +1,3 @@
-import React from "react";
 import { ProductsScroll } from "./ProductsScroll";
 import * as MetricTypes from "../types";
 
@@ -7,7 +6,6 @@ interface Props {
 }
 
 export const ProductsSection: React.FC<Props> = ({ item }) => {
-
     return (
         <>
             {[...item.keys()].map((key: string, i: number) => (

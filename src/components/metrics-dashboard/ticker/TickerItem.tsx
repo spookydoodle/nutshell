@@ -1,11 +1,11 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
 import * as Types from "../../../types/types";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         textContainer: {
             marginTop: "4vh",

@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, IconButton, Typography, Tooltip, Theme } from '@mui/material';
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
@@ -52,7 +51,7 @@ interface Props {
   categorySecondary?: string;
 }
 
-export const PlayerButtons = ({
+export const PlayerButtons: React.FC<Props> = ({
   play,
   setPlay,
   index,
@@ -62,7 +61,7 @@ export const PlayerButtons = ({
   setSecondaryIndex,
   categoryPrimary = "slide",
   categorySecondary = "slide",
-}: Props) => {
+}) => {
   const classes = useStyles();
 
   return (

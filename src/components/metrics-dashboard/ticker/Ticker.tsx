@@ -1,13 +1,13 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Box, Typography } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
 import * as Types from "../../../types/types";
 import { TickerElement } from "./TickerElement";
 import { TickerItem } from "./TickerItem";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         container: {
             width: "100%",
@@ -76,7 +76,7 @@ export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) =
     );
 
     const title = React.useMemo(
-        () => <MUI.Typography className={classNames(classes.textContainer, classes.title, classes.tickerText)}>{text}</MUI.Typography>,
+        () => <Typography className={classNames(classes.textContainer, classes.title, classes.tickerText)}>{text}</Typography>,
         [classes, text]
     );
 
@@ -91,7 +91,7 @@ export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) =
     );
 
     return (
-        <MUI.Box ref={setContainerRef} className={classes.container}>
+        <Box ref={setContainerRef} className={classes.container}>
             {containerRef && animationsInitialized ? (
                 fullList.map((el, i) => i <= index ? (
                     <TickerElement
@@ -103,6 +103,6 @@ export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) =
                     />
                 ) : null)
             ) : null}
-        </MUI.Box>
+        </Box>
     );
 };

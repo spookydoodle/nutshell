@@ -1,12 +1,12 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme, Grid, Hidden, Typography, Tooltip } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
 import { animations } from "../../../styles/animations";
 import { Header } from "../../../types/types";
 
-const useStyles = makeStyles((theme: MUI.Theme) =>
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         cardHeader: {
             marginTop: "2vh !important",
@@ -108,47 +108,47 @@ export const NavTitles: React.FC<Props> = ({
     const classes = useStyles();
 
     return (
-        <MUI.Grid
+        <Grid
             item
             container
             justifyContent="space-between"
             xs={12}
             className={classNames(classes.cardHeader, { [classes.pauseAnim]: animationsInitialized })}
         >
-            <MUI.Grid item xs={12} sm={8} className={classNames(classes.cardHeaderTitle, classes.underline)}>
-                <MUI.Typography fontSize={fontSizes.h2} color="inherit" component="span" className={classes.cardHeaderTitle} noWrap>
+            <Grid item xs={12} sm={8} className={classNames(classes.cardHeaderTitle, classes.underline)}>
+                <Typography fontSize={fontSizes.h2} color="inherit" component="span" className={classes.cardHeaderTitle} noWrap>
                     {current.titlePrimary}
-                </MUI.Typography>
+                </Typography>
                 {current?.titleSecondary && (
                     <>
-                        <MUI.Typography fontSize={fontSizes.h2} color="secondary" component="span" className={classes.cardHeaderTitle}>
+                        <Typography fontSize={fontSizes.h2} color="secondary" component="span" className={classes.cardHeaderTitle}>
                             {" // "}
-                        </MUI.Typography>
-                        <MUI.Typography fontSize={fontSizes.h2} color="inherit" component="span" className={classes.cardHeaderTitle} noWrap>
+                        </Typography>
+                        <Typography fontSize={fontSizes.h2} color="inherit" component="span" className={classes.cardHeaderTitle} noWrap>
                             {current.titleSecondary}
-                        </MUI.Typography>
+                        </Typography>
                     </>
                 )}
-            </MUI.Grid>
+            </Grid>
 
-            <MUI.Hidden only="xs">
-                <MUI.Grid item xs={4} className={classes.breadCrumbsContainer}>
+            <Hidden only="xs">
+                <Grid item xs={4} className={classes.breadCrumbsContainer}>
                     {current?.titleSecondaryShort && (
-                        <MUI.Tooltip title={current.titleSecondary || current.titleSecondaryShort} placement="top" arrow>
-                            <MUI.Typography fontSize={fontSizes.h2} color="inherit" component="span" className={classes.breadCrumbsText}>
+                        <Tooltip title={current.titleSecondary || current.titleSecondaryShort} placement="top" arrow>
+                            <Typography fontSize={fontSizes.h2} color="inherit" component="span" className={classes.breadCrumbsText}>
                                 {current.titleSecondaryShort}
-                            </MUI.Typography>
-                        </MUI.Tooltip>
+                            </Typography>
+                        </Tooltip>
                     )}
 
                     {sequences?.map((sequence, i) => (
-                        <MUI.Tooltip
+                        <Tooltip
                             key={i}
                             title={sequence === currentSequence ? sequence : `Change to ${sequence}`}
                             placement="top"
                             arrow
                         >
-                            <MUI.Typography
+                            <Typography
                                 fontSize={fontSizes.h2}
                                 color="inherit"
                                 component="span"
@@ -156,11 +156,11 @@ export const NavTitles: React.FC<Props> = ({
                                 onClick={() => setIndex(i === 0 ? 0 : 6)} // TODO: Implement correct logic
                             >
                                 {sequence}
-                            </MUI.Typography>
-                        </MUI.Tooltip>
+                            </Typography>
+                        </Tooltip>
                     )) ?? null}
-                </MUI.Grid>
-            </MUI.Hidden>
-        </MUI.Grid>
+                </Grid>
+            </Hidden>
+        </Grid>
     );
 };

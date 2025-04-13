@@ -56,7 +56,7 @@ export const Mobile: React.FC<Props> = ({ data, primaryMeasureName }) => {
                 primaryMeasureName={primaryMeasureName}
             />
 
-            <Footer text="Turbocharged by Spooky Doodle" />
+            <Footer text="Turbocharged by spookydoodle" />
         </>
     );
 };
