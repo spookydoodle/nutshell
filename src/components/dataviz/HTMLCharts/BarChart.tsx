@@ -57,7 +57,7 @@ interface Props {
     applySort?: boolean;
 }
 
-const BarChart: React.FC<Props> = ({
+export const BarChart: React.FC<Props> = ({
     variant,
     type,
     scrollId,
@@ -195,5 +195,3 @@ const BarChart: React.FC<Props> = ({
         </Box>
     );
 };
-
-export default BarChart;

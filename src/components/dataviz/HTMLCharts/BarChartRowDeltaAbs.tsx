@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import * as MUI from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import { useStyles } from "./styles";
 import { BarProps } from "./types";
 
@@ -26,32 +26,32 @@ export const BarChartRowDeltaAbs: React.FC<BarProps> = ({
     );
 
     return value ? (
-        <MUI.Grid
+        <Grid
             id={`chart-row-${i}`}
             item
             container
             direction="row"
             className={classNames(classes.row, { [classes.hide]: filler })}
         >
-            <MUI.Grid container item xs={6} justifyContent="space-between">
-                <MUI.Grid item container xs={9}>
-                    <MUI.Typography
+            <Grid container item xs={6} justifyContent="space-between">
+                <Grid item container xs={9}>
+                    <Typography
                         component="span"
                         noWrap
                         className={classNames(classes.labels, textClassName)}
                     >
-                        <MUI.Typography
+                        <Typography
                             component="span"
                             color="textSecondary"
                             className={classNames(classes.labels, textClassName, classes.rank)}
-                        >{`${i + 1}. `}</MUI.Typography>
+                        >{`${i + 1}. `}</Typography>
                         {category}
-                    </MUI.Typography>
-                </MUI.Grid>
+                    </Typography>
+                </Grid>
 
                 {delta && (
-                    <MUI.Grid item xs={3} container justifyContent="flex-end">
-                        <MUI.Typography
+                    <Grid item xs={3} container justifyContent="flex-end">
+                        <Typography
                             component="span"
                             noWrap
                             className={classNames(classes.labels, classes.delta, textClassName, {
@@ -61,24 +61,24 @@ export const BarChartRowDeltaAbs: React.FC<BarProps> = ({
                             })}
                         >
                             {deltaFormatted ? deltaFormatted : delta ? delta : undefined}
-                        </MUI.Typography>
-                    </MUI.Grid>
+                        </Typography>
+                    </Grid>
                 )}
-            </MUI.Grid>
+            </Grid>
 
-            <MUI.Grid item xs={3} className={classes.barContainer}>
-                <MUI.Box
+            <Grid item xs={3} className={classes.barContainer}>
+                <Box
                     width={`${(value / max) * 100}%`}
                     className={classNames(classes.bar, classes.neutralPrimary)}
                 />
-            </MUI.Grid>
+            </Grid>
 
-            <MUI.Grid item container justifyContent="flex-start" xs={3}>
-                <MUI.Typography noWrap className={classNames(classes.labels, classes.label, textClassName)}>
+            <Grid item container justifyContent="flex-start" xs={3}>
+                <Typography noWrap className={classNames(classes.labels, classes.label, textClassName)}>
                     {valueFormatted ? valueFormatted : value}
-                </MUI.Typography>
-            </MUI.Grid>
-        </MUI.Grid>
+                </Typography>
+            </Grid>
+        </Grid>
     ) : (
         <div></div>
     );

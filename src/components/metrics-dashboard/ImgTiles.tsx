@@ -25,7 +25,7 @@ interface Props {
     topN?: number;
 }
 
-const ImgTiles: React.FC<Props> = ({ title, variant = "md", data, topN = 3 }) => {
+export const ImgTiles: React.FC<Props> = ({ title, variant = "md", data, topN = 3 }) => {
     const classes = useStyles();
 
     return (
@@ -46,5 +46,3 @@ const ImgTiles: React.FC<Props> = ({ title, variant = "md", data, topN = 3 }) =>
         </>
     );
 };
-
-export default ImgTiles;

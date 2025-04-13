@@ -1,12 +1,12 @@
 import { makeStyles, createStyles } from '@mui/styles';
-import * as MUI from '@mui/material';
+import { Theme } from '@mui/material';
 import { animations, fontSizes } from "../../../styles";
 
 export const rowHeight = 20;
 export const rowGap = 2;
 export const maxBars = 12;
 
-export const useStyles = makeStyles((theme: MUI.Theme) =>
+export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paddingLeft: {
       paddingLeft: "20px",

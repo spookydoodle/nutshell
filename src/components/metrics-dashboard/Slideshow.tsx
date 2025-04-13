@@ -5,7 +5,7 @@ import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
 import { NavTitlesSales } from "./NavTitlesSales";
 import { Content } from "./Content";
-import BarChart from "../dataviz/HTMLCharts/BarChart";
+import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";

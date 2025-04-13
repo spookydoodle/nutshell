@@ -57,7 +57,7 @@ interface Props {
   value: MetricTypes.Datum;
 }
 
-const ProductTileCol: React.FC<Props> = ({ size = "md", i, value }) => {
+export const ProductTileCol: React.FC<Props> = ({ size = "md", i, value }) => {
   const classes = useStyles();
   const tooltip = `${value?.attributePrimary?.key} = ${value?.attributePrimary?.text} - ${value?.attributeSecondary?.text}`;
 
@@ -98,5 +98,3 @@ const ProductTileCol: React.FC<Props> = ({ size = "md", i, value }) => {
     </Grid>
   );
 };
-
-export default ProductTileCol;

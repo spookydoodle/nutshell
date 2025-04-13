@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, Typography } from '@mui/material';
-import ProductTileCol from "./ProductTileCol";
-import ProductTileRow from "./ProductTileRow";
+import { ProductTileCol } from "./ProductTileCol";
+import { ProductTileRow } from "./ProductTileRow";
 import * as MetricTypes from "./types";
 import { fontSizes } from "../../styles/themes";
 
