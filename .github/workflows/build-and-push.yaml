@@ -8,7 +8,7 @@ on:
       - v*
   pull_request:
 env:
-  IMAGE_NAME: flash
+  IMAGE_NAME: nutshell
 jobs:
   push:
     runs-on: ubuntu-latest
