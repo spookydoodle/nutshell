@@ -6,8 +6,8 @@ const data: MetricTypes.Data = {
     "tiles": [
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "measures": {
                 "primaryMeasure": {
@@ -20,10 +20,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 15.3,
@@ -45,8 +45,8 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 1"
+                "key": "The Cogwheel Bazaar",
+                "text": "PneumaPost Catalogue"
             },
             "measures": {
                 "primaryMeasure": {
@@ -59,10 +59,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 47.8,
@@ -84,8 +84,8 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 1"
+                "key": "The AetherNet Emporium",
+                "text": "PneumaPost Catalogue"
             },
             "measures": {
                 "primaryMeasure": {
@@ -98,10 +98,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 20.5,
@@ -126,11 +126,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R2",
-                "text": "Region 2"
+                "text": "Varnhelm"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "01",
@@ -147,10 +147,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -173,11 +173,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R2",
-                "text": "Region 2"
+                "text": "Varnhelm"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "02",
@@ -194,10 +194,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -220,11 +220,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R2",
-                "text": "Region 2"
+                "text": "Varnhelm"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "03",
@@ -241,10 +241,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -267,11 +267,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R1",
-                "text": "Region 1"
+                "text": "Brasshollow"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "04",
@@ -288,10 +288,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -314,11 +314,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R1",
-                "text": "Region 1"
+                "text": "Brasshollow"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "05",
@@ -335,10 +335,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -361,11 +361,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R1",
-                "text": "Region 1"
+                "text": "Brasshollow"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "06",
@@ -382,10 +382,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -408,11 +408,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R7",
-                "text": "Region 7"
+                "text": "Mournwald"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "07",
@@ -429,10 +429,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -455,11 +455,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R7",
-                "text": "Region 7"
+                "text": "Mournwald"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "08",
@@ -476,10 +476,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -502,11 +502,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R7",
-                "text": "Region 7"
+                "text": "Mournwald"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "09",
@@ -523,10 +523,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -549,11 +549,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R8",
-                "text": "Region 8"
+                "text": "Tarnaxis"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "10",
@@ -570,10 +570,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -596,11 +596,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R8",
-                "text": "Region 8"
+                "text": "Tarnaxis"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "11",
@@ -617,10 +617,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -643,11 +643,11 @@ const data: MetricTypes.Data = {
         {
             "tickerItemParent": {
                 "key": "R8",
-                "text": "Region 8"
+                "text": "Tarnaxis"
             },
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "tickerItem": {
                 "key": "12",
@@ -664,10 +664,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
@@ -690,17 +690,17 @@ const data: MetricTypes.Data = {
     ],
     "charts": [
         {
-            "characteristicName": "Geographic",
-            "characteristicNameShort": "GEO",
+            "characteristicName": "Realms",
+            "characteristicNameShort": "REALMS",
             "data": [
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R2",
-                        "text": "Region 2"
+                        "text": "Varnhelm"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -713,10 +713,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -738,12 +738,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R2",
-                        "text": "Region 2"
+                        "text": "Varnhelm"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -756,10 +756,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -781,12 +781,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R1",
-                        "text": "Region 1"
+                        "text": "Brasshollow"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -799,10 +799,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -824,12 +824,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R1",
-                        "text": "Region 1"
+                        "text": "Brasshollow"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -842,10 +842,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -867,12 +867,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R1",
-                        "text": "Region 1"
+                        "text": "Brasshollow"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -885,10 +885,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -910,12 +910,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R7",
-                        "text": "Region 7"
+                        "text": "Mournwald"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -928,10 +928,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -953,12 +953,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R7",
-                        "text": "Region 7"
+                        "text": "Mournwald"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -971,10 +971,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -996,12 +996,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R7",
-                        "text": "Region 7"
+                        "text": "Mournwald"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1014,10 +1014,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -1039,12 +1039,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R8",
-                        "text": "Region 8"
+                        "text": "Tarnaxis"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1057,10 +1057,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -1082,12 +1082,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R8",
-                        "text": "Region 8"
+                        "text": "Tarnaxis"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1100,10 +1100,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -1125,12 +1125,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R8",
-                        "text": "Region 8"
+                        "text": "Tarnaxis"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1143,10 +1143,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
@@ -1168,12 +1168,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R5",
-                        "text": "Region 5"
+                        "text": "Orrick Vale"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1186,10 +1186,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -10.1,
@@ -1211,12 +1211,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R5",
-                        "text": "Region 5"
+                        "text": "Orrick Vale"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1229,10 +1229,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 5.1,
@@ -1254,12 +1254,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R5",
-                        "text": "Region 5"
+                        "text": "Orrick Vale"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1272,10 +1272,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 50.1,
@@ -1297,12 +1297,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R3",
-                        "text": "Region 4"
+                        "text": "Dreksmoor"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1315,10 +1315,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -89.1,
@@ -1340,12 +1340,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R3",
-                        "text": "Region 4"
+                        "text": "Dreksmoor"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1358,10 +1358,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -61.1,
@@ -1383,12 +1383,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R3",
-                        "text": "Region 4"
+                        "text": "Dreksmoor"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1401,10 +1401,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 32.1,
@@ -1426,12 +1426,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R3",
-                        "text": "Region 3"
+                        "text": "Cindralune"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1444,10 +1444,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -10.1,
@@ -1469,12 +1469,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R3",
-                        "text": "Region 3"
+                        "text": "Cindralune"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1487,10 +1487,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -34.6,
@@ -1512,12 +1512,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R3",
-                        "text": "Region 3"
+                        "text": "Cindralune"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1530,10 +1530,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 50.1,
@@ -1555,12 +1555,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "R6",
-                        "text": "Region 6"
+                        "text": "Zepharion"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1573,10 +1573,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -10.1,
@@ -1598,12 +1598,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "R6",
-                        "text": "Region 6"
+                        "text": "Zepharion"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1616,10 +1616,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 5.1,
@@ -1641,12 +1641,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "R6",
-                        "text": "Region 6"
+                        "text": "Zepharion"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1659,10 +1659,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 50.1,
@@ -1685,17 +1685,17 @@ const data: MetricTypes.Data = {
             ]
         },
         {
-            "characteristicName": "Business",
-            "characteristicNameShort": "BUS",
+            "characteristicName": "Sectors",
+            "characteristicNameShort": "SECTORS",
             "data": [
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B1",
-                        "text": "Business 1",
+                        "text": "Aether Propulsion",
                         "shortText": "BUS_1",
                     },
                     "measures": {
@@ -1709,10 +1709,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -1734,12 +1734,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B2",
-                        "text": "Business 2",
+                        "text": "ChronoWorks",
                         "shortText": "BUS_2"
                     },
                     "measures": {
@@ -1753,10 +1753,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -1778,12 +1778,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B1",
-                        "text": "Business 1",
+                        "text": "Aether Propulsion",
                         "shortText": "BUS_1"
                     },
                     "measures": {
@@ -1797,10 +1797,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -1822,12 +1822,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B5",
-                        "text": "Business 6"
+                        "text": "SteelGuard"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1840,10 +1840,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -1865,12 +1865,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B2",
-                        "text": "Business 2",
+                        "text": "ChronoWorks",
                         "shortText": "BUS_2"
                     },
                     "measures": {
@@ -1884,10 +1884,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -32.3,
@@ -1909,12 +1909,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B5",
-                        "text": "Business 6"
+                        "text": "SteelGuard"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -1927,10 +1927,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 42.3,
@@ -1952,12 +1952,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B3",
-                        "text": "Business 3",
+                        "text": "CogBots ",
                         "shortText": "BUS_3"
                     },
                     "measures": {
@@ -1971,10 +1971,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -1996,12 +1996,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B4",
-                        "text": "Business 4"
+                        "text": "Obscura Optics"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2014,10 +2014,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2039,12 +2039,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B7",
-                        "text": "Business 5"
+                        "text": "Sparkworks"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2057,10 +2057,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2082,12 +2082,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B7",
-                        "text": "Business 5"
+                        "text": "Sparkworks"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2100,10 +2100,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2125,12 +2125,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B3",
-                        "text": "Business 3",
+                        "text": "CogBots ",
                         "shortText": "BUS_3"
                     },
                     "measures": {
@@ -2144,10 +2144,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2169,12 +2169,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B4",
-                        "text": "Business 4"
+                        "text": "Obscura Optics"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2187,10 +2187,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2212,12 +2212,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 2",
-                        "text": "Column Name 2"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                    "characteristicValue": {
                         "key": "B8",
-                        "text": "Business 7"
+                        "text": "ArcaneTech"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2230,10 +2230,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -42.3,
@@ -2255,12 +2255,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 1",
-                        "text": "Column Name 1"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                    "characteristicValue": {
                         "key": "B8",
-                        "text": "Business 7"
+                        "text": "ArcaneTech"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2273,10 +2273,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2298,12 +2298,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B1",
-                        "text": "Business 1",
+                        "text": "Aether Propulsion",
                         "shortText": "BUS_1"
                     },
                     "measures": {
@@ -2317,10 +2317,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -42.3,
@@ -2342,12 +2342,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B1",
-                        "text": "Business 14",
+                        "text": "Aether Propulsion4",
                         "shortText": "BUS_14"
                     },
                     "measures": {
@@ -2361,10 +2361,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -42.3,
@@ -2386,12 +2386,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B5",
-                        "text": "Business 6"
+                        "text": "SteelGuard"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2404,10 +2404,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -62.3,
@@ -2429,12 +2429,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B12",
-                        "text": "Business 12"
+                        "text": "Aether Propulsion2"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2447,10 +2447,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -62.3,
@@ -2472,12 +2472,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B2",
-                        "text": "Business 2",
+                        "text": "ChronoWorks",
                         "shortText": "BUS_2"
                     },
                     "measures": {
@@ -2491,10 +2491,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2516,12 +2516,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B2",
-                        "text": "Business 11",
+                        "text": "Aether Propulsion1",
                         "shortText": "BUS_11"
                     },
                     "measures": {
@@ -2535,10 +2535,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2560,12 +2560,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B7",
-                        "text": "Business 5"
+                        "text": "Sparkworks"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2578,10 +2578,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2603,12 +2603,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B10",
-                        "text": "Business 10"
+                        "text": "Aether Propulsion0"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2621,10 +2621,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2646,12 +2646,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B4",
-                        "text": "Business 4"
+                        "text": "Obscura Optics"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2664,10 +2664,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2689,12 +2689,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B9",
-                        "text": "Business 9"
+                        "text": "Whirligig Labs"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2707,10 +2707,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2732,12 +2732,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B3",
-                        "text": "Business 3",
+                        "text": "CogBots ",
                         "shortText": "BUS_3"
                     },
                     "measures": {
@@ -2751,10 +2751,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2776,12 +2776,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B3",
-                        "text": "Business 9",
+                        "text": "Whirligig Labs",
                         "shortText": "BUS_9"
                     },
                     "measures": {
@@ -2795,10 +2795,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2820,12 +2820,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B7",
-                        "text": "Business 7"
+                        "text": "ArcaneTech"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2838,10 +2838,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2863,12 +2863,12 @@ const data: MetricTypes.Data = {
                 },
                 {
                     "columnName": {
-                        "key": "Column Name 3",
-                        "text": "Column Name 3"
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
                     },
                    "characteristicValue": {
                         "key": "B8",
-                        "text": "Business 8"
+                        "text": "Smoke Rail"
                     },
                     "measures": {
                         "primaryMeasure": {
@@ -2881,10 +2881,10 @@ const data: MetricTypes.Data = {
                             "showUnitBefore": true,
                             "scaling": 1000,
                             "decimals": 0,
-                            "unit": "$"
+                            "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
@@ -2910,12 +2910,12 @@ const data: MetricTypes.Data = {
     "products": [
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -2928,7 +2928,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -2945,10 +2945,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -2970,12 +2970,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1",
             },
             "attributePrimary": {
@@ -2988,7 +2988,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3005,10 +3005,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3030,12 +3030,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1",
             },
             "attributePrimary": {
@@ -3043,12 +3043,12 @@ const data: MetricTypes.Data = {
                 "text": "Cool Product"
             },
             "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
+                "key": `${IMG_SERVER}/products/product-03.png`,
+                "text": `${IMG_SERVER}/products/product-03.png`
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3065,10 +3065,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3090,12 +3090,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2",
             },
             "attributePrimary": {
@@ -3108,7 +3108,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3125,10 +3125,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3150,12 +3150,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2",
             },
             "attributePrimary": {
@@ -3168,7 +3168,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3185,10 +3185,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3210,12 +3210,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2",
             },
             "attributePrimary": {
@@ -3228,7 +3228,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3245,10 +3245,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3270,12 +3270,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3",
             },
             "attributePrimary": {
@@ -3288,7 +3288,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3305,10 +3305,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3330,12 +3330,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3",
             },
             "attributePrimary": {
@@ -3348,7 +3348,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3365,10 +3365,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3390,12 +3390,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3",
             },
             "attributePrimary": {
@@ -3408,7 +3408,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3425,10 +3425,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3450,12 +3450,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1",
             },
             "attributePrimary": {
@@ -3468,7 +3468,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3485,10 +3485,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3510,12 +3510,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1",
             },
             "attributePrimary": {
@@ -3528,7 +3528,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3545,10 +3545,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3570,12 +3570,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1",
             },
             "attributePrimary": {
@@ -3583,12 +3583,12 @@ const data: MetricTypes.Data = {
                 "text": "Cool Product"
             },
             "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
+                "key": `${IMG_SERVER}/products/product-04.png`,
+                "text": `${IMG_SERVER}/products/product-04.png`
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3605,10 +3605,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3630,12 +3630,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2",
             },
             "attributePrimary": {
@@ -3648,7 +3648,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3665,10 +3665,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3690,12 +3690,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2",
             },
             "attributePrimary": {
@@ -3708,7 +3708,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3725,10 +3725,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3750,12 +3750,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2",
             },
             "attributePrimary": {
@@ -3768,7 +3768,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3785,10 +3785,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3810,12 +3810,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3",
             },
             "attributePrimary": {
@@ -3828,7 +3828,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3845,10 +3845,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3870,12 +3870,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -3888,7 +3888,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3905,10 +3905,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3930,12 +3930,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -3948,7 +3948,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -3965,10 +3965,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -3990,12 +3990,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -4008,7 +4008,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4025,10 +4025,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4050,12 +4050,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -4068,7 +4068,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4085,10 +4085,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4110,12 +4110,432 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
+                "shortText": "BUS 1"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-05.png`,
+                "text": `${IMG_SERVER}/products/product-05.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Row 1"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -4128,7 +4548,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4145,10 +4565,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4170,372 +4590,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -4548,7 +4608,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4565,10 +4625,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4590,12 +4650,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -4608,7 +4668,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4625,10 +4685,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4650,72 +4710,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Business 1",
-                "shortText": "BUS 1"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Row 1"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -4728,7 +4728,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4745,10 +4745,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4770,12 +4770,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -4788,7 +4788,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4805,10 +4805,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4830,12 +4830,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -4848,7 +4848,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4865,10 +4865,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4890,12 +4890,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -4908,7 +4908,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4925,10 +4925,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -4950,12 +4950,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -4968,7 +4968,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -4985,10 +4985,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5010,12 +5010,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -5028,7 +5028,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5045,10 +5045,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5070,12 +5070,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -5088,7 +5088,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5105,10 +5105,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5130,12 +5130,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -5148,7 +5148,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5165,10 +5165,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5190,12 +5190,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -5208,7 +5208,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5225,10 +5225,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5250,12 +5250,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -5268,7 +5268,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5285,10 +5285,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5310,12 +5310,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -5328,7 +5328,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5345,10 +5345,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5370,12 +5370,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -5388,7 +5388,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5405,10 +5405,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5430,12 +5430,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -5448,7 +5448,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5465,10 +5465,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5490,12 +5490,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -5508,7 +5508,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5525,10 +5525,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5550,12 +5550,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -5568,7 +5568,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "1",
@@ -5585,10 +5585,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5610,12 +5610,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -5628,7 +5628,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -5645,10 +5645,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5670,12 +5670,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -5688,7 +5688,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -5705,10 +5705,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5730,12 +5730,432 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
+                "shortText": "BUS 1"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-09.png`,
+                "text": `${IMG_SERVER}/products/product-09.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -5748,7 +6168,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -5765,10 +6185,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -5790,372 +6210,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -6168,7 +6228,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6185,10 +6245,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6210,12 +6270,432 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
+                "shortText": "BUS 1"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-06.png`,
+                "text": `${IMG_SERVER}/products/product-06.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "BUS 2"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots ",
+                "shortText": "BUS 3"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -6228,7 +6708,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6245,10 +6725,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6270,12 +6750,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -6288,7 +6768,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6305,10 +6785,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6330,12 +6810,72 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "BUS 1"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-07.png`,
+                "text": `${IMG_SERVER}/products/product-07.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Row 2"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "MTD": 123456,
+                        "WTD": 12345,
+                        "DAY": 1234
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "MTD": 0,
+                        "WTD": 0,
+                        "DAY": 0
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "MTD": 2345,
+                        "WTD": 123,
+                        "DAY": 123
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -6348,7 +6888,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6365,10 +6905,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6390,12 +6930,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -6408,7 +6948,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6425,10 +6965,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6450,12 +6990,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -6468,7 +7008,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6485,10 +7025,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6510,12 +7050,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -6528,7 +7068,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6545,10 +7085,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6570,12 +7110,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -6588,7 +7128,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6605,10 +7145,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6630,12 +7170,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -6648,7 +7188,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6665,10 +7205,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6690,12 +7230,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -6708,7 +7248,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6725,10 +7265,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6750,12 +7290,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -6768,7 +7308,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6785,10 +7325,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6810,12 +7350,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -6828,7 +7368,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6845,10 +7385,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6870,12 +7410,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -6888,7 +7428,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6905,10 +7445,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6930,12 +7470,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -6948,7 +7488,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -6965,10 +7505,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -6990,12 +7530,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -7008,7 +7548,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7025,10 +7565,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7050,12 +7590,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -7068,7 +7608,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7085,10 +7625,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7110,12 +7650,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -7128,7 +7668,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7145,10 +7685,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7170,12 +7710,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -7188,7 +7728,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7205,10 +7745,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7230,12 +7770,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -7248,7 +7788,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7265,10 +7805,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7290,12 +7830,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -7308,7 +7848,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7325,10 +7865,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7350,12 +7890,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "01",
-                "text": "Business 1",
+                "text": "Aether Propulsion",
                 "shortText": "BUS 1"
             },
             "attributePrimary": {
@@ -7368,7 +7908,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7385,10 +7925,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7410,12 +7950,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -7428,7 +7968,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7445,10 +7985,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7470,12 +8010,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -7488,7 +8028,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7505,10 +8045,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7530,12 +8070,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "02",
-                "text": "Business 2",
+                "text": "ChronoWorks",
                 "shortText": "BUS 2"
             },
             "attributePrimary": {
@@ -7548,7 +8088,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7565,10 +8105,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7590,12 +8130,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -7608,7 +8148,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7625,10 +8165,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7650,12 +8190,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -7668,7 +8208,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7685,10 +8225,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
@@ -7710,12 +8250,12 @@ const data: MetricTypes.Data = {
         },
         {
             "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
             },
             "slideName": {
                 "key": "03",
-                "text": "Business 3",
+                "text": "CogBots ",
                 "shortText": "BUS 3"
             },
             "attributePrimary": {
@@ -7728,7 +8268,7 @@ const data: MetricTypes.Data = {
             },
             "attributeSecondary": {
                 "key": "01",
-                "text": "Product Column Name 1"
+                "text": "Product Bar"
             },
             "rowName": {
                 "key": "2",
@@ -7745,550 +8285,10 @@ const data: MetricTypes.Data = {
                     "showUnitBefore": true,
                     "scaling": 1000,
                     "decimals": 0,
-                    "unit": "$"
+                    "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Business 1",
-                "shortText": "BUS 1"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Business 1",
-                "shortText": "BUS 1"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Business 1",
-                "shortText": "BUS 1"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "Business 2",
-                "shortText": "BUS 2"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 2",
-                "text": "Column Name 2"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 1",
-                "text": "Column Name 1"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "MTD": 0,
-                        "WTD": 0,
-                        "DAY": 0
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "MTD": 2345,
-                        "WTD": 123,
-                        "DAY": 123
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "Column Name 3",
-                "text": "Column Name 3"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "Business 3",
-                "shortText": "BUS 3"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Column Name 1"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Row 2"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "MTD": 123456,
-                        "WTD": 12345,
-                        "DAY": 1234
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "$"
-                },
-                "primaryMeasureDelta": {
-                    "suffix": "VS LY",
+                    
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,

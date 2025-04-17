@@ -113,7 +113,6 @@ export const Slideshow: React.FC<Props> = ({
                             <Box key={`chart-${name}-${key}-${i}`} className={classes.chartContainer}>
                                 <BarChart
                                     variant="scroll"
-                                    // variant="fade"
                                     type="abs-delta"
                                     rankColor="primary"
                                     labelSize="md"

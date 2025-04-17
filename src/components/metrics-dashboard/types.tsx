@@ -218,19 +218,19 @@ type StateDataItem = Array<{
         value: Array<{
             name: string; // tiles / bar-charts / items
             value: Array<{
-                name: string; // Total / Geographic / Business / Product Type 1 / Product Type 2
+                name: string; // Total / Realms / Sectors / Product Type 1 / Product Type 2
                 value: Datum[];
             }>;
         }>;
     }>;
 }>;
 
-type Category = "Geographic" | "Business" | "Products";
+type Category = "Realms" | "Sectors" | "Products";
 
 type ComponentType = "bar-chart" | "items" | "tiles" | "ticker";
 
 // Example: YTD -> Column Name 1 -> tiles -> Data
-// Example: YTD -> Column Name 1 -> bar-charts -> Geographic Bar Chart Data
+// Example: YTD -> Column Name 1 -> bar-charts -> Realms Bar Chart Data
 type StateDataMap = {
     slides: SlidesStateData;
     ticker?: TickerStateData;

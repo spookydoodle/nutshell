@@ -24,7 +24,7 @@ export const landingPageItems: { [key in string]: Item} = {
     "dashboard": {
         name: "SALES DASHBOARD",
         devices: ["mobile", "desktop"],
-        description: "Hhigh level sales results of some products.",
+        description: "High level sales results of steam punk products.",
         caption: "Data collected manually",
         image: gadgetsImg,
     },

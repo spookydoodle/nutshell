@@ -1,7 +1,7 @@
 {
   "name": "nutshell",
   "version": "0.1.0",
-  "description": "Spooky Nutshell",
+  "description": "Nutshell",
   "main": "src/index.tsx",
   "private": true,
   "scripts": {
