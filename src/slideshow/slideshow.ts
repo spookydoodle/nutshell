@@ -46,11 +46,11 @@ export abstract class Slideshow {
         return Slideshow.createResponsiveTheme(Slideshow.getDefaultThemeOptions(mode));
     };
 
-    public static createResponsiveTheme = (themeOptions: ThemeOptions) => {
+    private static createResponsiveTheme = (themeOptions: ThemeOptions) => {
         return responsiveFontSizes(createTheme(themeOptions));
     };
 
-    public static getDefaultThemeOptions = (mode: Mode): ThemeOptions => ({
+    private static getDefaultThemeOptions = (mode: Mode): ThemeOptions => ({
         // Needed to define thinner breakpoints than the default ones to assure nice layout for tiles
         // See client/src/logic/materialUITypes.tsx for module augmentation.
         // See here for more info on material-ui breakpoints: https://material-ui.com/customization/breakpoints/
