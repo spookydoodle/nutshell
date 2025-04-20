@@ -43,7 +43,7 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
             animationsInitialized={animationsInitialized}
             header={
                 <Hidden mdDown>
-                    <TitleLogoBar title='_NUTSHELL_DASHBOARD' titleShort='_NUTSHELL' backIcon />
+                    <TitleLogoBar title={slideshow.name} titleShort={slideshow.shortName} backIcon />
                 </Hidden>
             }
         >

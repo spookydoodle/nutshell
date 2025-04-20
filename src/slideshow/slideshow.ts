@@ -38,6 +38,9 @@ export abstract class Slideshow<T = unknown> {
         topBarVerticalPadding: 1,
     }
 
+    public abstract name: string;
+    public shortName?: string;
+
     /**
      * Data to present on the slides.
      */

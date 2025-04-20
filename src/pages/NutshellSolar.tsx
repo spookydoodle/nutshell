@@ -38,7 +38,7 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
 	return (
 		<NutshellLayout
             slideshow={slideshow}
-			header={<TitleLogoBar title='_SOLAR_NUTSHELL' titleShort='_SOL_NUT' backIcon />}
+			header={<TitleLogoBar title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
 		>
 			{slidesData && (
 				<SlideshowSolar
