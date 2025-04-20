@@ -2,42 +2,91 @@ import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import { Mode } from "../types";
 
+export interface SlideshowInitOptions {
+    /**
+     * Whether the slideshow is playing.
+     * Defaults to `true`.
+     */
+    play?: boolean;
+    /**
+     * Whether intro animations have been initialized and the slideshow can begin.
+     * Intro animations can include sliding or fading the background and various components in their places.
+     * Defaults to `false`.
+     */
+    animationsInitialized?: boolean;
+    /**
+     * Single slide duration in milliseconds.
+     * Defaults to `15000`.
+     */
+    duration?: number;
+    /**
+     * Whether the ticker should be displayed.
+     * Defaults to `true`.
+     */
+    showTicker?: boolean;
+}
+
 export abstract class Slideshow<T = unknown> {
     /**
      * Elements height given as percentage of viewport height.
      */
     public static vh = {
         /**
-         * Used for title and icons displayed in the primary row
+         * Used for title and icons displayed in the primary row.
          */
         topBarPrimaryRow: 5,
         topBarVerticalPadding: 1,
     }
 
     /**
-     * Data to present on the slides
+     * Data to present on the slides.
      */
     public data: T;
-
-    public constructor(d: T) {
-        this.data = d;
-    }
 
     /**
      * Whether the slideshow is playing.
      */
-    public play$ = new rxjs.BehaviorSubject<boolean>(false);
+    public play$: rxjs.BehaviorSubject<boolean>;
 
     /**
-     * Whether intro animations have been initialized.
-     * Intro animations are sliding the background and panels in their place.
+     * Whether intro animations have been initialized and the slideshow can begin.
+     * Intro animations can include sliding or fading the background and various components in their places.
      */
-    public animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(false);
+    public animationsInitialized$: rxjs.BehaviorSubject<boolean>;
+
+    /**
+     * Single slide duration in milliseconds.
+     */
+    public duration$: rxjs.BehaviorSubject<number>;
+
+    /**
+     * Whether the ticker should be displayed.
+     */
+    public showTicker$: rxjs.BehaviorSubject<boolean>;
+
+    public constructor(d: T, options?: SlideshowInitOptions) {
+        const { 
+            play = true,
+            animationsInitialized = false,
+            duration = 15000,
+            showTicker = true
+        } = options ?? {};
+        this.data = d;
+        this.play$ = new rxjs.BehaviorSubject<boolean>(play);
+        this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
+        this.duration$ = new rxjs.BehaviorSubject<number>(duration);
+        this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
+    }
 
     /**
      * Current slide index.
      */
     public index$ = new rxjs.BehaviorSubject<number>(0);
+
+    /**
+     * Previous slide index
+     */
+    public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
 
     /**
      * Function which extends theme.

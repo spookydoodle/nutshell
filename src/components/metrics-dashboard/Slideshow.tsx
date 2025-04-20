@@ -9,6 +9,7 @@ import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";
+import { SalesSlideshow } from "../../slideshow/sales/sales-slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -38,7 +39,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    animationsInitialized: boolean;
+    slideshow: SalesSlideshow;
     play: boolean;
     setPlay: (play: boolean) => void;
     data: MetricTypes.SlidesStateData;
@@ -48,7 +49,7 @@ interface Props {
 }
 
 export const Slideshow: React.FC<Props> = ({
-    animationsInitialized,
+    slideshow,
     play,
     setPlay,
     data,
@@ -58,7 +59,11 @@ export const Slideshow: React.FC<Props> = ({
 }) => {
     const classes = useStyles();
     const appId = Hooks.useAppId();
-    const [duration, setDuration] = useState(15000);
+    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
+    const [_prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
+    const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
+    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
+    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
     const dataKeys = data ? [...data.keys()] : [];
     const dataValues = data ? [...data.values()] : [];
@@ -84,8 +89,6 @@ export const Slideshow: React.FC<Props> = ({
 
     // Change index every 'duration' seconds. Index is used to display current slide in Transitions
     const [_seqIndex, setSeqIndex] = useState(0);
-    const [index, setIndex] = useState(0);
-    const [_prevIndex, setPrevIndex] = useState(0);
 
     useEffect(() => {
         if (play) {
@@ -140,8 +143,6 @@ export const Slideshow: React.FC<Props> = ({
                     })}
             </Box>;
         });
-
-    const [tickerOn, setTicker] = useState(true);
 
     const onSequenceClick = (seqInd: number) =>
         setIndex((prev: number) => {
@@ -201,7 +202,7 @@ export const Slideshow: React.FC<Props> = ({
                     </Hidden>
                 ))}
 
-                {tickerData && tickerOn ? (
+                {tickerData && showTicker ? (
                     <Hidden lgDown>
                         <Ticker
                             animationsInitialized={animationsInitialized}
@@ -224,8 +225,8 @@ export const Slideshow: React.FC<Props> = ({
                     sequences={[""]}
                     // seqName={sequences[Math.floor(index / seqLen)]}
                     // setOpenDialog={setOpenDialog}
-                    tickerOn={tickerOn}
-                    setTicker={setTicker}
+                    showTicker={showTicker}
+                    setShowTicker={setShowTicker}
                 />
             </Grid>
         </Grid>

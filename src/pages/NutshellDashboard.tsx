@@ -4,6 +4,7 @@ import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
+import * as Hooks from "../hooks";
 import * as Utils from "../utils";
 import { SalesSlideshow } from "../slideshow/sales/sales-slideshow";
 
@@ -13,8 +14,8 @@ interface Props {
 }
 
 export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
-    const [play, setPlay] = useState(false);
-    const [animationsInitialized, setAnimationsInitialized] = useState(false);
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [animationsInitialized, setAnimationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const newData = Utils.Metrics.convertToMap(slideshow.data);
 
     useEffect(() => {
@@ -50,7 +51,7 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
                 <>
                     <Hidden mdDown>
                         <Slideshow
-                            animationsInitialized={animationsInitialized}
+                            slideshow={slideshow}
                             play={play}
                             setPlay={setPlay}
                             data={slidesData}

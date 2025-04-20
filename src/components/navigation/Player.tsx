@@ -50,8 +50,8 @@ interface Props {
 	sequences: Array<string>;
 	categoryPrimary?: string;
 	categorySecondary?: string;
-	tickerOn: boolean;
-	setTicker: (on: boolean) => void;
+	showTicker: boolean;
+	setShowTicker: (on: boolean) => void;
 }
 
 export const Player: React.FC<Props> = ({
@@ -69,8 +69,8 @@ export const Player: React.FC<Props> = ({
 	sequences,
 	categoryPrimary,
 	categorySecondary,
-	tickerOn,
-	setTicker,
+	showTicker,
+	setShowTicker,
 }) => {
 	const classes = useStyles();
 	const [pin, setPin] = React.useState(false);
@@ -151,8 +151,8 @@ export const Player: React.FC<Props> = ({
 				handleSettingsClose={handleSettingsClose}
 				duration={duration}
 				setDuration={setDuration}
-				tickerOn={tickerOn}
-				setTicker={setTicker}
+				showTicker={showTicker}
+				setShowTicker={setShowTicker}
 			/>
 		</>
 	);

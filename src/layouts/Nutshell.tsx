@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { createTheme, Theme } from "@mui/material";
+import { Theme } from "@mui/material";
 import { NutshellContent } from "./NutshellContent";
 import { ThemeWrapper } from "./ThemeWrapper";
 import { Slideshow } from "../slideshow/slideshow";
@@ -16,7 +16,7 @@ interface Props {
 }
 
 export const NutshellLayout: React.FC<Props> = (props) => {
-    const mode = Hooks.useSubject(AppState.mode$);
+    const [mode] = Hooks.useSubjectState(AppState.mode$);
     const theme = useMemo(
         (): Theme => props.slideshow?.createTheme(mode) ?? Slideshow.createDefaultTheme(mode),
         [props.slideshow, mode]

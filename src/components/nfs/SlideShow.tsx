@@ -5,10 +5,11 @@ import { Background } from "./Background";
 import { Player } from "../navigation/Player";
 import { Transitions } from "../metrics-dashboard/Transitions";
 import { SmallScreenMessage } from "../metrics-dashboard/SmallScreenMessage";
-import { NEED_FOR_SPEED, imgPerSlide } from "../../slideshow/nfs/data";
+import { imgPerSlide } from "../../slideshow/nfs/data";
 import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
 import { NfsSlideshow } from "../../slideshow/nfs/nfs-slideshow";
+import * as Hooks from '../../hooks';
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -30,11 +31,11 @@ interface Props {
 
 export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
-    const [play, setPlay] = React.useState(true);
-    const [duration, setDuration] = React.useState(30000);
-    const [index, setIndex] = React.useState(0);
-    const [prevIndex, setPrevIndex] = React.useState(0);
-    const [tickerOn, setTicker] = React.useState(true);
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
+    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
+    const [prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
+    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
     const labels: string[] = slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""];
     const totalLen = slideshow.data?.games?.length || 0;
@@ -109,8 +110,8 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         sequences={sequences}
                         categoryPrimary="game"
                         categorySecondary="image"
-                        tickerOn={tickerOn}
-                        setTicker={setTicker}
+                        showTicker={showTicker}
+                        setShowTicker={setShowTicker}
                     />
 
                     <Progress slideIndex={index} onIndexChange={setIndex} onPrevIndexChange={setPrevIndex} />

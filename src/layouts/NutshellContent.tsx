@@ -78,7 +78,7 @@ export const NutshellContent: React.FC<Props> = ({
 }) => {
     const classes = useStyles();
     const appId = Hooks.useAppId();
-    const backgroundIndex = Hooks.useSubject(AppState.backgroundIndex$);
+    const [backgroundIndex] = Hooks.useSubjectState(AppState.backgroundIndex$);
 
     const img = React.useMemo(
         (): Img | undefined => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import * as rxjs from 'rxjs';
 
-export function useSubject<T>(subject$: rxjs.BehaviorSubject<T>): T {
+export function useSubjectState<T>(subject$: rxjs.BehaviorSubject<T>): [T, React.Dispatch<React.SetStateAction<T>>] {
     const [subject, setSubject] = React.useState<T>(subject$.value);
 
     React.useEffect(() => {
@@ -12,5 +12,17 @@ export function useSubject<T>(subject$: rxjs.BehaviorSubject<T>): T {
         };
     }, [subject$]);
 
-    return subject;
+    const handleChange = React.useCallback(
+        (value: T | ((prev: T) => T)) => {
+            if (typeof value === 'function') {
+                const nextValue = (value as (prev: T) => T)(subject$.value);
+                subject$.next(nextValue)
+            } else {
+                subject$.next(value);
+            }
+        },
+        [subject$]
+    );
+    
+    return [subject, handleChange];
 }

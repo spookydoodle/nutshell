@@ -65,8 +65,8 @@ interface Props {
   labels?: Array<string>;
   seqName: string;
   setOpenDialog: (open: boolean) => void;
-  tickerOn: boolean;
-  setTicker: (on: boolean) => void;
+  showTicker: boolean;
+  setShowTicker: (on: boolean) => void;
 }
 
 export const PlayerSales: React.FC<Props> = ({
@@ -81,8 +81,8 @@ export const PlayerSales: React.FC<Props> = ({
   labels,
   seqName,
   setOpenDialog,
-  tickerOn,
-  setTicker,
+  showTicker,
+  setShowTicker,
 }) => {
   const classes = useStyles();
   const [pin, setPin] = useState(false);
@@ -220,8 +220,8 @@ export const PlayerSales: React.FC<Props> = ({
         handleSettingsClose={handleSettingsClose}
         duration={duration}
         setDuration={setDuration}
-        tickerOn={tickerOn}
-        setTicker={setTicker}
+        showTicker={showTicker}
+        setShowTicker={setShowTicker}
       />
     </>
   );
