@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/Header";
+import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
 import { createStateData } from "../data/solar-data";
+import { Slideshow } from "../slideshow/slideshow";
 import * as Hooks from '../hooks';
+
 const data = createStateData();
 
-export const NutshellSolar: React.FC = () => {
+interface Props {
+    slideshow: Slideshow;
+}
+
+export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
 	const appId = Hooks.useAppId();
 
 	// Delay the transitions 5 seconds, when all CSS transitions are finished
@@ -34,6 +40,7 @@ export const NutshellSolar: React.FC = () => {
 
 	return (
 		<NutshellLayout
+            slideshow={slideshow}
 			header={<TitleLogoBar title='_SOLAR_NUTSHELL' titleShort='_SOL_NUT' backIcon={true} />}
 		>
 			{slidesData && (

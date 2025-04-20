@@ -1,8 +1,10 @@
 import React from "react";
 import { NutshellContent } from "./NutshellContent";
 import { ThemeWrapper } from "./ThemeWrapper";
+import { Slideshow } from "../slideshow/slideshow";
 
 interface Props {
+    slideshow: Slideshow;
     animationsInitialized?: boolean;
     header?: React.ReactNode;
     footer?: React.ReactNode;
@@ -12,7 +14,7 @@ interface Props {
 export const NutshellLayout: React.FC<Props> = (props) => {
 
     return (
-        <ThemeWrapper>
+        <ThemeWrapper slideshow={props.slideshow}>
             <NutshellContent {...props} />
         </ThemeWrapper>
     );

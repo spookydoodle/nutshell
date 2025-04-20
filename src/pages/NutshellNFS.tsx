@@ -1,17 +1,23 @@
 import React from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/Header";
+import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { ImagePreloadWrapper } from "../components/nfs/ImagePreloadWrapper";
 import { SlideShow } from "../components/nfs/SlideShow";
+import { Slideshow } from "../slideshow/slideshow";
 
-export const NutshellNFS: React.FC = () => {
-  return (
-    <NutshellLayout
-      header={<TitleLogoBar title='_NEED_FOR_NUTSHELL' titleShort='_NFS_NUTSHELL' backIcon />}
-    >
-      <ImagePreloadWrapper>
-        <SlideShow />
-      </ImagePreloadWrapper>
-    </NutshellLayout>
-  );
+interface Props {
+    slideshow: Slideshow;
+}
+
+export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
+    return (
+        <NutshellLayout
+            slideshow={slideshow}
+            header={<TitleLogoBar title='_NEED_FOR_NUTSHELL' titleShort='_NFS_NUTSHELL' backIcon />}
+        >
+            <ImagePreloadWrapper>
+                <SlideShow />
+            </ImagePreloadWrapper>
+        </NutshellLayout>
+    );
 };

@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Hidden } from '@mui/material';
 import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/Header";
+import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
 import * as Utils from "../utils";
 import data from "../data/nutshell-data";
+import { Slideshow as SlideshowType } from "../slideshow/slideshow";
 
 const newData = Utils.Metrics.convertToMap(data);
 
-export const NutshellDashboard: React.FC = () => {
+interface Props {
+    slideshow: SlideshowType;
+}
+
+export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
     const [play, setPlay] = useState(false);
     const [animationsInitialized, setAnimationsInitialized] = useState(false);
 
@@ -34,16 +39,17 @@ export const NutshellDashboard: React.FC = () => {
 
     return (
         <NutshellLayout
+            slideshow={slideshow}
             animationsInitialized={animationsInitialized}
             header={
-                <Hidden smDown>
-                    <TitleLogoBar title='_NUTSHELL_DASHBOARD' titleShort='_NUTSHELL' backIcon={true} />
+                <Hidden mdDown>
+                    <TitleLogoBar title='_NUTSHELL_DASHBOARD' titleShort='_NUTSHELL' backIcon />
                 </Hidden>
             }
         >
             {slidesData && (
                 <>
-                    <Hidden smDown>
+                    <Hidden mdDown>
                         <Slideshow
                             animationsInitialized={animationsInitialized}
                             play={play}

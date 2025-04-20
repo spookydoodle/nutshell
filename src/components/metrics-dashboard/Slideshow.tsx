@@ -190,7 +190,6 @@ export const Slideshow: React.FC<Props> = ({
                 />
 
                 {[...slides[index].data.entries()].map(([name, value], i) => (
-                    // TODO: Responsiveness: hide selected columnNames on smaller viewports where they no longer fit
                     <Hidden key={`${name}-${i}`} mdDown={i > 0} lgDown={i === 1}>
                         <Content
                             animationsInitialized={animationsInitialized}
