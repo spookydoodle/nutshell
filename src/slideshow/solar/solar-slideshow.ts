@@ -1,8 +1,8 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode } from "../types";
-import { Slideshow } from "./slideshow";
+import { Mode, StateDataMap } from "../../types";
+import { Slideshow } from "../slideshow";
 
-export class SolarSlideshow extends Slideshow {
+export class SolarSlideshow extends Slideshow<StateDataMap> {
     public getThemeOptions = (mode: Mode): ThemeOptions => ({
         palette: {
             primary: {

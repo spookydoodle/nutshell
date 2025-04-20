@@ -3,10 +3,10 @@ import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { ImagePreloadWrapper } from "../components/nfs/ImagePreloadWrapper";
 import { SlideShow } from "../components/nfs/SlideShow";
-import { Slideshow } from "../slideshow/slideshow";
+import { NfsSlideshow } from "../slideshow/nfs/nfs-slideshow";
 
 interface Props {
-    slideshow: Slideshow;
+    slideshow: NfsSlideshow;
 }
 
 export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
@@ -16,7 +16,7 @@ export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
             header={<TitleLogoBar title='_NEED_FOR_NUTSHELL' titleShort='_NFS_NUTSHELL' backIcon />}
         >
             <ImagePreloadWrapper>
-                <SlideShow />
+                <SlideShow slideshow={slideshow} />
             </ImagePreloadWrapper>
         </NutshellLayout>
     );

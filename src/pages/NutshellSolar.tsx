@@ -2,14 +2,11 @@ import React, { useState, useEffect } from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
-import { createStateData } from "../data/solar-data";
-import { Slideshow } from "../slideshow/slideshow";
+import { SolarSlideshow } from "../slideshow/solar/solar-slideshow";
 import * as Hooks from '../hooks';
 
-const data = createStateData();
-
 interface Props {
-    slideshow: Slideshow;
+    slideshow: SolarSlideshow;
 }
 
 export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
@@ -22,7 +19,7 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
 	useEffect(() => {
 		// Init is used to pause css animations
 		// Delay play until entry animations are finished
-		if (!animationsInitialized && data) {
+		if (!animationsInitialized && slideshow.data) {
 			const timeout = setTimeout(() => {
 				setAnimationsInitialized(true);
                 setPlay(true);
@@ -34,7 +31,7 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
 		}
 	}, [animationsInitialized]);
 
-	const selectedData = data?.get(appId);
+	const selectedData = slideshow.data?.get(appId);
 	const tickerData = selectedData?.ticker;
 	const slidesData = selectedData?.slides;
 

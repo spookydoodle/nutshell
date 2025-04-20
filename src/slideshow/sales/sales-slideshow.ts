@@ -1,8 +1,9 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode } from "../types";
-import { Slideshow } from "./slideshow";
+import { Mode } from "../../types";
+import { Slideshow } from "../slideshow";
+import * as MetricTypes from "../../components/metrics-dashboard/types";
 
-export class SalesSlideshow extends Slideshow {
+export class SalesSlideshow extends Slideshow<MetricTypes.Data> {
     public getThemeOptions = (mode: Mode): ThemeOptions => ({
         palette: {
             primary: {

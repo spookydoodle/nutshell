@@ -1,5 +1,5 @@
-import * as MetricTypes from "../components/metrics-dashboard/types";
-import { IMG_SERVER } from "../img/cmd";
+import * as MetricTypes from "../../components/metrics-dashboard/types";
+import { IMG_SERVER } from "../../img/cmd";
 
 const data: MetricTypes.Data = {
     "primaryMeasureName": "Coinflow",

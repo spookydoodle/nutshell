@@ -1,14 +1,17 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { SalesSlideshow } from "./slideshow/sales-slideshow";
-import { SolarSlideshow } from "./slideshow/solar-slideshow";
-import { NfsSlideshow } from "./slideshow/nfs-slideshow";
+import { SalesSlideshow } from "./slideshow/sales/sales-slideshow";
+import { SolarSlideshow } from "./slideshow/solar/solar-slideshow";
+import { NfsSlideshow } from "./slideshow/nfs/nfs-slideshow";
 import * as Pages from "./pages";
+import nutshellData from "./slideshow/sales/nutshell-data";
+import { createStateData } from "./slideshow/solar/solar-data";
+import { NEED_FOR_SPEED } from "./slideshow/nfs/data";
 import "./App.css";
 
-const salesSlideshow = new SalesSlideshow();
-const solarSlideshow = new SolarSlideshow();
-const nfsSlideshow = new NfsSlideshow();
+const salesSlideshow = new SalesSlideshow(nutshellData);
+const solarSlideshow = new SolarSlideshow(createStateData());
+const nfsSlideshow = new NfsSlideshow(NEED_FOR_SPEED);
 
 const router = createBrowserRouter([
     {

@@ -1,7 +1,8 @@
+import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import { Mode } from "../types";
 
-export abstract class Slideshow {
+export abstract class Slideshow<T = unknown> {
     /**
      * Elements height given as percentage of viewport height.
      */
@@ -12,6 +13,31 @@ export abstract class Slideshow {
         topBarPrimaryRow: 5,
         topBarVerticalPadding: 1,
     }
+
+    /**
+     * Data to present on the slides
+     */
+    public data: T;
+
+    public constructor(d: T) {
+        this.data = d;
+    }
+
+    /**
+     * Whether the slideshow is playing.
+     */
+    public play$ = new rxjs.BehaviorSubject<boolean>(false);
+
+    /**
+     * Whether intro animations have been initialized.
+     * Intro animations are sliding the background and panels in their place.
+     */
+    public animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(false);
+
+    /**
+     * Current slide index.
+     */
+    public index$ = new rxjs.BehaviorSubject<number>(0);
 
     /**
      * Function which extends theme.
@@ -42,7 +68,7 @@ export abstract class Slideshow {
         return Slideshow.createResponsiveTheme(themeOptions);
     };
 
-    public static createDefaultTheme = (mode: Mode) => {
+    public static createDefaultTheme = (mode: Mode): Theme => {
         return Slideshow.createResponsiveTheme(Slideshow.getDefaultThemeOptions(mode));
     };
 

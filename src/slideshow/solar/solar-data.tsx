@@ -1,11 +1,11 @@
-import { StateDataMap, Decimals, SlideData, Value, Metric } from "../types/types";
+import { StateDataMap, Decimals, SlideData, Value, Metric } from "../../types/types";
 import {
     PLANET_IMG,
     PLANET_FACTS,
     METRIC_DATA,
     METRIC_DEF,
 } from "./solar-system-data";
-import * as Utils from "../utils";
+import * as Utils from "../../utils";
 
 const getMetricDelta = (val: number, metric: Metric): number => {
     return val / METRIC_DATA[metric].data["Earth"];

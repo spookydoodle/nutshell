@@ -1,8 +1,9 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode } from "../types";
-import { Slideshow } from "./slideshow";
+import { Mode } from "../../types";
+import { Slideshow } from "../slideshow";
+import { NutshellData } from "../../components/nfs/types";
 
-export class NfsSlideshow extends Slideshow {
+export class NfsSlideshow extends Slideshow<NutshellData> {
     public getThemeOptions = (mode: Mode): ThemeOptions => ( {
         palette: {
             primary: {

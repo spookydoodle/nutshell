@@ -5,18 +5,17 @@ import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
 import * as Utils from "../utils";
-import data from "../data/nutshell-data";
-import { Slideshow as SlideshowType } from "../slideshow/slideshow";
+import { SalesSlideshow } from "../slideshow/sales/sales-slideshow";
 
-const newData = Utils.Metrics.convertToMap(data);
 
 interface Props {
-    slideshow: SlideshowType;
+    slideshow: SalesSlideshow;
 }
 
 export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
     const [play, setPlay] = useState(false);
     const [animationsInitialized, setAnimationsInitialized] = useState(false);
+    const newData = Utils.Metrics.convertToMap(slideshow.data);
 
     useEffect(() => {
         if (!animationsInitialized) {
@@ -57,12 +56,12 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
                             data={slidesData}
                             tickerData={tickerData}
                             setOpenDialog={setOpenDialog}
-                            primaryMeasureName={data.primaryMeasureName}
+                            primaryMeasureName={slideshow.data.primaryMeasureName}
                         />
                     </Hidden>
 
                     <Hidden mdUp>
-                        <Mobile data={data} primaryMeasureName={data.primaryMeasureName} />
+                        <Mobile data={slideshow.data} primaryMeasureName={slideshow.data.primaryMeasureName} />
                     </Hidden>
                 </>
             )}
