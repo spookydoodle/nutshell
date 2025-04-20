@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Hidden } from '@mui/material';
 import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/Header";
+import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
+import * as Hooks from "../hooks";
 import * as Utils from "../utils";
-import data from "../data/nutshell-data";
+import { SalesSlideshow } from "../slideshow/sales/sales-slideshow";
 
-const newData = Utils.Metrics.convertToMap(data);
 
-export const NutshellDashboard: React.FC = () => {
-    const [play, setPlay] = useState(false);
-    const [animationsInitialized, setAnimationsInitialized] = useState(false);
+interface Props {
+    slideshow: SalesSlideshow;
+}
+
+export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [animationsInitialized, setAnimationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
+    const newData = Utils.Metrics.convertToMap(slideshow.data);
 
     useEffect(() => {
         if (!animationsInitialized) {
@@ -34,29 +39,30 @@ export const NutshellDashboard: React.FC = () => {
 
     return (
         <NutshellLayout
+            slideshow={slideshow}
             animationsInitialized={animationsInitialized}
             header={
-                <Hidden smDown>
-                    <TitleLogoBar title='_NUTSHELL_DASHBOARD' titleShort='_NUTSHELL' backIcon={true} />
+                <Hidden mdDown>
+                    <TitleLogoBar title='_NUTSHELL_DASHBOARD' titleShort='_NUTSHELL' backIcon />
                 </Hidden>
             }
         >
             {slidesData && (
                 <>
-                    <Hidden smDown>
+                    <Hidden mdDown>
                         <Slideshow
-                            animationsInitialized={animationsInitialized}
+                            slideshow={slideshow}
                             play={play}
                             setPlay={setPlay}
                             data={slidesData}
                             tickerData={tickerData}
                             setOpenDialog={setOpenDialog}
-                            primaryMeasureName={data.primaryMeasureName}
+                            primaryMeasureName={slideshow.data.primaryMeasureName}
                         />
                     </Hidden>
 
                     <Hidden mdUp>
-                        <Mobile data={data} primaryMeasureName={data.primaryMeasureName} />
+                        <Mobile data={slideshow.data} primaryMeasureName={slideshow.data.primaryMeasureName} />
                     </Hidden>
                 </>
             )}

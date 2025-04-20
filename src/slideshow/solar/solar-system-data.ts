@@ -1,4 +1,3 @@
-// Solar system data
 export const METRIC_DEF = {
     "Mass": "Mass is both a property of a physical body and a measure of its resistance to acceleration when a net force is applied.",
     "Diameter": "In geometry, a diameter of a circle is any straight line segment that passes through the center of the circle and whose endpoints lie on the circle.",
@@ -22,7 +21,17 @@ export const METRIC_DEF = {
     "Global Magnetic Field": "Magnetic field, a vector field in the neighbourhood of a magnet, electric current, or changing electric field, in which magnetic forces are observable. Magnetic fields such as that of Earth cause magnetic compass needles and other permanent magnets to line up in the direction of the field. ",
 };
 
-export const METRIC_DATA = {
+type Property = 'Mass' | 'Diameter' | 'Density' | 'Gravity' | 'Escape Velocity' | 'Rotation Period' | 'Length of Day' | 'Distance from Sun' | 'Perihelion' | 'Aphelion' | 'Orbital Period'
+| 'Orbital Inclination' | 'Orbital Velocity' | 'Orbital Eccentricity' | 'Obliquity to Orbit' | 'Mean Temperature' | 'Number of Moons' | 'Surface Pressure';
+type Planet = 'Mercury' | 'Venus' | 'Earth' | 'Mars' | 'Jupiter' | 'Saturn' | 'Uranus' | 'Neptune' | 'Pluto';
+
+export const METRIC_DATA: {
+    [key in Property]: {
+        data: { [key in (Planet | 'Moon')]: number };
+        unit: string;
+        decimals: number;
+    };
+} = {
     Mass: {
         data: {
             Mercury: 0.33,
@@ -286,10 +295,10 @@ export const METRIC_DATA = {
             Earth: 1,
             Moon: 0,
             Mars: 0.01,
-            // Jupiter: 0,  // Unknown
-            // Saturn: 0,   // Unknown
-            // Uranus: 0,   // Unknown
-            // Neptune: 0,  // Unknown
+            Jupiter: -1,  // Unknown
+            Saturn: -1,   // Unknown
+            Uranus: -1,   // Unknown
+            Neptune: -1,  // Unknown
             Pluto: 0.00001,
         },
         unit: "bars",
@@ -345,7 +354,14 @@ export const METRIC_DATA = {
     // },
 };
 
-export const PLANET_IMG = {
+export const PLANET_IMG: {
+    [key in Planet]: {
+        name: string;
+        img: string;
+        description: string;
+        link: string;
+    }[];
+} = {
     Mercury: [
         {
             name: "Global Mosaic",
@@ -497,7 +513,7 @@ export const PLANET_IMG = {
     ],
 };
 
-export const PLANET_FACTS = [
+export const PLANET_FACTS: string[] = [
     "Hot",
     "No-moony",
     "Human",

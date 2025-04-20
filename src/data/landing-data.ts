@@ -2,17 +2,16 @@
 import ComputerIcon from '@mui/icons-material/Computer';
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import { IMG_SERVER } from "../img/cmd";
+import * as Types from '../types';
 
 const imgServer = `${IMG_SERVER}/landing`;
 const nfsImg = `${imgServer}/nfs.jpg`;
 const solarImg = `${imgServer}/solar.jpg`;
 const gadgetsImg = `${imgServer}/gadgets.jpg`;
 
-type Device = 'desktop' | 'mobile';
-
 interface Item {
     name: string;
-    devices: Device[];
+    devices: Types.Device[];
     icons?: string[];
     description: string;
     caption?: string | string[];
@@ -24,7 +23,7 @@ export const landingPageItems: { [key in string]: Item} = {
     "dashboard": {
         name: "SALES DASHBOARD",
         devices: ["mobile", "desktop"],
-        description: "Hhigh level sales results of some products.",
+        description: "High level sales results of steam punk products.",
         caption: "Data collected manually",
         image: gadgetsImg,
     },
@@ -47,7 +46,7 @@ export const landingPageItems: { [key in string]: Item} = {
     },
 };
 
-export const deviceIcons: { [key in Device]: typeof PhoneAndroidIcon } = {
+export const deviceIcons: { [key in Types.Device]: typeof PhoneAndroidIcon } = {
     mobile: PhoneAndroidIcon,
     desktop: ComputerIcon,
 };

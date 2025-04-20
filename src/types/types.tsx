@@ -1,5 +1,7 @@
 export type Mode = "light" | "dark" | undefined;
 
+export type Device = 'desktop' | 'mobile';
+
 export interface Dimension<T = string> {
   key: T;
   text: string;

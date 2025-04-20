@@ -58,8 +58,8 @@ interface Props {
     handleSettingsClose: () => void;
     duration: number;
     setDuration: React.Dispatch<React.SetStateAction<number>>;
-    tickerOn: boolean;
-    setTicker: (on: boolean) => void;
+    showTicker: boolean;
+    setShowTicker: (on: boolean) => void;
 }
 
 export const SettingsDialog: React.FC<Props> = ({
@@ -67,19 +67,19 @@ export const SettingsDialog: React.FC<Props> = ({
     handleSettingsClose,
     duration,
     setDuration,
-    tickerOn,
-    setTicker,
+    showTicker,
+    setShowTicker,
 }) => {
     const classes = useStyles();
     const location = useLocation();
     const imgArr = images[location.pathname.substring(1)] ?? [];
-    const backgroundIndex = Hooks.useSubject(AppState.backgroundIndex$);
+    const [backgroundIndex] = Hooks.useSubjectState(AppState.backgroundIndex$);
 
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.only("xs"));
 
     const onTickerChange = (event: React.ChangeEvent<HTMLInputElement>) =>
-        setTicker(event.target.checked);
+        setShowTicker(event.target.checked);
 
     const onBgClick = (i: number) => () => AppState.backgroundIndex$.next(i);
 
@@ -124,7 +124,7 @@ export const SettingsDialog: React.FC<Props> = ({
                     <FormControlLabel
                         control={
                             <Checkbox
-                                checked={tickerOn}
+                                checked={showTicker}
                                 onChange={onTickerChange}
                                 name="ticker-setting"
                                 color="primary"

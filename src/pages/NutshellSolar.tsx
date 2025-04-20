@@ -1,22 +1,25 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/Header";
+import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
-import { createStateData } from "../data/solar-data";
+import { SolarSlideshow } from "../slideshow/solar/solar-slideshow";
 import * as Hooks from '../hooks';
-const data = createStateData();
 
-export const NutshellSolar: React.FC = () => {
+interface Props {
+    slideshow: SolarSlideshow;
+}
+
+export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
 	const appId = Hooks.useAppId();
 
 	// Delay the transitions 5 seconds, when all CSS transitions are finished
-	const [play, setPlay] = useState(false);
-	const [animationsInitialized, setAnimationsInitialized] = useState(false);
+	const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+	const [animationsInitialized, setAnimationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
 
-	useEffect(() => {
+	React.useEffect(() => {
 		// Init is used to pause css animations
 		// Delay play until entry animations are finished
-		if (!animationsInitialized && data) {
+		if (!animationsInitialized && slideshow.data) {
 			const timeout = setTimeout(() => {
 				setAnimationsInitialized(true);
                 setPlay(true);
@@ -28,17 +31,18 @@ export const NutshellSolar: React.FC = () => {
 		}
 	}, [animationsInitialized]);
 
-	const selectedData = data?.get(appId);
+	const selectedData = slideshow.data?.get(appId);
 	const tickerData = selectedData?.ticker;
 	const slidesData = selectedData?.slides;
 
 	return (
 		<NutshellLayout
-			header={<TitleLogoBar title='_SOLAR_NUTSHELL' titleShort='_SOL_NUT' backIcon={true} />}
+            slideshow={slideshow}
+			header={<TitleLogoBar title='_SOLAR_NUTSHELL' titleShort='_SOL_NUT' backIcon />}
 		>
 			{slidesData && (
 				<SlideshowSolar
-					animationsInitialized={animationsInitialized}
+					slideshow={slideshow}
 					play={play}
 					setPlay={setPlay}
 					data={slidesData}

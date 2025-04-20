@@ -1,2 +1,2 @@
 export { useAppId } from './useAppId'
-export { useSubject } from './useSubject'
+export { useSubjectState } from './useSubject'

@@ -1,4 +1,4 @@
-import { NutshellData, Dimension } from "./types";
+import { NutshellData, Dimension } from "../../components/nfs/types";
 import { IMG_SERVER } from "../../img/cmd";
 
 const imgServer = `${IMG_SERVER}/nfs`;

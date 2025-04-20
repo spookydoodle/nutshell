@@ -7,6 +7,7 @@ import { fontSizes } from "../../styles/themes";
 import PublicIcon from "@mui/icons-material/Public";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
+import { Category } from './types';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -86,13 +87,13 @@ export const BreadCrumbs: React.FC<Props> = ({
     const classes = useStyles();
 
     const items = React.useMemo(
-        () => [
+        (): { name: Category; icon: React.ReactNode; }[] => [
             {
-                name: "Geographic",
+                name: "Realms",
                 icon: <PublicIcon className={classes.breadCrumbIcon} />,
             },
             {
-                name: "Business",
+                name: "Sectors",
                 icon: <BusinessCenterIcon className={classes.breadCrumbIcon} />,
             },
             {

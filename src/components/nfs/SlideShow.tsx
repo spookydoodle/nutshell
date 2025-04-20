@@ -5,13 +5,11 @@ import { Background } from "./Background";
 import { Player } from "../navigation/Player";
 import { Transitions } from "../metrics-dashboard/Transitions";
 import { SmallScreenMessage } from "../metrics-dashboard/SmallScreenMessage";
-import { NEED_FOR_SPEED, imgPerSlide } from "./data";
+import { imgPerSlide } from "../../slideshow/nfs/data";
 import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
-const data = NEED_FOR_SPEED;
-const labels: string[] = data && data.games ? data?.games?.map((game) => game.label) : [""];
-const totalLen = data?.games?.length || 0;
-const sequences = ["Timeline"];
+import { NfsSlideshow } from "../../slideshow/nfs/nfs-slideshow";
+import * as Hooks from '../../hooks';
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -27,13 +25,21 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-export const SlideShow: React.FC = () => {
+interface Props {
+    slideshow: NfsSlideshow;
+}
+
+export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
-    const [play, setPlay] = React.useState(true);
-    const [duration, setDuration] = React.useState(30000);
-    const [index, setIndex] = React.useState(0);
-    const [prevIndex, setPrevIndex] = React.useState(0);
-    const [tickerOn, setTicker] = React.useState(true);
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
+    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
+    const [prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
+    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
+
+    const labels: string[] = slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""];
+    const totalLen = slideshow.data?.games?.length || 0;
+    const sequences = ["Timeline"];
 
     React.useEffect(() => {
         if (!play) {
@@ -68,7 +74,7 @@ export const SlideShow: React.FC = () => {
                                         ? "swipe-cube-to-right"
                                         : "swipe-cube-to-left"
                             }
-                            components={data.games
+                            components={slideshow.data.games
                                 .map(({ background }) => background.map((src, i) => <Background key={src} src={src} index={i} />))
                                 .flat(1)}
                             index={index}
@@ -77,7 +83,7 @@ export const SlideShow: React.FC = () => {
 
                     <Transitions
                         variant={index % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
-                        components={data.games
+                        components={slideshow.data.games
                             .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} index={index} prevIndex={prevIndex}/>))
                             .flat(1)}
                         index={index}
@@ -104,8 +110,8 @@ export const SlideShow: React.FC = () => {
                         sequences={sequences}
                         categoryPrimary="game"
                         categorySecondary="image"
-                        tickerOn={tickerOn}
-                        setTicker={setTicker}
+                        showTicker={showTicker}
+                        setShowTicker={setShowTicker}
                     />
 
                     <Progress slideIndex={index} onIndexChange={setIndex} onPrevIndexChange={setPrevIndex} />
