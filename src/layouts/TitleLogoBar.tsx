@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme: Theme) =>
             color: "rgba(255, 255, 255, .87)",
             marginTop: 0,
             padding: `${Slideshow.vh.topBarVerticalPadding}vh 10px`,
-            backgroundColor: "red",
             textTransform: "uppercase",
         },
         headerTitle: {
