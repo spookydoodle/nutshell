@@ -14,30 +14,29 @@ const router = createBrowserRouter([
     {
         path: '/dashboard',
         element: <Pages.NutshellDashboard slideshow={salesSlideshow} />,
-        ErrorBoundary: () => <Pages.ErrorBoundary slideshow={salesSlideshow} />
+        ErrorBoundary: Pages.ErrorBoundary
     },
     {
         path: '/solar-system',
         element: <Pages.NutshellSolar slideshow={solarSlideshow} />,
-        ErrorBoundary: () => <Pages.ErrorBoundary slideshow={solarSlideshow} />
+        ErrorBoundary: Pages.ErrorBoundary
     },
     {
         path: '/need-for-nutshell',
         element: <Pages.NutshellNFS slideshow={nfsSlideshow} />,
-        ErrorBoundary: () => <Pages.ErrorBoundary slideshow={nfsSlideshow} />
+        ErrorBoundary: Pages.ErrorBoundary
     },
     {
         path: '/',
-        // TODO: Fix - this prop not needed - use default theme
-        element: <Pages.Landing slideshow={salesSlideshow} />,
-        ErrorBoundary: () => <Pages.ErrorBoundary slideshow={salesSlideshow} />
+        element: <Pages.Landing />,
+        ErrorBoundary: Pages.ErrorBoundary
     }
 ]);
 
 const App: React.FC = () => {
   return (
     <React.StrictMode>
-      <RouterProvider router={router} fallbackElement={<Pages.ErrorBoundary slideshow={salesSlideshow} />} />
+      <RouterProvider router={router} fallbackElement={<Pages.ErrorBoundary />} />
     </React.StrictMode>
   );
 }
