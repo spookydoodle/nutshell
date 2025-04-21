@@ -40,7 +40,7 @@ interface Props {
     onPrevIndexChange: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export const Progress: React.FC<Props> = ({ slideIndex, onIndexChange, onPrevIndexChange}) => {
+export const Progress: React.FC<Props> = ({ slideIndex, onIndexChange, onPrevIndexChange }) => {
     const classes = useStyles();
 
     return (

@@ -2,20 +2,25 @@ import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import { Mode } from "../types";
 
+/**
+ * Initial options to create a slideshow with
+ */
 export interface SlideshowInitOptions {
     /**
      * Whether the slideshow is playing.
+     * Slideshow will automatically increment the slide index if both `play` and `animationsInitialized` are `true`.
      * Defaults to `true`.
      */
     play?: boolean;
     /**
      * Whether intro animations have been initialized and the slideshow can begin.
      * Intro animations can include sliding or fading the background and various components in their places.
+     * Slideshow will automatically increment the slide index if both `animationsInitialized` and `play` are `true`.
      * Defaults to `false`.
      */
     animationsInitialized?: boolean;
     /**
-     * Single slide duration in milliseconds.
+     * Single slide duration in milliseconds. Used for automatically incrementing the slide index.
      * Defaults to `15000`.
      */
     duration?: number;
@@ -26,6 +31,10 @@ export interface SlideshowInitOptions {
     showTicker?: boolean;
 }
 
+/**
+ * Abstract class to be extended by specific slideshow classes.
+ * Provides theme related properties and functions as static functions.
+ */
 export abstract class Slideshow<T = unknown> {
     /**
      * Elements height given as percentage of viewport height.
@@ -67,14 +76,20 @@ export abstract class Slideshow<T = unknown> {
      */
     public showTicker$: rxjs.BehaviorSubject<boolean>;
 
-    public constructor(d: T, options?: SlideshowInitOptions) {
-        const { 
+    /**
+     * Creates a slideshow object with all necessary properties to automatically display slides.
+     * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
+     * @param data
+     * @param options 
+     */
+    public constructor(data: T, options?: SlideshowInitOptions) {
+        const {
             play = true,
             animationsInitialized = false,
             duration = 15000,
             showTicker = true
         } = options ?? {};
-        this.data = d;
+        this.data = data;
         this.play$ = new rxjs.BehaviorSubject<boolean>(play);
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
@@ -116,18 +131,27 @@ export abstract class Slideshow<T = unknown> {
                 ...options.typography,
             }
         }
-        
+
         return Slideshow.createResponsiveTheme(themeOptions);
     };
 
+    /**
+     * Creates default theme for slideshows with slideshow breakpoints, color palette and typography.
+     */
     public static createDefaultTheme = (mode: Mode): Theme => {
         return Slideshow.createResponsiveTheme(Slideshow.getDefaultThemeOptions(mode));
     };
 
+    /**
+     * Wrapper function for theme with responsive font sizes.
+     */
     private static createResponsiveTheme = (themeOptions: ThemeOptions) => {
         return responsiveFontSizes(createTheme(themeOptions));
     };
 
+    /**
+     * Provides default theme options with breakpoints, color palette and typography.
+     */
     private static getDefaultThemeOptions = (mode: Mode): ThemeOptions => ({
         // Needed to define thinner breakpoints than the default ones to assure nice layout for tiles
         // See client/src/logic/materialUITypes.tsx for module augmentation.

@@ -62,15 +62,15 @@ export interface Data {
     ticker: TickerItem[];
 }
 
-export interface ChartData { 
-    characteristicName: string; 
-    characteristicNameShort: string; 
-    data: ChartBreakdownItem[]; 
+export interface ChartData {
+    characteristicName: string;
+    characteristicNameShort: string;
+    data: ChartBreakdownItem[];
 }
 
-export interface Chart { 
-    characteristicName: string; 
-    data: Datum[]; 
+export interface Chart {
+    characteristicName: string;
+    data: Datum[];
 }
 
 /**
@@ -254,7 +254,7 @@ type SlideData = Array<SlideDataItem>;
 interface SlideDataItem {
     headers: Header;
     data: Map<
-        string, 
+        string,
         Item
     >;
 }

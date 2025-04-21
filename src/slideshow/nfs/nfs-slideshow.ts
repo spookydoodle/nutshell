@@ -6,8 +6,8 @@ import { NutshellData } from "../../components/nfs/types";
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public name = '_NEED_FOR_NUTSHELL';
     public shortName = '_NFS';
-    
-    public getThemeOptions = (mode: Mode): ThemeOptions => ( {
+
+    public getThemeOptions = (mode: Mode): ThemeOptions => ({
         palette: {
             primary: {
                 light: "#000000",

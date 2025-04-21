@@ -51,7 +51,7 @@ const getChartsData = (
     return charts.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
         const { valueByTimebox: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
-        const subitems =  tickerItemsData ? getTickerItemsData(tickerItemsData, [columnName], timebox, row.characteristicValue.text) : undefined;
+        const subitems = tickerItemsData ? getTickerItemsData(tickerItemsData, [columnName], timebox, row.characteristicValue.text) : undefined;
 
         return {
             name: row.characteristicValue.text,
@@ -133,13 +133,13 @@ const getProductsData = (
 
 export const getUnique = (res: MetricTypes.Data, key: 'slideName' | 'columnName' | 'rowName') => {
     const unique: MetricTypes.Dimension[] = [];
-    
+
     for (const product of res.products) {
         if (!unique.some((s) => s.key === product[key].key)) {
             unique.push(product[key]);
         }
     }
-    
+
     return unique;
 };
 
@@ -161,9 +161,9 @@ export const convertToMapMobile = (res: MetricTypes.Data): MetricTypes.StateData
                     columnName,
                     {
                         tile: getTileData(res.tiles, columnName, timebox)[0],
-                        charts: res.charts.map((c) => ({ 
-                            characteristicName: c.characteristicName, 
-                            data: getChartsData(c.data, columnName, timebox, res.ticker) 
+                        charts: res.charts.map((c) => ({
+                            characteristicName: c.characteristicName,
+                            data: getChartsData(c.data, columnName, timebox, res.ticker)
                         })),
                         products: productSlides.map((slide) => ({
                             tile: getTileData(

@@ -33,7 +33,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 interface Props {
     slideshow: SolarSlideshow;
     play: boolean;
-    setPlay: (play: boolean) => void;
+    setPlay: React.Dispatch<React.SetStateAction<boolean>>;
     data: SlidesStateData;
     tickerData?: Map<string, TickerData>;
 }

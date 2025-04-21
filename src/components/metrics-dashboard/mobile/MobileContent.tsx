@@ -71,7 +71,7 @@ export const MobileContent: React.FC<Props> = ({
         () => Utils.Metrics.convertToMapMobile(data),
         [data]
     );
-    
+
     const productSlides = React.useMemo(
         () => Utils.Metrics.getUnique(data, 'slideName'),
         [data]

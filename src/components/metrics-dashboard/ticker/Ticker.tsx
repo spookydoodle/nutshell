@@ -63,7 +63,7 @@ export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) =
     const classes = useStyles();
     const [containerRef, setContainerRef] = React.useState<HTMLDivElement | null>(null);
     const [index, setIndex] = React.useState(0);
-    
+
     const list = React.useMemo(
         () => [...data.entries()].map(([primaryCategory, nestedDataSet]) => {
             return [...nestedDataSet.entries()]?.map(([secondaryCategory, dataSet], secondaryIndex) => {

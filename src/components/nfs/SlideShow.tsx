@@ -25,6 +25,8 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
+const sequences = ["Timeline"];
+
 interface Props {
     slideshow: NfsSlideshow;
 }
@@ -37,9 +39,8 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const [prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
-    const labels: string[] = slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""];
-    const totalLen = slideshow.data?.games?.length || 0;
-    const sequences = ["Timeline"];
+    const labels: string[] = React.useMemo(() => slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""], [slideshow]);
+    const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
 
     React.useEffect(() => {
         if (!play) {
@@ -84,7 +85,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                     <Transitions
                         variant={index % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
                         components={slideshow.data.games
-                            .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} index={index} prevIndex={prevIndex}/>))
+                            .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} index={index} prevIndex={prevIndex} />))
                             .flat(1)}
                         index={index}
                     />

@@ -6,6 +6,7 @@ import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import FastForwardIcon from "@mui/icons-material/FastForward";
 import FastRewindIcon from "@mui/icons-material/FastRewind";
+import React from 'react';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
   play: boolean;
-  setPlay: (play: boolean) => void;
+  setPlay: React.Dispatch<React.SetStateAction<boolean>>;
   index: number;
   secondaryIndex?: number;
   length: number;
@@ -74,7 +75,7 @@ export const PlayerButtons: React.FC<Props> = ({
         <IconButton
           color="inherit"
           aria-label="play/pause"
-          onClick={() => (play ? setPlay(false) : setPlay(true))}
+          onClick={() => setPlay((prev) => !prev)}
           className={`${classes.playIcon} ${classes.play}`}
         >
           {play ? (

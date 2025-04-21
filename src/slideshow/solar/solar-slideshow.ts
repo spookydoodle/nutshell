@@ -5,7 +5,7 @@ import { Slideshow } from "../slideshow";
 export class SolarSlideshow extends Slideshow<StateDataMap> {
     public name = '_SOLAR_NUTSHELL';
     public shortName = '_SOL_NUT';
-    
+
     public getThemeOptions = (mode: Mode): ThemeOptions => ({
         palette: {
             primary: {

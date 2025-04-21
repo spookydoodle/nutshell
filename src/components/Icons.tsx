@@ -1,18 +1,18 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faRobot,
-  // faHatWizard,
-  // faGhost,
-  // faGamepad,
-  // faCat,
-  // faBroom
+    faRobot,
+    // faHatWizard,
+    // faGhost,
+    // faGamepad,
+    // faCat,
+    // faBroom
 } from "@fortawesome/free-solid-svg-icons";
 
 export const IconRobot = () => (
-  <FontAwesomeIcon
-    icon={faRobot}
-    size="1x"
+    <FontAwesomeIcon
+        icon={faRobot}
+        size="1x"
     // flip="vertical"
     // rotation={90}
     // spin
@@ -24,5 +24,5 @@ export const IconRobot = () => (
     // transform={{ rotate: 42 }}
     // mask={['far', 'circle']}
     // color="#ff0000"
-  />
+    />
 );

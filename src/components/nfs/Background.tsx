@@ -62,7 +62,7 @@ interface Props {
     index: number;
 }
 
-export const Background: React.FC<Props> = ({ src, index}) => {
+export const Background: React.FC<Props> = ({ src, index }) => {
     const classes = useStyles();
 
     return (

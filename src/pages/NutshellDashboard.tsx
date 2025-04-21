@@ -8,7 +8,6 @@ import * as Hooks from "../hooks";
 import * as Utils from "../utils";
 import { SalesSlideshow } from "../slideshow/sales/sales-slideshow";
 
-
 interface Props {
     slideshow: SalesSlideshow;
 }

@@ -42,11 +42,11 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC = () => {
-  return (
-    <React.StrictMode>
-      <RouterProvider router={router} fallbackElement={<Pages.ErrorBoundary />} />
-    </React.StrictMode>
-  );
+    return (
+        <React.StrictMode>
+            <RouterProvider router={router} fallbackElement={<Pages.ErrorBoundary />} />
+        </React.StrictMode>
+    );
 }
 
 export default App;

@@ -22,7 +22,7 @@ export const METRIC_DEF = {
 };
 
 type Property = 'Mass' | 'Diameter' | 'Density' | 'Gravity' | 'Escape Velocity' | 'Rotation Period' | 'Length of Day' | 'Distance from Sun' | 'Perihelion' | 'Aphelion' | 'Orbital Period'
-| 'Orbital Inclination' | 'Orbital Velocity' | 'Orbital Eccentricity' | 'Obliquity to Orbit' | 'Mean Temperature' | 'Number of Moons' | 'Surface Pressure';
+    | 'Orbital Inclination' | 'Orbital Velocity' | 'Orbital Eccentricity' | 'Obliquity to Orbit' | 'Mean Temperature' | 'Number of Moons' | 'Surface Pressure';
 type Planet = 'Mercury' | 'Venus' | 'Earth' | 'Mars' | 'Jupiter' | 'Saturn' | 'Uranus' | 'Neptune' | 'Pluto';
 
 export const METRIC_DATA: {

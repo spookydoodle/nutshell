@@ -174,7 +174,7 @@ export const NavTitlesSales: React.FC<Props> = ({
                             arrow
                         >
                             <Typography
-                            fontSize={fontSizes.h3}
+                                fontSize={fontSizes.h3}
                                 color="inherit"
                                 component="span"
                                 className={classes.breadCrumbsText}

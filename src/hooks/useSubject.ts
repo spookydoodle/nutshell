@@ -23,6 +23,6 @@ export function useSubjectState<T>(subject$: rxjs.BehaviorSubject<T>): [T, React
         },
         [subject$]
     );
-    
+
     return [subject, handleChange];
 }

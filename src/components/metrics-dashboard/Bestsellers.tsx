@@ -1,4 +1,4 @@
-import { Divider} from '@mui/material';
+import { Divider } from '@mui/material';
 import { ProductTiles } from "./ProductTiles";
 import * as MetricTypes from "./types";
 
