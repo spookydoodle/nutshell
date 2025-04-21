@@ -2,8 +2,8 @@ import React from "react";
 import { Layout } from "../layouts/Layout";
 import { NavbarTitle } from "../layouts/NavbarTitle";
 import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
-import * as Utils from "../utils";
 import { NutshellCoinflowContent } from "./NutshellCoinflowContent";
+import * as Utils from "../utils";
 
 interface Props {
     slideshow: CoinflowSlideshow;

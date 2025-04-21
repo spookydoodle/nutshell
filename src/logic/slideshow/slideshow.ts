@@ -139,6 +139,10 @@ export abstract class Slideshow<T = unknown> {
 
     private timeout: NodeJS.Timeout | undefined;
 
+    /**
+     * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
+     * @param timeout If provided, will delay setting `play$` (if autoplay initially set) and `animationsInitialized$` values.
+     */
     public start = (timeout = 0): void => {
         this.index$.next(0);
         this.prevIndex$.next(0);

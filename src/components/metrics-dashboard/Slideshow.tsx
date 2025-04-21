@@ -54,7 +54,7 @@ export const Slideshow: React.FC<Props> = ({
 }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const isMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
+    const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
     const appId = Hooks.useAppId();
     const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
@@ -188,7 +188,7 @@ export const Slideshow: React.FC<Props> = ({
                     primaryMeasureName={primaryMeasureName}
                 />
 
-                {[...slides[index].data.entries()].map(([name, value], i) => !(isLgDown && i === 1) && !(isMdDown && i > 0) ? (
+                {[...slides[index].data.entries()].map(([name, value], i) => !(isLgDown && i === 1) && !(hiddenMdDown && i > 0) ? (
                     <Content
                         key={`${name}-${i}`}
                         animationsInitialized={animationsInitialized}
