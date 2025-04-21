@@ -4,10 +4,9 @@ import { animations } from "../styles/animations";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Theme } from '@mui/material';
 import { SuspenseImg } from "../components/SuspenseImg";
-import { Img } from "./images";
-import * as AppState from "../state";
-import * as Hooks from '../hooks';
 import { Slideshow } from "../logic/slideshow/slideshow";
+import { Img } from "./images";
+import * as Hooks from '../hooks';
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -28,7 +27,7 @@ const useStyles = makeStyles((_theme: Theme) =>
             backgroundColor: "#000",
             transformStyle: "preserve-3d",
             overflow: "hidden",
-            transform: "translateY(-4rem)",
+            transform: "translateY(-64px)",
             animation: `$no-transform 2s .5s cubic-bezier(0, .5, 0, 1) forwards`,
             border: "none",
             "&::after": {
@@ -71,7 +70,7 @@ interface Props {
     children?: React.ReactNode;
 }
 
-export const NutshellContent: React.FC<Props> = ({
+export const LayoutContent: React.FC<Props> = ({
     slideshow,
     header,
     footer,

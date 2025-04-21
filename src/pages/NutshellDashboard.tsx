@@ -4,9 +4,9 @@ import { Layout } from "../layouts/Layout";
 import { NavbarTitle } from "../layouts/NavbarTitle";
 import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
+import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
 import * as Hooks from "../hooks";
 import * as Utils from "../utils";
-import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
 
 interface Props {
     slideshow: CoinflowSlideshow;
@@ -39,7 +39,6 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
     return (
         <Layout
             slideshow={slideshow}
-            animationsInitialized={animationsInitialized}
             header={
                 <Hidden mdDown>
                     <NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon />

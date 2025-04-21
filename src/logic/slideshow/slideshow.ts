@@ -46,8 +46,14 @@ export abstract class Slideshow<T = unknown> {
          * Used for title and icons displayed in the primary row.
          */
         topBarPrimaryRow: 5,
+        topBarSecondaryRow: 3,
         topBarVerticalPadding: 1,
     }
+
+    public static title = '_NUTSHELL';
+    public static titleShort = '_NTSHLL';
+    public static subtitle = 'Have a great day';
+    public static subtitleShort = 'Yo';
 
     public abstract path: string;
     public abstract name: string;

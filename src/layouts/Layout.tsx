@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Theme } from "@mui/material";
-import { NutshellContent } from "./NutshellContent";
+import { LayoutContent } from "./LayoutContent";
 import { ThemeWrapper } from "./ThemeWrapper";
 import * as Hooks from '../hooks';
 import { Slideshow } from "../logic/slideshow/slideshow";
@@ -23,7 +23,7 @@ export const Layout: React.FC<Props> = (props) => {
 
     return (
         <ThemeWrapper theme={theme}>
-            <NutshellContent {...props} />
+            <LayoutContent {...props} />
         </ThemeWrapper>
     );
 };
