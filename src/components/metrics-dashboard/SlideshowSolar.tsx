@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Grid, Hidden, Theme } from '@mui/material';
+import { Grid, Theme, useMediaQuery } from '@mui/material';
 import { Player } from "../navigation/Player";
 import { NavTitles } from "./solar/NavTitles";
 import { Content } from "./Content";
@@ -46,6 +46,10 @@ export const SlideshowSolar: React.FC<Props> = ({
     tickerData
 }) => {
     const classes = useStyles();
+    const hiddenSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
+    const hiddenMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
+    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
     const appId = Hooks.useAppId();
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
@@ -134,31 +138,26 @@ export const SlideshowSolar: React.FC<Props> = ({
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
-                <Hidden smDown>
-                    <NavTitles
-                        animationsInitialized={animationsInitialized}
-                        current={slides[index].headers}
-                        next={slides[(index + 1) % totalLen].headers}
-                        play={play}
-                        index={index}
-                        setIndex={setIndex}
-                        seqLen={seqLen}
-                        onBreadClick={(index: number) =>
-                            setIndex(
-                                (prev: number) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
-                            )
-                        }
-                        sequences={sequences}
-                        currentSequence={slides[index].headers.sequence}
-                    />
+                {!hiddenSmDown ? (
+                    <>
+                        <NavTitles
+                            animationsInitialized={animationsInitialized}
+                            current={slides[index].headers}
+                            next={slides[(index + 1) % totalLen].headers}
+                            play={play}
+                            index={index}
+                            setIndex={setIndex}
+                            seqLen={seqLen}
+                            onBreadClick={(index: number) =>
+                                setIndex(
+                                    (prev: number) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
+                                )
+                            }
+                            sequences={sequences}
+                            currentSequence={slides[index].headers.sequence}
+                        />
 
-                    {[...slides[index].data.entries()].map(([name, value], i) => (
-                        // TODO: Responsiveness:
-                        <Hidden
-                            key={`${name}-${i}`}
-                            only={i > 0 ? "xs" : undefined}
-                        // smDown={i > 1}
-                        >
+                        {[...slides[index].data.entries()].map(([name, value], i) => !(i > 0 && hiddenOnlyXs) ? (
                             <Content
                                 animationsInitialized={animationsInitialized}
                                 name={name}
@@ -166,42 +165,40 @@ export const SlideshowSolar: React.FC<Props> = ({
                                 components={getComponents(name)}
                                 index={index}
                             />
-                        </Hidden>
-                    ))}
+                        ) : null)}
 
-                    {tickerData && showTicker ? (
-                        <Hidden lgDown>
-                            <Ticker
-                                animationsInitialized={animationsInitialized}
-                                text="Turbocharged by spookydoodle"
-                                data={tickerData}
-                            />
-                        </Hidden>
-                    ) : null}
+                        {tickerData && showTicker && !hiddenLgDown ? (
+                                <Ticker
+                                    animationsInitialized={animationsInitialized}
+                                    text="Turbocharged by spookydoodle"
+                                    data={tickerData}
+                                />
+                        ) : null}
 
-                    <Player
-                        slideshow={slideshow}
-                        animationsInitialized={animationsInitialized}
-                        play={play}
-                        setPlay={setPlay}
-                        index={index}
-                        length={totalLen}
-                        setIndex={(n: number, prev: number) => {
-                            setIndex(n);
-                            setPrevIndex(prev);
-                        }}
-                        duration={duration}
-                        setDuration={setDuration}
-                        labels={labels}
-                        sequences={sequences}
-                        showTicker={showTicker}
-                        setShowTicker={setShowTicker}
-                    />
-                </Hidden>
+                        <Player
+                            slideshow={slideshow}
+                            animationsInitialized={animationsInitialized}
+                            play={play}
+                            setPlay={setPlay}
+                            index={index}
+                            length={totalLen}
+                            setIndex={(n: number, prev: number) => {
+                                setIndex(n);
+                                setPrevIndex(prev);
+                            }}
+                            duration={duration}
+                            setDuration={setDuration}
+                            labels={labels}
+                            sequences={sequences}
+                            showTicker={showTicker}
+                            setShowTicker={setShowTicker}
+                        />
+                    </>
+                ) : null}
 
-                <Hidden mdUp>
+                {!hiddenMdUp ? (
                     <SmallScreenMessage variant="Solar" animationsInitialized={animationsInitialized} />
-                </Hidden>
+                ) : null}
             </Grid>
         </Grid>
     );

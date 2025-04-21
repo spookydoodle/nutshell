@@ -146,11 +146,7 @@ export const SettingsDialog: React.FC<Props> = ({
                     />
                 </Box>
 
-                <SlideDurationInput
-                    duration={duration}
-                    setDuration={setDuration}
-                    fullWidth={true}
-                />
+                <SlideDurationInput duration={duration} setDuration={setDuration} />
             </DialogContent>
 
             <DialogActions>

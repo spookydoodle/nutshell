@@ -9,11 +9,11 @@ import { Img } from '../../layouts/images';
  */
 export interface SlideshowInitOptions {
     /**
-     * Whether the slideshow is playing.
+     * Whether the slideshow should play on start.
      * Slideshow will automatically increment the slide index if both `play` and `animationsInitialized` are `true`.
      * Defaults to `true`.
      */
-    play?: boolean;
+    autoplay?: boolean;
     /**
      * Whether intro animations have been initialized and the slideshow can begin.
      * Intro animations can include sliding or fading the background and various components in their places.
@@ -54,6 +54,7 @@ export abstract class Slideshow<T = unknown> {
     public static titleShort = '_NTSHLL';
     public static subtitle = 'Have a great day';
     public static subtitleShort = 'Yo';
+    public static tickerTitle = 'Turbocharged by spookydoodle';
 
     public abstract path: string;
     public abstract name: string;
@@ -65,15 +66,20 @@ export abstract class Slideshow<T = unknown> {
     public abstract imageUrl: string;
     public backgroundImageUrls?: Img[];
 
+    private defaultAnimationsInitialized = true;
+    private defaultAutoPlay = true;
+    private defaultDuration = 15000;
+    private defaultShowTicker = true;
+
+    /**
+     * Options provided in the constructor.
+     */
+    private initOptions?: SlideshowInitOptions;
+
     /**
      * Data to present on the slides.
      */
     public data: T;
-
-    /**
-     * Whether the slideshow is playing.
-     */
-    public play$: rxjs.BehaviorSubject<boolean>;
 
     /**
      * Whether intro animations have been initialized and the slideshow can begin.
@@ -104,18 +110,22 @@ export abstract class Slideshow<T = unknown> {
      */
     public constructor(data: T, options?: SlideshowInitOptions) {
         const {
-            play = true,
-            animationsInitialized = false,
-            duration = 15000,
-            showTicker = true
+            animationsInitialized = this.defaultAnimationsInitialized,
+            duration = this.defaultDuration,
+            showTicker = this.defaultShowTicker
         } = options ?? {};
+        this.initOptions = options;
         this.data = data;
-        this.play$ = new rxjs.BehaviorSubject<boolean>(play);
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
     }
+
+    /**
+     * Whether the slideshow is playing.
+     */
+    public play$ = new rxjs.BehaviorSubject<boolean>(false);
 
     /**
      * Current slide index.
@@ -126,6 +136,27 @@ export abstract class Slideshow<T = unknown> {
      * Previous slide index
      */
     public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
+
+    private timeout: NodeJS.Timeout | undefined;
+
+    public start = (timeout = 0): void => {
+        this.timeout = setTimeout(() => {
+            this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
+            this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
+        }, timeout);
+        this.index$.next(0);
+        this.prevIndex$.next(0);
+        this.selectedBackgroundIndex$.next(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
+    };
+
+    /**
+     * Resets observables needed to start the slideshow.
+     */
+    public stop = (): void => {
+        clearTimeout(this.timeout);
+        this.play$.next(false);
+        this.animationsInitialized$.next(false);
+    };
 
     /**
      * Function which extends theme.

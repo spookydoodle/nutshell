@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Theme, Box, Grid, Hidden } from '@mui/material';
+import { Theme, Box, Grid, useMediaQuery } from '@mui/material';
+import { CoinflowSlideshow } from "../../slideshows/coinflow/coinflow-slideshow";
+import { Slideshow as SlideshowType } from "../../logic/slideshow/slideshow";
 import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
 import { NavTitles } from "./NavTitles";
@@ -9,7 +11,6 @@ import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";
-import { CoinflowSlideshow } from "../../slideshows/coinflow/coinflow-slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -40,25 +41,22 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow: CoinflowSlideshow;
-    play: boolean;
-    setPlay: React.Dispatch<React.SetStateAction<boolean>>;
     data: MetricTypes.SlidesStateData;
     tickerData?: Map<string, MetricTypes.TickerData>;
-    setOpenDialog: (open: boolean) => void;
     primaryMeasureName: string;
 }
 
 export const Slideshow: React.FC<Props> = ({
     slideshow,
-    play,
-    setPlay,
     data,
     tickerData,
-    // setOpenDialog,
     primaryMeasureName
 }) => {
     const classes = useStyles();
+    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
     const appId = Hooks.useAppId();
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
     const [_prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
@@ -190,26 +188,23 @@ export const Slideshow: React.FC<Props> = ({
                     primaryMeasureName={primaryMeasureName}
                 />
 
-                {[...slides[index].data.entries()].map(([name, value], i) => (
-                    <Hidden key={`${name}-${i}`} mdDown={i > 0} lgDown={i === 1}>
-                        <Content
-                            animationsInitialized={animationsInitialized}
-                            name={name}
-                            tileData={value.tile} // TODO: consider changing to Transitions and passing components
-                            components={getComponents(name)}
-                            index={index}
-                        />
-                    </Hidden>
-                ))}
+                {[...slides[index].data.entries()].map(([name, value], i) => !(hiddenLgDown && i === 1) && !(hiddenMdDown && i > 0) ? (
+                    <Content
+                        key={`${name}-${i}`}
+                        animationsInitialized={animationsInitialized}
+                        name={name}
+                        tileData={value.tile} // TODO: consider changing to Transitions and passing components
+                        components={getComponents(name)}
+                        index={index}
+                    />
+                ) : null)}
 
-                {tickerData && showTicker ? (
-                    <Hidden lgDown>
-                        <Ticker
-                            animationsInitialized={animationsInitialized}
-                            text="Turbocharged by spookydoodle"
-                            data={tickerData}
-                        />
-                    </Hidden>
+                {tickerData && showTicker && !hiddenLgDown ? (
+                    <Ticker
+                        animationsInitialized={animationsInitialized}
+                        text={SlideshowType.tickerTitle}
+                        data={tickerData}
+                    />
                 ) : null}
 
                 <Player
@@ -225,7 +220,6 @@ export const Slideshow: React.FC<Props> = ({
                     labels={labels}
                     sequences={[""]}
                     // seqName={sequences[Math.floor(index / seqLen)]}
-                    // setOpenDialog={setOpenDialog}
                     showTicker={showTicker}
                     setShowTicker={setShowTicker}
                 />

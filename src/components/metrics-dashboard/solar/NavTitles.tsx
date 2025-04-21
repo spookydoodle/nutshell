@@ -1,7 +1,7 @@
 import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Theme, Grid, Hidden, Typography, Tooltip } from '@mui/material';
+import { Theme, Grid, Typography, Tooltip, useMediaQuery } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
 import { animations } from "../../../styles/animations";
 import { Header } from "../../../types/types";
@@ -106,6 +106,7 @@ export const NavTitles: React.FC<Props> = ({
     currentSequence,
 }) => {
     const classes = useStyles();
+    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
     return (
         <Grid
@@ -131,7 +132,7 @@ export const NavTitles: React.FC<Props> = ({
                 )}
             </Grid>
 
-            <Hidden only="xs">
+            {!hiddenOnlyXs ? (
                 <Grid item xs={4} className={classes.breadCrumbsContainer}>
                     {current?.titleSecondaryShort && (
                         <Tooltip title={current.titleSecondary || current.titleSecondaryShort} placement="top" arrow>
@@ -160,7 +161,7 @@ export const NavTitles: React.FC<Props> = ({
                         </Tooltip>
                     )) ?? null}
                 </Grid>
-            </Hidden>
+            ) : null}
         </Grid>
     );
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Box, Hidden, Theme, Typography } from '@mui/material';
+import { Box, Theme, Typography, useMediaQuery } from '@mui/material';
 import { animations } from "../styles/animations";
 import { BackNav } from "./BackNav";
 import { fontSizes } from "../styles/themes";
@@ -43,6 +43,7 @@ interface Props {
     subtitle?: string;
     subtitleShort?: string;
     backIcon?: boolean;
+    hidden?: "mdDown";
 }
 
 export const NavbarTitle: React.FC<Props> = ({
@@ -51,9 +52,16 @@ export const NavbarTitle: React.FC<Props> = ({
     titleSuffix,
     subtitle,
     subtitleShort,
-    backIcon = false
+    backIcon = false,
+    hidden
 }) => {
     const classes = useStyles();
+    const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
+    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+
+    if (hidden && hiddenMdDown) {
+        return null;
+    }
 
     return (
         <Box className={classes.topBar}>
@@ -61,8 +69,9 @@ export const NavbarTitle: React.FC<Props> = ({
                 {backIcon && <BackNav to="/" tooltipText="Back to main screen" />}
                 <Box>
                     <Typography fontSize={fontSizes.h2} color="inherit">
-                        <Hidden lgDown>{title ?? ""} </Hidden>
-                        <Hidden lgUp>{titleShort ?? title ?? ""} </Hidden>
+                        {!hiddenLgDown
+                            ? (title ?? "")
+                            : (titleShort ?? title ?? "")}
                         {titleSuffix && (
                             <Typography
                                 color="error"
@@ -73,8 +82,7 @@ export const NavbarTitle: React.FC<Props> = ({
                         )}
                     </Typography>
                     <Typography fontSize={fontSizes.h5} color="inherit" className={classes.subtitle}>
-                        <Hidden mdDown>{subtitle ?? ""}</Hidden>
-                        <Hidden mdUp>{subtitleShort ?? ""}</Hidden>
+                        {!hiddenMdDown ? (subtitle ?? "") : (subtitleShort ?? "")}
                     </Typography>
                 </Box>
             </Box>

@@ -10,6 +10,14 @@ interface Props {
 }
 
 export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
+    React.useEffect(() => {
+        slideshow.start();
+
+        return () => {
+            slideshow.stop();
+        };
+    }, []);
+
     return (
         <Layout
             slideshow={slideshow}
