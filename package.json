@@ -4,6 +4,7 @@
     "description": "Nutshell",
     "main": "src/index.tsx",
     "private": true,
+    "type": "module",
     "scripts": {
         "analyze": "source-map-explorer 'build/static/js/*.js'",
         "dev": "vite",
@@ -96,8 +97,8 @@
         "pretty-quick": "4.0.0",
         "source-map-explorer": "2.5.3",
         "typescript": "^5.3.3",
-        "vite": "^5.0.12",
-        "vite-plugin-svgr": "^4.2.0",
-        "vite-tsconfig-paths": "^4.3.1"
+        "vite": "6.3.2",
+        "vite-plugin-svgr": "4.3.0",
+        "vite-tsconfig-paths": "5.1.4"
     }
 }

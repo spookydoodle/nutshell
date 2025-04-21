@@ -6,19 +6,20 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import { animations } from "../styles/animations";
 import { Link } from "../components/Link";
 import { SuspenseImg } from "../components/SuspenseImg";
+import { Slideshow } from "../logic/slideshow/slideshow";
 import * as Hooks from "../hooks";
 import * as Types from "../types";
 import * as AppState from "../state";
-import { Slideshow } from "../logic/slideshow/slideshow";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         outerContainer: {
-            minHeight: `calc(100vh - ${2 * (Slideshow.vh.topBarPrimaryRow + Slideshow.vh.topBarSecondaryRow + (2 * Slideshow.vh.topBarVerticalPadding))}vh - 20px)`,
+            minHeight: `calc(100vh - ${2 * (Slideshow.vh.topBarPrimaryRow + Slideshow.vh.topBarSecondaryRow + (2 * Slideshow.vh.topBarVerticalPadding))}vh - 40px)`,
             boxSizing: "border-box",
             display: "grid",
             alignItems: "center",
             marginTop: "20px",
+            marginBottom: "20px",
         },
         container: {
             overflowX: "hidden",
