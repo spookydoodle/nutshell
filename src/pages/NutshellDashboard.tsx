@@ -6,10 +6,10 @@ import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
 import * as Hooks from "../hooks";
 import * as Utils from "../utils";
-import { SalesSlideshow } from "../slideshow/sales/sales-slideshow";
+import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
 
 interface Props {
-    slideshow: SalesSlideshow;
+    slideshow: CoinflowSlideshow;
 }
 
 export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {

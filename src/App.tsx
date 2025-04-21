@@ -1,47 +1,37 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { SalesSlideshow } from "./slideshow/sales/sales-slideshow";
-import { SolarSlideshow } from "./slideshow/solar/solar-slideshow";
-import { NfsSlideshow } from "./slideshow/nfs/nfs-slideshow";
-import nutshellData from "./slideshow/sales/nutshell-data";
-import { createStateData } from "./slideshow/solar/solar-data";
-import { NEED_FOR_SPEED } from "./slideshow/nfs/data";
 import * as Pages from "./pages";
+import * as Hooks from "./hooks";
+import * as AppState from "./state";
 import "./App.css";
 
-const salesSlideshow = new SalesSlideshow(nutshellData, { play: false });
-const solarSlideshow = new SolarSlideshow(createStateData(), { play: false });
-const nfsSlideshow = new NfsSlideshow(NEED_FOR_SPEED, {
-    play: true,
-    animationsInitialized: true,
-    duration: 30000,
-    showTicker: false,
-});
-
-const router = createBrowserRouter([
-    {
-        path: '/dashboard',
-        element: <Pages.NutshellDashboard slideshow={salesSlideshow} />,
-        ErrorBoundary: Pages.ErrorBoundary
-    },
-    {
-        path: '/solar-system',
-        element: <Pages.NutshellSolar slideshow={solarSlideshow} />,
-        ErrorBoundary: Pages.ErrorBoundary
-    },
-    {
-        path: '/need-for-nutshell',
-        element: <Pages.NutshellNFS slideshow={nfsSlideshow} />,
-        ErrorBoundary: Pages.ErrorBoundary
-    },
-    {
-        path: '/',
-        element: <Pages.Landing />,
-        ErrorBoundary: Pages.ErrorBoundary
-    }
-]);
-
 const App: React.FC = () => {
+    const [slideshows] = Hooks.useSubjectState(AppState.slideshows$);
+
+    const router = React.useMemo(
+        () => createBrowserRouter([
+            ...slideshows.map(({ slideshow, ...page }) => ({
+                path: slideshow.path,
+                element: <page.component slideshow={slideshow} />,
+                ErrorBoundary: Pages.ErrorBoundary
+            })),
+            {
+                path: '/',
+                element: <Pages.Landing items={slideshows.map(({ slideshow }) => ({
+                    path: slideshow.path,
+                    name: slideshow.name,
+                    description: slideshow.description,
+                    devices: slideshow.devices,
+                    imageUrl: slideshow.imageUrl,
+                    caption: slideshow.caption,
+                    links: slideshow.links
+                }))} />,
+                ErrorBoundary: Pages.ErrorBoundary
+            }
+        ]),
+        [slideshows]
+    );
+
     return (
         <React.StrictMode>
             <RouterProvider router={router} fallbackElement={<Pages.ErrorBoundary />} />

@@ -1,14 +1,19 @@
 import React from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
-import { LandingContent } from "./LandingContent";
+import { LandingContent, LandingItem } from "./LandingContent";
+import * as Types from "../types";
 
-export const Landing: React.FC = () => {
+interface Props {
+    items: LandingItem[]
+}
+
+export const Landing: React.FC<Props> = ({ items }) => {
     return (
         <NutshellLayout
             header={<TitleLogoBar title="_NUTSHELL" titleShort="_NUTSHELL" subtitle="Have a great day" subtitleShort="Yo" />}
         >
-            <LandingContent />
+            <LandingContent items={items} />
         </NutshellLayout>
     );
 };

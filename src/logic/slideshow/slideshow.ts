@@ -1,6 +1,7 @@
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
-import { Mode } from "../types";
+import * as Types from "../../types";
+import { Img } from '../../layouts/images';
 
 /**
  * Initial options to create a slideshow with
@@ -47,8 +48,15 @@ export abstract class Slideshow<T = unknown> {
         topBarVerticalPadding: 1,
     }
 
+    public abstract path: string;
     public abstract name: string;
     public shortName?: string;
+    public abstract description: string;
+    public abstract devices: Types.Device[];
+    public caption?: string;
+    public links?: string[];
+    public abstract imageUrl: string;
+    public backgroundImageUrl?: Img[];
 
     /**
      * Data to present on the slides.
@@ -111,12 +119,12 @@ export abstract class Slideshow<T = unknown> {
      * If not provided, default theme will be used.
      * Breakpoints cannot be overwritten.
      */
-    public getThemeOptions?: (mode: Mode) => Omit<ThemeOptions, 'breakpoints'>;
+    public getThemeOptions?: (mode: Types.Mode) => Omit<ThemeOptions, 'breakpoints'>;
 
     /**
      * Adds custom theme options from `getThemeOptions` (or default options if custom are not implemented) on top of the default theme options and creates application theme.
      */
-    public createTheme = (mode: Mode): Theme => {
+    public createTheme = (mode: Types.Mode): Theme => {
         const defaultOptions = Slideshow.getDefaultThemeOptions(mode);
         const options: ThemeOptions = this.getThemeOptions?.(mode) ?? { palette: {}, typography: {} };
         const themeOptions: ThemeOptions = {
@@ -138,7 +146,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Creates default theme for slideshows with slideshow breakpoints, color palette and typography.
      */
-    public static createDefaultTheme = (mode: Mode): Theme => {
+    public static createDefaultTheme = (mode: Types.Mode): Theme => {
         return Slideshow.createResponsiveTheme(Slideshow.getDefaultThemeOptions(mode));
     };
 
@@ -152,7 +160,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Provides default theme options with breakpoints, color palette and typography.
      */
-    private static getDefaultThemeOptions = (mode: Mode): ThemeOptions => ({
+    private static getDefaultThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         // Needed to define thinner breakpoints than the default ones to assure nice layout for tiles
         // See client/src/logic/materialUITypes.tsx for module augmentation.
         // See here for more info on material-ui breakpoints: https://material-ui.com/customization/breakpoints/

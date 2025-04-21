@@ -2,7 +2,7 @@ import React from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
-import { SolarSlideshow } from "../slideshow/solar/solar-slideshow";
+import { SolarSlideshow } from "../slideshows/solar/solar-slideshow";
 import * as Hooks from '../hooks';
 
 interface Props {
@@ -10,8 +10,6 @@ interface Props {
 }
 
 export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
-    const appId = Hooks.useAppId();
-
     // Delay the transitions 5 seconds, when all CSS transitions are finished
     const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [animationsInitialized, setAnimationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
@@ -31,7 +29,7 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
         }
     }, [animationsInitialized]);
 
-    const selectedData = slideshow.data?.get(appId);
+    const selectedData = slideshow.data?.get('solar-system');
     const tickerData = selectedData?.ticker;
     const slidesData = selectedData?.slides;
 

@@ -1,12 +1,21 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode, StateDataMap } from "../../types";
-import { Slideshow } from "../slideshow";
+import { Slideshow } from "../../logic/slideshow/slideshow";
+import * as Types from "../../types";
+import { IMG_SERVER } from "../../img/cmd";
+import { getImgArr } from "../../layouts/images";
 
-export class SolarSlideshow extends Slideshow<StateDataMap> {
+export class SolarSlideshow extends Slideshow<Types.StateDataMap> {
+    public path = '/solar';
     public name = '_SOLAR_NUTSHELL';
     public shortName = '_SOL_NUT';
+    public description = 'Some whatever solar system info overview';
+    public devices: Types.Device[] = ['desktop'];
+    public caption = 'Data collected manually';
+    public imageUrl = `${IMG_SERVER}/landing/solar.jpg`
+    public links = ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/"];
+    public backgroundImageUrl = getImgArr("SS");
 
-    public getThemeOptions = (mode: Mode): ThemeOptions => ({
+    public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {
             primary: {
                 light: "#4361EE",

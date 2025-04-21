@@ -4,9 +4,10 @@ import { animations } from "../styles/animations";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Theme } from '@mui/material';
 import { SuspenseImg } from "../components/SuspenseImg";
-import { Img, images } from "./images";
+import { Img } from "./images";
 import * as AppState from "../state";
 import * as Hooks from '../hooks';
+import { Slideshow } from "../logic/slideshow/slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -64,6 +65,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
+    slideshow?: Slideshow;
     animationsInitialized?: boolean;
     header?: React.ReactNode;
     footer?: React.ReactNode;
@@ -71,6 +73,7 @@ interface Props {
 }
 
 export const NutshellContent: React.FC<Props> = ({
+    slideshow,
     animationsInitialized,
     header,
     footer,
@@ -82,10 +85,10 @@ export const NutshellContent: React.FC<Props> = ({
 
     const img = React.useMemo(
         (): Img | undefined => {
-            const imgArr = images[appId ?? ''] ?? [];
+            const imgArr = slideshow?.backgroundImageUrl ?? [];
             return imgArr?.[backgroundIndex % imgArr.length]
         },
-        [backgroundIndex]
+        [backgroundIndex, slideshow]
     );
 
     return (

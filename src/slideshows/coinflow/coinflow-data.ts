@@ -22,7 +22,7 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 15.3,
@@ -58,7 +58,7 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 47.8,
@@ -94,7 +94,7 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 20.5,
@@ -140,13 +140,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -154,7 +154,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -179,7 +179,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -187,13 +187,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -201,7 +201,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -226,7 +226,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -234,13 +234,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -248,7 +248,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -273,7 +273,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -281,13 +281,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -295,7 +295,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -320,7 +320,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -328,13 +328,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -342,7 +342,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -367,7 +367,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -375,13 +375,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -389,7 +389,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -414,7 +414,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -422,13 +422,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -436,7 +436,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -461,7 +461,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -469,13 +469,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -483,7 +483,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -508,7 +508,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -516,13 +516,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -530,7 +530,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -555,7 +555,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -563,13 +563,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -577,7 +577,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -602,7 +602,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -610,13 +610,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -624,7 +624,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -649,7 +649,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -657,13 +657,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
-                        
+
                     }
                 },
                 "secondaryMeasure": {
@@ -671,7 +671,7 @@ const data: MetricTypes.Data = {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -688,7 +688,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R2",
                         "text": "Varnhelm"
                     },
@@ -705,13 +705,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -719,7 +719,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -730,7 +730,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R2",
                         "text": "Varnhelm"
                     },
@@ -740,7 +740,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 20456789,
                                 "QTD": 4267890,
                                 "MTD": 19345677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -748,13 +748,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -762,7 +762,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -773,7 +773,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R1",
                         "text": "Brasshollow"
                     },
@@ -783,7 +783,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 25456789,
                                 "QTD": 4067890,
                                 "MTD": 17345677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -791,13 +791,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -805,7 +805,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -816,7 +816,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R1",
                         "text": "Brasshollow"
                     },
@@ -826,7 +826,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 27456789,
                                 "QTD": 4067890,
                                 "MTD": 16345677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -834,13 +834,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -848,7 +848,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -859,7 +859,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R1",
                         "text": "Brasshollow"
                     },
@@ -869,7 +869,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 20756789,
                                 "QTD": 4237890,
                                 "MTD": 14745677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -877,13 +877,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -891,7 +891,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -902,7 +902,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R7",
                         "text": "Mournwald"
                     },
@@ -912,7 +912,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 8756789,
                                 "QTD": 4487890,
                                 "MTD": 13645677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -920,13 +920,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -934,7 +934,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -945,7 +945,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R7",
                         "text": "Mournwald"
                     },
@@ -962,13 +962,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -976,7 +976,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -987,7 +987,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R7",
                         "text": "Mournwald"
                     },
@@ -1004,13 +1004,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1018,7 +1018,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1029,7 +1029,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R8",
                         "text": "Tarnaxis"
                     },
@@ -1046,13 +1046,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1070,7 +1070,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R8",
                         "text": "Tarnaxis"
                     },
@@ -1087,13 +1087,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1101,7 +1101,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1112,7 +1112,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R8",
                         "text": "Tarnaxis"
                     },
@@ -1122,7 +1122,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 6756789,
                                 "QTD": 1267890,
                                 "MTD": 8645677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1130,13 +1130,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1144,7 +1144,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1155,7 +1155,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R5",
                         "text": "Orrick Vale"
                     },
@@ -1172,13 +1172,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -10.1,
                                 "QTD": 5.3,
                                 "MTD": -2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1186,7 +1186,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1197,7 +1197,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R5",
                         "text": "Orrick Vale"
                     },
@@ -1207,7 +1207,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 19356789,
                                 "QTD": 3427890,
                                 "MTD": 255677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1215,13 +1215,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 5.1,
                                 "QTD": 65.3,
                                 "MTD": 45.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1229,7 +1229,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1240,7 +1240,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R5",
                         "text": "Orrick Vale"
                     },
@@ -1250,7 +1250,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 4356789,
                                 "QTD": 1510890,
                                 "MTD": 10045677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1258,13 +1258,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 50.1,
                                 "QTD": -12.3,
                                 "MTD": -23.1,
-                               
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1272,7 +1272,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1283,7 +1283,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R3",
                         "text": "Dreksmoor"
                     },
@@ -1293,7 +1293,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 6086789,
                                 "QTD": 3477890,
                                 "MTD": 7945677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1301,13 +1301,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -89.1,
                                 "QTD": -9,
                                 "MTD": 12.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1315,7 +1315,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1326,7 +1326,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R3",
                         "text": "Dreksmoor"
                     },
@@ -1336,7 +1336,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 10356789,
                                 "QTD": 3187890,
                                 "MTD": 204677,
-                               
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1344,13 +1344,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -61.1,
                                 "QTD": 65.3,
                                 "MTD": -12.4,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1358,7 +1358,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 35678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1369,7 +1369,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R3",
                         "text": "Dreksmoor"
                     },
@@ -1379,7 +1379,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1856789,
                                 "QTD": 1310890,
                                 "MTD": 12045677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1387,13 +1387,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 32.1,
                                 "QTD": 22.3,
                                 "MTD": -23.1,
-                               
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1401,7 +1401,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1412,7 +1412,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R3",
                         "text": "Cindralune"
                     },
@@ -1422,7 +1422,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 14256789,
                                 "QTD": 2567890,
                                 "MTD": 9045677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1430,13 +1430,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -10.1,
                                 "QTD": 45.3,
                                 "MTD": -2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1444,7 +1444,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1455,7 +1455,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R3",
                         "text": "Cindralune"
                     },
@@ -1465,7 +1465,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 8356789,
                                 "QTD": 3427890,
                                 "MTD": 255677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1473,13 +1473,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -34.6,
                                 "QTD": 65.3,
                                 "MTD": 45.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1487,7 +1487,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1498,7 +1498,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R3",
                         "text": "Cindralune"
                     },
@@ -1508,7 +1508,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 3856789,
                                 "QTD": 1510890,
                                 "MTD": 10045677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1516,13 +1516,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 50.1,
                                 "QTD": -12.3,
                                 "MTD": -23.1,
-                               
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1530,7 +1530,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1541,7 +1541,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R6",
                         "text": "Zepharion"
                     },
@@ -1551,7 +1551,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 9256789,
                                 "QTD": 3067890,
                                 "MTD": 9045677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1559,13 +1559,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -10.1,
                                 "QTD": 5.3,
                                 "MTD": -2.6,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1573,7 +1573,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1584,7 +1584,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R6",
                         "text": "Zepharion"
                     },
@@ -1594,7 +1594,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 18356789,
                                 "QTD": 3427890,
                                 "MTD": 255677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1602,13 +1602,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 5.1,
                                 "QTD": 65.3,
                                 "MTD": 45.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1616,7 +1616,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1627,7 +1627,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "R6",
                         "text": "Zepharion"
                     },
@@ -1637,7 +1637,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 2356789,
                                 "QTD": 1510890,
                                 "MTD": 10045677,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1645,13 +1645,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 50.1,
                                 "QTD": -12.3,
                                 "MTD": -23.1,
-                               
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1659,7 +1659,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
-                               
+
                             },
                             "unit": "pc"
                         }
@@ -1676,7 +1676,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B1",
                         "text": "Aether Propulsion",
                         "shortText": "BUS_1",
@@ -1687,7 +1687,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 51278901,
                                 "QTD": 6989012,
                                 "MTD": 1645678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1695,13 +1695,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1719,7 +1719,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B2",
                         "text": "ChronoWorks",
                         "shortText": "BUS_2"
@@ -1737,13 +1737,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1761,7 +1761,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B1",
                         "text": "Aether Propulsion",
                         "shortText": "BUS_1"
@@ -1779,13 +1779,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1793,7 +1793,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -1804,7 +1804,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B5",
                         "text": "SteelGuard"
                     },
@@ -1814,7 +1814,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 29078901,
                                 "QTD": 4309012,
                                 "MTD": 1505678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1822,13 +1822,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1836,7 +1836,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -1847,7 +1847,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B2",
                         "text": "ChronoWorks",
                         "shortText": "BUS_2"
@@ -1858,7 +1858,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 94378901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1866,13 +1866,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -32.3,
                                 "QTD": -2.9,
                                 "MTD": -40.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1880,7 +1880,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -1891,7 +1891,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B5",
                         "text": "SteelGuard"
                     },
@@ -1901,7 +1901,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 39078901,
                                 "QTD": 6089012,
                                 "MTD": 1945678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1909,13 +1909,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 42.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1923,7 +1923,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 245678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -1934,7 +1934,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B3",
                         "text": "CogBots",
                         "shortText": "BUS_3"
@@ -1945,7 +1945,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 45678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1953,13 +1953,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -1967,7 +1967,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -1978,7 +1978,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B4",
                         "text": "Obscura Optics"
                     },
@@ -1988,7 +1988,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 41678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -1996,13 +1996,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2010,7 +2010,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2021,7 +2021,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B7",
                         "text": "Sparkworks"
                     },
@@ -2031,7 +2031,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 31678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2039,13 +2039,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2053,7 +2053,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2064,7 +2064,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B7",
                         "text": "Sparkworks"
                     },
@@ -2074,7 +2074,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 62678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2082,13 +2082,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2096,7 +2096,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2107,7 +2107,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B3",
                         "text": "CogBots",
                         "shortText": "BUS_3"
@@ -2118,7 +2118,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 45678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2126,13 +2126,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2140,7 +2140,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2151,7 +2151,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B4",
                         "text": "Obscura Optics"
                     },
@@ -2161,7 +2161,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 36678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2169,13 +2169,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2183,7 +2183,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2194,7 +2194,7 @@ const data: MetricTypes.Data = {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B8",
                         "text": "ArcaneTech"
                     },
@@ -2204,7 +2204,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 23678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2212,13 +2212,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -42.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2226,7 +2226,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2237,7 +2237,7 @@ const data: MetricTypes.Data = {
                         "key": "PneumaPost Catalogue",
                         "text": "PneumaPost Catalogue"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B8",
                         "text": "ArcaneTech"
                     },
@@ -2247,7 +2247,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 12678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2255,13 +2255,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2269,7 +2269,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2280,7 +2280,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B1",
                         "text": "Aether Propulsion",
                         "shortText": "BUS_1"
@@ -2291,7 +2291,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 37678901,
                                 "QTD": 6909012,
                                 "MTD": 2955678,
-                               
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2299,13 +2299,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -42.3,
                                 "QTD": -2.9,
                                 "MTD": -70.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2313,7 +2313,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 395678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2324,7 +2324,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B21",
                         "text": "ProAether",
                         "shortText": "BUS_21"
@@ -2335,7 +2335,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 31678901,
                                 "QTD": 6909012,
                                 "MTD": 2955678,
-                               
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2343,13 +2343,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -42.3,
                                 "QTD": -2.9,
                                 "MTD": -70.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2357,7 +2357,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 395678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2368,7 +2368,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B5",
                         "text": "SteelGuard"
                     },
@@ -2378,7 +2378,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 7878901,
                                 "QTD": 6129012,
                                 "MTD": 2065678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2386,13 +2386,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -62.3,
                                 "QTD": 2.9,
                                 "MTD": 90.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2400,7 +2400,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2411,7 +2411,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B12",
                         "text": "Emporium B12"
                     },
@@ -2421,7 +2421,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 3878901,
                                 "QTD": 6129012,
                                 "MTD": 2065678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2429,13 +2429,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": -62.3,
                                 "QTD": 2.9,
                                 "MTD": 90.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2443,7 +2443,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2454,7 +2454,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B2",
                         "text": "ChronoWorks",
                         "shortText": "BUS_2"
@@ -2465,7 +2465,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 5678901,
                                 "QTD": 4889012,
                                 "MTD": 1835678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2473,13 +2473,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": -2.9,
                                 "MTD": -50.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2487,7 +2487,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2498,7 +2498,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B2",
                         "text": "Aether Propulsion1",
                         "shortText": "BUS_11"
@@ -2509,7 +2509,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 12678901,
                                 "QTD": 4889012,
                                 "MTD": 1835678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2517,13 +2517,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": -2.9,
                                 "MTD": -50.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2531,7 +2531,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2542,7 +2542,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B7",
                         "text": "Sparkworks"
                     },
@@ -2552,7 +2552,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 13678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2560,13 +2560,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2574,7 +2574,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2585,7 +2585,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B10",
                         "text": "Aether Propulsion0"
                     },
@@ -2595,7 +2595,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 45678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2603,13 +2603,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2617,7 +2617,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2628,7 +2628,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B4",
                         "text": "Obscura Optics"
                     },
@@ -2638,7 +2638,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 25678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2646,13 +2646,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2660,7 +2660,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2671,7 +2671,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B9",
                         "text": "Whirligig Labs"
                     },
@@ -2681,7 +2681,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 51678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2689,13 +2689,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2703,7 +2703,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2714,7 +2714,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B3",
                         "text": "CogBots",
                         "shortText": "BUS_3"
@@ -2725,7 +2725,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 38678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2733,13 +2733,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2747,7 +2747,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2758,7 +2758,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B3",
                         "text": "EmpLabs",
                         "shortText": "BUS_9"
@@ -2769,7 +2769,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 47678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2777,13 +2777,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2791,7 +2791,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2802,7 +2802,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B7",
                         "text": "ArcaneTech"
                     },
@@ -2812,7 +2812,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 54678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2820,13 +2820,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2834,7 +2834,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2845,7 +2845,7 @@ const data: MetricTypes.Data = {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
-                   "characteristicValue": {
+                    "characteristicValue": {
                         "key": "B8",
                         "text": "Smoke Rail"
                     },
@@ -2855,7 +2855,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 42678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
-                                
+
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2863,13 +2863,13 @@ const data: MetricTypes.Data = {
                             "unit": "ᘐ"
                         },
                         "primaryMeasureDelta": {
-                    
-                    "unit": "%",
+
+                            "unit": "%",
                             "valueByTimebox": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
-                                
+
                             }
                         },
                         "secondaryMeasure": {
@@ -2877,7 +2877,7 @@ const data: MetricTypes.Data = {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
-                           
+
                             },
                             "unit": "pc"
                         }
@@ -2919,7 +2919,7 @@ const data: MetricTypes.Data = {
                         "YTD": 557456,
                         "QTD": 410456,
                         "MTD": 29001,
-                       
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -2927,13 +2927,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -2941,7 +2941,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -2986,13 +2986,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3000,7 +3000,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3038,7 +3038,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3046,13 +3046,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3060,7 +3060,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3098,7 +3098,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3106,13 +3106,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3120,7 +3120,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3158,7 +3158,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3166,13 +3166,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3180,7 +3180,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3218,7 +3218,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3226,13 +3226,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3240,7 +3240,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3278,7 +3278,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3286,13 +3286,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3300,7 +3300,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3338,7 +3338,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3346,13 +3346,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3360,7 +3360,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3398,7 +3398,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3406,13 +3406,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3420,7 +3420,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3465,13 +3465,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3479,7 +3479,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3524,13 +3524,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3538,7 +3538,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3576,7 +3576,7 @@ const data: MetricTypes.Data = {
                         "YTD": 213456,
                         "QTD": 163456,
                         "MTD": 13345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3584,13 +3584,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3598,7 +3598,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3636,7 +3636,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3644,13 +3644,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3658,7 +3658,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3696,7 +3696,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3704,13 +3704,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3718,7 +3718,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3756,7 +3756,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3764,13 +3764,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3778,7 +3778,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3816,7 +3816,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3824,13 +3824,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3838,7 +3838,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3876,7 +3876,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3884,13 +3884,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3898,7 +3898,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3936,7 +3936,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -3944,13 +3944,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -3958,7 +3958,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -3996,7 +3996,7 @@ const data: MetricTypes.Data = {
                         "YTD": 637456,
                         "QTD": 203456,
                         "MTD": 26905,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4004,13 +4004,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4018,7 +4018,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4056,7 +4056,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4064,13 +4064,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4078,7 +4078,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4116,7 +4116,7 @@ const data: MetricTypes.Data = {
                         "YTD": 142356,
                         "QTD": 203456,
                         "MTD": 27845,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4124,13 +4124,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4138,7 +4138,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4176,7 +4176,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4184,13 +4184,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4198,7 +4198,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4236,7 +4236,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4244,13 +4244,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4258,7 +4258,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4296,7 +4296,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4304,13 +4304,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4318,7 +4318,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4356,7 +4356,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4364,13 +4364,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4378,7 +4378,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4416,7 +4416,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4424,13 +4424,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4438,7 +4438,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -4476,7 +4476,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -4484,13 +4484,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -4498,547 +4498,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "1",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5076,7 +4536,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5084,13 +4544,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5098,7 +4558,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5136,7 +4596,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5144,13 +4604,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5158,7 +4618,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5196,7 +4656,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5204,13 +4664,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5218,7 +4678,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5256,7 +4716,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5264,13 +4724,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5278,7 +4738,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5316,7 +4776,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5324,13 +4784,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5338,7 +4798,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5376,7 +4836,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5384,13 +4844,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5398,7 +4858,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5436,7 +4896,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5444,13 +4904,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5458,7 +4918,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5496,7 +4956,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5504,13 +4964,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5518,7 +4978,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5556,7 +5016,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5564,13 +5024,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5578,7 +5038,547 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "1",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
                     },
                     "unit": "pc"
                 }
@@ -5616,7 +5616,7 @@ const data: MetricTypes.Data = {
                         "YTD": 593456,
                         "QTD": 213456,
                         "MTD": 73345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5624,13 +5624,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5638,7 +5638,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5683,13 +5683,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5697,7 +5697,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5742,13 +5742,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5756,7 +5756,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5794,7 +5794,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5802,13 +5802,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5816,7 +5816,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5854,7 +5854,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5862,13 +5862,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5876,7 +5876,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5914,7 +5914,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5922,13 +5922,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5936,7 +5936,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -5974,7 +5974,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -5982,13 +5982,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -5996,7 +5996,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6034,7 +6034,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6042,13 +6042,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6056,7 +6056,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6094,7 +6094,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6102,13 +6102,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6116,7 +6116,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6154,7 +6154,7 @@ const data: MetricTypes.Data = {
                         "YTD": 423456,
                         "QTD": 223456,
                         "MTD": 32345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6162,13 +6162,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6176,7 +6176,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6214,7 +6214,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6222,13 +6222,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6236,7 +6236,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6274,7 +6274,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6282,13 +6282,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6296,7 +6296,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6334,7 +6334,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6342,13 +6342,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6356,7 +6356,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6394,7 +6394,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6402,13 +6402,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6416,7 +6416,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6454,7 +6454,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6462,13 +6462,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6476,7 +6476,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6514,7 +6514,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6522,13 +6522,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6536,7 +6536,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6574,7 +6574,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6582,13 +6582,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6596,7 +6596,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6634,7 +6634,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6642,13 +6642,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6656,7 +6656,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6701,13 +6701,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6715,7 +6715,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6760,13 +6760,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6774,7 +6774,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6819,13 +6819,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6833,7 +6833,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6871,7 +6871,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6879,13 +6879,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6893,7 +6893,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6931,7 +6931,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6939,13 +6939,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -6953,7 +6953,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -6991,7 +6991,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -6999,13 +6999,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7013,7 +7013,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7051,7 +7051,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7059,13 +7059,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7073,7 +7073,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7111,7 +7111,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7119,13 +7119,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7133,7 +7133,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7171,7 +7171,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7179,13 +7179,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7193,547 +7193,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "2",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-                        
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-                       
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7771,7 +7231,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7779,13 +7239,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7793,7 +7253,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7831,7 +7291,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7839,13 +7299,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7853,7 +7313,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7891,7 +7351,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7899,13 +7359,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7913,7 +7373,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -7951,7 +7411,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -7959,13 +7419,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -7973,7 +7433,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -8011,7 +7471,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -8019,13 +7479,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -8033,7 +7493,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -8071,7 +7531,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -8079,13 +7539,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -8093,7 +7553,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -8131,7 +7591,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -8139,13 +7599,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -8153,7 +7613,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -8191,7 +7651,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -8199,13 +7659,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -8213,7 +7673,7 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
                     },
                     "unit": "pc"
                 }
@@ -8251,7 +7711,7 @@ const data: MetricTypes.Data = {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
-                        
+
                     },
                     "showUnitBefore": true,
                     "scaling": 1000,
@@ -8259,13 +7719,13 @@ const data: MetricTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-                    
+
                     "unit": "%",
                     "valueByTimebox": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
-                       
+
                     }
                 },
                 "secondaryMeasure": {
@@ -8273,7 +7733,547 @@ const data: MetricTypes.Data = {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
-                        
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "2",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueByTimebox": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueByTimebox": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
                     },
                     "unit": "pc"
                 }

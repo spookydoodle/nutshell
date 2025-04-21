@@ -2,7 +2,7 @@ import * as MetricTypes from "../components/metrics-dashboard/types";
 import * as Types from "../types";
 import * as FormatUtils from "./formats";
 
-const filterByPositiveSales = (
+const filterByPositive = (
     data: MetricTypes.DataValue,
     columnName: string,
     timebox: string
@@ -22,7 +22,7 @@ const getTileData = (
     columnName: string,
     timebox: string
 ): MetricTypes.Datum[] => {
-    const tiles = filterByPositiveSales(data, columnName, timebox) as MetricTypes.Tile[];
+    const tiles = filterByPositive(data, columnName, timebox) as MetricTypes.Tile[];
 
     return tiles.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -46,7 +46,7 @@ const getChartsData = (
     timebox: string,
     tickerItemsData?: MetricTypes.TickerItem[]
 ): MetricTypes.Datum[] => {
-    const charts = filterByPositiveSales(data, columnName, timebox) as MetricTypes.ChartBreakdownItem[];
+    const charts = filterByPositive(data, columnName, timebox) as MetricTypes.ChartBreakdownItem[];
 
     return charts.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -103,7 +103,7 @@ const getProductsData = (
     slideName: string,
     rowName: MetricTypes.Dimension
 ): MetricTypes.Datum[] => {
-    return (filterByPositiveSales(data, columnName, timebox) as MetricTypes.ProductsItem[])
+    return (filterByPositive(data, columnName, timebox) as MetricTypes.ProductsItem[])
         .filter((row) => row.slideName.key === slideName && row.rowName.key === rowName.key)
         .map((row) => {
             const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;

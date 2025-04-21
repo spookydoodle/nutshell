@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import { imgPerSlide } from "../../slideshow/nfs/data";
+import { imgPerSlide } from "../../slideshows/nfs/nfs-data";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({

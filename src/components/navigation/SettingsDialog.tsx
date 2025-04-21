@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { Img } from "react-image";
 import { makeStyles, createStyles } from '@mui/styles';
 import {
@@ -17,9 +16,9 @@ import {
     Checkbox, Theme, useTheme
 } from '@mui/material';
 import { SlideDurationInput } from "./SlideDurationInput";
-import { images } from "../../layouts/images";
 import * as AppState from "../../state";
 import * as Hooks from '../../hooks';
+import { Slideshow } from "../../logic/slideshow/slideshow";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -54,6 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 interface Props {
+    slideshow: Slideshow;
     openSettings: boolean;
     handleSettingsClose: () => void;
     duration: number;
@@ -63,6 +63,7 @@ interface Props {
 }
 
 export const SettingsDialog: React.FC<Props> = ({
+    slideshow,
     openSettings,
     handleSettingsClose,
     duration,
@@ -71,8 +72,7 @@ export const SettingsDialog: React.FC<Props> = ({
     setShowTicker,
 }) => {
     const classes = useStyles();
-    const location = useLocation();
-    const imgArr = images[location.pathname.substring(1)] ?? [];
+    const imgArr = slideshow.backgroundImageUrl ?? []
     const [backgroundIndex] = Hooks.useSubjectState(AppState.backgroundIndex$);
 
     const theme = useTheme();

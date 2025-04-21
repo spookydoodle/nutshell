@@ -4,7 +4,7 @@ import { Box, Hidden, Theme, Typography } from '@mui/material';
 import { animations } from "../styles/animations";
 import { BackNav } from "./BackNav";
 import { fontSizes } from "../styles/themes";
-import { Slideshow } from "../slideshow/slideshow";
+import { Slideshow } from "../logic/slideshow/slideshow";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
