@@ -12,9 +12,9 @@ interface Props {
 }
 
 export const NutshellCoinflowContent: React.FC<Props> = ({ slideshow, data, tickerData }) => {
-    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
-    return !hiddenOnlyXs ? (
+    return !isOnlyXs ? (
         <Slideshow
             slideshow={slideshow}
             data={data}

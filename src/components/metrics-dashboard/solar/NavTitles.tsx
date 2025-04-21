@@ -106,7 +106,7 @@ export const NavTitles: React.FC<Props> = ({
     currentSequence,
 }) => {
     const classes = useStyles();
-    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
     return (
         <Grid
@@ -132,7 +132,7 @@ export const NavTitles: React.FC<Props> = ({
                 )}
             </Grid>
 
-            {!hiddenOnlyXs ? (
+            {!isOnlyXs ? (
                 <Grid item xs={4} className={classes.breadCrumbsContainer}>
                     {current?.titleSecondaryShort && (
                         <Tooltip title={current.titleSecondary || current.titleSecondaryShort} placement="top" arrow>

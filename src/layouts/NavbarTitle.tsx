@@ -56,10 +56,10 @@ export const NavbarTitle: React.FC<Props> = ({
     hidden
 }) => {
     const classes = useStyles();
-    const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
-    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const isMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
 
-    if (hidden && hiddenMdDown) {
+    if (hidden && isMdDown) {
         return null;
     }
 
@@ -69,7 +69,7 @@ export const NavbarTitle: React.FC<Props> = ({
                 {backIcon && <BackNav to="/" tooltipText="Back to main screen" />}
                 <Box>
                     <Typography fontSize={fontSizes.h2} color="inherit">
-                        {!hiddenLgDown
+                        {!isLgDown
                             ? (title ?? "")
                             : (titleShort ?? title ?? "")}
                         {titleSuffix && (
@@ -82,7 +82,7 @@ export const NavbarTitle: React.FC<Props> = ({
                         )}
                     </Typography>
                     <Typography fontSize={fontSizes.h5} color="inherit" className={classes.subtitle}>
-                        {!hiddenMdDown ? (subtitle ?? "") : (subtitleShort ?? "")}
+                        {!isMdDown ? (subtitle ?? "") : (subtitleShort ?? "")}
                     </Typography>
                 </Box>
             </Box>

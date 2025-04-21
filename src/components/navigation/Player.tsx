@@ -76,10 +76,10 @@ export const Player: React.FC<Props> = ({
     setShowTicker,
 }) => {
     const classes = useStyles();
-    const hiddenXlDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('xl'));
-    const hiddenMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
-    const hiddenMdDown = !hiddenMdUp;
-    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
+    const isXlDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('xl'));
+    const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
+    const isMdDown = !isMdUp;
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
     const [pin, setPin] = React.useState(false);
     const [show, setShow] = React.useState(false);
     const [hover, setHover] = React.useState(false);
@@ -133,17 +133,17 @@ export const Player: React.FC<Props> = ({
                                 categoryPrimary={categoryPrimary}
                                 categorySecondary={categorySecondary}
                             />
-                            {!hiddenMdUp && !hiddenOnlyXs ? (
+                            {!isMdUp && !isOnlyXs ? (
                                 <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />
                             ) : null}
                         </Grid>
 
-                        {!hiddenMdDown ? (
+                        {!isMdDown ? (
                             <>
                                 <Slider index={index} length={length} setIndex={setIndex} labels={labels || []} sequences={sequences} />
 
                                 <Grid item xs={4} md={3} container justifyContent="space-around" alignItems="center" className={classes.settingsButtonsContainer}>
-                                    {!hiddenXlDown ? (
+                                    {!isXlDown ? (
                                         <SlideDurationInput duration={duration} setDuration={setDuration} />
                                     ) : null}
 

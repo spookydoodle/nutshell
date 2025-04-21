@@ -46,10 +46,10 @@ export const SlideshowSolar: React.FC<Props> = ({
     tickerData
 }) => {
     const classes = useStyles();
-    const hiddenSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
-    const hiddenMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
-    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
+    const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
+    const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
     const appId = Hooks.useAppId();
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
@@ -138,7 +138,7 @@ export const SlideshowSolar: React.FC<Props> = ({
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
-                {!hiddenSmDown ? (
+                {!isSmDown ? (
                     <>
                         <NavTitles
                             animationsInitialized={animationsInitialized}
@@ -157,7 +157,7 @@ export const SlideshowSolar: React.FC<Props> = ({
                             currentSequence={slides[index].headers.sequence}
                         />
 
-                        {[...slides[index].data.entries()].map(([name, value], i) => !(i > 0 && hiddenOnlyXs) ? (
+                        {[...slides[index].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (
                             <Content
                                 animationsInitialized={animationsInitialized}
                                 name={name}
@@ -167,7 +167,7 @@ export const SlideshowSolar: React.FC<Props> = ({
                             />
                         ) : null)}
 
-                        {tickerData && showTicker && !hiddenLgDown ? (
+                        {tickerData && showTicker && !isLgDown ? (
                                 <Ticker
                                     animationsInitialized={animationsInitialized}
                                     text="Turbocharged by spookydoodle"
@@ -196,7 +196,7 @@ export const SlideshowSolar: React.FC<Props> = ({
                     </>
                 ) : null}
 
-                {!hiddenMdUp ? (
+                {!isMdUp ? (
                     <SmallScreenMessage variant="Solar" animationsInitialized={animationsInitialized} />
                 ) : null}
             </Grid>

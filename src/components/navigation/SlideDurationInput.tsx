@@ -32,13 +32,13 @@ interface Props {
 
 export const SlideDurationInput: React.FC<Props> = ({ duration, setDuration }) => {
     const classes = useStyles();
-    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const minVal = 5000;
     const maxVal = 60000;
 
     return (
         <Box className={classes.container}>
-            {!hiddenLgDown ? (
+            {!isLgDown ? (
                 <Typography
                     className={classes.playerInput}>
                     Slide duration: {duration / 1000}s

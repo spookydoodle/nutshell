@@ -33,8 +33,8 @@ interface Props {
 
 export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
-    const hiddenSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
-    const hiddenMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
+    const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
+    const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
     const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
@@ -63,7 +63,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
-                {!hiddenSmDown ? (
+                {!isSmDown ? (
                     <>
                         <Box className={classes.cinema}>
                             <Transitions
@@ -123,7 +123,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                     </>
                 ) : null}
 
-                {!hiddenMdUp ? (
+                {!isMdUp ? (
                     <SmallScreenMessage variant="NFS" />
                 ) : null}
             </Grid>

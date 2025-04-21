@@ -107,8 +107,8 @@ export const NavTitles: React.FC<Props> = ({
     primaryMeasureName
 }) => {
     const classes = useStyles();
-    const hiddenLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const hiddenOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
     const onSeqClick = (i: number) => () => onSequenceClick?.(i);
 
@@ -154,7 +154,7 @@ export const NavTitles: React.FC<Props> = ({
                 )}
             </Grid>
 
-            {!hiddenLgDown ? (
+            {!isLgDown ? (
                 <Grid item xs={4}>
                     <BreadCrumbs
                         animationsInitialized={animationsInitialized}
@@ -167,7 +167,7 @@ export const NavTitles: React.FC<Props> = ({
                 </Grid>
             ) : null}
 
-            {!hiddenOnlyXs ? (
+            {!isOnlyXs ? (
                 <Grid item xs={4} className={classes.breadCrumbsContainer}>
                     {current?.titleSecondaryShort && (
                         <Tooltip

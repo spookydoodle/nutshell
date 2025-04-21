@@ -140,13 +140,12 @@ export abstract class Slideshow<T = unknown> {
     private timeout: NodeJS.Timeout | undefined;
 
     public start = (timeout = 0): void => {
+        this.index$.next(0);
+        this.prevIndex$.next(0);
         this.timeout = setTimeout(() => {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, timeout);
-        this.index$.next(0);
-        this.prevIndex$.next(0);
-        this.selectedBackgroundIndex$.next(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
     };
 
     /**
@@ -156,6 +155,8 @@ export abstract class Slideshow<T = unknown> {
         clearTimeout(this.timeout);
         this.play$.next(false);
         this.animationsInitialized$.next(false);
+        this.index$.next(0);
+        this.prevIndex$.next(0);
     };
 
     /**

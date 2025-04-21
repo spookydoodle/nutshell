@@ -33,7 +33,7 @@ interface Props {
 export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
     const classes = useStyles();
     const theme = useTheme();
-    const isXs = useMediaQuery(theme.breakpoints.only("xs"));
+    const isOnlyXs = useMediaQuery(theme.breakpoints.only("xs"));
 
     return values.length > 0 ? (
         <>
