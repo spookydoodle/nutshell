@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface TitleLogoProps {
+interface Props {
     title: string;
     titleShort?: string;
     titleSuffix?: string;
@@ -58,7 +58,7 @@ interface TitleLogoProps {
     backIcon?: boolean;
 }
 
-export const TitleLogoBar: React.FC<TitleLogoProps> = ({
+export const NavbarTitle: React.FC<Props> = ({
     title,
     titleShort,
     titleSuffix,

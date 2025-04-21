@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Hidden } from '@mui/material';
-import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/TitleLogoBar";
+import { Layout } from "../layouts/Layout";
+import { NavbarTitle } from "../layouts/NavbarTitle";
 import { Slideshow } from "../components/metrics-dashboard/Slideshow";
 import { Mobile } from "../components/metrics-dashboard/mobile/Mobile";
 import * as Hooks from "../hooks";
@@ -37,12 +37,12 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
     const [_openDialog, setOpenDialog] = useState(false);
 
     return (
-        <NutshellLayout
+        <Layout
             slideshow={slideshow}
             animationsInitialized={animationsInitialized}
             header={
                 <Hidden mdDown>
-                    <TitleLogoBar title={slideshow.name} titleShort={slideshow.shortName} backIcon />
+                    <NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon />
                 </Hidden>
             }
         >
@@ -65,6 +65,6 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
                     </Hidden>
                 </>
             )}
-        </NutshellLayout>
+        </Layout>
     );
 };

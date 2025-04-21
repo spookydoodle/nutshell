@@ -66,7 +66,6 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow?: Slideshow;
-    animationsInitialized?: boolean;
     header?: React.ReactNode;
     footer?: React.ReactNode;
     children?: React.ReactNode;
@@ -74,26 +73,26 @@ interface Props {
 
 export const NutshellContent: React.FC<Props> = ({
     slideshow,
-    animationsInitialized,
     header,
     footer,
     children,
 }) => {
     const classes = useStyles();
     const appId = Hooks.useAppId();
-    const [backgroundIndex] = Hooks.useSubjectState(AppState.backgroundIndex$);
+    const [selectedBackgroundIndex] = Hooks.useNullableSubjectState(slideshow?.selectedBackgroundIndex$, 0);
+    const [animationsInitialized] = Hooks.useNullableSubjectState(slideshow?.animationsInitialized$, true);
 
     const img = React.useMemo(
         (): Img | undefined => {
-            const imgArr = slideshow?.backgroundImageUrl ?? [];
-            return imgArr?.[backgroundIndex % imgArr.length]
+            const imgArr = slideshow?.backgroundImageUrls ?? [];
+            return imgArr?.[selectedBackgroundIndex % imgArr.length]
         },
-        [backgroundIndex, slideshow]
+        [selectedBackgroundIndex, slideshow]
     );
 
     return (
         <Box className={classes.bg}>
-            {img && backgroundIndex != undefined && backgroundIndex >= 0 ? (
+            {img && selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
                 <Box className={classNames(classes.screen, { [classes.pauseAnim]: animationsInitialized })}>
                     <SuspenseImg
                         alt={`background-${appId}`}

@@ -17,15 +17,7 @@ const App: React.FC = () => {
             })),
             {
                 path: '/',
-                element: <Pages.Landing items={slideshows.map(({ slideshow }) => ({
-                    path: slideshow.path,
-                    name: slideshow.name,
-                    description: slideshow.description,
-                    devices: slideshow.devices,
-                    imageUrl: slideshow.imageUrl,
-                    caption: slideshow.caption,
-                    links: slideshow.links
-                }))} />,
+                element: <Pages.Landing />,
                 ErrorBoundary: Pages.ErrorBoundary
             }
         ]),

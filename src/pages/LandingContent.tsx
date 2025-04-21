@@ -1,21 +1,14 @@
 import React from "react";
 import { Grid, Typography, Theme, Tooltip } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
+import ComputerIcon from '@mui/icons-material/Computer';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import { animations } from "../styles/animations";
 import { Link } from "../components/Link";
 import { SuspenseImg } from "../components/SuspenseImg";
-import { deviceIcons } from "../data/landing-data";
+import * as Hooks from "../hooks";
 import * as Types from "../types";
-
-export interface LandingItem {
-    path: string;
-    imageUrl: string;
-    name: string;
-    description: string;
-    devices: Types.Device[];
-    caption?: string;
-    links?: string[];
-}
+import * as AppState from "../state";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -95,12 +88,15 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
-    items: LandingItem[];
-}
+const deviceIcons: { [key in Types.Device]: typeof PhoneAndroidIcon } = {
+    mobile: PhoneAndroidIcon,
+    desktop: ComputerIcon,
+};
 
-export const LandingContent: React.FC<Props> = ({ items }) => {
+
+export const LandingContent: React.FC = () => {
     const classes = useStyles();
+    const [slideshows] = Hooks.useSubjectState(AppState.slideshows$)
 
     return (
         <Grid
@@ -110,32 +106,32 @@ export const LandingContent: React.FC<Props> = ({ items }) => {
             justifyContent="space-evenly"
             className={classes.container}
         >
-            {items.map((item) => (
+            {slideshows.map(({ slideshow }) => (
                 <Grid
-                    key={item.path}
+                    key={slideshow.path}
                     item
                     xs={12}
                     lg={4}
                     className={classes.item}
                 >
-                    <Link to={item.path}>
+                    <Link to={slideshow.path}>
                         <div className={classes.imgContainer}>
                             <SuspenseImg
-                                alt={item.name}
+                                alt={slideshow.name}
                                 img={{
-                                    img: item.imageUrl,
+                                    img: slideshow.imageUrl,
                                     className: `${classes.img} ${classes.blurOff}`,
                                 }}
                                 fallback={{
-                                    img: item.imageUrl,
+                                    img: slideshow.imageUrl,
                                     className: `${classes.img} ${classes.blur}`,
                                 }}
                             />
                         </div>
                         <Typography variant="h6" position="relative">
-                            {item.name}
+                            {slideshow.name}
                             <div className={classes.iconsContainer}>
-                                {item.devices.map((device) => {
+                                {slideshow.devices.map((device) => {
                                     const Icon = deviceIcons[device];
                                     return (
                                         <Tooltip key={device} arrow title={`Available on ${device}`} placement="top">
@@ -145,7 +141,7 @@ export const LandingContent: React.FC<Props> = ({ items }) => {
                                 })}
                             </div>
                         </Typography>
-                        <Typography variant="body1">{item.description}</Typography>
+                        <Typography variant="body1">{slideshow.description}</Typography>
                     </Link>
                 </Grid>
             ))}

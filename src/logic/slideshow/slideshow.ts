@@ -1,6 +1,7 @@
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
+import * as Utils from "../../utils";
 import { Img } from '../../layouts/images';
 
 /**
@@ -56,7 +57,7 @@ export abstract class Slideshow<T = unknown> {
     public caption?: string;
     public links?: string[];
     public abstract imageUrl: string;
-    public backgroundImageUrl?: Img[];
+    public backgroundImageUrls?: Img[];
 
     /**
      * Data to present on the slides.
@@ -85,6 +86,11 @@ export abstract class Slideshow<T = unknown> {
     public showTicker$: rxjs.BehaviorSubject<boolean>;
 
     /**
+     * Index of the currently displayed background image from `backgroundImageUrls` array.
+     */
+    public selectedBackgroundIndex$: rxjs.BehaviorSubject<number>;
+
+    /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
      * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
      * @param data
@@ -102,6 +108,7 @@ export abstract class Slideshow<T = unknown> {
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
+        this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
     }
 
     /**

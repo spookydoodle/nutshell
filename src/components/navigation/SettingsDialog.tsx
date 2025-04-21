@@ -72,8 +72,8 @@ export const SettingsDialog: React.FC<Props> = ({
     setShowTicker,
 }) => {
     const classes = useStyles();
-    const imgArr = slideshow.backgroundImageUrl ?? []
-    const [backgroundIndex] = Hooks.useSubjectState(AppState.backgroundIndex$);
+    const imgArr = slideshow.backgroundImageUrls ?? []
+    const [selectedBackgroundIndex, setSelectedBackgroundIndex] = Hooks.useSubjectState(slideshow.selectedBackgroundIndex$);
 
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.only("xs"));
@@ -81,7 +81,7 @@ export const SettingsDialog: React.FC<Props> = ({
     const onTickerChange = (event: React.ChangeEvent<HTMLInputElement>) =>
         setShowTicker(event.target.checked);
 
-    const onBgClick = (i: number) => () => AppState.backgroundIndex$.next(i);
+    const onBgClick = (i: number) => () => setSelectedBackgroundIndex(i);
 
     return (
         <Dialog
@@ -93,7 +93,7 @@ export const SettingsDialog: React.FC<Props> = ({
             <DialogTitle id="responsive-dialog-title">Settings</DialogTitle>
 
             <DialogContent>
-                {backgroundIndex != undefined && backgroundIndex >= 0 ? (
+                {selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
                     <>
                         <Typography color="primary" gutterBottom
                         >Change background
@@ -107,7 +107,7 @@ export const SettingsDialog: React.FC<Props> = ({
                                             onClick={onBgClick(i)}
                                             src={img.min}
                                             alt={img.min}
-                                            className={`${classes.img} ${i === backgroundIndex ? classes.selected : undefined
+                                            className={`${classes.img} ${i === selectedBackgroundIndex ? classes.selected : undefined
                                                 }`}
                                         />
                                     </ImageListItem>
