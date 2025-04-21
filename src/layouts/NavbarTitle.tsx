@@ -22,19 +22,6 @@ const useStyles = makeStyles((theme: Theme) =>
         headerTitle: {
             display: "flex",
             alignItems: "center",
-            columnGap: "5px",
-        },
-        title: {
-            fontSize: fontSizes.h1,
-            marginTop: "1vh",
-            [theme.breakpoints.down("sm")]: {
-                marginTop: ".35rem",
-                fontSize: "1.2rem",
-            },
-            [theme.breakpoints.only("xs")]: {
-                marginTop: ".35rem",
-                fontSize: "1rem",
-            },
         },
         subtitle: {
             fontSize: fontSizes.h5,
@@ -49,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface TitleLogoProps {
+interface Props {
     title: string;
     titleShort?: string;
     titleSuffix?: string;
@@ -58,7 +45,7 @@ interface TitleLogoProps {
     backIcon?: boolean;
 }
 
-export const TitleLogoBar: React.FC<TitleLogoProps> = ({
+export const NavbarTitle: React.FC<Props> = ({
     title,
     titleShort,
     titleSuffix,
@@ -73,20 +60,19 @@ export const TitleLogoBar: React.FC<TitleLogoProps> = ({
             <Box className={classes.headerTitle}>
                 {backIcon && <BackNav to="/" tooltipText="Back to main screen" />}
                 <Box>
-                    <Typography fontSize={fontSizes.h2} color="inherit" className={classes.title}>
+                    <Typography fontSize={fontSizes.h2} color="inherit">
                         <Hidden lgDown>{title ?? ""} </Hidden>
                         <Hidden lgUp>{titleShort ?? title ?? ""} </Hidden>
                         {titleSuffix && (
                             <Typography
                                 color="error"
                                 component="span"
-                                className={classes.title}
                             >
                                 {` (${titleSuffix})`}
                             </Typography>
                         )}
                     </Typography>
-                    <Typography fontSize={fontSizes.h2} color="inherit" variant="h6" className={classes.subtitle}>
+                    <Typography fontSize={fontSizes.h5} color="inherit" className={classes.subtitle}>
                         <Hidden mdDown>{subtitle ?? ""}</Hidden>
                         <Hidden mdUp>{subtitleShort ?? ""}</Hidden>
                     </Typography>

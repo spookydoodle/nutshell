@@ -13,7 +13,7 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public devices: Types.Device[] = ['mobile', 'desktop'];
     public caption = 'Data collected manually';
     public imageUrl = `${IMG_SERVER}/landing/gadgets.jpg`;
-    public backgroundImageUrl = getImgArr("BG");
+    public backgroundImageUrls = getImgArr("BG");
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

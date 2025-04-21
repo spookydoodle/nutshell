@@ -13,7 +13,7 @@ export class SolarSlideshow extends Slideshow<Types.StateDataMap> {
     public caption = 'Data collected manually';
     public imageUrl = `${IMG_SERVER}/landing/solar.jpg`
     public links = ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/"];
-    public backgroundImageUrl = getImgArr("SS");
+    public backgroundImageUrls = getImgArr("SS");
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

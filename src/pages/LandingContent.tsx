@@ -1,36 +1,42 @@
 import React from "react";
-import { Grid, Typography, Theme, Tooltip } from '@mui/material';
+import { Box, Typography, Theme, Tooltip } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
+import ComputerIcon from '@mui/icons-material/Computer';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import { animations } from "../styles/animations";
 import { Link } from "../components/Link";
 import { SuspenseImg } from "../components/SuspenseImg";
-import { deviceIcons } from "../data/landing-data";
+import { Slideshow } from "../logic/slideshow/slideshow";
+import * as Hooks from "../hooks";
 import * as Types from "../types";
-
-export interface LandingItem {
-    path: string;
-    imageUrl: string;
-    name: string;
-    description: string;
-    devices: Types.Device[];
-    caption?: string;
-    links?: string[];
-}
+import * as AppState from "../state";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
+        outerContainer: {
+            minHeight: `calc(100vh - ${2 * (Slideshow.vh.topBarPrimaryRow + Slideshow.vh.topBarSecondaryRow + (2 * Slideshow.vh.topBarVerticalPadding))}vh - 40px)`,
+            boxSizing: "border-box",
+            display: "grid",
+            alignItems: "center",
+            marginTop: "20px",
+            marginBottom: "20px",
+        },
         container: {
             overflowX: "hidden",
-            textAlign: "center",
             overflowY: "scroll",
-            padding: "0 60px",
-            minHeight: "calc(100vh - 120px)",
-            [theme.breakpoints.down("sm")]: {
-                height: "auto",
-                padding: "0 20px",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "",
+            flexWrap: "wrap",
+            flexBasis: 0,
+            columnGap: "40px",
+            rowGap: "40px",
+            padding: "0 20px",
+            [theme.breakpoints.up("md")]: {
+                padding: "0 40px",
             },
-            [theme.breakpoints.down("lg")]: {
-                paddingTop: "40px"
+            [theme.breakpoints.up("lg")]: {
+                padding: "0 60px",
             },
             "&::-webkit-scrollbar": {
                 width: "6px",
@@ -42,21 +48,21 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         item: {
             position: "relative",
+            rowGap: "10px",
+            display: "grid",
+            textAlign: "center",
             color: "white",
-        },
-        padding: {
-            padding: "0 5px",
+            flex: "1 1 0",
+            minWidth: "300px",
+            maxWidth: "500px",
         },
         imgContainer: {
-            position: "relative",
             overflow: "hidden",
-            width: "100%",
             height: "40vh",
             [theme.breakpoints.down("sm")]: {
                 height: "200px",
             },
             marginBottom: "10px",
-            margin: "0 auto",
         },
         img: {
             backgroundColor: "#000",
@@ -95,60 +101,53 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
-    items: LandingItem[];
-}
+const deviceIcons: { [key in Types.Device]: typeof PhoneAndroidIcon } = {
+    mobile: PhoneAndroidIcon,
+    desktop: ComputerIcon,
+};
 
-export const LandingContent: React.FC<Props> = ({ items }) => {
+
+export const LandingContent: React.FC = () => {
     const classes = useStyles();
+    const [slideshows] = Hooks.useSubjectState(AppState.slideshows$)
 
     return (
-        <Grid
-            container
-            spacing={6}
-            alignItems="center"
-            justifyContent="space-evenly"
-            className={classes.container}
-        >
-            {items.map((item) => (
-                <Grid
-                    key={item.path}
-                    item
-                    xs={12}
-                    lg={4}
-                    className={classes.item}
-                >
-                    <Link to={item.path}>
-                        <div className={classes.imgContainer}>
-                            <SuspenseImg
-                                alt={item.name}
-                                img={{
-                                    img: item.imageUrl,
-                                    className: `${classes.img} ${classes.blurOff}`,
-                                }}
-                                fallback={{
-                                    img: item.imageUrl,
-                                    className: `${classes.img} ${classes.blur}`,
-                                }}
-                            />
-                        </div>
-                        <Typography variant="h6" position="relative">
-                            {item.name}
-                            <div className={classes.iconsContainer}>
-                                {item.devices.map((device) => {
-                                    const Icon = deviceIcons[device];
-                                    return (
-                                        <Tooltip key={device} arrow title={`Available on ${device}`} placement="top">
-                                            <Icon fontSize="small" key={device} />
-                                        </Tooltip>
-                                    );
-                                })}
+        <Box className={classes.outerContainer}>
+            <Box className={classes.container}>
+                {slideshows.map(({ slideshow }) => (
+                    <Box key={slideshow.path} className={classes.item}>
+                        <Link to={slideshow.path}>
+                            <div className={classes.imgContainer}>
+                                <SuspenseImg
+                                    alt={slideshow.name}
+                                    img={{
+                                        img: slideshow.imageUrl,
+                                        className: `${classes.img} ${classes.blurOff}`,
+                                    }}
+                                    fallback={{
+                                        img: slideshow.imageUrl,
+                                        className: `${classes.img} ${classes.blur}`,
+                                    }}
+                                />
                             </div>
-                        </Typography>
-                        <Typography variant="body1">{item.description}</Typography>
-                    </Link>
-                </Grid>
-            ))}
-        </Grid>
+                            <Typography variant="h6" position="relative">
+                                {slideshow.name}
+                                <div className={classes.iconsContainer}>
+                                    {slideshow.devices.map((device) => {
+                                        const Icon = deviceIcons[device];
+                                        return (
+                                            <Tooltip key={device} arrow title={`Available on ${device}`} placement="top">
+                                                <Icon fontSize="small" key={device} />
+                                            </Tooltip>
+                                        );
+                                    })}
+                                </div>
+                            </Typography>
+                            <Typography variant="body1">{slideshow.description}</Typography>
+                        </Link>
+                    </Box>
+                ))}
+            </Box>
+        </Box>
     );
 };

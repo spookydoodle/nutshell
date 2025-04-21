@@ -1,6 +1,6 @@
 import React from "react";
-import { NutshellLayout } from "../layouts/Nutshell";
-import { TitleLogoBar } from "../layouts/TitleLogoBar";
+import { Layout } from "../layouts/Layout";
+import { NavbarTitle } from "../layouts/NavbarTitle";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
 import { SolarSlideshow } from "../slideshows/solar/solar-slideshow";
 import * as Hooks from '../hooks';
@@ -34,9 +34,9 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
     const slidesData = selectedData?.slides;
 
     return (
-        <NutshellLayout
+        <Layout
             slideshow={slideshow}
-            header={<TitleLogoBar title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
+            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
         >
             {slidesData && (
                 <SlideshowSolar
@@ -47,6 +47,6 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
                     tickerData={tickerData}
                 />
             )}
-        </NutshellLayout>
+        </Layout>
     );
 };

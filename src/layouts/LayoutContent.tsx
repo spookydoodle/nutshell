@@ -4,10 +4,9 @@ import { animations } from "../styles/animations";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Theme } from '@mui/material';
 import { SuspenseImg } from "../components/SuspenseImg";
-import { Img } from "./images";
-import * as AppState from "../state";
-import * as Hooks from '../hooks';
 import { Slideshow } from "../logic/slideshow/slideshow";
+import { Img } from "./images";
+import * as Hooks from '../hooks';
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -28,7 +27,7 @@ const useStyles = makeStyles((_theme: Theme) =>
             backgroundColor: "#000",
             transformStyle: "preserve-3d",
             overflow: "hidden",
-            transform: "translateY(-4rem)",
+            transform: "translateY(-64px)",
             animation: `$no-transform 2s .5s cubic-bezier(0, .5, 0, 1) forwards`,
             border: "none",
             "&::after": {
@@ -66,34 +65,33 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow?: Slideshow;
-    animationsInitialized?: boolean;
     header?: React.ReactNode;
     footer?: React.ReactNode;
     children?: React.ReactNode;
 }
 
-export const NutshellContent: React.FC<Props> = ({
+export const LayoutContent: React.FC<Props> = ({
     slideshow,
-    animationsInitialized,
     header,
     footer,
     children,
 }) => {
     const classes = useStyles();
     const appId = Hooks.useAppId();
-    const [backgroundIndex] = Hooks.useSubjectState(AppState.backgroundIndex$);
+    const [selectedBackgroundIndex] = Hooks.useNullableSubjectState(slideshow?.selectedBackgroundIndex$, 0);
+    const [animationsInitialized] = Hooks.useNullableSubjectState(slideshow?.animationsInitialized$, true);
 
     const img = React.useMemo(
         (): Img | undefined => {
-            const imgArr = slideshow?.backgroundImageUrl ?? [];
-            return imgArr?.[backgroundIndex % imgArr.length]
+            const imgArr = slideshow?.backgroundImageUrls ?? [];
+            return imgArr?.[selectedBackgroundIndex % imgArr.length]
         },
-        [backgroundIndex, slideshow]
+        [selectedBackgroundIndex, slideshow]
     );
 
     return (
         <Box className={classes.bg}>
-            {img && backgroundIndex != undefined && backgroundIndex >= 0 ? (
+            {img && selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
                 <Box className={classNames(classes.screen, { [classes.pauseAnim]: animationsInitialized })}>
                     <SuspenseImg
                         alt={`background-${appId}`}
