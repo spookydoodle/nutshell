@@ -6,6 +6,7 @@ import { PlayerButtons } from "./PlayerButtons";
 import { SlideDurationInput } from "./SlideDurationInput";
 import { PlayerSettingsButton } from "./PlayerSettingsButton";
 import { SettingsDialog } from "./SettingsDialog";
+import { Slideshow } from "../../logic/slideshow/slideshow";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -36,6 +37,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
+    slideshow: Slideshow;
     animationsInitialized: boolean;
     play: boolean;
     setPlay: React.Dispatch<React.SetStateAction<boolean>>;
@@ -55,6 +57,7 @@ interface Props {
 }
 
 export const Player: React.FC<Props> = ({
+    slideshow,
     animationsInitialized,
     play,
     setPlay,
@@ -147,6 +150,7 @@ export const Player: React.FC<Props> = ({
             </Box>
 
             <SettingsDialog
+                slideshow={slideshow}
                 openSettings={openSettings}
                 handleSettingsClose={handleSettingsClose}
                 duration={duration}

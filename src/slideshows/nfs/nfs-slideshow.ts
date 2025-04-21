@@ -1,13 +1,24 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode } from "../../types";
+import * as Types from "../../types";
 import { NutshellData } from "../../components/nfs/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
+import { IMG_SERVER } from "../../img/cmd";
+import { getImgArr } from "../../layouts/images";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
+    public path = '/need-for-nutshell';
     public name = '_NEED_FOR_NUTSHELL';
     public shortName = '_NFS';
+    public description = 'Evolution of the Need for Speed games franchise';
+    public devices: Types.Device[] = ['desktop'];
+    public caption = 'Data collected manually';
+    public imageUrl = `${IMG_SERVER}/landing/nfs.jpg`;
+    public links = [
+        "https://vgsales.fandom.com/wiki/Need_for_Speed",
+        "https://en.wikipedia.org/wiki/Need_for_Speed"
+    ];
 
-    public getThemeOptions = (mode: Mode): ThemeOptions => ({
+    public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {
             primary: {
                 light: "#000000",

@@ -213,6 +213,7 @@ export const Slideshow: React.FC<Props> = ({
                 ) : null}
 
                 <Player
+                    slideshow={slideshow}
                     animationsInitialized={animationsInitialized}
                     play={play}
                     setPlay={setPlay}

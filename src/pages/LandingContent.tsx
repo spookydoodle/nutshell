@@ -4,7 +4,18 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { animations } from "../styles/animations";
 import { Link } from "../components/Link";
 import { SuspenseImg } from "../components/SuspenseImg";
-import { deviceIcons, landingPageItems } from "../data/landing-data";
+import { deviceIcons } from "../data/landing-data";
+import * as Types from "../types";
+
+export interface LandingItem {
+    path: string;
+    imageUrl: string;
+    name: string;
+    description: string;
+    devices: Types.Device[];
+    caption?: string;
+    links?: string[];
+}
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -84,8 +95,11 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
+interface Props {
+    items: LandingItem[];
+}
 
-export const LandingContent: React.FC = () => {
+export const LandingContent: React.FC<Props> = ({ items }) => {
     const classes = useStyles();
 
     return (
@@ -96,24 +110,24 @@ export const LandingContent: React.FC = () => {
             justifyContent="space-evenly"
             className={classes.container}
         >
-            {Object.entries(landingPageItems).map(([key, item]) => (
+            {items.map((item) => (
                 <Grid
-                    key={key}
+                    key={item.path}
                     item
                     xs={12}
                     lg={4}
                     className={classes.item}
                 >
-                    <Link key={key} to={`/${key}`}>
+                    <Link to={item.path}>
                         <div className={classes.imgContainer}>
                             <SuspenseImg
                                 alt={item.name}
                                 img={{
-                                    img: item.image,
+                                    img: item.imageUrl,
                                     className: `${classes.img} ${classes.blurOff}`,
                                 }}
                                 fallback={{
-                                    img: item.image,
+                                    img: item.imageUrl,
                                     className: `${classes.img} ${classes.blur}`,
                                 }}
                             />
@@ -124,7 +138,7 @@ export const LandingContent: React.FC = () => {
                                 {item.devices.map((device) => {
                                     const Icon = deviceIcons[device];
                                     return (
-                                        <Tooltip arrow title={`Available on ${device}`} placement="top">
+                                        <Tooltip key={device} arrow title={`Available on ${device}`} placement="top">
                                             <Icon fontSize="small" key={device} />
                                         </Tooltip>
                                     );

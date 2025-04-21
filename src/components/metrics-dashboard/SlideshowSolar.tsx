@@ -180,6 +180,7 @@ export const SlideshowSolar: React.FC<Props> = ({
                     ) : null}
 
                     <Player
+                        slideshow={slideshow}
                         animationsInitialized={animationsInitialized}
                         play={play}
                         setPlay={setPlay}

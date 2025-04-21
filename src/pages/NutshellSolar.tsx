@@ -10,8 +10,6 @@ interface Props {
 }
 
 export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
-    const appId = Hooks.useAppId();
-
     // Delay the transitions 5 seconds, when all CSS transitions are finished
     const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [animationsInitialized, setAnimationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
@@ -31,7 +29,7 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
         }
     }, [animationsInitialized]);
 
-    const selectedData = slideshow.data?.get(appId);
+    const selectedData = slideshow.data?.get('solar-system');
     const tickerData = selectedData?.ticker;
     const slidesData = selectedData?.slides;
 

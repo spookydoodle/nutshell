@@ -1,13 +1,21 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode } from "../../types";
+import * as Types from "../../types";
 import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
+import { IMG_SERVER } from "../../img/cmd";
+import { getImgArr } from "../../layouts/images";
 
 export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
+    public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';
+    public description = 'High level conflow results of a steam punk company';
+    public devices: Types.Device[] = ['mobile', 'desktop'];
+    public caption = 'Data collected manually';
+    public imageUrl = `${IMG_SERVER}/landing/gadgets.jpg`;
+    public backgroundImageUrl = getImgArr("BG");
 
-    public getThemeOptions = (mode: Mode): ThemeOptions => ({
+    public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {
             primary: {
                 light: "#C9184A",
