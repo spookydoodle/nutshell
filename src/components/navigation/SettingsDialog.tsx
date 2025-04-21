@@ -13,7 +13,8 @@ import {
     Box,
     Typography,
     FormControlLabel,
-    Checkbox, Theme, useTheme
+    Checkbox, Theme, useTheme,
+    ToggleButtonGroup
 } from '@mui/material';
 import { SlideDurationInput } from "./SlideDurationInput";
 import * as AppState from "../../state";
@@ -73,6 +74,7 @@ export const SettingsDialog: React.FC<Props> = ({
 }) => {
     const classes = useStyles();
     const imgArr = slideshow.backgroundImageUrls ?? []
+    const [mode, setMode] = Hooks.useSubjectState(AppState.mode$);
     const [selectedBackgroundIndex, setSelectedBackgroundIndex] = Hooks.useSubjectState(slideshow.selectedBackgroundIndex$);
 
     const theme = useTheme();
@@ -116,6 +118,16 @@ export const SettingsDialog: React.FC<Props> = ({
                         </div>
                     </>
                 ) : undefined}
+
+                <Box className={classes.itemContainer}>
+                    <Typography color="primary" gutterBottom>
+                        Mode
+                    </Typography>
+                    <ToggleButtonGroup>
+                        <Button size="small" variant={mode === 'light' ? "contained" : "text"} value="light" onClick={() => setMode('light')}>Light</Button>
+                        <Button size="small" variant={mode === 'dark' ? "contained" : "text"} value="dark" onClick={() => setMode('dark')}>Dark</Button>
+                    </ToggleButtonGroup>
+                </Box>
 
                 <Box className={classes.itemContainer}>
                     <Typography color="primary" gutterBottom>
