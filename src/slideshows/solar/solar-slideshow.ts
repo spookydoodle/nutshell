@@ -1,24 +1,23 @@
 import { ThemeOptions } from "@mui/material";
-import { Mode } from "../../types";
-import { Slideshow } from "../slideshow";
-import * as MetricTypes from "../../components/metrics-dashboard/types";
+import { Slideshow } from "../../logic/slideshow/slideshow";
+import { Mode, StateDataMap } from "../../types";
 
-export class SalesSlideshow extends Slideshow<MetricTypes.Data> {
-    public name = '_NUTSHELL_DASHBOARD';
-    public shortName = '_NUTSHELL';
+export class SolarSlideshow extends Slideshow<StateDataMap> {
+    public name = '_SOLAR_NUTSHELL';
+    public shortName = '_SOL_NUT';
 
     public getThemeOptions = (mode: Mode): ThemeOptions => ({
         palette: {
             primary: {
-                light: "#C9184A",
-                main: "#590D22",
-                dark: "#590D22",
+                light: "#4361EE",
+                main: "#000000",
+                dark: "#3A0CA3",
                 contrastText: "#F1FAEE",
             },
             secondary: {
-                light: "#0077B6",
-                main: "#0077B6",
-                dark: "#023E8A",
+                light: "#4895EF",
+                main: "#4361EE",
+                dark: "#3F37C9",
                 contrastText: "#F1FAEE",
             },
             common: {
@@ -30,14 +29,14 @@ export class SalesSlideshow extends Slideshow<MetricTypes.Data> {
                 default: mode === "dark" ? "#000000" : "#F4F4F4",
             },
             text: {
-                primary: mode === "dark" ? "#FAF8F3" : "#000",
-                secondary: mode === "dark" ? "rgba(255, 255, 255, 0.60)" : "#023E8A",
+                primary: mode === "dark" ? "rgba(247, 244, 234, .87)" : "#000000",
+                secondary: mode === "dark" ? "rgba(255, 255, 255, 0.60)" : "#495057",
                 disabled: "rgba(0, 23, 79, 0.38)",
                 // hint: "rgba(0, 0, 0, 0.38)",
             },
         },
         typography: {
-            fontFamily: ["Lato", "Arial"].join(","),
+            fontFamily: ["Goldman-Regular", "Open Sans", "Arial"].join(","),
         },
     });
 }

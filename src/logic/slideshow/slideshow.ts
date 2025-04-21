@@ -1,6 +1,6 @@
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
-import { Mode } from "../types";
+import { Mode } from "../../types";
 
 /**
  * Initial options to create a slideshow with

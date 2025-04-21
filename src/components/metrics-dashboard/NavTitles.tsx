@@ -93,7 +93,7 @@ interface Props {
     primaryMeasureName: string;
 }
 
-export const NavTitlesSales: React.FC<Props> = ({
+export const NavTitles: React.FC<Props> = ({
     animationsInitialized = true,
     current,
     // next,

@@ -1,15 +1,15 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { SalesSlideshow } from "./slideshow/sales/sales-slideshow";
-import { SolarSlideshow } from "./slideshow/solar/solar-slideshow";
-import { NfsSlideshow } from "./slideshow/nfs/nfs-slideshow";
-import nutshellData from "./slideshow/sales/nutshell-data";
-import { createStateData } from "./slideshow/solar/solar-data";
-import { NEED_FOR_SPEED } from "./slideshow/nfs/data";
+import { CoinflowSlideshow } from "./slideshows/coinflow/coinflow-slideshow";
+import { SolarSlideshow } from "./slideshows/solar/solar-slideshow";
+import { NfsSlideshow } from "./slideshows/nfs/nfs-slideshow";
+import nutshellData from "./slideshows/coinflow/coinflow-data";
+import { createStateData } from "./slideshows/solar/solar-data";
+import { NEED_FOR_SPEED } from "./slideshows/nfs/nfs-data";
 import * as Pages from "./pages";
 import "./App.css";
 
-const salesSlideshow = new SalesSlideshow(nutshellData, { play: false });
+const salesSlideshow = new CoinflowSlideshow(nutshellData, { play: false });
 const solarSlideshow = new SolarSlideshow(createStateData(), { play: false });
 const nfsSlideshow = new NfsSlideshow(NEED_FOR_SPEED, {
     play: true,

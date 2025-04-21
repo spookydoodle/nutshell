@@ -1,6 +1,6 @@
 import React from "react";
 import { LoadProgress } from "../navigation/LoadProgress";
-import { NEED_FOR_SPEED } from "../../slideshow/nfs/data";
+import { NEED_FOR_SPEED } from "../../slideshows/nfs/nfs-data";
 const data = NEED_FOR_SPEED;
 const imagesToPreload = data.games.map(({ background }) => background).flat(1);
 

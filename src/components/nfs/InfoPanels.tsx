@@ -1,7 +1,7 @@
 import React from "react";
 import { Rating } from './Rating';
 import { TitlePanels } from "../metrics-dashboard/TitlePanels";
-import * as Data from "../../slideshow/nfs/data";
+import * as Data from "../../slideshows/nfs/nfs-data";
 import * as Utils from "../../utils";
 import * as Types from "./types";
 

@@ -3,13 +3,13 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, Hidden } from '@mui/material';
 import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
-import { NavTitlesSales } from "./NavTitlesSales";
+import { NavTitles } from "./NavTitles";
 import { Content } from "./Content";
 import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";
-import { SalesSlideshow } from "../../slideshow/sales/sales-slideshow";
+import { CoinflowSlideshow } from "../../slideshows/coinflow/coinflow-slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -39,7 +39,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideshow: SalesSlideshow;
+    slideshow: CoinflowSlideshow;
     play: boolean;
     setPlay: React.Dispatch<React.SetStateAction<boolean>>;
     data: MetricTypes.SlidesStateData;
@@ -176,7 +176,7 @@ export const Slideshow: React.FC<Props> = ({
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
-                <NavTitlesSales
+                <NavTitles
                     animationsInitialized={animationsInitialized}
                     current={slides[index].headers}
                     next={slides[(index + 1) % totalLen].headers}

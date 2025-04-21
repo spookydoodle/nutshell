@@ -10,7 +10,7 @@ import { Ticker } from "./ticker/Ticker";
 import { SmallScreenMessage } from "./SmallScreenMessage";
 import { SlidesStateData, SlideData, TickerData } from "../../types/types";
 import * as Hooks from '../../hooks';
-import { SolarSlideshow } from "../../slideshow/solar/solar-slideshow";
+import { SolarSlideshow } from "../../slideshows/solar/solar-slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({

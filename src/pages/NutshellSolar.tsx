@@ -2,7 +2,7 @@ import React from "react";
 import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
-import { SolarSlideshow } from "../slideshow/solar/solar-slideshow";
+import { SolarSlideshow } from "../slideshows/solar/solar-slideshow";
 import * as Hooks from '../hooks';
 
 interface Props {

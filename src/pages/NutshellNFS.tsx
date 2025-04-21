@@ -3,7 +3,7 @@ import { NutshellLayout } from "../layouts/Nutshell";
 import { TitleLogoBar } from "../layouts/TitleLogoBar";
 import { ImagePreloadWrapper } from "../components/nfs/ImagePreloadWrapper";
 import { SlideShow } from "../components/nfs/SlideShow";
-import { NfsSlideshow } from "../slideshow/nfs/nfs-slideshow";
+import { NfsSlideshow } from "../slideshows/nfs/nfs-slideshow";
 
 interface Props {
     slideshow: NfsSlideshow;

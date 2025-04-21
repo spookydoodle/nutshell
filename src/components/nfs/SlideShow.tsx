@@ -5,10 +5,10 @@ import { Background } from "./Background";
 import { Player } from "../navigation/Player";
 import { Transitions } from "../metrics-dashboard/Transitions";
 import { SmallScreenMessage } from "../metrics-dashboard/SmallScreenMessage";
-import { imgPerSlide } from "../../slideshow/nfs/data";
+import { imgPerSlide } from "../../slideshows/nfs/nfs-data";
 import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
-import { NfsSlideshow } from "../../slideshow/nfs/nfs-slideshow";
+import { NfsSlideshow } from "../../slideshows/nfs/nfs-slideshow";
 import * as Hooks from '../../hooks';
 
 const useStyles = makeStyles((_theme: Theme) =>

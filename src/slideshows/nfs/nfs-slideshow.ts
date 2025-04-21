@@ -1,7 +1,7 @@
 import { ThemeOptions } from "@mui/material";
 import { Mode } from "../../types";
-import { Slideshow } from "../slideshow";
 import { NutshellData } from "../../components/nfs/types";
+import { Slideshow } from "../../logic/slideshow/slideshow";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public name = '_NEED_FOR_NUTSHELL';
