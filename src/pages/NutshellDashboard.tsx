@@ -8,7 +8,6 @@ import * as Hooks from "../hooks";
 import * as Utils from "../utils";
 import { SalesSlideshow } from "../slideshow/sales/sales-slideshow";
 
-
 interface Props {
     slideshow: SalesSlideshow;
 }
@@ -43,7 +42,7 @@ export const NutshellDashboard: React.FC<Props> = ({ slideshow }) => {
             animationsInitialized={animationsInitialized}
             header={
                 <Hidden mdDown>
-                    <TitleLogoBar title='_NUTSHELL_DASHBOARD' titleShort='_NUTSHELL' backIcon />
+                    <TitleLogoBar title={slideshow.name} titleShort={slideshow.shortName} backIcon />
                 </Hidden>
             }
         >

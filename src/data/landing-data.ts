@@ -19,7 +19,7 @@ interface Item {
     image: string;
 }
 
-export const landingPageItems: { [key in string]: Item} = {
+export const landingPageItems: { [key in string]: Item } = {
     "dashboard": {
         name: "SALES DASHBOARD",
         devices: ["mobile", "desktop"],

@@ -1,6 +1,6 @@
 import React from "react";
 import classNames from "classnames";
-import { Grid, Typography , Box } from "@mui/material";
+import { Grid, Typography, Box } from "@mui/material";
 import { useStyles } from "./styles";
 import { BarProps } from "./types";
 
@@ -21,7 +21,7 @@ export const BarChartRowAbsDelta: React.FC<BarProps> = ({
     const classes = useStyles();
 
     const textClassName = React.useMemo(
-        () => labelSize === "sm" ? classes.textSm: classes.textMd,
+        () => labelSize === "sm" ? classes.textSm : classes.textMd,
         [labelSize]
     );
 

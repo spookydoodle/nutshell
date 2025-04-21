@@ -21,7 +21,7 @@ export const BarChartRowDeltaAbs: React.FC<BarProps> = ({
     const classes = useStyles();
 
     const textClassName = React.useMemo(
-        () => labelSize === "sm" ? classes.textSm: classes.textMd,
+        () => labelSize === "sm" ? classes.textSm : classes.textMd,
         [labelSize]
     );
 
@@ -57,7 +57,7 @@ export const BarChartRowDeltaAbs: React.FC<BarProps> = ({
                             className={classNames(classes.labels, classes.delta, textClassName, {
                                 [classes.deltaPos]: isDeltaGood,
                                 [classes.deltaNeg]: isDeltaBad,
-                                [classes.deltaMax]: delta <= -1000 || delta >= 1000 
+                                [classes.deltaMax]: delta <= -1000 || delta >= 1000
                             })}
                         >
                             {deltaFormatted ? deltaFormatted : delta ? delta : undefined}

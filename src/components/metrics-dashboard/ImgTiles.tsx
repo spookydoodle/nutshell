@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Theme, Grid, Typography} from '@mui/material';
+import { Theme, Grid, Typography } from '@mui/material';
 import { fontSizes } from "../../styles/themes";
 import { ImgTile } from "./ImgTile";
 import * as Types from "../../types/types";

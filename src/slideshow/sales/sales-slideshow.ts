@@ -4,6 +4,9 @@ import { Slideshow } from "../slideshow";
 import * as MetricTypes from "../../components/metrics-dashboard/types";
 
 export class SalesSlideshow extends Slideshow<MetricTypes.Data> {
+    public name = '_NUTSHELL_DASHBOARD';
+    public shortName = '_NUTSHELL';
+
     public getThemeOptions = (mode: Mode): ThemeOptions => ({
         palette: {
             primary: {

@@ -21,7 +21,7 @@ export const BarChartRowAbsDeltaMulti: React.FC<BarProps> = ({
     const classes = useStyles();
 
     const textClassName = React.useMemo(
-        () => labelSize === "sm" ? classes.textSm: classes.textMd,
+        () => labelSize === "sm" ? classes.textSm : classes.textMd,
         [labelSize]
     );
 

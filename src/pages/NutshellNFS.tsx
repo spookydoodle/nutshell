@@ -13,7 +13,7 @@ export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
     return (
         <NutshellLayout
             slideshow={slideshow}
-            header={<TitleLogoBar title='_NEED_FOR_NUTSHELL' titleShort='_NFS_NUTSHELL' backIcon />}
+            header={<TitleLogoBar title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
         >
             <ImagePreloadWrapper>
                 <SlideShow slideshow={slideshow} />
