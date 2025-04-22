@@ -140,7 +140,7 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
         (n: number) => setIndex((prev) => prev + (n - prev % length)),
         [length]
     );
-console.log({ seqLen, labelsLen: labels.length})
+    
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
