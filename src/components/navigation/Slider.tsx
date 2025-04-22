@@ -81,7 +81,7 @@ export const Slider: React.FC<Props> = ({
                     labels ? labels[value - 1] : value
                 }
                 onChange={(_event: object, value: number | number[]) =>
-                    setIndex(Number(value) - 1, index)
+                    setIndex(Number(value) - 1, index % length)
                 }
                 className={classes.slider}
             />

@@ -13,5 +13,8 @@ export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
 
     return !isOnlyXs
         ? <Desktop slideshow={slideshow} />
-        : <Mobile slideshow={slideshow} />;
+        : slideshow.enableMobile
+            ? <Mobile slideshow={slideshow} />
+            // TODO: Add small screen message
+            : null;
 };

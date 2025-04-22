@@ -27,11 +27,17 @@ export interface SlideshowInitOptions {
      * Defaults to `15000`.
      */
     duration?: number;
+
     /**
      * Whether the ticker should be displayed.
      * Defaults to `true`.
      */
     showTicker?: boolean;
+
+    /**
+     * Whether to display mobile version on xs size screen.
+     */
+    enableMobile?: boolean;
 }
 
 /**
@@ -71,6 +77,7 @@ export abstract class Slideshow<T = unknown> {
     private defaultAutoPlay = true;
     private defaultDuration = 15000;
     private defaultShowTicker = true;
+    private defaultEnableMobile = false;
 
     /**
      * Options provided in the constructor.
@@ -104,6 +111,12 @@ export abstract class Slideshow<T = unknown> {
     public selectedBackgroundIndex$: rxjs.BehaviorSubject<number>;
 
     /**
+     * Whether to enable mobile version on xs size screen.
+    //  * TODO: change to optional function returning data and components
+     */
+    public enableMobile: boolean;
+
+    /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
      * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
      * @param data
@@ -113,7 +126,8 @@ export abstract class Slideshow<T = unknown> {
         const {
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
-            showTicker = this.defaultShowTicker
+            showTicker = this.defaultShowTicker,
+            enableMobile = this.defaultEnableMobile
         } = options ?? {};
         this.initOptions = options;
         this.data = data;
@@ -121,6 +135,7 @@ export abstract class Slideshow<T = unknown> {
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
+        this.enableMobile = enableMobile;
     }
 
     /**

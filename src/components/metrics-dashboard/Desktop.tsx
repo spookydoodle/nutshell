@@ -50,7 +50,6 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
     const appId = Hooks.useAppId();
     const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [_prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
@@ -60,7 +59,6 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
 
     const dataKeys = slidesData ? [...slidesData.keys()] : [];
     const dataValues = slidesData ? [...slidesData.values()] : [];
-    const sequencesN = dataKeys.length;
 
     const slides: MetricTypes.SlideData = dataValues.flat(1);
 
@@ -80,17 +78,10 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
                 .flat(2)
         );
 
-    // Change index every 'duration' seconds. Index is used to display current slide in Transitions
-    const [_seqIndex, setSeqIndex] = useState(0);
-
     useEffect(() => {
         if (play) {
             const interval = setInterval(() => {
-                setIndex((prev) => {
-                    setSeqIndex(Math.floor((prev + 1) / seqLen));
-                    setPrevIndex(prev % totalLen);
-                    return (prev + 1) % totalLen;
-                });
+                setIndex((prev) => (prev + 1) % totalLen);
             }, duration);
 
             return () => {
@@ -138,32 +129,15 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
         });
 
     const onSequenceClick = (seqInd: number) =>
-        setIndex((prev: number) => {
-            setSeqIndex(seqInd % totalLen);
-
-            return (prev % seqLen) + seqLen * seqInd;
-        });
+        setIndex((prev) => ((prev % seqLen) + seqLen * seqInd));
 
     const onBreadClick = (index: number) =>
         setIndex(
-            (prev: number) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
+            (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
         );
 
-    const setIndexOnPlayer = (n: number, prev: number, next?: boolean) => {
-        setSeqIndex((prevSeqInd) => {
-            let newSeqInd = prevSeqInd;
-
-            if (next && n === 0 && prev === seqLen - 1) {
-                newSeqInd = (prevSeqInd + 1) % sequencesN;
-            } else if (next && n === seqLen - 1 && prev === 0) {
-                newSeqInd = (sequencesN + prevSeqInd - 1) % sequencesN;
-            }
-
-            setIndex((n + newSeqInd * seqLen) % totalLen);
-            setPrevIndex((prev + newSeqInd * seqLen) % totalLen);
-
-            return newSeqInd;
-        });
+    const setIndexOnPlayer = (n: number, current: number) => {
+        setIndex((prevIndex) => prevIndex + (n - current))
     };
 
     return (

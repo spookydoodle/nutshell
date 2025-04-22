@@ -21,12 +21,12 @@ export interface SlideshowPage {
  * Instantiates all available slideshows and sets the value of app state's `slideshows$`.
  */
 export const instantiateSlideshows = (): void => {
-    const coinflowSlideshow = new CoinflowSlideshow(nutshellData);
+    const coinflowSlideshow = new CoinflowSlideshow(nutshellData, { enableMobile: true });
     const solarSlideshow = new SolarSlideshow(createStateData());
     const nfsSlideshow = new NfsSlideshow(NEED_FOR_SPEED, {
         animationsInitialized: true,
         duration: 30000,
-        showTicker: false,
+        showTicker: false
     });
 
     slideshows$.next([
