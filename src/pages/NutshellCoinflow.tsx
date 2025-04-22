@@ -18,18 +18,12 @@ export const NutshellCoinflow: React.FC<Props> = ({ slideshow }) => {
         };
     }, []);
 
-    const newData = Utils.Metrics.convertToMap(slideshow.data);
-    const selectedData = newData;
-    const slidesData = selectedData?.slides;
-
     return (
         <Layout
             slideshow={slideshow}
             header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon hidden="mdDown" />}
         >
-            {slidesData ? (
-                <NutshellCoinflowContent slideshow={slideshow} data={slidesData} />
-            ) : null}
+            <NutshellCoinflowContent slideshow={slideshow} />
         </Layout>
     );
 };

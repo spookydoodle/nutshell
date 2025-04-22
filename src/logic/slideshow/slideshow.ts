@@ -138,8 +138,6 @@ export abstract class Slideshow<T = unknown> {
      */
     public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
 
-    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
-
     private timeout: NodeJS.Timeout | undefined;
 
     /**
@@ -165,6 +163,9 @@ export abstract class Slideshow<T = unknown> {
         this.index$.next(0);
         this.prevIndex$.next(0);
     };
+
+    public getSlidesData?: () => MetricTypes.SlidesStateData | undefined;
+    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
 
     /**
      * Function which extends theme.

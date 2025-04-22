@@ -41,13 +41,11 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow: CoinflowSlideshow;
-    data: MetricTypes.SlidesStateData;
     primaryMeasureName: string;
 }
 
 export const Slideshow: React.FC<Props> = ({
     slideshow,
-    data,
     primaryMeasureName
 }) => {
     const classes = useStyles();
@@ -60,10 +58,12 @@ export const Slideshow: React.FC<Props> = ({
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
+
+    const slidesData = React.useMemo(() => slideshow.getSlidesData?.(), [slideshow]);
     const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
 
-    const dataKeys = data ? [...data.keys()] : [];
-    const dataValues = data ? [...data.values()] : [];
+    const dataKeys = slidesData ? [...slidesData.keys()] : [];
+    const dataValues = slidesData ? [...slidesData.values()] : [];
     const sequencesN = dataKeys.length;
 
     const slides: MetricTypes.SlideData = dataValues.flat(1);

@@ -7,16 +7,14 @@ import * as MetricTypes from "../components/metrics-dashboard/types";
 
 interface Props {
     slideshow: CoinflowSlideshow;
-    data: MetricTypes.SlidesStateData;
 }
 
-export const NutshellCoinflowContent: React.FC<Props> = ({ slideshow, data }) => {
+export const NutshellCoinflowContent: React.FC<Props> = ({ slideshow }) => {
     const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
     return !isOnlyXs ? (
         <Slideshow
             slideshow={slideshow}
-            data={data}
             primaryMeasureName={slideshow.data.primaryMeasureName}
         />
     ) : (

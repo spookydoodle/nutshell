@@ -18,6 +18,10 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
 
     private convertedData = Utils.Metrics.convertToMap(this.data);
 
+    public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
+        return this.convertedData.slides;
+    };
+
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
         return this.convertedData.ticker;
     };
