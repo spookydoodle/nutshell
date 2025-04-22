@@ -76,9 +76,6 @@ export const SlideshowSolar: React.FC<Props> = ({
     const totalLen = slides.length;
     const seqLen = totalLen / 2; // TODO: Repair this to get the seqLen of current time box
 
-    // Change index every 'duration' seconds. Index is used to display current slide in Transitions
-    const [_prevIndex, setPrevIndex] = useState(0);
-
     useEffect(() => {
         if (play) {
             const interval = setInterval(() => {
@@ -134,6 +131,11 @@ export const SlideshowSolar: React.FC<Props> = ({
             </>
         ));
 
+    const handleIndexChange = React.useCallback(
+        (n: number) => setIndex((prev) => prev + (n - prev % length)),
+        [length]
+    );
+    
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -176,21 +178,11 @@ export const SlideshowSolar: React.FC<Props> = ({
 
                         <Player
                             slideshow={slideshow}
-                            animationsInitialized={animationsInitialized}
-                            play={play}
-                            setPlay={setPlay}
-                            index={index}
+                            index={index % totalLen}
+                            onIndexChange={handleIndexChange}
                             length={totalLen}
-                            setIndex={(n: number, prev: number) => {
-                                setIndex(n);
-                                setPrevIndex(prev);
-                            }}
-                            duration={duration}
-                            setDuration={setDuration}
                             labels={labels}
                             sequences={sequences}
-                            showTicker={showTicker}
-                            setShowTicker={setShowTicker}
                         />
                     </>
                 ) : null}

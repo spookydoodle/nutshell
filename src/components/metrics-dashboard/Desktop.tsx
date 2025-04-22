@@ -135,11 +135,12 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
         setIndex(
             (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
         );
-
-    const setIndexOnPlayer = (n: number, current: number) => {
-        setIndex((prevIndex) => prevIndex + (n - current))
-    };
-
+    
+    const handleIndexChange = React.useCallback(
+        (n: number) => setIndex((prev) => prev + (n - prev % length)),
+        [length]
+    );
+console.log({ seqLen, labelsLen: labels.length})
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -177,19 +178,12 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
 
                 <Player
                     slideshow={slideshow}
-                    animationsInitialized={animationsInitialized}
-                    play={play}
-                    setPlay={setPlay}
-                    index={index % seqLen}
+                    index={index % labels.length}
+                    onIndexChange={handleIndexChange}
                     length={labels.length}
-                    setIndex={setIndexOnPlayer}
-                    duration={duration}
-                    setDuration={setDuration}
                     labels={labels}
                     sequences={[""]}
                     // seqName={sequences[Math.floor(index / seqLen)]}
-                    showTicker={showTicker}
-                    setShowTicker={setShowTicker}
                 />
             </Grid>
         </Grid>

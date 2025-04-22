@@ -46,7 +46,7 @@ interface Props {
   index: number;
   secondaryIndex?: number;
   length: number;
-  setIndex: (index: number, i: number) => void;
+  onIndexChange: (index: number) => void;
   setSecondaryIndex?: (index: number, i: number) => void;
   categoryPrimary?: string;
   categorySecondary?: string;
@@ -58,7 +58,7 @@ export const PlayerButtons: React.FC<Props> = ({
   index,
   secondaryIndex,
   length,
-  setIndex,
+  onIndexChange,
   setSecondaryIndex,
   categoryPrimary = "slide",
   categorySecondary = "slide",
@@ -95,7 +95,7 @@ export const PlayerButtons: React.FC<Props> = ({
           <IconButton
             color="inherit"
             aria-label={`previous ${categoryPrimary} icon`}
-            onClick={() => setIndex(index > 0 ? index - 1 : length - 1, index)}
+            onClick={() => onIndexChange(index > 0 ? index - 1 : length - 1)}
             className={classes.icon}
           >
             <SkipPreviousIcon fontSize="small" />
@@ -164,7 +164,7 @@ export const PlayerButtons: React.FC<Props> = ({
           <IconButton
             color="inherit"
             aria-label={`next ${categoryPrimary} icon`}
-            onClick={() => setIndex(index < length - 1 ? index + 1 : 0, index)}
+            onClick={() => onIndexChange(index < length - 1 ? index + 1 : 0)}
             className={classes.icon}
           >
             <SkipNextIcon fontSize="small" />

@@ -31,7 +31,7 @@ const PlayerSlider = withStyles((theme: Theme) => ({
 
 interface Props {
     index: number;
-    setIndex: (index: number, prev: number) => void;
+    onIndexChange: (index: number) => void;
     length: number;
     labels: Array<string>;
     sequences: Array<string>;
@@ -40,7 +40,7 @@ interface Props {
 export const Slider: React.FC<Props> = ({
     index,
     length,
-    setIndex,
+    onIndexChange,
     labels,
     sequences,
 }) => {
@@ -81,7 +81,7 @@ export const Slider: React.FC<Props> = ({
                     labels ? labels[value - 1] : value
                 }
                 onChange={(_event: object, value: number | number[]) =>
-                    setIndex(Number(value) - 1, index % length)
+                    onIndexChange(Number(value) - 1)
                 }
                 className={classes.slider}
             />

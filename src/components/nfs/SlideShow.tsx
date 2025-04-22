@@ -35,11 +35,10 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
     const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
-    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [play] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
+    const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const [prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
-    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
     const labels: string[] = React.useMemo(() => slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""], [slideshow]);
     const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
@@ -59,7 +58,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
             clearInterval(interval);
         };
     }, [play, duration]);
-
+console.log({ imgPerSlide, totalLen })
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -95,28 +94,23 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
 
                         <Player
                             slideshow={slideshow}
-                            animationsInitialized={true}
-                            play={play}
-                            setPlay={setPlay}
-                            index={Math.floor(index / imgPerSlide)}
-                            secondaryIndex={index}
                             length={totalLen}
-                            setIndex={(n: number, prev: number) => {
-                                setIndex(n * imgPerSlide);
-                                setPrevIndex(prev * imgPerSlide);
+                            index={Math.floor(index / imgPerSlide)}
+                            onIndexChange={(n: number) => {
+                                setIndex((prev) => {
+                                    setPrevIndex(Math.floor(prev / imgPerSlide) * imgPerSlide);
+                                    return n * imgPerSlide;
+                            });
                             }}
+                            secondaryIndex={index}
                             setSecondaryIndex={(n: number, prev: number) => {
                                 setIndex(n);
                                 setPrevIndex(prev);
                             }}
-                            duration={duration}
-                            setDuration={setDuration}
                             labels={labels}
                             sequences={sequences}
                             categoryPrimary="game"
                             categorySecondary="image"
-                            showTicker={showTicker}
-                            setShowTicker={setShowTicker}
                         />
 
                         <Progress slideIndex={index} onIndexChange={setIndex} onPrevIndexChange={setPrevIndex} />

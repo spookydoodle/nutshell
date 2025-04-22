@@ -150,6 +150,7 @@ export abstract class Slideshow<T = unknown> {
 
     /**
      * Previous slide index
+    //  * TODO: Consider moving to specific implementation
      */
     public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
 
