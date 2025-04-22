@@ -2,14 +2,13 @@ import React from "react";
 import { Layout } from "../layouts/Layout";
 import { NavbarTitle } from "../layouts/NavbarTitle";
 import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
-import { NutshellCoinflowContent } from "./NutshellCoinflowContent";
-import * as Utils from "../utils";
+import { NutshellCoinflowContent } from "./NutshellContent";
 
 interface Props {
     slideshow: CoinflowSlideshow;
 }
 
-export const NutshellCoinflow: React.FC<Props> = ({ slideshow }) => {
+export const Nutshell: React.FC<Props> = ({ slideshow }) => {
     React.useEffect(() => {
         slideshow.start(5000);
 

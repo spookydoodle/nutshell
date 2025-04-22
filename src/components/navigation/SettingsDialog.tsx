@@ -95,7 +95,7 @@ export const SettingsDialog: React.FC<Props> = ({
             <DialogTitle id="responsive-dialog-title">Settings</DialogTitle>
 
             <DialogContent>
-                {selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
+                {slideshow.backgroundImageUrls && selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
                     <>
                         <Typography color="primary" gutterBottom
                         >Change background
@@ -129,22 +129,24 @@ export const SettingsDialog: React.FC<Props> = ({
                     </ToggleButtonGroup>
                 </Box>
 
-                <Box className={classes.itemContainer}>
-                    <Typography color="primary" gutterBottom>
-                        Ticker options
-                    </Typography>
-                    <FormControlLabel
-                        control={
-                            <Checkbox
-                                checked={showTicker}
-                                onChange={onTickerChange}
-                                name="ticker-setting"
-                                color="primary"
-                            />
-                        }
-                        label="Show (on large screen)"
-                    />
-                </Box>
+                {slideshow.getTickerData ? (
+                    <Box className={classes.itemContainer}>
+                        <Typography color="primary" gutterBottom>
+                            Ticker options
+                        </Typography>
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={showTicker}
+                                    onChange={onTickerChange}
+                                    name="ticker-setting"
+                                    color="primary"
+                                />
+                            }
+                            label="Show (on large screen)"
+                        />
+                    </Box>
+                ) : null}
 
                 <SlideDurationInput duration={duration} setDuration={setDuration} />
             </DialogContent>

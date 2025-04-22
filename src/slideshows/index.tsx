@@ -6,9 +6,8 @@ import nutshellData from "./coinflow/coinflow-data";
 import { createStateData } from "./solar/solar-data";
 import { NEED_FOR_SPEED } from "./nfs/nfs-data";
 import { Slideshow } from "../logic/slideshow/slideshow";
+import { Nutshell, NutshellSolar, NutshellNFS } from "../pages";
 import { slideshows$ } from "../state";
-import { NutshellCoinflow, NutshellSolar, NutshellNFS } from "../pages";
-import React from "react";
 
 type ComponentType = React.ComponentType<{ slideshow: Slideshow }>;
 
@@ -32,7 +31,7 @@ export const instantiateSlideshows = (): void => {
 
     slideshows$.next([
         // TODO: Remove type casting when components are generalized and can receive non specific Slideshow prop type
-        { slideshow: coinflowSlideshow, component: NutshellCoinflow as ComponentType },
+        { slideshow: coinflowSlideshow, component: Nutshell as ComponentType },
         { slideshow: solarSlideshow, component: NutshellSolar as ComponentType },
         { slideshow: nfsSlideshow, component: NutshellNFS as ComponentType }
     ]);

@@ -164,7 +164,14 @@ export abstract class Slideshow<T = unknown> {
         this.prevIndex$.next(0);
     };
 
+    /**
+     * Returns data needed to render slides.
+     */
     public getSlidesData?: () => MetricTypes.SlidesStateData | undefined;
+
+    /**
+     * Returns data needed to render bottom ticker.
+     */
     public getTickerData?: () => MetricTypes.TickerStateData | undefined;
 
     /**
