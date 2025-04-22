@@ -164,6 +164,10 @@ export abstract class Slideshow<T = unknown> {
         this.prevIndex$.next(0);
     };
 
+    // TODO: Change to static
+    public getSlideTitle?: () => string;
+    public getSlideSubtitle?: () => string;
+
     /**
      * Returns data needed to render slides.
      */

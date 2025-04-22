@@ -43,7 +43,7 @@ interface Props {
     subtitle?: string;
     subtitleShort?: string;
     backIcon?: boolean;
-    hidden?: "mdDown";
+    hidden?: "smDown";
 }
 
 export const NavbarTitle: React.FC<Props> = ({
@@ -56,10 +56,11 @@ export const NavbarTitle: React.FC<Props> = ({
     hidden
 }) => {
     const classes = useStyles();
+    const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     const isMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
 
-    if (hidden && isMdDown) {
+    if (hidden && isSmDown) {
         return null;
     }
 

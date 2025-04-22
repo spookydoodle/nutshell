@@ -18,6 +18,11 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
 
     private convertedData = Utils.Metrics.convertToMap(this.data);
 
+    // TODO: Add YTD/QTD/MTD
+    public getSlideTitle = (): string => "Coinflow";
+    // TODO by realms, sectors, products
+    public getSlideSubtitle = (): string => "By TODO";
+
     public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
         return this.convertedData.slides;
     };

@@ -41,7 +41,7 @@ export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
                 {title}
             </Typography>
             <Swiper
-                slidesPerView={isXs ? 2.4 : 4.4}
+                slidesPerView={isOnlyXs ? 2.4 : 4.4}
                 spaceBetween={10}
                 freeMode={true}
                 className={classes.horizontalScroll}

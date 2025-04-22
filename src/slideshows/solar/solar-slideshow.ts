@@ -15,10 +15,14 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public imageUrl = `${IMG_SERVER}/landing/solar.jpg`
     public links = ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/"];
     public backgroundImageUrls = getImgArr("SS");
-    
-        public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
-            return this.data.slides;
-        };
+
+    public getSlideTitle = (): string => "Solar system";
+    // TODO:  Vs the earth, Planets show
+    public getSlideSubtitle = (): string => "Vs. the Earth";
+
+    public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
+        return this.data.slides;
+    };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
         return this.data.ticker;

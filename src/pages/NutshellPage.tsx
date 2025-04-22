@@ -2,13 +2,13 @@ import React from "react";
 import { Layout } from "../layouts/Layout";
 import { NavbarTitle } from "../layouts/NavbarTitle";
 import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
-import { NutshellCoinflowContent } from "./NutshellContent";
+import { NutshellPageContent } from "./NutshellPageContent";
 
 interface Props {
     slideshow: CoinflowSlideshow;
 }
 
-export const Nutshell: React.FC<Props> = ({ slideshow }) => {
+export const NutshellPage: React.FC<Props> = ({ slideshow }) => {
     React.useEffect(() => {
         slideshow.start(5000);
 
@@ -20,9 +20,10 @@ export const Nutshell: React.FC<Props> = ({ slideshow }) => {
     return (
         <Layout
             slideshow={slideshow}
-            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon hidden="mdDown" />}
+            // TODO: use same header for mobile
+            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon hidden="smDown" />}
         >
-            <NutshellCoinflowContent slideshow={slideshow} />
+            <NutshellPageContent slideshow={slideshow} />
         </Layout>
     );
 };

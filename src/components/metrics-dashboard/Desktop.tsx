@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, useMediaQuery } from '@mui/material';
 import { CoinflowSlideshow } from "../../slideshows/coinflow/coinflow-slideshow";
-import { Slideshow as SlideshowType } from "../../logic/slideshow/slideshow";
+import { Slideshow, Slideshow as SlideshowType } from "../../logic/slideshow/slideshow";
 import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
 import { NavTitles } from "./NavTitles";
@@ -40,14 +40,10 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideshow: CoinflowSlideshow;
-    primaryMeasureName: string;
+    slideshow: Slideshow;
 }
 
-export const Slideshow: React.FC<Props> = ({
-    slideshow,
-    primaryMeasureName
-}) => {
+export const Desktop: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
@@ -184,7 +180,6 @@ export const Slideshow: React.FC<Props> = ({
                     onBreadClick={onBreadClick}
                     sequences={sequences}
                     currentSequence={slides[index].headers.sequence}
-                    primaryMeasureName={primaryMeasureName}
                 />
 
                 {[...slides[index].data.entries()].map(([name, value], i) => !(isLgDown && i === 1) && !(hiddenMdDown && i > 0) ? (
