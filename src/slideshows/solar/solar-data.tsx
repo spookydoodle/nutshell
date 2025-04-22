@@ -1,4 +1,4 @@
-import { StateDataMap, Decimals, SlideData, Value, Metric } from "../../types/types";
+import { Decimals, Metric } from "../../types/types";
 import {
     PLANET_IMG,
     PLANET_FACTS,
@@ -6,6 +6,7 @@ import {
     METRIC_DEF,
 } from "./solar-system-data";
 import * as Utils from "../../utils";
+import { StateDataMap, TickerStateData, SlideData, Datum, MainDataItem } from "../../components/metrics-dashboard/types";
 
 const getMetricDelta = (val: number, metric: Metric): number => {
     return val / METRIC_DATA[metric].data["Earth"];
@@ -59,6 +60,7 @@ const metricSlides: Array<[string, SlideData]> = [
                                     "Total",
                                     {
                                         type: "bar-chart",
+                                        name: "TODO: Name",
                                         data: Object.entries(metricData.data).map(
                                             ([planet, value]) => {
                                                 const delta = getMetricDelta(value, metric as Metric);
@@ -126,39 +128,41 @@ const planetsSlides: Array<[string, SlideData]> = [
                 },
                 data: new Map(
                     Object.entries(PLANET_IMG)
-                        .filter((planet, i) => i >= n * 3 && i < (n + 1) * 3)
-                        .map(([planet, planetData], i) => [
-                            planet,
-                            {
-                                main: new Map([
-                                    [
-                                        "Total",
-                                        {
-                                            type: "items",
-                                            data: planetData.map(
-                                                ({ name, description, img, link }) => ({
-                                                    name: name,
-                                                    description: description,
-                                                    img: { src: img },
-                                                    link: link,
-                                                })
-                                            ),
-                                        },
-                                    ],
-                                ]),
-                                tile: {
-                                    name: planet,
-                                    primary: i + 1,
-                                    primaryFormatted: PLANET_FACTS[n * 3 + i],
-                                },
-                            },
-                        ])
+                        .filter((_planet, i) => i >= n * 3 && i < (n + 1) * 3)
+                        .map(([planet, planetData], i) => {
+                            const tile: Datum =  {
+                                name: planet,
+                                primary: i + 1,
+                                primaryFormatted: PLANET_FACTS[n * 3 + i],
+                            };
+                            const main: MainDataItem = new Map([
+                                [
+                                    "Total",
+                                    {
+                                        type: "items",
+                                        name: "TODO: Name",
+                                        data: planetData.map(
+                                            ({ name, description, img, link }) => ({
+                                                name: name,
+                                                description: description,
+                                                img: { src: img },
+                                                link: link,
+                                                // TODO: Check display
+                                                primary: 0,
+                                                primaryFormatted: "",
+                                            })
+                                        ),
+                                    },
+                                ],
+                            ]);
+                            return [planet, { main, tile }];
+                        })
                 ),
             })),
     ],
 ];
 
-const tickerData: Map<string, Map<string, Array<Value>>> = new Map([
+const tickerData: TickerStateData = new Map([
     [
         "Solar System Metrics VS. the Earth",
         new Map(
@@ -186,13 +190,7 @@ const tickerData: Map<string, Map<string, Array<Value>>> = new Map([
     ],
 ]);
 
-export const createStateData = (): StateDataMap =>
-    new Map([
-        [
-            "solar-system",
-            {
-                slides: new Map([...metricSlides, ...planetsSlides]),
-                ticker: tickerData,
-            },
-        ],
-    ]);
+export const createStateData = (): StateDataMap => ({
+    slides: new Map([...metricSlides, ...planetsSlides]),
+    ticker: tickerData,
+});

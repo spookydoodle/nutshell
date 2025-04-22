@@ -42,10 +42,10 @@ interface Props {
     items: Array<string>;
     index: number;
     onChange: (value: number) => void;
-    primaryMeasureName: string;
+    title?: string;
 }
 
-export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, primaryMeasureName }) => {
+export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, title }) => {
     const classes = useStyles();
 
     const handleChange = React.useCallback(
@@ -62,7 +62,7 @@ export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, prim
     return (
         <Box className={classes.navtitle}>
             <Typography className={classes.title}>
-                {primaryMeasureName}
+                {title ?? ""}
             </Typography>
 
             <FormControl variant="outlined" className={classes.formControl}>

@@ -3,7 +3,7 @@ import * as Types from "../../types";
 import { NutshellData } from "../../components/nfs/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
-import { getImgArr } from "../../layouts/images";
+import { NutshellNFS } from "../../pages";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public path = '/need-for-nutshell';
@@ -17,6 +17,8 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://vgsales.fandom.com/wiki/Need_for_Speed",
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
+
+    public customSlideshow: React.ComponentType<{ slideshow: Slideshow<NutshellData>; }> = NutshellNFS;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

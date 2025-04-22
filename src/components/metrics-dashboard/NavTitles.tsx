@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Theme, Box, Hidden, Grid, Typography, Tooltip } from '@mui/material';
+import { Theme, Grid, Typography, Tooltip, useMediaQuery } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { fontSizes } from "../../styles/themes";
 import { BreadCrumbs } from "./BreadCrumbs";
@@ -90,7 +90,6 @@ interface Props {
     onBreadClick: (index: number) => void;
     sequences?: Array<string>;
     currentSequence: string;
-    primaryMeasureName: string;
 }
 
 export const NavTitles: React.FC<Props> = ({
@@ -103,10 +102,11 @@ export const NavTitles: React.FC<Props> = ({
     seqLen,
     onBreadClick,
     sequences,
-    currentSequence,
-    primaryMeasureName
+    currentSequence
 }) => {
     const classes = useStyles();
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
     const onSeqClick = (i: number) => () => onSequenceClick?.(i);
 
@@ -152,7 +152,7 @@ export const NavTitles: React.FC<Props> = ({
                 )}
             </Grid>
 
-            <Hidden lgDown>
+            {!isLgDown ? (
                 <Grid item xs={4}>
                     <BreadCrumbs
                         animationsInitialized={animationsInitialized}
@@ -160,12 +160,11 @@ export const NavTitles: React.FC<Props> = ({
                         index={index % seqLen < 3 ? index % seqLen : 2}
                         color="white"
                         onBreadClick={onBreadClick}
-                        primaryMeasureName={primaryMeasureName}
                     />
                 </Grid>
-            </Hidden>
+            ) : null}
 
-            <Hidden only="xs">
+            {!isOnlyXs ? (
                 <Grid item xs={4} className={classes.breadCrumbsContainer}>
                     {current?.titleSecondaryShort && (
                         <Tooltip
@@ -209,7 +208,7 @@ export const NavTitles: React.FC<Props> = ({
                             </Tooltip>
                         ))}
                 </Grid>
-            </Hidden>
+            ) : null}
         </Grid>
     );
 };

@@ -2,17 +2,19 @@ import React from "react";
 import { MobileHeader } from "./MobileHeader";
 import { MobileContent } from "./MobileContent";
 import { Footer } from "./Footer";
-import * as MetricTypes from "../types";
+import { Slideshow } from "../../../logic/slideshow/slideshow";
 import * as Utils from "../../../utils";
+import { Data } from "../types";
 
 interface Props {
-    data: MetricTypes.Data;
-    primaryMeasureName: string;
+    slideshow: Slideshow;
 }
 
-export const Mobile: React.FC<Props> = ({ data, primaryMeasureName }) => {
+// TODO: Generalize types
+export const Mobile: React.FC<Props> = ({  slideshow }) => {
     const [timeboxIndex, setTimeboxIndex] = React.useState(0);
     const [chanIndex, setChanIndex] = React.useState(0);
+    const title = React.useMemo(() => slideshow.getSlideTitle?.() ?? "", [slideshow]);
 
     const handleTimeboxChange = React.useCallback(
         (index: number) => setTimeboxIndex(index),
@@ -25,13 +27,13 @@ export const Mobile: React.FC<Props> = ({ data, primaryMeasureName }) => {
     );
 
     const columnNames = React.useMemo(
-        () => Utils.Metrics.getUnique(data, 'columnName'),
-        [data]
+        () => Utils.Metrics.getUnique(slideshow.data as Data, 'columnName'),
+        [slideshow.data]
     );
 
     const timeboxes = React.useMemo(
-        () => Utils.Metrics.getUniqueTimeboxes(data),
-        [data]
+        () => Utils.Metrics.getUniqueTimeboxes(slideshow.data as Data),
+        [slideshow.data]
     );
 
     return (
@@ -43,17 +45,17 @@ export const Mobile: React.FC<Props> = ({ data, primaryMeasureName }) => {
                 handleColumnNameChange={handleColumnNameChange}
                 columnNames={columnNames.map((el) => el.key)}
                 timeboxes={timeboxes}
-                primaryMeasureName={primaryMeasureName}
+                title={title}
             />
 
             <MobileContent
-                data={data}
+                data={slideshow.data as Data}
                 timeboxIndex={timeboxIndex}
                 chanIndex={chanIndex}
                 handleColumnNameChange={handleColumnNameChange}
                 columnNames={columnNames.map((el) => el.key)}
                 timeboxes={timeboxes}
-                primaryMeasureName={primaryMeasureName}
+                primaryMeasureName={title}
             />
 
             <Footer text="Turbocharged by spookydoodle" />

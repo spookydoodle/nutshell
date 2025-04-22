@@ -1,5 +1,6 @@
 import React from "react";
 import { Img } from "react-image";
+import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import {
     Button,
@@ -20,6 +21,9 @@ import { SlideDurationInput } from "./SlideDurationInput";
 import * as AppState from "../../state";
 import * as Hooks from '../../hooks';
 import { Slideshow } from "../../logic/slideshow/slideshow";
+import * as Types from "../../types";
+
+const modes: Types.Mode[] = ["light", "dark"];
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -95,7 +99,7 @@ export const SettingsDialog: React.FC<Props> = ({
             <DialogTitle id="responsive-dialog-title">Settings</DialogTitle>
 
             <DialogContent>
-                {selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
+                {slideshow.backgroundImageUrls && selectedBackgroundIndex != undefined && selectedBackgroundIndex >= 0 ? (
                     <>
                         <Typography color="primary" gutterBottom
                         >Change background
@@ -109,8 +113,7 @@ export const SettingsDialog: React.FC<Props> = ({
                                             onClick={onBgClick(i)}
                                             src={img.min}
                                             alt={img.min}
-                                            className={`${classes.img} ${i === selectedBackgroundIndex ? classes.selected : undefined
-                                                }`}
+                                            className={classNames(classes.img, { [classes.selected]: i === selectedBackgroundIndex })}
                                         />
                                     </ImageListItem>
                                 ))}
@@ -124,33 +127,34 @@ export const SettingsDialog: React.FC<Props> = ({
                         Mode
                     </Typography>
                     <ToggleButtonGroup>
-                        <Button size="small" variant={mode === 'light' ? "contained" : "text"} value="light" onClick={() => setMode('light')}>Light</Button>
-                        <Button size="small" variant={mode === 'dark' ? "contained" : "text"} value="dark" onClick={() => setMode('dark')}>Dark</Button>
+                        {modes.map((m) => (
+                            <Button key={m} size="small" variant={mode === m ? "contained" : "text"} value={m} onClick={() => setMode(m)}>
+                                {m}
+                            </Button>
+                        ))}
                     </ToggleButtonGroup>
                 </Box>
 
-                <Box className={classes.itemContainer}>
-                    <Typography color="primary" gutterBottom>
-                        Ticker options
-                    </Typography>
-                    <FormControlLabel
-                        control={
-                            <Checkbox
-                                checked={showTicker}
-                                onChange={onTickerChange}
-                                name="ticker-setting"
-                                color="primary"
-                            />
-                        }
-                        label="Show (on large screen)"
-                    />
-                </Box>
+                {slideshow.getTickerData ? (
+                    <Box className={classes.itemContainer}>
+                        <Typography color="primary" gutterBottom>
+                            Ticker options
+                        </Typography>
+                        <FormControlLabel
+                            control={
+                                <Checkbox
+                                    checked={showTicker}
+                                    onChange={onTickerChange}
+                                    name="ticker-setting"
+                                    color="primary"
+                                />
+                            }
+                            label="Show (on large screen)"
+                        />
+                    </Box>
+                ) : null}
 
-                <SlideDurationInput
-                    duration={duration}
-                    setDuration={setDuration}
-                    fullWidth={true}
-                />
+                <SlideDurationInput duration={duration} setDuration={setDuration} />
             </DialogContent>
 
             <DialogActions>

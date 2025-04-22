@@ -107,7 +107,7 @@ export const TitlePanels: React.FC<Props> = ({
     const style4 = useAnimation(ref4);
     const styles: Style[] = [style1, style2, style3, style4];
 
-    useChain([ref1, ref2, ref3, ref4], [0.5, 0.8, 1.2, 1.6]);
+    useChain([ref1, ref2, ref3, ref4], [0.4, 0.65, 0.9, 1.15]);
 
     return (
         <Box className={classes.container}>

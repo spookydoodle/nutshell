@@ -1,12 +1,13 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Box, Grid, Slide, Hidden, Theme } from '@mui/material';
+import { Box, Grid, Slide, Theme, useMediaQuery } from '@mui/material';
 import { Slider } from "./Slider";
 import { PlayerButtons } from "./PlayerButtons";
 import { SlideDurationInput } from "./SlideDurationInput";
 import { PlayerSettingsButton } from "./PlayerSettingsButton";
 import { SettingsDialog } from "./SettingsDialog";
 import { Slideshow } from "../../logic/slideshow/slideshow";
+import * as Hooks from '../../hooks';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -38,44 +39,38 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
     slideshow: Slideshow;
-    animationsInitialized: boolean;
-    play: boolean;
-    setPlay: React.Dispatch<React.SetStateAction<boolean>>;
-    index: number;
-    secondaryIndex?: number;
     length: number;
-    setIndex: (index: number, prev: number) => void;
-    setSecondaryIndex?: (index: number, prev: number) => void;
-    duration: number;
-    setDuration: React.Dispatch<React.SetStateAction<number>>;
+    index: number;
+    onIndexChange: (n: number) => void;
+    secondaryIndex?: number;
+    onSecondaryIndexChange?: (index: number) => void;
     labels?: Array<string>;
     sequences: Array<string>;
     categoryPrimary?: string;
     categorySecondary?: string;
-    showTicker: boolean;
-    setShowTicker: (on: boolean) => void;
 }
 
 export const Player: React.FC<Props> = ({
     slideshow,
-    animationsInitialized,
-    play,
-    setPlay,
-    index,
-    secondaryIndex,
     length,
-    setIndex,
-    setSecondaryIndex,
-    duration,
-    setDuration,
+    index,
+    onIndexChange,
+    secondaryIndex,
+    onSecondaryIndexChange,
     labels,
     sequences,
     categoryPrimary,
     categorySecondary,
-    showTicker,
-    setShowTicker,
 }) => {
     const classes = useStyles();
+    const isXlDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('xl'));
+    const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
+    const isMdDown = !isMdUp;
+    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
+    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
+    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
     const [pin, setPin] = React.useState(false);
     const [show, setShow] = React.useState(false);
     const [hover, setHover] = React.useState(false);
@@ -111,7 +106,7 @@ export const Player: React.FC<Props> = ({
         () => !animationsInitialized ? false : pin || show || hover,
         [animationsInitialized, pin, show, hover]
     );
-
+    
     return (
         <>
             <Box onMouseOver={onHover} onMouseOut={onOut}>
@@ -122,29 +117,31 @@ export const Player: React.FC<Props> = ({
                                 play={play}
                                 setPlay={setPlay}
                                 index={index}
-                                setIndex={setIndex}
+                                onIndexChange={onIndexChange}
                                 secondaryIndex={secondaryIndex}
-                                setSecondaryIndex={setSecondaryIndex}
+                                onSecondaryIndexChange={onSecondaryIndexChange}
                                 length={length}
                                 categoryPrimary={categoryPrimary}
                                 categorySecondary={categorySecondary}
                             />
-                            <Hidden mdUp only="xs">
+                            {!isMdUp && !isOnlyXs ? (
                                 <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />
-                            </Hidden>
+                            ) : null}
                         </Grid>
 
-                        <Hidden mdDown>
-                            <Slider index={index} length={length} setIndex={setIndex} labels={labels || []} sequences={sequences} />
+                        {!isMdDown ? (
+                            <>
+                                <Slider index={index} length={length} onIndexChange={onIndexChange} labels={labels || []} sequences={sequences} />
 
-                            <Grid item xs={4} md={3} container justifyContent="space-around" alignItems="center" className={classes.settingsButtonsContainer}>
-                                <Hidden xlDown>
-                                    <SlideDurationInput duration={duration} setDuration={setDuration} />
-                                </Hidden>
+                                <Grid item xs={4} md={3} container justifyContent="space-around" alignItems="center" className={classes.settingsButtonsContainer}>
+                                    {!isXlDown ? (
+                                        <SlideDurationInput duration={duration} setDuration={setDuration} />
+                                    ) : null}
 
-                                <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />
-                            </Grid>
-                        </Hidden>
+                                    <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />
+                                </Grid>
+                            </>
+                        ) : null}
                     </Grid>
                 </Slide>
             </Box>

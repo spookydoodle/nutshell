@@ -40,7 +40,7 @@ interface Props {
     handleColumnNameChange: (index: number) => void;
     columnNames: string[];
     timeboxes: string[];
-    primaryMeasureName: string;
+    title: string;
 }
 
 export const MobileHeader: React.FC<Props> = ({
@@ -50,7 +50,7 @@ export const MobileHeader: React.FC<Props> = ({
     handleColumnNameChange,
     columnNames,
     timeboxes,
-    primaryMeasureName
+    title
 }) => {
     const classes = useStyles();
 
@@ -64,7 +64,7 @@ export const MobileHeader: React.FC<Props> = ({
                 <Typography fontSize={fontSizes.h3} className={classes.title}>xo</Typography>
             </Box>
 
-            <CategoryDropdown items={timeboxes} index={timeboxIndex} onChange={handleTimeboxChange} primaryMeasureName={primaryMeasureName} />
+            <CategoryDropdown items={timeboxes} index={timeboxIndex} onChange={handleTimeboxChange} title={title} />
             <ColumnButtons buttons={columnNames} index={chanIndex} onChange={handleColumnNameChange} />
         </Box>
     );

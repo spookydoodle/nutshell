@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Box, IconButton, Typography, Tooltip, Grid, Hidden, Theme } from '@mui/material';
+import { Box, IconButton, Typography, Tooltip, Grid, Theme, useMediaQuery } from '@mui/material';
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
@@ -28,27 +28,26 @@ const useStyles = makeStyles(() =>
 interface Props {
     duration: number;
     setDuration: React.Dispatch<React.SetStateAction<number>>;
-    fullWidth?: boolean;
 }
 
-export const SlideDurationInput: React.FC<Props> = ({ duration, setDuration, fullWidth }) => {
+export const SlideDurationInput: React.FC<Props> = ({ duration, setDuration }) => {
     const classes = useStyles();
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const minVal = 5000;
     const maxVal = 60000;
 
     return (
         <Box className={classes.container}>
-            <Hidden lgDown>
+            {!isLgDown ? (
                 <Typography
                     className={classes.playerInput}>
                     Slide duration: {duration / 1000}s
                 </Typography>
-            </Hidden>
-            <Hidden lgUp>
+            ) : (
                 <Typography variant="body2" className={classes.playerInput}>
                     Duration: {duration / 1000}s
                 </Typography>
-            </Hidden>
+            )}
 
             <Grid container direction="column" className={classes.iconContainer}>
                 <Tooltip

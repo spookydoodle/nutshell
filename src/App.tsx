@@ -7,12 +7,13 @@ import "./App.css";
 
 const App: React.FC = () => {
     const [slideshows] = Hooks.useSubjectState(AppState.slideshows$);
+    console.log({slideshows})
 
     const router = React.useMemo(
         () => createBrowserRouter([
-            ...slideshows.map(({ slideshow, ...page }) => ({
+            ...slideshows.map((slideshow) => ({
                 path: slideshow.path,
-                element: <page.component slideshow={slideshow} />,
+                element: <Pages.NutshellPage slideshow={slideshow} />,
                 ErrorBoundary: Pages.ErrorBoundary
             })),
             {

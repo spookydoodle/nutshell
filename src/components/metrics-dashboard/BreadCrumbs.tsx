@@ -74,15 +74,13 @@ interface Props {
     name?: string;
     color?: "textSecondary" | "white";
     onBreadClick?: (index: number) => void;
-    primaryMeasureName: string;
 }
 
 export const BreadCrumbs: React.FC<Props> = ({
     animationsInitialized = true,
     index,
     color = "textSecondary",
-    onBreadClick,
-    primaryMeasureName
+    onBreadClick
 }) => {
     const classes = useStyles();
 
@@ -118,7 +116,7 @@ export const BreadCrumbs: React.FC<Props> = ({
             {items.map((item, i) => (
                 <Tooltip
                     key={item.name}
-                    title={`Switch to ${primaryMeasureName} by ${item.name}`}
+                    title={`Switch to ${item.name}`}
                     placement="top"
                     arrow
                 >

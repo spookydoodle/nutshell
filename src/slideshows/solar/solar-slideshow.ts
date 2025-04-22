@@ -1,10 +1,12 @@
 import { ThemeOptions } from "@mui/material";
 import { Slideshow } from "../../logic/slideshow/slideshow";
+import * as MetricTypes from "../../components/metrics-dashboard/types";
 import * as Types from "../../types";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
+import { NutshellSolar } from "../../pages";
 
-export class SolarSlideshow extends Slideshow<Types.StateDataMap> {
+export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/solar';
     public name = '_SOLAR_NUTSHELL';
     public shortName = '_SOL_NUT';
@@ -14,6 +16,20 @@ export class SolarSlideshow extends Slideshow<Types.StateDataMap> {
     public imageUrl = `${IMG_SERVER}/landing/solar.jpg`
     public links = ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/"];
     public backgroundImageUrls = getImgArr("SS");
+
+    public getSlideTitle = (): string => "Solar system";
+    // TODO:  Vs the earth, Planets show
+    public getSlideSubtitle = (): string => "Vs. the Earth";
+
+    public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
+        return this.data.slides;
+    };
+
+    public getTickerData = (): MetricTypes.TickerStateData | undefined => {
+        return this.data.ticker;
+    };
+    
+    public customSlideshow: React.ComponentType<{ slideshow: Slideshow<MetricTypes.StateDataMap>; }> = NutshellSolar;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

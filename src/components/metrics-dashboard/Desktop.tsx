@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Theme, Box, Grid, Hidden } from '@mui/material';
+import { Theme, Box, Grid, useMediaQuery } from '@mui/material';
+import { CoinflowSlideshow } from "../../slideshows/coinflow/coinflow-slideshow";
+import { Slideshow, Slideshow as SlideshowType } from "../../logic/slideshow/slideshow";
 import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
 import { NavTitles } from "./NavTitles";
@@ -9,7 +11,6 @@ import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";
-import { CoinflowSlideshow } from "../../slideshows/coinflow/coinflow-slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -39,35 +40,25 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideshow: CoinflowSlideshow;
-    play: boolean;
-    setPlay: React.Dispatch<React.SetStateAction<boolean>>;
-    data: MetricTypes.SlidesStateData;
-    tickerData?: Map<string, MetricTypes.TickerData>;
-    setOpenDialog: (open: boolean) => void;
-    primaryMeasureName: string;
+    slideshow: Slideshow;
 }
 
-export const Slideshow: React.FC<Props> = ({
-    slideshow,
-    play,
-    setPlay,
-    data,
-    tickerData,
-    // setOpenDialog,
-    primaryMeasureName
-}) => {
+export const Desktop: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
     const appId = Hooks.useAppId();
+    const [play] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [_prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
-    const dataKeys = data ? [...data.keys()] : [];
-    const dataValues = data ? [...data.values()] : [];
-    const sequencesN = dataKeys.length;
+    const slidesData = React.useMemo(() => slideshow.getSlidesData?.(), [slideshow]);
+    const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
+
+    const dataKeys = slidesData ? [...slidesData.keys()] : [];
+    const dataValues = slidesData ? [...slidesData.values()] : [];
 
     const slides: MetricTypes.SlideData = dataValues.flat(1);
 
@@ -87,17 +78,10 @@ export const Slideshow: React.FC<Props> = ({
                 .flat(2)
         );
 
-    // Change index every 'duration' seconds. Index is used to display current slide in Transitions
-    const [_seqIndex, setSeqIndex] = useState(0);
-
     useEffect(() => {
         if (play) {
             const interval = setInterval(() => {
-                setIndex((prev) => {
-                    setSeqIndex(Math.floor((prev + 1) / seqLen));
-                    setPrevIndex(prev % totalLen);
-                    return (prev + 1) % totalLen;
-                });
+                setIndex((prev) => (prev + 1) % totalLen);
             }, duration);
 
             return () => {
@@ -145,34 +129,18 @@ export const Slideshow: React.FC<Props> = ({
         });
 
     const onSequenceClick = (seqInd: number) =>
-        setIndex((prev: number) => {
-            setSeqIndex(seqInd % totalLen);
-
-            return (prev % seqLen) + seqLen * seqInd;
-        });
+        setIndex((prev) => ((prev % seqLen) + seqLen * seqInd));
 
     const onBreadClick = (index: number) =>
         setIndex(
-            (prev: number) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
+            (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
         );
-
-    const setIndexOnPlayer = (n: number, prev: number, next?: boolean) => {
-        setSeqIndex((prevSeqInd) => {
-            let newSeqInd = prevSeqInd;
-
-            if (next && n === 0 && prev === seqLen - 1) {
-                newSeqInd = (prevSeqInd + 1) % sequencesN;
-            } else if (next && n === seqLen - 1 && prev === 0) {
-                newSeqInd = (sequencesN + prevSeqInd - 1) % sequencesN;
-            }
-
-            setIndex((n + newSeqInd * seqLen) % totalLen);
-            setPrevIndex((prev + newSeqInd * seqLen) % totalLen);
-
-            return newSeqInd;
-        });
-    };
-
+    
+    const handleIndexChange = React.useCallback(
+        (n: number) => setIndex((prev) => prev + (n - prev % length)),
+        [length]
+    );
+console.log({ seqLen, labelsLen: labels.length})
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -187,47 +155,35 @@ export const Slideshow: React.FC<Props> = ({
                     onBreadClick={onBreadClick}
                     sequences={sequences}
                     currentSequence={slides[index].headers.sequence}
-                    primaryMeasureName={primaryMeasureName}
                 />
 
-                {[...slides[index].data.entries()].map(([name, value], i) => (
-                    <Hidden key={`${name}-${i}`} mdDown={i > 0} lgDown={i === 1}>
-                        <Content
-                            animationsInitialized={animationsInitialized}
-                            name={name}
-                            tileData={value.tile} // TODO: consider changing to Transitions and passing components
-                            components={getComponents(name)}
-                            index={index}
-                        />
-                    </Hidden>
-                ))}
+                {[...slides[index].data.entries()].map(([name, value], i) => !(isLgDown && i === 1) && !(hiddenMdDown && i > 0) ? (
+                    <Content
+                        key={`${name}-${i}`}
+                        animationsInitialized={animationsInitialized}
+                        name={name}
+                        tileData={value.tile} // TODO: consider changing to Transitions and passing components
+                        components={getComponents(name)}
+                        index={index}
+                    />
+                ) : null)}
 
-                {tickerData && showTicker ? (
-                    <Hidden lgDown>
-                        <Ticker
-                            animationsInitialized={animationsInitialized}
-                            text="Turbocharged by spookydoodle"
-                            data={tickerData}
-                        />
-                    </Hidden>
+                {tickerData && showTicker && !isLgDown ? (
+                    <Ticker
+                        animationsInitialized={animationsInitialized}
+                        text={SlideshowType.tickerTitle}
+                        data={tickerData}
+                    />
                 ) : null}
 
                 <Player
                     slideshow={slideshow}
-                    animationsInitialized={animationsInitialized}
-                    play={play}
-                    setPlay={setPlay}
-                    index={index % seqLen}
+                    index={index % labels.length}
+                    onIndexChange={handleIndexChange}
                     length={labels.length}
-                    setIndex={setIndexOnPlayer}
-                    duration={duration}
-                    setDuration={setDuration}
                     labels={labels}
                     sequences={[""]}
                     // seqName={sequences[Math.floor(index / seqLen)]}
-                    // setOpenDialog={setOpenDialog}
-                    showTicker={showTicker}
-                    setShowTicker={setShowTicker}
                 />
             </Grid>
         </Grid>

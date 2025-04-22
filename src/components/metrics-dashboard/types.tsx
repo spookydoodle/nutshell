@@ -199,6 +199,9 @@ export interface Datum {
      * More detailed breakdown of this datum.
      */
     subitems?: Datum[];
+    description?: string;
+    tooltip?: string;
+    link?: string;
 }
 
 export interface ImgSrc {
@@ -277,8 +280,10 @@ type MainDataItem = Map<
 >;
 
 interface Header {
-    // for each slide
-    category: Category;
+    /**
+     * Will be used for breadcrumbs and player sequence name
+     */
+    category: string;
     sequence: string;
     titlePrimary: string;
     titlePrimaryShort: string;
@@ -286,7 +291,15 @@ interface Header {
     titleSecondaryShort: string;
 }
 
-type TickerStateData = Map<string, TickerData>; // YTD/MTD => characteristic1 => store => Datum
+/**
+ * Keys of the map are the main sections of the data, for example periodic value such as: YTD, QTD.
+ * Values are further mappings for sub sections.
+ */
+type TickerStateData = Map<string, TickerData>; 
+
+/**
+ * Keys of the map are sub sections of main sections, for example a region value
+ */
 type TickerData = Map<string, Datum[]>;
 
 interface StateType {
@@ -362,6 +375,7 @@ export type {
     FeedLayoutType,
     LandingType,
     StateDataItem,
+    TickerStateData,
     TickerData,
     SlidesStateData,
     SlideData,

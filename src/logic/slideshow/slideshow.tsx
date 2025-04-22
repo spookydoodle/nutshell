@@ -1,6 +1,9 @@
+
+import React from "react";
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
+import * as MetricTypes from '../../components/metrics-dashboard/types';
 import * as Utils from "../../utils";
 import { Img } from '../../layouts/images';
 
@@ -9,11 +12,11 @@ import { Img } from '../../layouts/images';
  */
 export interface SlideshowInitOptions {
     /**
-     * Whether the slideshow is playing.
+     * Whether the slideshow should play on start.
      * Slideshow will automatically increment the slide index if both `play` and `animationsInitialized` are `true`.
      * Defaults to `true`.
      */
-    play?: boolean;
+    autoplay?: boolean;
     /**
      * Whether intro animations have been initialized and the slideshow can begin.
      * Intro animations can include sliding or fading the background and various components in their places.
@@ -26,11 +29,22 @@ export interface SlideshowInitOptions {
      * Defaults to `15000`.
      */
     duration?: number;
+
     /**
      * Whether the ticker should be displayed.
      * Defaults to `true`.
      */
     showTicker?: boolean;
+
+    /**
+     * Whether to display mobile version on xs size screen.
+     */
+    enableMobile?: boolean;
+
+    /**
+     * Slide start delay in ms from the moment `slideshow.start()` function is triggered.
+     */
+    startDelay?: number;
 }
 
 /**
@@ -54,6 +68,7 @@ export abstract class Slideshow<T = unknown> {
     public static titleShort = '_NTSHLL';
     public static subtitle = 'Have a great day';
     public static subtitleShort = 'Yo';
+    public static tickerTitle = 'Turbocharged by spookydoodle';
 
     public abstract path: string;
     public abstract name: string;
@@ -65,15 +80,22 @@ export abstract class Slideshow<T = unknown> {
     public abstract imageUrl: string;
     public backgroundImageUrls?: Img[];
 
+    private defaultAnimationsInitialized = true;
+    private defaultAutoPlay = true;
+    private defaultDuration = 15000;
+    private defaultShowTicker = true;
+    private defaultEnableMobile = false;
+    private defaultStartDelay = 0;
+
+    /**
+     * Options provided in the constructor.
+     */
+    private initOptions?: SlideshowInitOptions;
+
     /**
      * Data to present on the slides.
      */
     public data: T;
-
-    /**
-     * Whether the slideshow is playing.
-     */
-    public play$: rxjs.BehaviorSubject<boolean>;
 
     /**
      * Whether intro animations have been initialized and the slideshow can begin.
@@ -97,6 +119,17 @@ export abstract class Slideshow<T = unknown> {
     public selectedBackgroundIndex$: rxjs.BehaviorSubject<number>;
 
     /**
+     * Whether to enable mobile version on xs size screen.
+    //  * TODO: change to optional function returning data and components
+     */
+    public enableMobile: boolean;
+
+    /**
+     * Slide start delay in ms from the moment `slideshow.start()` function is triggered.
+     */
+    public startDelay: number;
+
+    /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
      * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
      * @param data
@@ -104,18 +137,26 @@ export abstract class Slideshow<T = unknown> {
      */
     public constructor(data: T, options?: SlideshowInitOptions) {
         const {
-            play = true,
-            animationsInitialized = false,
-            duration = 15000,
-            showTicker = true
+            animationsInitialized = this.defaultAnimationsInitialized,
+            duration = this.defaultDuration,
+            showTicker = this.defaultShowTicker,
+            enableMobile = this.defaultEnableMobile,
+            startDelay= this.defaultStartDelay
         } = options ?? {};
+        this.initOptions = options;
         this.data = data;
-        this.play$ = new rxjs.BehaviorSubject<boolean>(play);
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
+        this.enableMobile = enableMobile;
+        this.startDelay = startDelay;
     }
+
+    /**
+     * Whether the slideshow is playing.
+     */
+    public play$ = new rxjs.BehaviorSubject<boolean>(false);
 
     /**
      * Current slide index.
@@ -124,8 +165,54 @@ export abstract class Slideshow<T = unknown> {
 
     /**
      * Previous slide index
+    //  * TODO: Consider moving to specific implementation
      */
     public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
+
+    private timeout: NodeJS.Timeout | undefined;
+
+    /**
+     * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
+     * @param timeout If provided, will delay setting `play$` (if autoplay initially set) and `animationsInitialized$` values.
+     */
+    public start = (): void => {
+        this.index$.next(0);
+        this.prevIndex$.next(0);
+        this.timeout = setTimeout(() => {
+            this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
+            this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
+        }, this.startDelay);
+    };
+
+    /**
+     * Resets observables needed to start the slideshow.
+     */
+    public stop = (): void => {
+        clearTimeout(this.timeout);
+        this.play$.next(false);
+        this.animationsInitialized$.next(false);
+        this.index$.next(0);
+        this.prevIndex$.next(0);
+    };
+
+    // TODO: Change to static
+    public getSlideTitle?: () => string;
+    public getSlideSubtitle?: () => string;
+
+    /**
+     * Returns data needed to render slides.
+     */
+    public getSlidesData?: () => MetricTypes.SlidesStateData | undefined;
+
+    /**
+     * Returns data needed to render bottom ticker.
+     */
+    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
+
+    /**
+     * If provided will render the custom slideshow instead of the default dashboard.
+     */
+    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T> }>;
 
     /**
      * Function which extends theme.
