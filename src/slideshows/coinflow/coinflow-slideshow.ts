@@ -4,6 +4,7 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
+import * as Utils from '../../utils';
 
 export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public path = '/coinflow';
@@ -14,6 +15,12 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public caption = 'Data collected manually';
     public imageUrl = `${IMG_SERVER}/landing/gadgets.jpg`;
     public backgroundImageUrls = getImgArr("BG");
+
+    private convertedData = Utils.Metrics.convertToMap(this.data);
+
+    public getTickerData = (): MetricTypes.TickerStateData | undefined => {
+        return this.convertedData.ticker;
+    };
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

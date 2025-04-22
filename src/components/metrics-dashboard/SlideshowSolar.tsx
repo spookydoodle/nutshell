@@ -35,15 +35,13 @@ interface Props {
     play: boolean;
     setPlay: React.Dispatch<React.SetStateAction<boolean>>;
     data: SlidesStateData;
-    tickerData?: Map<string, TickerData>;
 }
 
 export const SlideshowSolar: React.FC<Props> = ({
     slideshow,
     play,
     setPlay,
-    data,
-    tickerData
+    data
 }) => {
     const classes = useStyles();
     const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
@@ -55,6 +53,7 @@ export const SlideshowSolar: React.FC<Props> = ({
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
+    const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
 
     const dataKeys = data ? [...data.keys()] : [];
     const dataValues = data ? [...data.values()] : [];

@@ -20,7 +20,6 @@ export const NutshellCoinflow: React.FC<Props> = ({ slideshow }) => {
 
     const newData = Utils.Metrics.convertToMap(slideshow.data);
     const selectedData = newData;
-    const tickerData = selectedData?.ticker;
     const slidesData = selectedData?.slides;
 
     return (
@@ -29,7 +28,7 @@ export const NutshellCoinflow: React.FC<Props> = ({ slideshow }) => {
             header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon hidden="mdDown" />}
         >
             {slidesData ? (
-                <NutshellCoinflowContent slideshow={slideshow} data={slidesData} tickerData={tickerData} />
+                <NutshellCoinflowContent slideshow={slideshow} data={slidesData} />
             ) : null}
         </Layout>
     );

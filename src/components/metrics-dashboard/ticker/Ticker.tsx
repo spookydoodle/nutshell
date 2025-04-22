@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     animationsInitialized: boolean;
     text: string;
-    data: Map<string, Types.TickerData>;
+    data: Types.TickerStateData;
 }
 
 export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) => {

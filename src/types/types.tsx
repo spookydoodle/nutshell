@@ -20,17 +20,11 @@ export interface ImgSrc {
 
 export interface Value {
     name: string;
-    /**
-     * Provide already with units, prefix, suffix, e.g. '$ 234 K'
-     */
     primary?: number;
     /**
      * Provide already with units, prefix, suffix, e.g. '$ 234 K'
      */
     primaryFormatted?: string;
-    /**
-     * Provide already with prefix and suffix, e.g. '+10.2% VS LY'
-     */
     primaryDelta?: number;
     /**
      * Provide already with prefix and suffix, e.g. '+10.2% VS LY'

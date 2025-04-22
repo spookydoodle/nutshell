@@ -42,14 +42,12 @@ const useStyles = makeStyles((_theme: Theme) =>
 interface Props {
     slideshow: CoinflowSlideshow;
     data: MetricTypes.SlidesStateData;
-    tickerData?: Map<string, MetricTypes.TickerData>;
     primaryMeasureName: string;
 }
 
 export const Slideshow: React.FC<Props> = ({
     slideshow,
     data,
-    tickerData,
     primaryMeasureName
 }) => {
     const classes = useStyles();
@@ -62,6 +60,7 @@ export const Slideshow: React.FC<Props> = ({
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
+    const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
 
     const dataKeys = data ? [...data.keys()] : [];
     const dataValues = data ? [...data.values()] : [];

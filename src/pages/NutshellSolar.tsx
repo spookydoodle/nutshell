@@ -21,8 +21,7 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
         };
     }, []);
 
-    const selectedData = slideshow.data?.get('solar-system');
-    const tickerData = selectedData?.ticker;
+    const selectedData = slideshow.data;
     const slidesData = selectedData?.slides;
 
     return (
@@ -36,7 +35,6 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
                     play={play}
                     setPlay={setPlay}
                     data={slidesData}
-                    tickerData={tickerData}
                 />
             )}
         </Layout>

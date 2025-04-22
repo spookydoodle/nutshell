@@ -1,6 +1,7 @@
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
+import * as MetricTypes from '../../components/metrics-dashboard/types';
 import * as Utils from "../../utils";
 import { Img } from '../../layouts/images';
 
@@ -136,6 +137,8 @@ export abstract class Slideshow<T = unknown> {
      * Previous slide index
      */
     public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
+
+    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
 
     private timeout: NodeJS.Timeout | undefined;
 
