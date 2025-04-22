@@ -7,7 +7,6 @@ import "./App.css";
 
 const App: React.FC = () => {
     const [slideshows] = Hooks.useSubjectState(AppState.slideshows$);
-    console.log({slideshows})
 
     const router = React.useMemo(
         () => createBrowserRouter([

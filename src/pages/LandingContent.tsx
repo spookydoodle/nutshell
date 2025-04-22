@@ -106,7 +106,6 @@ const deviceIcons: { [key in Types.Device]: typeof PhoneAndroidIcon } = {
     desktop: ComputerIcon,
 };
 
-
 export const LandingContent: React.FC = () => {
     const classes = useStyles();
     const [slideshows] = Hooks.useSubjectState(AppState.slideshows$)
