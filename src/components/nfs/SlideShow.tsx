@@ -58,7 +58,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
             clearInterval(interval);
         };
     }, [play, duration]);
-console.log({ imgPerSlide, totalLen })
+
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -100,12 +100,14 @@ console.log({ imgPerSlide, totalLen })
                                 setIndex((prev) => {
                                     setPrevIndex(Math.floor(prev / imgPerSlide) * imgPerSlide);
                                     return n * imgPerSlide;
-                            });
+                                });
                             }}
                             secondaryIndex={index}
-                            setSecondaryIndex={(n: number, prev: number) => {
-                                setIndex(n);
-                                setPrevIndex(prev);
+                            onSecondaryIndexChange={(n: number) => {
+                                setIndex((prev) => {
+                                    setPrevIndex(prev);
+                                    return n;
+                                });
                             }}
                             labels={labels}
                             sequences={sequences}

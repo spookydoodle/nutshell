@@ -43,7 +43,7 @@ interface Props {
     index: number;
     onIndexChange: (n: number) => void;
     secondaryIndex?: number;
-    setSecondaryIndex?: (index: number, prev: number) => void;
+    onSecondaryIndexChange?: (index: number) => void;
     labels?: Array<string>;
     sequences: Array<string>;
     categoryPrimary?: string;
@@ -56,7 +56,7 @@ export const Player: React.FC<Props> = ({
     index,
     onIndexChange,
     secondaryIndex,
-    setSecondaryIndex,
+    onSecondaryIndexChange,
     labels,
     sequences,
     categoryPrimary,
@@ -119,7 +119,7 @@ export const Player: React.FC<Props> = ({
                                 index={index}
                                 onIndexChange={onIndexChange}
                                 secondaryIndex={secondaryIndex}
-                                setSecondaryIndex={setSecondaryIndex}
+                                onSecondaryIndexChange={onSecondaryIndexChange}
                                 length={length}
                                 categoryPrimary={categoryPrimary}
                                 categorySecondary={categorySecondary}
