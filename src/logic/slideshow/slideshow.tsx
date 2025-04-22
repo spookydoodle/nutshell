@@ -1,3 +1,5 @@
+
+import React from "react";
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
@@ -38,6 +40,11 @@ export interface SlideshowInitOptions {
      * Whether to display mobile version on xs size screen.
      */
     enableMobile?: boolean;
+
+    /**
+     * Slide start delay in ms from the moment `slideshow.start()` function is triggered.
+     */
+    startDelay?: number;
 }
 
 /**
@@ -78,6 +85,7 @@ export abstract class Slideshow<T = unknown> {
     private defaultDuration = 15000;
     private defaultShowTicker = true;
     private defaultEnableMobile = false;
+    private defaultStartDelay = 0;
 
     /**
      * Options provided in the constructor.
@@ -117,6 +125,11 @@ export abstract class Slideshow<T = unknown> {
     public enableMobile: boolean;
 
     /**
+     * Slide start delay in ms from the moment `slideshow.start()` function is triggered.
+     */
+    public startDelay: number;
+
+    /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
      * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
      * @param data
@@ -127,7 +140,8 @@ export abstract class Slideshow<T = unknown> {
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
             showTicker = this.defaultShowTicker,
-            enableMobile = this.defaultEnableMobile
+            enableMobile = this.defaultEnableMobile,
+            startDelay= this.defaultStartDelay
         } = options ?? {};
         this.initOptions = options;
         this.data = data;
@@ -136,6 +150,7 @@ export abstract class Slideshow<T = unknown> {
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
         this.enableMobile = enableMobile;
+        this.startDelay = startDelay;
     }
 
     /**
@@ -160,13 +175,13 @@ export abstract class Slideshow<T = unknown> {
      * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
      * @param timeout If provided, will delay setting `play$` (if autoplay initially set) and `animationsInitialized$` values.
      */
-    public start = (timeout = 0): void => {
+    public start = (): void => {
         this.index$.next(0);
         this.prevIndex$.next(0);
         this.timeout = setTimeout(() => {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
-        }, timeout);
+        }, this.startDelay);
     };
 
     /**
@@ -193,6 +208,11 @@ export abstract class Slideshow<T = unknown> {
      * Returns data needed to render bottom ticker.
      */
     public getTickerData?: () => MetricTypes.TickerStateData | undefined;
+
+    /**
+     * If provided will render the custom slideshow instead of the default dashboard.
+     */
+    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T> }>;
 
     /**
      * Function which extends theme.

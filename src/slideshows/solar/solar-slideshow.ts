@@ -4,6 +4,7 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import * as Types from "../../types";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
+import { NutshellSolar } from "../../pages";
 
 export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/solar';
@@ -27,6 +28,8 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
         return this.data.ticker;
     };
+    
+    public customSlideshow: React.ComponentType<{ slideshow: Slideshow<MetricTypes.StateDataMap>; }> = NutshellSolar;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

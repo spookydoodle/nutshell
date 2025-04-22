@@ -10,6 +10,8 @@ import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
 import { NfsSlideshow } from "../../slideshows/nfs/nfs-slideshow";
 import * as Hooks from '../../hooks';
+import { Slideshow } from "../../logic/slideshow/slideshow";
+import { NutshellData } from "./types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -28,7 +30,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 const sequences = ["Timeline"];
 
 interface Props {
-    slideshow: NfsSlideshow;
+    slideshow: Slideshow<NutshellData>;
 }
 
 export const SlideShow: React.FC<Props> = ({ slideshow }) => {
@@ -93,7 +95,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         />
 
                         <Player
-                            slideshow={slideshow}
+                            slideshow={slideshow as Slideshow}
                             length={totalLen}
                             index={Math.floor(index / imgPerSlide)}
                             onIndexChange={(n: number) => {

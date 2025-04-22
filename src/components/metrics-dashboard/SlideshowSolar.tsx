@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Theme, useMediaQuery } from '@mui/material';
 import { Player } from "../navigation/Player";
@@ -8,9 +8,10 @@ import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { ImgTiles } from "./ImgTiles";
 import { Ticker } from "./ticker/Ticker";
 import { SmallScreenMessage } from "./SmallScreenMessage";
-import { SlidesStateData, SlideData, TickerData } from "../../types/types";
+import { SlidesStateData, SlideData } from "../../types/types";
 import * as Hooks from '../../hooks';
-import { SolarSlideshow } from "../../slideshows/solar/solar-slideshow";
+import { Slideshow } from "../../logic/slideshow/slideshow";
+import * as MetricTypes from "./types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -31,7 +32,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideshow: SolarSlideshow;
+    slideshow: Slideshow<MetricTypes.StateDataMap>;
     play: boolean;
     setPlay: React.Dispatch<React.SetStateAction<boolean>>;
     data: SlidesStateData;
@@ -135,7 +136,7 @@ export const SlideshowSolar: React.FC<Props> = ({
         (n: number) => setIndex((prev) => prev + (n - prev % length)),
         [length]
     );
-    
+
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -177,7 +178,7 @@ export const SlideshowSolar: React.FC<Props> = ({
                         ) : null}
 
                         <Player
-                            slideshow={slideshow}
+                            slideshow={slideshow as Slideshow}
                             index={index % totalLen}
                             onIndexChange={handleIndexChange}
                             length={totalLen}

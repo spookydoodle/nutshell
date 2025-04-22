@@ -1,31 +1,17 @@
 import React from "react";
-import { Layout } from "../layouts/Layout";
-import { NavbarTitle } from "../layouts/NavbarTitle";
 import { ImagePreloadWrapper } from "../components/nfs/ImagePreloadWrapper";
 import { SlideShow } from "../components/nfs/SlideShow";
-import { NfsSlideshow } from "../slideshows/nfs/nfs-slideshow";
+import { NutshellData } from "../components/nfs/types";
+import { Slideshow } from "../logic/slideshow/slideshow";
 
 interface Props {
-    slideshow: NfsSlideshow;
+    slideshow: Slideshow<NutshellData>;
 }
 
 export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
-    React.useEffect(() => {
-        slideshow.start();
-
-        return () => {
-            slideshow.stop();
-        };
-    }, []);
-
     return (
-        <Layout
-            slideshow={slideshow}
-            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
-        >
-            <ImagePreloadWrapper>
-                <SlideShow slideshow={slideshow} />
-            </ImagePreloadWrapper>
-        </Layout>
+        <ImagePreloadWrapper>
+            <SlideShow slideshow={slideshow} />
+        </ImagePreloadWrapper>
     );
 };

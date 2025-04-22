@@ -48,7 +48,7 @@ export const Desktop: React.FC<Props> = ({ slideshow }) => {
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
     const appId = Hooks.useAppId();
-    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+    const [play] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);

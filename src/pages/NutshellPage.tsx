@@ -1,22 +1,14 @@
 import React from "react";
 import { Layout } from "../layouts/Layout";
 import { NavbarTitle } from "../layouts/NavbarTitle";
-import { CoinflowSlideshow } from "../slideshows/coinflow/coinflow-slideshow";
 import { NutshellPageContent } from "./NutshellPageContent";
+import { Slideshow } from "../logic/slideshow/slideshow";
 
 interface Props {
-    slideshow: CoinflowSlideshow;
+    slideshow: Slideshow;
 }
 
 export const NutshellPage: React.FC<Props> = ({ slideshow }) => {
-    React.useEffect(() => {
-        slideshow.start(5000);
-
-        return () => {
-            slideshow.stop();
-        };
-    }, []);
-
     return (
         <Layout
             slideshow={slideshow}

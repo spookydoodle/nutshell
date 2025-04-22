@@ -11,10 +11,23 @@ interface Props {
 export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
     const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
 
-    return !isOnlyXs
-        ? <Desktop slideshow={slideshow} />
-        : slideshow.enableMobile
-            ? <Mobile slideshow={slideshow} />
-            // TODO: Add small screen message
-            : null;
+    React.useEffect(() => {
+        if (isOnlyXs) {
+            return;
+        }
+        slideshow.start();
+
+        return () => {
+            slideshow.stop();
+        };
+    }, [isOnlyXs]);
+
+    if (isOnlyXs) {
+        return slideshow.enableMobile ? <Mobile slideshow={slideshow} /> : null; // TODO: Add small screen message
+    }
+
+    if (slideshow.customSlideshow) {
+        return <slideshow.customSlideshow slideshow={slideshow} />
+    }
+    return <Desktop slideshow={slideshow} />;
 };

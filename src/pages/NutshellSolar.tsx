@@ -1,42 +1,26 @@
 import React from "react";
-import { Layout } from "../layouts/Layout";
-import { NavbarTitle } from "../layouts/NavbarTitle";
 import { SlideshowSolar } from "../components/metrics-dashboard/SlideshowSolar";
-import { SolarSlideshow } from "../slideshows/solar/solar-slideshow";
+import { Slideshow } from "../logic/slideshow/slideshow";
 import * as Hooks from '../hooks';
+import * as MetricTypes from "../components/metrics-dashboard/types";
 
 interface Props {
-    slideshow: SolarSlideshow;
+    slideshow: Slideshow<MetricTypes.StateDataMap>;
 }
 
 export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
     // Delay the transitions 5 seconds, when all CSS transitions are finished
     const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
 
-    React.useEffect(() => {
-        slideshow.start(5000);
-
-        return () => {
-            slideshow.stop();
-        };
-    }, []);
-
     const selectedData = slideshow.data;
-    const slidesData = selectedData?.slides;
+    const slidesData = selectedData.slides;
 
     return (
-        <Layout
+        <SlideshowSolar
             slideshow={slideshow}
-            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
-        >
-            {slidesData && (
-                <SlideshowSolar
-                    slideshow={slideshow}
-                    play={play}
-                    setPlay={setPlay}
-                    data={slidesData}
-                />
-            )}
-        </Layout>
+            play={play}
+            setPlay={setPlay}
+            data={slidesData}
+        />
     );
 };

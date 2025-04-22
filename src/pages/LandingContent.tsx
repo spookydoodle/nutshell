@@ -114,7 +114,7 @@ export const LandingContent: React.FC = () => {
     return (
         <Box className={classes.outerContainer}>
             <Box className={classes.container}>
-                {slideshows.map(({ slideshow }) => (
+                {slideshows.map((slideshow) => (
                     <Box key={slideshow.path} className={classes.item}>
                         <Link to={slideshow.path}>
                             <div className={classes.imgContainer}>
