@@ -48,7 +48,6 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
         const subscription = slideshow.index$
             .pipe(rxjs.pairwise())
             .subscribe(([previous, current]) => {
-                console.log('sub', previous, current)
                 setPrevIndex(previous)
             });
 
