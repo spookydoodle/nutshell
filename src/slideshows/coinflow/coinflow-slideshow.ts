@@ -4,7 +4,6 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import * as Utils from '../../utils';
 
 export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/coinflow';

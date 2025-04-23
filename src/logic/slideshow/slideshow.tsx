@@ -166,14 +166,12 @@ export abstract class Slideshow<T = unknown> {
         this.enableMobile = enableMobile;
         this.startDelay = startDelay;
 
-        this.playSubscription = this.play$.subscribe((play) => {
-            if (!play) {
-                clearInterval(this.playInterval);
-                this.playSubscription?.unsubscribe();
-            } else {
+        this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
+            clearInterval(this.playInterval);
+            if (play) {
                 this.playInterval = setInterval(() => {
                     this.index$.next((this.index$.value + 1) % this.slideCount);
-                }, duration);
+                }, this.getAutoIncrementInterval?.(duration) ?? duration);
             }
         })
     }
@@ -187,6 +185,11 @@ export abstract class Slideshow<T = unknown> {
      * Current slide index.
      */
     public index$ = new rxjs.BehaviorSubject<number>(0);
+
+    /**
+     * If index should be incremented with a custom interval than selected `duration` value.
+     */
+    public getAutoIncrementInterval?: (duration: number) => number;
 
     private timeout: NodeJS.Timeout | undefined;
 

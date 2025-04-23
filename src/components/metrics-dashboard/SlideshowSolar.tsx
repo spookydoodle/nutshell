@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Theme, useMediaQuery } from '@mui/material';
 import { Player } from "../navigation/Player";
@@ -33,17 +33,10 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow: Slideshow<MetricTypes.StateDataMap>;
-    play: boolean;
-    setPlay: React.Dispatch<React.SetStateAction<boolean>>;
     data: SlidesStateData;
 }
 
-export const SlideshowSolar: React.FC<Props> = ({
-    slideshow,
-    play,
-    setPlay,
-    data
-}) => {
+export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
     const classes = useStyles();
     const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
@@ -52,8 +45,9 @@ export const SlideshowSolar: React.FC<Props> = ({
     const appId = Hooks.useAppId();
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
-    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
+    const [play] = Hooks.useSubjectState(slideshow.play$);
+    const [duration] = Hooks.useSubjectState(slideshow.duration$);
+    const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
     const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
 
     const dataKeys = data ? [...data.keys()] : [];
@@ -76,18 +70,6 @@ export const SlideshowSolar: React.FC<Props> = ({
 
     const totalLen = slides.length;
     const seqLen = totalLen / 2; // TODO: Repair this to get the seqLen of current time box
-
-    useEffect(() => {
-        if (play) {
-            const interval = setInterval(() => {
-                setIndex((prev) => (prev + 1) % totalLen);
-            }, duration);
-
-            return () => {
-                clearInterval(interval);
-            };
-        }
-    }, [play, slides, duration, totalLen]);
 
     const getComponents = (name: string) =>
         slides.map((slide, ind) => (

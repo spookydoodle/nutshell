@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import * as rxjs from 'rxjs';
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Box, Theme, useMediaQuery } from '@mui/material';
 import { Background } from "./Background";
@@ -37,29 +38,24 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
     const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
-    const [play] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const [prevIndex, setPrevIndex] = useState(0);
 
     const labels: string[] = React.useMemo(() => slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""], [slideshow]);
     const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
 
     React.useEffect(() => {
-        if (!play) {
-            return;
-        }
-        const interval = setInterval(() => {
-            setIndex((prev) => {
-                setPrevIndex(prev);
-                return (prev + 1) % (totalLen * imgPerSlide);
+        const subscription = slideshow.index$
+            .pipe(rxjs.pairwise())
+            .subscribe(([previous, current]) => {
+                console.log('sub', previous, current)
+                setPrevIndex(previous)
             });
-        }, duration / imgPerSlide);
 
         return () => {
-            clearInterval(interval);
+            subscription.unsubscribe();
         };
-    }, [play, duration]);
+    }, []);
 
     const isAnimationFadeIn = (index > prevIndex && index % imgPerSlide !== 0) ||
         (index < prevIndex && Math.floor(index / imgPerSlide) === Math.floor(prevIndex / imgPerSlide))
