@@ -4,6 +4,7 @@ import { NutshellData } from "../../components/nfs/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { NutshellNFS } from "../../pages";
+import { imgPerSlide } from "./nfs-data";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public path = '/need-for-nutshell';
@@ -17,6 +18,8 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://vgsales.fandom.com/wiki/Need_for_Speed",
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
+
+    public getAutoIncrementInterval = (duration: number): number => duration / imgPerSlide;
 
     public customSlideshow: React.ComponentType<{ slideshow: Slideshow<NutshellData>; }> = NutshellNFS;
 

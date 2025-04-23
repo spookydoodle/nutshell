@@ -12,6 +12,10 @@ import { Img } from '../../layouts/images';
  */
 export interface SlideshowInitOptions {
     /**
+     * Number of slides which value of `index$` refers to.
+     */
+    slideCount: number;
+    /**
      * Whether the slideshow should play on start.
      * Slideshow will automatically increment the slide index if both `play` and `animationsInitialized` are `true`.
      * Defaults to `true`.
@@ -98,6 +102,11 @@ export abstract class Slideshow<T = unknown> {
     public data: T;
 
     /**
+     * Number of slides which value of `index$` refers to.
+     */
+    public slideCount: number;
+
+    /**
      * Whether intro animations have been initialized and the slideshow can begin.
      * Intro animations can include sliding or fading the background and various components in their places.
      */
@@ -129,14 +138,18 @@ export abstract class Slideshow<T = unknown> {
      */
     public startDelay: number;
 
+    private playSubscription: rxjs.Subscription | undefined;
+    private playInterval: NodeJS.Timeout | undefined;
+
     /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
      * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
      * @param data
      * @param options 
      */
-    public constructor(data: T, options?: SlideshowInitOptions) {
+    public constructor(data: T, options: SlideshowInitOptions) {
         const {
+            slideCount,
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
             showTicker = this.defaultShowTicker,
@@ -145,12 +158,22 @@ export abstract class Slideshow<T = unknown> {
         } = options ?? {};
         this.initOptions = options;
         this.data = data;
+        this.slideCount = slideCount;
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
         this.enableMobile = enableMobile;
         this.startDelay = startDelay;
+
+        this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
+            clearInterval(this.playInterval);
+            if (play) {
+                this.playInterval = setInterval(() => {
+                    this.index$.next((this.index$.value + 1) % this.slideCount);
+                }, this.getAutoIncrementInterval?.(duration) ?? duration);
+            }
+        })
     }
 
     /**
@@ -164,10 +187,9 @@ export abstract class Slideshow<T = unknown> {
     public index$ = new rxjs.BehaviorSubject<number>(0);
 
     /**
-     * Previous slide index
-    //  * TODO: Consider moving to specific implementation
+     * If index should be incremented with a custom interval than selected `duration` value.
      */
-    public prevIndex$ = new rxjs.BehaviorSubject<number>(0);
+    public getAutoIncrementInterval?: (duration: number) => number;
 
     private timeout: NodeJS.Timeout | undefined;
 
@@ -177,7 +199,6 @@ export abstract class Slideshow<T = unknown> {
      */
     public start = (): void => {
         this.index$.next(0);
-        this.prevIndex$.next(0);
         this.timeout = setTimeout(() => {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
@@ -192,7 +213,6 @@ export abstract class Slideshow<T = unknown> {
         this.play$.next(false);
         this.animationsInitialized$.next(false);
         this.index$.next(0);
-        this.prevIndex$.next(0);
     };
 
     // TODO: Change to static

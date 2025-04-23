@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import * as rxjs from 'rxjs';
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Box, Theme, useMediaQuery } from '@mui/material';
 import { Background } from "./Background";
@@ -8,7 +9,7 @@ import { SmallScreenMessage } from "../metrics-dashboard/SmallScreenMessage";
 import { imgPerSlide } from "../../slideshows/nfs/nfs-data";
 import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
-import { NfsSlideshow } from "../../slideshows/nfs/nfs-slideshow";
+import * as Data from "../../slideshows/nfs/nfs-data";
 import * as Hooks from '../../hooks';
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { NutshellData } from "./types";
@@ -37,29 +38,38 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
     const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
-    const [play] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [duration] = Hooks.useSubjectState(slideshow.duration$);
-    const [prevIndex, setPrevIndex] = Hooks.useSubjectState(slideshow.prevIndex$);
+    const [prevIndex, setPrevIndex] = useState(0);
 
     const labels: string[] = React.useMemo(() => slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""], [slideshow]);
     const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
 
     React.useEffect(() => {
-        if (!play) {
-            return;
-        }
-        const interval = setInterval(() => {
-            setIndex((prev) => {
-                setPrevIndex(prev);
-                return (prev + 1) % (totalLen * imgPerSlide);
+        const subscription = slideshow.index$
+            .pipe(rxjs.pairwise())
+            .subscribe(([previous, current]) => {
+                setPrevIndex(previous)
             });
-        }, duration / imgPerSlide);
 
         return () => {
-            clearInterval(interval);
+            subscription.unsubscribe();
         };
-    }, [play, duration]);
+    }, []);
+
+    const isAnimationFadeIn = (index > prevIndex && index % imgPerSlide !== 0) ||
+        (index < prevIndex && Math.floor(index / imgPerSlide) === Math.floor(prevIndex / imgPerSlide))
+
+    // Going back
+    const isAnimationBack = !isAnimationFadeIn && (index < prevIndex || (prevIndex === 0 && index === totalLen * imgPerSlide - 1))
+    
+    const applyStyle = React.useMemo(
+        () => {
+            const a = index > prevIndex && index % Data.imgPerSlide !== 0;
+            const b = index < prevIndex && Math.floor(index / Data.imgPerSlide) === Math.floor(prevIndex / Data.imgPerSlide);
+            return !(a || b);
+        },
+        [index, prevIndex]
+    );
 
     return (
         <Grid container justifyContent="center">
@@ -69,13 +79,9 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         <Box className={classes.cinema}>
                             <Transitions
                                 variant={
-                                    (index > prevIndex && index % imgPerSlide !== 0) ||
-                                        (index < prevIndex &&
-                                            Math.floor(index / imgPerSlide) ===
-                                            Math.floor(prevIndex / imgPerSlide))
+                                    isAnimationFadeIn
                                         ? "fade-in"
-                                        : index < prevIndex ||
-                                            (prevIndex === 0 && index === totalLen * imgPerSlide - 1)
+                                        : isAnimationBack
                                             ? "swipe-cube-to-right"
                                             : "swipe-cube-to-left"
                                 }
@@ -89,7 +95,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         <Transitions
                             variant={index % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
                             components={slideshow.data.games
-                                .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} index={index} prevIndex={prevIndex} />))
+                                .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={applyStyle} />))
                                 .flat(1)}
                             index={index}
                         />

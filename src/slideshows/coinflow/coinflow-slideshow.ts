@@ -4,9 +4,8 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import * as Utils from '../../utils';
 
-export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
+export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';
@@ -16,19 +15,17 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public imageUrl = `${IMG_SERVER}/landing/gadgets.jpg`;
     public backgroundImageUrls = getImgArr("BG");
 
-    private convertedData = Utils.Metrics.convertToMap(this.data);
-
     // TODO: Add YTD/QTD/MTD
     public getSlideTitle = (): string => "Coinflow";
     // TODO by realms, sectors, products
     public getSlideSubtitle = (): string => "By TODO";
 
     public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
-        return this.convertedData.slides;
+        return this.data.slides;
     };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
-        return this.convertedData.ticker;
+        return this.data.ticker;
     };
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({

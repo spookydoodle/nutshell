@@ -1,7 +1,6 @@
 import React from "react";
 import { Rating } from './Rating';
 import { TitlePanels } from "../metrics-dashboard/TitlePanels";
-import * as Data from "../../slideshows/nfs/nfs-data";
 import * as Utils from "../../utils";
 import * as Types from "./types";
 
@@ -18,11 +17,10 @@ const unknownTx = [
 interface Props {
     slide: Types.GameDataItem;
     ind: number;
-    index: number;
-    prevIndex: number;
+    applyStyle?: boolean;
 }
 
-export const InfoPanels: React.FC<Props> = ({ slide, ind, index, prevIndex }) => {
+export const InfoPanels: React.FC<Props> = ({ slide, ind, applyStyle }) => {
     const salesAmount = React.useMemo(
         () => {
             const r = Math.floor(Math.random());
@@ -34,18 +32,6 @@ export const InfoPanels: React.FC<Props> = ({ slide, ind, index, prevIndex }) =>
             return unknownTx[r * unknownTx.length];
         },
         [slide.qty.value, slide.qty.unit]
-    );
-
-    const applyStyle = React.useMemo(
-        () => {
-            const a = index > prevIndex && index % Data.imgPerSlide !== 0;
-            const b = index < prevIndex &&
-                Math.floor(index / Data.imgPerSlide) ===
-                Math.floor(prevIndex / Data.imgPerSlide);
-            const c = a || b;
-            return !c;
-        },
-        [index, prevIndex]
     );
 
     return (
