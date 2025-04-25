@@ -25,7 +25,7 @@ interface Props {
 export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
+    const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
@@ -46,7 +46,7 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
         .map((slide) => slide.headers.titleSecondaryShort);
     
     const handleIndexChange = React.useCallback(
-        (n: number) => setIndex((prev) => prev + (n - prev % labels.length)),
+        (n: number) => setSlideIndex((prev) => prev + (n - prev % labels.length)),
         [length, labels]
     );
     
@@ -65,7 +65,7 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
 
                 <Player
                     slideshow={slideshow}
-                    index={index % labels.length}
+                    index={slideIndex % labels.length}
                     onIndexChange={handleIndexChange}
                     length={labels.length}
                     labels={labels}

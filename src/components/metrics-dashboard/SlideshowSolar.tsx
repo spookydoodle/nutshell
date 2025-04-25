@@ -44,7 +44,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
     const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
     const appId = Hooks.useAppId();
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
-    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
+    const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [play] = Hooks.useSubjectState(slideshow.play$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
@@ -63,7 +63,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
 
     const getMaxRows = (_i: number) =>
         Math.max(
-            ...[...slides[index].data.values()]
+            ...[...slides[slideIndex].data.values()]
                 .map((s) => [...s.main.values()].map((e) => e.data.length))
                 .flat(2)
         );
@@ -104,7 +104,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
                                             isDeltaBad: row.primaryIsBad,
                                         })) || []
                                     }
-                                    maxRows={getMaxRows(index)}
+                                    maxRows={getMaxRows(slideIndex)}
                                 />
                             </Grid>
                         ) : val.type === "items" && val.data.length > 0 ? (
@@ -115,7 +115,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
         ));
 
     const handleIndexChange = React.useCallback(
-        (n: number) => setIndex((prev) => prev + (n - prev % length)),
+        (n: number) => setSlideIndex((prev) => prev + (n - prev % length)),
         [length]
     );
 
@@ -126,28 +126,28 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
                     <>
                         <NavTitles
                             animationsInitialized={animationsInitialized}
-                            current={slides[index].headers}
-                            next={slides[(index + 1) % totalLen].headers}
+                            current={slides[slideIndex].headers}
+                            next={slides[(slideIndex + 1) % totalLen].headers}
                             play={play}
-                            index={index}
-                            setIndex={setIndex}
+                            index={slideIndex}
+                            setIndex={setSlideIndex}
                             seqLen={seqLen}
                             onBreadClick={(index: number) =>
-                                setIndex(
+                                setSlideIndex(
                                     (prev: number) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
                                 )
                             }
                             sequences={sequences}
-                            currentSequence={slides[index].headers.sequence}
+                            currentSequence={slides[slideIndex].headers.sequence}
                         />
 
-                        {[...slides[index].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (
+                        {[...slides[slideIndex].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (
                             <Content
                                 animationsInitialized={animationsInitialized}
                                 name={name}
                                 tileData={value.tile} // TODO: consider changing to Transitions and passing components
                                 components={getComponents(name)}
-                                index={index}
+                                index={slideIndex}
                             />
                         ) : null)}
 
@@ -157,7 +157,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
 
                         <Player
                             slideshow={slideshow as Slideshow}
-                            index={index % totalLen}
+                            index={slideIndex % totalLen}
                             onIndexChange={handleIndexChange}
                             length={totalLen}
                             labels={labels}

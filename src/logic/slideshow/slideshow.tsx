@@ -12,7 +12,7 @@ import { Img } from '../../layouts/images';
  */
 export interface SlideshowInitOptions {
     /**
-     * Number of slides which value of `index$` refers to.
+     * Number of slides which value of `slideIndex$` refers to.
      */
     slidesLength: number;
     /**
@@ -102,7 +102,7 @@ export abstract class Slideshow<T = unknown> {
     public data: T;
 
     /**
-     * Number of slides which value of `index$` refers to.
+     * Number of slides which value of `slideIndex$` refers to.
      */
     public slidesLength: number;
 
@@ -140,7 +140,7 @@ export abstract class Slideshow<T = unknown> {
 
     /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
-     * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
+     * Automatically increments the slide `slideIndex$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
      * @param data
      * @param options 
      */
@@ -172,7 +172,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Current slide index.
      */
-    public index$ = new rxjs.BehaviorSubject<number>(0);
+    public slideIndex$ = new rxjs.BehaviorSubject<number>(0);
 
     /**
      * If index should be incremented with a custom interval than selected `duration` value.
@@ -188,7 +188,7 @@ export abstract class Slideshow<T = unknown> {
      * @param timeout If provided, will delay setting `play$` (if autoplay initially set) and `animationsInitialized$` values.
      */
     public start = (): void => {
-        this.index$.next(0);
+        this.slideIndex$.next(0);
         this.timeout = setTimeout(() => {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
@@ -197,7 +197,7 @@ export abstract class Slideshow<T = unknown> {
             clearInterval(this.playInterval);
             if (play) {
                 this.playInterval = setInterval(() => {
-                    this.index$.next((this.index$.value + 1) % this.slidesLength);
+                    this.slideIndex$.next((this.slideIndex$.value + 1) % this.slidesLength);
                 }, this.getAutoIncrementInterval?.(duration) ?? duration);
             }
         })
@@ -210,7 +210,7 @@ export abstract class Slideshow<T = unknown> {
         clearTimeout(this.timeout);
         this.play$.next(false);
         this.animationsInitialized$.next(false);
-        this.index$.next(0);
+        this.slideIndex$.next(0);
         this.playSubscription?.unsubscribe();
     };
 
