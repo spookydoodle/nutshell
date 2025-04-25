@@ -29,25 +29,24 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
-    const slidesData = React.useMemo(() => slideshow.getSlidesData?.(), [slideshow]);
-    const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
+    const tickerData = React.useMemo(
+        () => slideshow.getTickerData?.(),
+        [slideshow]
+    );
 
-    const dataKeys = slidesData ? [...slidesData.keys()] : [];
-    const dataValues = slidesData ? [...slidesData.values()] : [];
+    const playerLabels = React.useMemo(
+        () => slideshow.getPlayerLabels(),
+        [slideshow]
+    );
 
-    const slides: MetricTypes.SlideData = dataValues.flat(1);
-
-    const totalLen = slides.length;
-    const seqLen = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
-
-    // For the 'legend' in Player components (marks, sequences)
-    const labels: Array<string> = slides
-        .filter((_slide, i) => i < seqLen)
-        .map((slide) => slide.headers.titleSecondaryShort);
+    const playerIndex = React.useMemo(
+        () => slideshow.getPlayerIndex(slideIndex, playerLabels.length),
+        [slideshow, slideIndex, playerLabels]
+    );
     
     const handleIndexChange = React.useCallback(
-        (n: number) => setSlideIndex((prev) => prev + (n - prev % labels.length)),
-        [length, labels]
+        (n: number) => setSlideIndex((prev) => prev + (n - prev % playerLabels.length)),
+        [length, playerLabels]
     );
     
     return (
@@ -65,10 +64,9 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
 
                 <Player
                     slideshow={slideshow}
-                    index={slideIndex % labels.length}
+                    index={playerIndex}
                     onIndexChange={handleIndexChange}
-                    length={labels.length}
-                    labels={labels}
+                    playerLabels={playerLabels}
                     sequences={[""]}
                     // seqName={sequences[Math.floor(index / seqLen)]}
                 />

@@ -12,10 +12,6 @@ import { Img } from '../../layouts/images';
  */
 export interface SlideshowInitOptions {
     /**
-     * Number of slides which value of `slideIndex$` refers to.
-     */
-    slidesLength: number;
-    /**
      * Whether the slideshow should play on start.
      * Slideshow will automatically increment the slide index if both `play` and `animationsInitialized` are `true`.
      * Defaults to `true`.
@@ -102,11 +98,6 @@ export abstract class Slideshow<T = unknown> {
     public data: T;
 
     /**
-     * Number of slides which value of `slideIndex$` refers to.
-     */
-    public slidesLength: number;
-
-    /**
      * Whether intro animations have been initialized and the slideshow can begin.
      * Intro animations can include sliding or fading the background and various components in their places.
      */
@@ -146,7 +137,6 @@ export abstract class Slideshow<T = unknown> {
      */
     public constructor(data: T, options: SlideshowInitOptions) {
         const {
-            slidesLength,
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
             showTicker = this.defaultShowTicker,
@@ -155,7 +145,6 @@ export abstract class Slideshow<T = unknown> {
         } = options ?? {};
         this.initOptions = options;
         this.data = data;
-        this.slidesLength = slidesLength;
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
@@ -173,6 +162,35 @@ export abstract class Slideshow<T = unknown> {
      * Current slide index.
      */
     public slideIndex$ = new rxjs.BehaviorSubject<number>(0);
+
+    /**
+     * Returns number of slides which value of `slideIndex$` refers to.
+     */
+    public abstract getSlidesLength: () => number;
+
+    // TODO: Change to static
+    public getSlideTitle?: () => string;
+    public getSlideSubtitle?: () => string;
+
+    /**
+     * Returns data needed to render slides.
+     */
+    public getSlidesData?: () => MetricTypes.SlidesStateData | undefined;
+
+    /**
+     * Function which returns the index for the bottom Player component.
+     */
+    public abstract getPlayerIndex: (slideIndex: number, playerLabelsLength: number) => number;
+
+    /**
+     * Returns list of labels for Player navigation.
+     */
+    public abstract getPlayerLabels: () => Types.PlayerLabel[];
+
+    /**
+     * Returns data needed to render bottom ticker.
+     */
+    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
 
     /**
      * If index should be incremented with a custom interval than selected `duration` value.
@@ -193,11 +211,13 @@ export abstract class Slideshow<T = unknown> {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
+        
+        const slidesLength = this.getSlidesLength();
         this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
             clearInterval(this.playInterval);
             if (play) {
                 this.playInterval = setInterval(() => {
-                    this.slideIndex$.next((this.slideIndex$.value + 1) % this.slidesLength);
+                    this.slideIndex$.next((this.slideIndex$.value + 1) % slidesLength);
                 }, this.getAutoIncrementInterval?.(duration) ?? duration);
             }
         })
@@ -213,20 +233,6 @@ export abstract class Slideshow<T = unknown> {
         this.slideIndex$.next(0);
         this.playSubscription?.unsubscribe();
     };
-
-    // TODO: Change to static
-    public getSlideTitle?: () => string;
-    public getSlideSubtitle?: () => string;
-
-    /**
-     * Returns data needed to render slides.
-     */
-    public getSlidesData?: () => MetricTypes.SlidesStateData | undefined;
-
-    /**
-     * Returns data needed to render bottom ticker.
-     */
-    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
 
     /**
      * If provided will render the custom slideshow instead of the default dashboard.

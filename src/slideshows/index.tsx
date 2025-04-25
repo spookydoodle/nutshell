@@ -16,16 +16,13 @@ const solarData = createStateData();
  */
 export const instantiateSlideshows = (): void => {
     const coinflowSlideshow = new CoinflowSlideshow(metricData, {
-        slidesLength: metricData.slides.values().reduce<number>((acc, val) => acc + val.length, 0),
         enableMobile: true,
         startDelay: 5000
     });
     const solarSlideshow = new SolarSlideshow(solarData, {
-        slidesLength: solarData.slides.values().reduce<number>((acc, val) => acc + val.length, 0),
         startDelay: 5000
     });
     const nfsSlideshow = new NfsSlideshow(NEED_FOR_SPEED, {
-        slidesLength: NEED_FOR_SPEED.games.length * imgPerSlide,
         animationsInitialized: true,
         duration: 30000,
         showTicker: false

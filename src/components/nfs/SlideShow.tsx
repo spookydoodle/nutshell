@@ -41,7 +41,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [prevSlideIndex, setPrevSlideIndex] = useState(0);
 
-    const labels: string[] = React.useMemo(() => slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""], [slideshow]);
+    const playerLabels = React.useMemo(() => slideshow.getPlayerLabels(), [slideshow]);
     const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
 
     React.useEffect(() => {
@@ -97,7 +97,6 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
 
                         <Player
                             slideshow={slideshow as Slideshow}
-                            length={totalLen}
                             index={Math.floor(slideIndex / imgPerSlide)}
                             onIndexChange={(n: number) => {
                                 setSlideIndex((prev) => {
@@ -112,7 +111,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                                     return n;
                                 });
                             }}
-                            labels={labels}
+                            playerLabels={playerLabels}
                             sequences={sequences}
                             categoryPrimary="game"
                             categorySecondary="image"

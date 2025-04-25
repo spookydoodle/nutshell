@@ -19,7 +19,21 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
 
-    public getAutoIncrementInterval = (duration: number): number => duration / imgPerSlide;
+    public getAutoIncrementInterval = (duration: number): number => {
+        return duration / imgPerSlide;
+    };
+
+    public getSlidesLength = (): number => {
+        return this.data.games.length * imgPerSlide
+    };
+
+    public getPlayerLabels = (): { label: string; sequenceName?: string; }[] => {
+        return this.data.games.map((game) => ({ label: game.year }))
+    };
+
+    public getPlayerIndex = (slideIndex: number, _playerLabelsLength: number): number => {
+        return Math.floor(slideIndex / imgPerSlide);
+    };
 
     public customSlideshow: React.ComponentType<{ slideshow: Slideshow<NutshellData>; }> = NutshellNFS;
 

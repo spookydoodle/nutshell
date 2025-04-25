@@ -55,9 +55,9 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
 
     const slides: SlideData = dataValues.flat(1);
 
-    // For the 'legend' in Player components (marks, sequences)
-    const labels: Array<string> = slides.map(
-        (slide) => slide.headers.titleSecondaryShort
+    const playerLabels = React.useMemo(
+        () => slideshow.getPlayerLabels(),
+        [slideshow]
     );
     const sequences = dataKeys;
 
@@ -159,8 +159,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
                             slideshow={slideshow as Slideshow}
                             index={slideIndex % totalLen}
                             onIndexChange={handleIndexChange}
-                            length={totalLen}
-                            labels={labels}
+                            playerLabels={playerLabels}
                             sequences={sequences}
                         />
                     </>
