@@ -16,11 +16,6 @@ export const NutshellSolar: React.FC<Props> = ({ slideshow }) => {
     const slidesData = selectedData.slides;
 
     return (
-        <SlideshowSolar
-            slideshow={slideshow}
-            play={play}
-            setPlay={setPlay}
-            data={slidesData}
-        />
+        <SlideshowSolar slideshow={slideshow} data={slidesData} />
     );
 };

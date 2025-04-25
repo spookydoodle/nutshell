@@ -9,7 +9,6 @@ import { SmallScreenMessage } from "../metrics-dashboard/SmallScreenMessage";
 import { imgPerSlide } from "../../slideshows/nfs/nfs-data";
 import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
-import * as Data from "../../slideshows/nfs/nfs-data";
 import * as Hooks from '../../hooks';
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { NutshellData } from "./types";
@@ -27,8 +26,6 @@ const useStyles = makeStyles((_theme: Theme) =>
         }
     })
 );
-
-const sequences = ["Timeline"];
 
 interface Props {
     slideshow: Slideshow<NutshellData>;
@@ -94,12 +91,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                             index={slideIndex}
                         />
 
-                        <Player
-                            slideshow={slideshow as Slideshow}
-                            onSecondaryIndexChange={setSlideIndex}
-                            categoryPrimary="game"
-                            categorySecondary="image"
-                        />
+                        <Player slideshow={slideshow as Slideshow} categoryPrimary="game" categorySecondary="image" />
 
                         <Progress slideIndex={slideIndex} onIndexChange={setSlideIndex} onPrevIndexChange={setPrevSlideIndex} />
                     </>
