@@ -28,7 +28,7 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
     };
 
     public getPlayerLabels = (): { label: string; sequenceName?: string; }[] => {
-        return this.data.games.map((game) => ({ label: game.year }))
+        return this.data.games.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
     };
 
     public getPlayerIndex = (slideIndex: number, _playerLabelsLength: number): number => {

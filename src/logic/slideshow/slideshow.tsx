@@ -185,7 +185,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns list of labels for Player navigation.
      */
-    public abstract getPlayerLabels: () => Types.PlayerLabel[];
+    public abstract getPlayerLabels: () => Types.PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
 
     /**
      * Returns data needed to render bottom ticker.
