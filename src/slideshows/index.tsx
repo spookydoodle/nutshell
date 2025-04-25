@@ -11,22 +11,21 @@ import { convertToMap } from "../utils/metrics";
 
 const metricData =  convertToMap(nutshellData)
 const solarData = createStateData();
-
 /**
  * Instantiates all available slideshows and sets the value of app state's `slideshows$`.
  */
 export const instantiateSlideshows = (): void => {
     const coinflowSlideshow = new CoinflowSlideshow(metricData, {
-        slideCount: metricData.slides.size,
+        slidesLength: metricData.slides.values().reduce<number>((acc, val) => acc + val.length, 0),
         enableMobile: true,
         startDelay: 5000
     });
     const solarSlideshow = new SolarSlideshow(solarData, {
-        slideCount: solarData.slides.size,
+        slidesLength: solarData.slides.values().reduce<number>((acc, val) => acc + val.length, 0),
         startDelay: 5000
     });
     const nfsSlideshow = new NfsSlideshow(NEED_FOR_SPEED, {
-        slideCount: NEED_FOR_SPEED.games.length * imgPerSlide,
+        slidesLength: NEED_FOR_SPEED.games.length * imgPerSlide,
         animationsInitialized: true,
         duration: 30000,
         showTicker: false

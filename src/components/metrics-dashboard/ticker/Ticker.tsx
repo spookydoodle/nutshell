@@ -55,11 +55,11 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
     animationsInitialized: boolean;
-    text: string;
+    title: string;
     data: Types.TickerStateData;
 }
 
-export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) => {
+export const Ticker: React.FC<Props> = ({ animationsInitialized, title, data }) => {
     const classes = useStyles();
     const [containerRef, setContainerRef] = React.useState<HTMLDivElement | null>(null);
     const [index, setIndex] = React.useState(0);
@@ -75,14 +75,12 @@ export const Ticker: React.FC<Props> = ({ animationsInitialized, text, data }) =
         [data]
     );
 
-    const title = React.useMemo(
-        () => <Typography className={classNames(classes.textContainer, classes.title, classes.tickerText)}>{text}</Typography>,
-        [classes, text]
-    );
-
     const fullList: React.ReactNode[] = React.useMemo(
-        () => [title, ...list],
-        [title, list]
+        () => [
+            <Typography className={classNames(classes.textContainer, classes.title, classes.tickerText)}>{title}</Typography>,
+            ...list
+        ],
+        [classes, title, list]
     );
 
     const handleChange = React.useCallback(

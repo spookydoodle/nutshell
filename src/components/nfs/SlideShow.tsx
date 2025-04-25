@@ -47,7 +47,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     React.useEffect(() => {
         const subscription = slideshow.index$
             .pipe(rxjs.pairwise())
-            .subscribe(([previous, current]) => {
+            .subscribe(([previous]) => {
                 setPrevIndex(previous)
             });
 
@@ -55,21 +55,16 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
             subscription.unsubscribe();
         };
     }, []);
-
-    const isAnimationFadeIn = (index > prevIndex && index % imgPerSlide !== 0) ||
-        (index < prevIndex && Math.floor(index / imgPerSlide) === Math.floor(prevIndex / imgPerSlide))
-
-    // Going back
-    const isAnimationBack = !isAnimationFadeIn && (index < prevIndex || (prevIndex === 0 && index === totalLen * imgPerSlide - 1))
     
-    const applyStyle = React.useMemo(
+    const isSwitchingWithinSlide = React.useMemo(
         () => {
-            const a = index > prevIndex && index % Data.imgPerSlide !== 0;
-            const b = index < prevIndex && Math.floor(index / Data.imgPerSlide) === Math.floor(prevIndex / Data.imgPerSlide);
-            return !(a || b);
+            const forwards = index > prevIndex && index % imgPerSlide !== 0;
+            const backwards = index < prevIndex && Math.floor(index / imgPerSlide) === Math.floor(prevIndex / imgPerSlide);
+            return forwards || backwards;
         },
         [index, prevIndex]
     );
+    const isSwitchingToEarlierSlide = !isSwitchingWithinSlide && (index < prevIndex || (prevIndex === 0 && index === totalLen * imgPerSlide - 1));
 
     return (
         <Grid container justifyContent="center">
@@ -79,9 +74,9 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         <Box className={classes.cinema}>
                             <Transitions
                                 variant={
-                                    isAnimationFadeIn
+                                    isSwitchingWithinSlide
                                         ? "fade-in"
-                                        : isAnimationBack
+                                        : isSwitchingToEarlierSlide
                                             ? "swipe-cube-to-right"
                                             : "swipe-cube-to-left"
                                 }
@@ -95,7 +90,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         <Transitions
                             variant={index % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
                             components={slideshow.data.games
-                                .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={applyStyle} />))
+                                .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={!isSwitchingWithinSlide} />))
                                 .flat(1)}
                             index={index}
                         />

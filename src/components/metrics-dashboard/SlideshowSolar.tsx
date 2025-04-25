@@ -152,11 +152,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
                         ) : null)}
 
                         {tickerData && showTicker && !isLgDown ? (
-                                <Ticker
-                                    animationsInitialized={animationsInitialized}
-                                    text="Turbocharged by spookydoodle"
-                                    data={tickerData}
-                                />
+                            <Ticker animationsInitialized={animationsInitialized} title="Turbocharged by spookydoodle" data={tickerData} />
                         ) : null}
 
                         <Player

@@ -25,10 +25,8 @@ interface Props {
 export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const [play] = Hooks.useSubjectState(slideshow.play$);
     const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
-    const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
     const slidesData = React.useMemo(() => slideshow.getSlidesData?.(), [slideshow]);
@@ -48,8 +46,8 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
         .map((slide) => slide.headers.titleSecondaryShort);
     
     const handleIndexChange = React.useCallback(
-        (n: number) => setIndex((prev) => prev + (n - prev % length)),
-        [length]
+        (n: number) => setIndex((prev) => prev + (n - prev % labels.length)),
+        [length, labels]
     );
     
     return (
@@ -60,7 +58,7 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
                 {tickerData && showTicker && !isLgDown ? (
                     <Ticker
                         animationsInitialized={animationsInitialized}
-                        text={SlideshowType.tickerTitle}
+                        title={SlideshowType.tickerTitle}
                         data={tickerData}
                     />
                 ) : null}

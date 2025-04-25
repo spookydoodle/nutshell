@@ -14,7 +14,7 @@ export interface SlideshowInitOptions {
     /**
      * Number of slides which value of `index$` refers to.
      */
-    slideCount: number;
+    slidesLength: number;
     /**
      * Whether the slideshow should play on start.
      * Slideshow will automatically increment the slide index if both `play` and `animationsInitialized` are `true`.
@@ -104,7 +104,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Number of slides which value of `index$` refers to.
      */
-    public slideCount: number;
+    public slidesLength: number;
 
     /**
      * Whether intro animations have been initialized and the slideshow can begin.
@@ -138,9 +138,6 @@ export abstract class Slideshow<T = unknown> {
      */
     public startDelay: number;
 
-    private playSubscription: rxjs.Subscription | undefined;
-    private playInterval: NodeJS.Timeout | undefined;
-
     /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
      * Automatically increments the slide `index$` value every `duration$` value given that `play$` and `animationsInitialized$` values are `true`.
@@ -149,7 +146,7 @@ export abstract class Slideshow<T = unknown> {
      */
     public constructor(data: T, options: SlideshowInitOptions) {
         const {
-            slideCount,
+            slidesLength,
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
             showTicker = this.defaultShowTicker,
@@ -158,22 +155,13 @@ export abstract class Slideshow<T = unknown> {
         } = options ?? {};
         this.initOptions = options;
         this.data = data;
-        this.slideCount = slideCount;
+        this.slidesLength = slidesLength;
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
         this.enableMobile = enableMobile;
         this.startDelay = startDelay;
-
-        this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
-            clearInterval(this.playInterval);
-            if (play) {
-                this.playInterval = setInterval(() => {
-                    this.index$.next((this.index$.value + 1) % this.slideCount);
-                }, this.getAutoIncrementInterval?.(duration) ?? duration);
-            }
-        })
     }
 
     /**
@@ -192,6 +180,8 @@ export abstract class Slideshow<T = unknown> {
     public getAutoIncrementInterval?: (duration: number) => number;
 
     private timeout: NodeJS.Timeout | undefined;
+    private playSubscription: rxjs.Subscription | undefined;
+    private playInterval: NodeJS.Timeout | undefined;
 
     /**
      * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
@@ -203,6 +193,14 @@ export abstract class Slideshow<T = unknown> {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
+        this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
+            clearInterval(this.playInterval);
+            if (play) {
+                this.playInterval = setInterval(() => {
+                    this.index$.next((this.index$.value + 1) % this.slidesLength);
+                }, this.getAutoIncrementInterval?.(duration) ?? duration);
+            }
+        })
     };
 
     /**
@@ -213,6 +211,7 @@ export abstract class Slideshow<T = unknown> {
         this.play$.next(false);
         this.animationsInitialized$.next(false);
         this.index$.next(0);
+        this.playSubscription?.unsubscribe();
     };
 
     // TODO: Change to static

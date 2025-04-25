@@ -55,11 +55,6 @@ export const DesktopMetricContent: React.FC<Props> = ({ slideshow }) => {
 
     const totalLen = slides.length;
     const seqLen = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
-
-    // For the 'legend' in Player components (marks, sequences)
-    const labels: Array<string> = slides
-        .filter((_slide, i) => i < seqLen)
-        .map((slide) => slide.headers.titleSecondaryShort);
     const sequences = dataKeys;
 
     const getMaxRows = (_i: number) =>
@@ -116,7 +111,6 @@ export const DesktopMetricContent: React.FC<Props> = ({ slideshow }) => {
             (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
         );
     };
-
     
     return (
         <>
