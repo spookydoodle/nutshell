@@ -3,6 +3,7 @@ import { fileURLToPath } from 'url';
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import viteTsconfigPaths from "vite-tsconfig-paths";
+import checker from "vite-plugin-checker";
 
 const __dirname = fileURLToPath(import.meta.url);
 
@@ -14,6 +15,11 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
                 jsxImportSource: "@emotion/react",
                 babel: {
                     plugins: ["@emotion/babel-plugin"],
+                },
+            }),
+            checker({
+                typescript: {
+                    tsconfigPath: './tsconfig.json'
                 },
             }),
             viteTsconfigPaths(),
