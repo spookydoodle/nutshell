@@ -1,3 +1,4 @@
+import React from 'react';
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, IconButton, Typography, Tooltip, Theme } from '@mui/material';
 import SkipPreviousIcon from "@mui/icons-material/SkipPrevious";
@@ -6,7 +7,8 @@ import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
 import FastForwardIcon from "@mui/icons-material/FastForward";
 import FastRewindIcon from "@mui/icons-material/FastRewind";
-import React from 'react';
+import { Slideshow } from '../../logic/slideshow/slideshow';
+import * as Hooks from '../../hooks';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -41,29 +43,27 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
-    play: boolean;
-    setPlay: React.Dispatch<React.SetStateAction<boolean>>;
+    slideshow: Slideshow;
     index: number;
-    secondaryIndex?: number;
-    length: number;
-    onIndexChange: (index: number) => void;
-    onSecondaryIndexChange?: (index: number) => void;
+    playerLabelsLength: number;
     categoryPrimary?: string;
     categorySecondary?: string;
 }
 
 export const PlayerButtons: React.FC<Props> = ({
-    play,
-    setPlay,
+    slideshow,
     index,
-    secondaryIndex,
-    length,
-    onIndexChange,
-    onSecondaryIndexChange,
+    playerLabelsLength,
     categoryPrimary = "slide",
     categorySecondary = "slide",
 }) => {
     const classes = useStyles();
+    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
+
+    const handleIndexChange = React.useCallback(
+        (index: number) => slideshow.onPlayerIndexChange(index, playerLabelsLength),
+        [slideshow]
+    );
 
     return (
         <>
@@ -95,14 +95,14 @@ export const PlayerButtons: React.FC<Props> = ({
                     <IconButton
                         color="inherit"
                         aria-label={`previous ${categoryPrimary} icon`}
-                        onClick={() => onIndexChange(index > 0 ? index - 1 : length - 1)}
+                        onClick={() => handleIndexChange(index > 0 ? index - 1 : playerLabelsLength - 1)}
                         className={classes.icon}
                     >
                         <SkipPreviousIcon fontSize="small" />
                     </IconButton>
                 </Tooltip>
 
-                {onSecondaryIndexChange && secondaryIndex !== undefined ? (
+                {slideshow.onPlayerSecondaryPreviousButtonClick ? (
                     <Tooltip
                         title={`Previous ${categorySecondary}`}
                         aria-label={`previous ${categorySecondary}`}
@@ -111,7 +111,7 @@ export const PlayerButtons: React.FC<Props> = ({
                         <IconButton
                             color="inherit"
                             aria-label={`previous ${categorySecondary} icon`}
-                            onClick={() => onSecondaryIndexChange(secondaryIndex > 0 ? secondaryIndex - 1 : length * 6 - 1)}
+                            onClick={() => slideshow.onPlayerSecondaryPreviousButtonClick?.(playerLabelsLength)}
                             className={classes.icon}
                         >
                             <FastRewindIcon fontSize="small" />
@@ -120,16 +120,16 @@ export const PlayerButtons: React.FC<Props> = ({
                 ) : undefined}
 
                 <Tooltip
-                    title={`${categoryPrimary} ${index + 1} out of ${length}`}
+                    title={`${categoryPrimary} ${index + 1} out of ${playerLabelsLength}`}
                     aria-label="slide number"
                     arrow
                 >
                     <Typography variant="body2" style={{ margin: "0 1em" }}>
-                        {index + 1} / {length}
+                        {index + 1} / {playerLabelsLength}
                     </Typography>
                 </Tooltip>
 
-                {onSecondaryIndexChange && secondaryIndex !== undefined ? (
+                {slideshow.onPlayerSecondaryNextButtonClick ? (
                     <Tooltip
                         title={`Next ${categorySecondary}`}
                         aria-label={`next ${categorySecondary}`}
@@ -138,7 +138,7 @@ export const PlayerButtons: React.FC<Props> = ({
                         <IconButton
                             color="inherit"
                             aria-label={`next ${categorySecondary} icon`}
-                            onClick={() => onSecondaryIndexChange(secondaryIndex < length * 6 - 1 ? secondaryIndex + 1 : 0)}
+                            onClick={() => slideshow.onPlayerSecondaryNextButtonClick?.(playerLabelsLength)}
                             className={classes.icon}
                         >
                             <FastForwardIcon fontSize="small" />
@@ -154,7 +154,7 @@ export const PlayerButtons: React.FC<Props> = ({
                     <IconButton
                         color="inherit"
                         aria-label={`next ${categoryPrimary} icon`}
-                        onClick={() => onIndexChange(index < length - 1 ? index + 1 : 0)}
+                        onClick={() => handleIndexChange(index < playerLabelsLength - 1 ? index + 1 : 0)}
                         className={classes.icon}
                     >
                         <SkipNextIcon fontSize="small" />

@@ -212,3 +212,7 @@ export type TransitionVariant =
     | "swipe-cube-to-left"
     | "swipe-cube-to-right";
 
+export interface PlayerLabel {
+    label: string;
+    sequenceName?: string;
+}

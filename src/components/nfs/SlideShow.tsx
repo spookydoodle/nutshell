@@ -38,38 +38,32 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const classes = useStyles();
     const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
-    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
-    const [prevIndex, setPrevIndex] = useState(0);
+    const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
+    const [prevSlideIndex, setPrevSlideIndex] = useState(0);
 
-    const labels: string[] = React.useMemo(() => slideshow.data && slideshow.data.games ? slideshow.data?.games?.map((game) => game.label) : [""], [slideshow]);
     const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
 
     React.useEffect(() => {
-        const subscription = slideshow.index$
+        const subscription = slideshow.slideIndex$
             .pipe(rxjs.pairwise())
-            .subscribe(([previous, current]) => {
-                setPrevIndex(previous)
+            .subscribe(([previous]) => {
+                setPrevSlideIndex(previous)
             });
 
         return () => {
             subscription.unsubscribe();
         };
     }, []);
-
-    const isAnimationFadeIn = (index > prevIndex && index % imgPerSlide !== 0) ||
-        (index < prevIndex && Math.floor(index / imgPerSlide) === Math.floor(prevIndex / imgPerSlide))
-
-    // Going back
-    const isAnimationBack = !isAnimationFadeIn && (index < prevIndex || (prevIndex === 0 && index === totalLen * imgPerSlide - 1))
     
-    const applyStyle = React.useMemo(
+    const isSwitchingWithinSlide = React.useMemo(
         () => {
-            const a = index > prevIndex && index % Data.imgPerSlide !== 0;
-            const b = index < prevIndex && Math.floor(index / Data.imgPerSlide) === Math.floor(prevIndex / Data.imgPerSlide);
-            return !(a || b);
+            const forwards = slideIndex > prevSlideIndex && slideIndex % imgPerSlide !== 0;
+            const backwards = slideIndex < prevSlideIndex && Math.floor(slideIndex / imgPerSlide) === Math.floor(prevSlideIndex / imgPerSlide);
+            return forwards || backwards;
         },
-        [index, prevIndex]
+        [slideIndex, prevSlideIndex]
     );
+    const isSwitchingToEarlierSlide = !isSwitchingWithinSlide && (slideIndex < prevSlideIndex || (prevSlideIndex === 0 && slideIndex === totalLen * imgPerSlide - 1));
 
     return (
         <Grid container justifyContent="center">
@@ -79,51 +73,35 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                         <Box className={classes.cinema}>
                             <Transitions
                                 variant={
-                                    isAnimationFadeIn
+                                    isSwitchingWithinSlide
                                         ? "fade-in"
-                                        : isAnimationBack
+                                        : isSwitchingToEarlierSlide
                                             ? "swipe-cube-to-right"
                                             : "swipe-cube-to-left"
                                 }
                                 components={slideshow.data.games
                                     .map(({ background }) => background.map((src, i) => <Background key={src} src={src} index={i} />))
                                     .flat(1)}
-                                index={index}
+                                index={slideIndex}
                             />
                         </Box>
 
                         <Transitions
-                            variant={index % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
+                            variant={slideIndex % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
                             components={slideshow.data.games
-                                .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={applyStyle} />))
+                                .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={!isSwitchingWithinSlide} />))
                                 .flat(1)}
-                            index={index}
+                            index={slideIndex}
                         />
 
                         <Player
                             slideshow={slideshow as Slideshow}
-                            length={totalLen}
-                            index={Math.floor(index / imgPerSlide)}
-                            onIndexChange={(n: number) => {
-                                setIndex((prev) => {
-                                    setPrevIndex(Math.floor(prev / imgPerSlide) * imgPerSlide);
-                                    return n * imgPerSlide;
-                                });
-                            }}
-                            secondaryIndex={index}
-                            onSecondaryIndexChange={(n: number) => {
-                                setIndex((prev) => {
-                                    setPrevIndex(prev);
-                                    return n;
-                                });
-                            }}
-                            labels={labels}
-                            sequences={sequences}
+                            onSecondaryIndexChange={setSlideIndex}
                             categoryPrimary="game"
                             categorySecondary="image"
                         />
 
-                        <Progress slideIndex={index} onIndexChange={setIndex} onPrevIndexChange={setPrevIndex} />
+                        <Progress slideIndex={slideIndex} onIndexChange={setSlideIndex} onPrevIndexChange={setPrevSlideIndex} />
                     </>
                 ) : null}
 

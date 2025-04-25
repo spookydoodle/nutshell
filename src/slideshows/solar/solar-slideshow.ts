@@ -18,11 +18,25 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public backgroundImageUrls = getImgArr("SS");
 
     public getSlideTitle = (): string => "Solar system";
-    // TODO:  Vs the earth, Planets show
-    public getSlideSubtitle = (): string => "Vs. the Earth";
-
+    public getSlideSubtitle = (): string => "Vs. the Earth"; // TODO:  Vs the earth, Planets show
     public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
         return this.data.slides;
+    };
+
+    public getSlidesLength = (): number => {
+        return this.data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);;
+    };
+
+    public getPlayerLabels = (): Types.PlayerLabel[] => {
+        return [...this.data.slides.entries()].map(([sequenceName, slides]) => slides.map((slide): Types.PlayerLabel => ({ label: slide.headers.titleSecondaryShort, sequenceName }))).flat();
+    };
+
+    public getPlayerIndex = (slideIndex: number, playerLabelsLength: number): number => {
+        return slideIndex % playerLabelsLength;
+    };
+
+    public onPlayerIndexChange = (index: number, _playerLabelsLength: number) => {
+        this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % length));
     };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {

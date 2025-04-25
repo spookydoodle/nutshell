@@ -8,6 +8,7 @@ import { PlayerSettingsButton } from "./PlayerSettingsButton";
 import { SettingsDialog } from "./SettingsDialog";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as Hooks from '../../hooks';
+import * as Types from '../../types';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -39,26 +40,12 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
     slideshow: Slideshow;
-    length: number;
-    index: number;
-    onIndexChange: (n: number) => void;
-    secondaryIndex?: number;
-    onSecondaryIndexChange?: (index: number) => void;
-    labels?: Array<string>;
-    sequences: Array<string>;
     categoryPrimary?: string;
     categorySecondary?: string;
 }
 
 export const Player: React.FC<Props> = ({
     slideshow,
-    length,
-    index,
-    onIndexChange,
-    secondaryIndex,
-    onSecondaryIndexChange,
-    labels,
-    sequences,
     categoryPrimary,
     categorySecondary,
 }) => {
@@ -67,8 +54,8 @@ export const Player: React.FC<Props> = ({
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
     const isMdDown = !isMdUp;
     const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
-    const [play, setPlay] = Hooks.useSubjectState(slideshow.play$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
+    const [slideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
     const [pin, setPin] = React.useState(false);
@@ -76,12 +63,22 @@ export const Player: React.FC<Props> = ({
     const [hover, setHover] = React.useState(false);
     const [openSettings, setOpenSettings] = React.useState(false);
 
+    const playerLabels = React.useMemo(
+        () => slideshow.getPlayerLabels(),
+        [slideshow]
+    );
+
+    const playerIndex = React.useMemo(
+        () => slideshow.getPlayerIndex(slideIndex, playerLabels.length),
+        [slideshow, slideIndex, playerLabels]
+    );
+
     React.useEffect(() => {
-        const onMouseMove = () => setShow(true);
-        window.addEventListener("mousemove", onMouseMove, false);
+        const handleMouseMove = () => setShow(true);
+        window.addEventListener("mousemove", handleMouseMove, false);
 
         return () => {
-            window.removeEventListener("mousemove", onMouseMove);
+            window.removeEventListener("mousemove", handleMouseMove);
         };
     }, []);
 
@@ -114,13 +111,9 @@ export const Player: React.FC<Props> = ({
                     <Grid container justifyContent="center" alignItems="center" className={classes.container}>
                         <Grid item xs={12} md={4} lg={3} container justifyContent="center" alignItems="center">
                             <PlayerButtons
-                                play={play}
-                                setPlay={setPlay}
-                                index={index}
-                                onIndexChange={onIndexChange}
-                                secondaryIndex={secondaryIndex}
-                                onSecondaryIndexChange={onSecondaryIndexChange}
-                                length={length}
+                                slideshow={slideshow}
+                                index={playerIndex}
+                                playerLabelsLength={playerLabels.length}
                                 categoryPrimary={categoryPrimary}
                                 categorySecondary={categorySecondary}
                             />
@@ -131,7 +124,7 @@ export const Player: React.FC<Props> = ({
 
                         {!isMdDown ? (
                             <>
-                                <Slider index={index} length={length} onIndexChange={onIndexChange} labels={labels || []} sequences={sequences} />
+                                <Slider slideshow={slideshow} index={playerIndex} playerLabels={playerLabels} />
 
                                 <Grid item xs={4} md={3} container justifyContent="space-around" alignItems="center" className={classes.settingsButtonsContainer}>
                                     {!isXlDown ? (

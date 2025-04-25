@@ -24,8 +24,27 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
         return this.data.slides;
     };
 
+    public getSlidesLength = () => {
+        return this.data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
+    };
+
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
         return this.data.ticker;
+    };
+
+    public getPlayerLabels = (): Types.PlayerLabel[] => {
+        return [...this.data.slides.values()][0].map((slide) => ({ 
+            label: slide.headers.titleSecondaryShort,
+            sequenceName: slide.headers.category === 'Products' ? 'Products' : 'Charts'
+        }));
+    };
+
+    public getPlayerIndex = (slideIndex: number, playerLabelsLength: number) => {
+        return slideIndex % playerLabelsLength;
+    }
+
+    public onPlayerIndexChange = (index: number, playerLabelsLength: number) => {
+        this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % playerLabelsLength))
     };
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({

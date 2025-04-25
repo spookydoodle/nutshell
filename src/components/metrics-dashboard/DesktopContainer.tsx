@@ -25,31 +25,13 @@ interface Props {
 export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const [play] = Hooks.useSubjectState(slideshow.play$);
-    const [index, setIndex] = Hooks.useSubjectState(slideshow.index$);
+    const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
-    const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
-    const slidesData = React.useMemo(() => slideshow.getSlidesData?.(), [slideshow]);
-    const tickerData = React.useMemo(() => slideshow.getTickerData?.(), [slideshow]);
-
-    const dataKeys = slidesData ? [...slidesData.keys()] : [];
-    const dataValues = slidesData ? [...slidesData.values()] : [];
-
-    const slides: MetricTypes.SlideData = dataValues.flat(1);
-
-    const totalLen = slides.length;
-    const seqLen = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
-
-    // For the 'legend' in Player components (marks, sequences)
-    const labels: Array<string> = slides
-        .filter((_slide, i) => i < seqLen)
-        .map((slide) => slide.headers.titleSecondaryShort);
-    
-    const handleIndexChange = React.useCallback(
-        (n: number) => setIndex((prev) => prev + (n - prev % length)),
-        [length]
+    const tickerData = React.useMemo(
+        () => slideshow.getTickerData?.(),
+        [slideshow]
     );
     
     return (
@@ -60,20 +42,12 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
                 {tickerData && showTicker && !isLgDown ? (
                     <Ticker
                         animationsInitialized={animationsInitialized}
-                        text={SlideshowType.tickerTitle}
+                        title={SlideshowType.tickerTitle}
                         data={tickerData}
                     />
                 ) : null}
 
-                <Player
-                    slideshow={slideshow}
-                    index={index % labels.length}
-                    onIndexChange={handleIndexChange}
-                    length={labels.length}
-                    labels={labels}
-                    sequences={[""]}
-                    // seqName={sequences[Math.floor(index / seqLen)]}
-                />
+                <Player slideshow={slideshow} />
             </Grid>
         </Grid>
     );

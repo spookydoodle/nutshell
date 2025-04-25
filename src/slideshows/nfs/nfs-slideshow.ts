@@ -19,7 +19,39 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
 
-    public getAutoIncrementInterval = (duration: number): number => duration / imgPerSlide;
+    public getAutoIncrementInterval = (duration: number): number => {
+        return duration / imgPerSlide;
+    };
+
+    public getSlidesLength = (): number => {
+        return this.data.games.length * imgPerSlide
+    };
+
+    public getPlayerLabels = (): { label: string; sequenceName?: string; }[] => {
+        return this.data.games.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
+    };
+
+    public getPlayerIndex = (slideIndex: number, _playerLabelsLength: number): number => {
+        return Math.floor(slideIndex / imgPerSlide);
+    };
+
+    public onPlayerIndexChange = (index: number, _playerLabelsLength: number) => {
+        this.slideIndex$.next(index * imgPerSlide)
+    };
+
+    public getPlayerSecondaryIndex = (slideIndex: number, _playerLabelsLength: number): number => {
+        return slideIndex;
+    };
+
+    public onPlayerSecondaryPreviousButtonClick = (playerLabelsLength: number) => {
+        console.log('previous', this.slideIndex$.value)
+        this.slideIndex$.next(this.slideIndex$.value > 0 ? this.slideIndex$.value - 1 : playerLabelsLength * imgPerSlide - 1)
+    };
+
+    public onPlayerSecondaryNextButtonClick = (playerLabelsLength: number) => {
+        console.log('next', this.slideIndex$.value)
+        this.slideIndex$.next(this.slideIndex$.value < playerLabelsLength * imgPerSlide - 1 ? this.slideIndex$.value + 1 : 0)
+    };
 
     public customSlideshow: React.ComponentType<{ slideshow: Slideshow<NutshellData>; }> = NutshellNFS;
 
