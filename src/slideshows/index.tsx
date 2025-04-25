@@ -4,7 +4,7 @@ import { SolarSlideshow } from "./solar/solar-slideshow";
 import { NfsSlideshow } from "./nfs/nfs-slideshow";
 import nutshellData from "./coinflow/coinflow-data";
 import { createStateData } from "./solar/solar-data";
-import { imgPerSlide, NEED_FOR_SPEED } from "./nfs/nfs-data";
+import { NEED_FOR_SPEED } from "./nfs/nfs-data";
 import { slideshows$ } from "../state";
 import { Slideshow } from "../logic/slideshow/slideshow";
 import { convertToMap } from "../utils/metrics";

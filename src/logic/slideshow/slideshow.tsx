@@ -188,6 +188,23 @@ export abstract class Slideshow<T = unknown> {
     public abstract getPlayerLabels: () => Types.PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
 
     /**
+     * Handler on index change using Player slider and previous/next buttons.
+     */
+    public abstract onPlayerIndexChange: (index: number, playerLabelsLength: number) => void;
+    
+    /**
+     * On click of the secondary "previous" button on the Player component.
+     * The button will not be rendered if this handler is not defined.
+     */
+    public onPlayerSecondaryPreviousButtonClick?: (playerLabelsLength: number) => void;
+    
+    /**
+     * On click of the secondary "next" button on the Player component.
+     * The button will not be rendered if this handler is not defined.
+     */
+    public onPlayerSecondaryNextButtonClick?: (playerLabelsLength: number) => void;
+
+    /**
      * Returns data needed to render bottom ticker.
      */
     public getTickerData?: () => MetricTypes.TickerStateData | undefined;

@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import { makeStyles, createStyles, withStyles } from '@mui/styles';
 import { Grid, Slider as SliderComponent, Theme } from '@mui/material';
+import { Slideshow } from '../../logic/slideshow/slideshow';
 import * as Types from '../../types';
 
 const useStyles = makeStyles((_theme: Theme) =>
@@ -32,14 +33,14 @@ const PlayerSlider = withStyles((theme: Theme) => ({
 }))(SliderComponent);
 
 interface Props {
+    slideshow: Slideshow
     index: number;
-    onIndexChange: (index: number) => void;
     playerLabels: Types.PlayerLabel[]
 }
 
 export const Slider: React.FC<Props> = ({
+    slideshow,
     index,
-    onIndexChange,
     playerLabels,
 }) => {
     const classes = useStyles();
@@ -91,7 +92,7 @@ export const Slider: React.FC<Props> = ({
                     playerLabels ? playerLabels[value - 1].label : value
                 }
                 onChange={(_event: object, value: number | number[]) =>
-                    onIndexChange(Number(value) - 1)
+                    slideshow.onPlayerIndexChange(Number(value) - 1, playerLabels.length)
                 }
                 className={classes.slider}
             />

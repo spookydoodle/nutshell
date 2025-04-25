@@ -33,21 +33,6 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
         () => slideshow.getTickerData?.(),
         [slideshow]
     );
-
-    const playerLabels = React.useMemo(
-        () => slideshow.getPlayerLabels(),
-        [slideshow]
-    );
-
-    const playerIndex = React.useMemo(
-        () => slideshow.getPlayerIndex(slideIndex, playerLabels.length),
-        [slideshow, slideIndex, playerLabels]
-    );
-    
-    const handleIndexChange = React.useCallback(
-        (n: number) => setSlideIndex((prev) => prev + (n - prev % playerLabels.length)),
-        [length, playerLabels]
-    );
     
     return (
         <Grid container justifyContent="center">
@@ -62,14 +47,7 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
                     />
                 ) : null}
 
-                <Player
-                    slideshow={slideshow}
-                    index={playerIndex}
-                    onIndexChange={handleIndexChange}
-                    playerLabels={playerLabels}
-                    sequences={[""]}
-                    // seqName={sequences[Math.floor(index / seqLen)]}
-                />
+                <Player slideshow={slideshow} />
             </Grid>
         </Grid>
     );

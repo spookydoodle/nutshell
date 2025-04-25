@@ -41,7 +41,6 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [prevSlideIndex, setPrevSlideIndex] = useState(0);
 
-    const playerLabels = React.useMemo(() => slideshow.getPlayerLabels(), [slideshow]);
     const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
 
     React.useEffect(() => {
@@ -97,22 +96,7 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
 
                         <Player
                             slideshow={slideshow as Slideshow}
-                            index={Math.floor(slideIndex / imgPerSlide)}
-                            onIndexChange={(n: number) => {
-                                setSlideIndex((prev) => {
-                                    setPrevSlideIndex(Math.floor(prev / imgPerSlide) * imgPerSlide);
-                                    return n * imgPerSlide;
-                                });
-                            }}
-                            secondaryIndex={slideIndex}
-                            onSecondaryIndexChange={(n: number) => {
-                                setSlideIndex((prev) => {
-                                    setPrevSlideIndex(prev);
-                                    return n;
-                                });
-                            }}
-                            playerLabels={playerLabels}
-                            sequences={sequences}
+                            onSecondaryIndexChange={setSlideIndex}
                             categoryPrimary="game"
                             categorySecondary="image"
                         />

@@ -35,6 +35,10 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
         return slideIndex % playerLabelsLength;
     };
 
+    public onPlayerIndexChange = (index: number, _playerLabelsLength: number) => {
+        this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % length));
+    };
+
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
         return this.data.ticker;
     };

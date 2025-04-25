@@ -54,11 +54,6 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
     const dataValues = data ? [...data.values()] : [];
 
     const slides: SlideData = dataValues.flat(1);
-
-    const playerLabels = React.useMemo(
-        () => slideshow.getPlayerLabels(),
-        [slideshow]
-    );
     const sequences = dataKeys;
 
     const getMaxRows = (_i: number) =>
@@ -114,11 +109,6 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
             </>
         ));
 
-    const handleIndexChange = React.useCallback(
-        (n: number) => setSlideIndex((prev) => prev + (n - prev % length)),
-        [length]
-    );
-
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
@@ -155,13 +145,7 @@ export const SlideshowSolar: React.FC<Props> = ({ slideshow, data }) => {
                             <Ticker animationsInitialized={animationsInitialized} title="Turbocharged by spookydoodle" data={tickerData} />
                         ) : null}
 
-                        <Player
-                            slideshow={slideshow as Slideshow}
-                            index={slideIndex % totalLen}
-                            onIndexChange={handleIndexChange}
-                            playerLabels={playerLabels}
-                            sequences={sequences}
-                        />
+                        <Player slideshow={slideshow as Slideshow} />
                     </>
                 ) : null}
 

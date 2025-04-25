@@ -35,6 +35,24 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         return Math.floor(slideIndex / imgPerSlide);
     };
 
+    public onPlayerIndexChange = (index: number, _playerLabelsLength: number) => {
+        this.slideIndex$.next(index * imgPerSlide)
+    };
+
+    public getPlayerSecondaryIndex = (slideIndex: number, _playerLabelsLength: number): number => {
+        return slideIndex;
+    };
+
+    public onPlayerSecondaryPreviousButtonClick = (playerLabelsLength: number) => {
+        console.log('previous', this.slideIndex$.value)
+        this.slideIndex$.next(this.slideIndex$.value > 0 ? this.slideIndex$.value - 1 : playerLabelsLength * imgPerSlide - 1)
+    };
+
+    public onPlayerSecondaryNextButtonClick = (playerLabelsLength: number) => {
+        console.log('next', this.slideIndex$.value)
+        this.slideIndex$.next(this.slideIndex$.value < playerLabelsLength * imgPerSlide - 1 ? this.slideIndex$.value + 1 : 0)
+    };
+
     public customSlideshow: React.ComponentType<{ slideshow: Slideshow<NutshellData>; }> = NutshellNFS;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
