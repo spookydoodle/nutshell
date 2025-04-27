@@ -16,14 +16,16 @@ const useStyles = makeStyles((_theme: Theme) =>
             width: "100vw",
             minWidth: "100vw",
             position: "relative",
-            backgroundColor: "rgba(0, 0, 0, .6)",
+            background: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 140px, rgba(0, 0, 0, .6) 200px)",
             overflowX: "hidden",
             maxWidth: "100vw",
+            maxHeight: "calc(100vh - 65px)",
+            overflowY: "auto"
         },
         spacing: {
             margin: 0,
             width: "100%",
-            height: "180px",
+            height: "160px",
         },
         card: {
             width: "100%",

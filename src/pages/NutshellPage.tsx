@@ -12,8 +12,7 @@ export const NutshellPage: React.FC<Props> = ({ slideshow }) => {
     return (
         <Layout
             slideshow={slideshow}
-            // TODO: use same header for mobile
-            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon hidden="smDown" />}
+            header={<NavbarTitle title={slideshow.name} titleShort={slideshow.shortName} backIcon />}
         >
             <NutshellPageContent slideshow={slideshow} />
         </Layout>
