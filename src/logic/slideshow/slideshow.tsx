@@ -37,15 +37,23 @@ export interface SlideshowInitOptions {
     showTicker?: boolean;
 
     /**
-     * Whether to display mobile version on xs size screen.
-     */
-    enableMobile?: boolean;
-
-    /**
      * Slide start delay in ms from the moment `slideshow.start()` function is triggered.
+     * Defaults to 0.
      */
     startDelay?: number;
+    
+    /**
+     * Breakpoint below which to display small screen component.
+     * Defaults to `sm`.
+     */
+    smallScreenComponentBreakpoint?: SmallScreenComponentBreakpoint;
 }
+
+export interface SmallScreenComponentProps {
+    slideshow: Slideshow;
+}
+
+export type SmallScreenComponentBreakpoint = 'sm' | 'md';
 
 /**
  * Abstract class to be extended by specific slideshow classes.
@@ -84,8 +92,8 @@ export abstract class Slideshow<T = unknown> {
     private defaultAutoPlay = true;
     private defaultDuration = 15000;
     private defaultShowTicker = true;
-    private defaultEnableMobile = false;
     private defaultStartDelay = 0;
+    private defaultSmallScreenComponentBreakpoint: SmallScreenComponentBreakpoint = 'sm';
 
     /**
      * Options provided in the constructor.
@@ -119,15 +127,14 @@ export abstract class Slideshow<T = unknown> {
     public selectedBackgroundIndex$: rxjs.BehaviorSubject<number>;
 
     /**
-     * Whether to enable mobile version on xs size screen.
-    //  * TODO: change to optional function returning data and components
-     */
-    public enableMobile: boolean;
-
-    /**
      * Slide start delay in ms from the moment `slideshow.start()` function is triggered.
      */
     public startDelay: number;
+
+    /**
+     * Breakpoint below which to display small screen component.
+     */
+    public smallScreenComponentBreakpoint: SmallScreenComponentBreakpoint;
 
     /**
      * Creates a slideshow object with all necessary properties to automatically display slides.
@@ -140,8 +147,8 @@ export abstract class Slideshow<T = unknown> {
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
             showTicker = this.defaultShowTicker,
-            enableMobile = this.defaultEnableMobile,
-            startDelay= this.defaultStartDelay
+            startDelay= this.defaultStartDelay,
+            smallScreenComponentBreakpoint = this.defaultSmallScreenComponentBreakpoint
         } = options ?? {};
         this.initOptions = options;
         this.data = data;
@@ -149,8 +156,8 @@ export abstract class Slideshow<T = unknown> {
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
         this.selectedBackgroundIndex$ = new rxjs.BehaviorSubject<number>(Utils.Numbers.getRandom(this.backgroundImageUrls?.length ?? 0));
-        this.enableMobile = enableMobile;
         this.startDelay = startDelay;
+        this.smallScreenComponentBreakpoint = smallScreenComponentBreakpoint;
     }
 
     /**
@@ -254,7 +261,12 @@ export abstract class Slideshow<T = unknown> {
     /**
      * If provided will render the custom slideshow instead of the default dashboard.
      */
-    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T> }>;
+    public abstract customSlideshow: React.ComponentType<{ slideshow: Slideshow }>;
+
+    /**
+     * If provided, will be displayed on xs screen size.
+     */
+    public abstract smallScreenComponent: React.ComponentType<SmallScreenComponentProps>;
 
     /**
      * Function which extends theme.

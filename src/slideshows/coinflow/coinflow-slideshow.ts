@@ -4,6 +4,8 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
+import { DesktopMetricContent } from "../../components/metrics-dashboard/DesktopMetricContent";
+import { Mobile } from "../../components/metrics-dashboard/mobile/Mobile";
 
 export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/coinflow';
@@ -46,6 +48,9 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public onPlayerIndexChange = (index: number, playerLabelsLength: number) => {
         this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % playerLabelsLength))
     };
+
+    public customSlideshow = DesktopMetricContent;
+    public smallScreenComponent = Mobile;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

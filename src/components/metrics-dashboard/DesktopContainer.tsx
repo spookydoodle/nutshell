@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Grid, useMediaQuery } from '@mui/material';
-import { Slideshow, Slideshow as SlideshowType } from "../../logic/slideshow/slideshow";
+import { Slideshow } from "../../logic/slideshow/slideshow";
 import { Player } from "../navigation/Player";
 import { Ticker } from "./ticker/Ticker";
 import * as Hooks from '../../hooks';
-import * as MetricTypes from "./types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -24,30 +23,22 @@ interface Props {
 
 export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
     const classes = useStyles();
-    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-    const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
+    const isSmUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
+    const isLgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
     const tickerData = React.useMemo(
-        () => slideshow.getTickerData?.(),
-        [slideshow]
+        () => isLgUp && showTicker ? slideshow.getTickerData?.() : undefined,
+        [slideshow, showTicker, isLgUp]
     );
     
     return (
         <Grid container justifyContent="center">
             <Grid container item className={classes.content}>
                 {children}
-
-                {tickerData && showTicker && !isLgDown ? (
-                    <Ticker
-                        animationsInitialized={animationsInitialized}
-                        title={SlideshowType.tickerTitle}
-                        data={tickerData}
-                    />
-                ) : null}
-
-                <Player slideshow={slideshow} />
+                {tickerData ? <Ticker animationsInitialized={animationsInitialized} title={Slideshow.tickerTitle} data={tickerData} /> : null}
+                {isSmUp ? <Player slideshow={slideshow} /> : null}
             </Grid>
         </Grid>
     );

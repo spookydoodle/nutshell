@@ -61,28 +61,22 @@ interface Props {
     slideshow: Slideshow;
     openSettings: boolean;
     handleSettingsClose: () => void;
-    duration: number;
-    setDuration: React.Dispatch<React.SetStateAction<number>>;
-    showTicker: boolean;
-    setShowTicker: (on: boolean) => void;
 }
 
 export const SettingsDialog: React.FC<Props> = ({
     slideshow,
     openSettings,
     handleSettingsClose,
-    duration,
-    setDuration,
-    showTicker,
-    setShowTicker,
 }) => {
     const classes = useStyles();
+    const theme = useTheme();
     const imgArr = slideshow.backgroundImageUrls ?? []
     const [mode, setMode] = Hooks.useSubjectState(AppState.mode$);
     const [selectedBackgroundIndex, setSelectedBackgroundIndex] = Hooks.useSubjectState(slideshow.selectedBackgroundIndex$);
-
-    const theme = useTheme();
-    const fullScreen = useMediaQuery(theme.breakpoints.only("xs"));
+    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
+    const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
+    const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
+    const isOnlyXs = useMediaQuery(theme.breakpoints.only("xs"));
 
     const onTickerChange = (event: React.ChangeEvent<HTMLInputElement>) =>
         setShowTicker(event.target.checked);
@@ -91,7 +85,7 @@ export const SettingsDialog: React.FC<Props> = ({
 
     return (
         <Dialog
-            fullScreen={fullScreen}
+            fullScreen={isOnlyXs}
             open={openSettings}
             onClose={handleSettingsClose}
             aria-labelledby="responsive-dialog-title"
@@ -135,21 +129,14 @@ export const SettingsDialog: React.FC<Props> = ({
                     </ToggleButtonGroup>
                 </Box>
 
-                {slideshow.getTickerData ? (
+                {!isLgDown && slideshow.getTickerData ? (
                     <Box className={classes.itemContainer}>
                         <Typography color="primary" gutterBottom>
                             Ticker options
                         </Typography>
                         <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={showTicker}
-                                    onChange={onTickerChange}
-                                    name="ticker-setting"
-                                    color="primary"
-                                />
-                            }
-                            label="Show (on large screen)"
+                            control={ <Checkbox checked={showTicker} onChange={onTickerChange} name="ticker-setting" color="primary" />}
+                            label="Show"
                         />
                     </Box>
                 ) : null}

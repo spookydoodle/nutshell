@@ -50,14 +50,12 @@ export const Player: React.FC<Props> = ({
     categorySecondary,
 }) => {
     const classes = useStyles();
-    const isXlDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('xl'));
+    const isXlUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('xl'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
     const isMdDown = !isMdUp;
-    const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [slideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [duration, setDuration] = Hooks.useSubjectState(slideshow.duration$);
-    const [showTicker, setShowTicker] = Hooks.useSubjectState(slideshow.showTicker$);
     const [pin, setPin] = React.useState(false);
     const [show, setShow] = React.useState(false);
     const [hover, setHover] = React.useState(false);
@@ -94,8 +92,8 @@ export const Player: React.FC<Props> = ({
         };
     }, [show]);
 
-    const onHover = React.useCallback(() => setHover(true), []);
-    const onOut = React.useCallback(() => setHover(false), []);
+    const handleMouseEnter = React.useCallback(() => setHover(true), []);
+    const handleMouseOut = React.useCallback(() => setHover(false), []);
     const handleSettingsOpen = React.useCallback(() => setOpenSettings(true), []);
     const handleSettingsClose = React.useCallback(() => setOpenSettings(false), []);
 
@@ -103,12 +101,14 @@ export const Player: React.FC<Props> = ({
         () => !animationsInitialized ? false : pin || show || hover,
         [animationsInitialized, pin, show, hover]
     );
+
+    const playerSettingsButton = <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />;
     
     return (
         <>
-            <Box onMouseOver={onHover} onMouseOut={onOut}>
+            <Box>
                 <Slide in={slideIn} direction="up">
-                    <Grid container justifyContent="center" alignItems="center" className={classes.container}>
+                    <Grid container justifyContent="center" alignItems="center" onMouseEnter={handleMouseEnter} onMouseOut={handleMouseOut} className={classes.container}>
                         <Grid item xs={12} md={4} lg={3} container justifyContent="center" alignItems="center">
                             <PlayerButtons
                                 slideshow={slideshow}
@@ -117,21 +117,15 @@ export const Player: React.FC<Props> = ({
                                 categoryPrimary={categoryPrimary}
                                 categorySecondary={categorySecondary}
                             />
-                            {!isMdUp && !isOnlyXs ? (
-                                <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />
-                            ) : null}
+                            {isMdDown ? playerSettingsButton : null}
                         </Grid>
 
-                        {!isMdDown ? (
+                        {isMdUp ? (
                             <>
                                 <Slider slideshow={slideshow} index={playerIndex} playerLabels={playerLabels} />
-
                                 <Grid item xs={4} md={3} container justifyContent="space-around" alignItems="center" className={classes.settingsButtonsContainer}>
-                                    {!isXlDown ? (
-                                        <SlideDurationInput duration={duration} setDuration={setDuration} />
-                                    ) : null}
-
-                                    <PlayerSettingsButton pin={pin} setPin={setPin} handleSettingsOpen={handleSettingsOpen} />
+                                    {isXlUp ? <SlideDurationInput duration={duration} setDuration={setDuration} /> : null}
+                                    {playerSettingsButton}
                                 </Grid>
                             </>
                         ) : null}
@@ -139,15 +133,7 @@ export const Player: React.FC<Props> = ({
                 </Slide>
             </Box>
 
-            <SettingsDialog
-                slideshow={slideshow}
-                openSettings={openSettings}
-                handleSettingsClose={handleSettingsClose}
-                duration={duration}
-                setDuration={setDuration}
-                showTicker={showTicker}
-                setShowTicker={setShowTicker}
-            />
+            <SettingsDialog slideshow={slideshow} openSettings={openSettings} handleSettingsClose={handleSettingsClose} />
         </>
     );
 };

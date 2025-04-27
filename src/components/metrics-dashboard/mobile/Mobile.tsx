@@ -5,13 +5,15 @@ import { Footer } from "./Footer";
 import { Slideshow } from "../../../logic/slideshow/slideshow";
 import * as Utils from "../../../utils";
 import { Data } from "../types";
+// TODO: Extract from class
+import data from "../../../slideshows/coinflow/coinflow-data";
 
 interface Props {
     slideshow: Slideshow;
 }
 
 // TODO: Generalize types
-export const Mobile: React.FC<Props> = ({  slideshow }) => {
+export const Mobile: React.FC<Props> = ({ slideshow }) => {
     const [timeboxIndex, setTimeboxIndex] = React.useState(0);
     const [chanIndex, setChanIndex] = React.useState(0);
     const title = React.useMemo(() => slideshow.getSlideTitle?.() ?? "", [slideshow]);
@@ -27,12 +29,12 @@ export const Mobile: React.FC<Props> = ({  slideshow }) => {
     );
 
     const columnNames = React.useMemo(
-        () => Utils.Metrics.getUnique(slideshow.data as Data, 'columnName'),
+        () => Utils.Metrics.getUnique(data as Data, 'columnName'),
         [slideshow.data]
     );
 
     const timeboxes = React.useMemo(
-        () => Utils.Metrics.getUniqueTimeboxes(slideshow.data as Data),
+        () => Utils.Metrics.getUniqueTimeboxes(data as Data),
         [slideshow.data]
     );
 
@@ -49,7 +51,7 @@ export const Mobile: React.FC<Props> = ({  slideshow }) => {
             />
 
             <MobileContent
-                data={slideshow.data as Data}
+                data={data as Data}
                 timeboxIndex={timeboxIndex}
                 chanIndex={chanIndex}
                 handleColumnNameChange={handleColumnNameChange}

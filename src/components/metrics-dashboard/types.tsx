@@ -256,10 +256,7 @@ type SlidesStateData = Map<string, SlideData>;
 type SlideData = Array<SlideDataItem>;
 interface SlideDataItem {
     headers: Header;
-    data: Map<
-        string,
-        Item
-    >;
+    data: Map<string, Item>;
 }
 
 // TODO: rename
