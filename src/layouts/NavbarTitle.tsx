@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme: Theme) =>
         headerTitle: {
             display: "flex",
             alignItems: "center",
+            zIndex: 2
         },
         subtitle: {
             fontSize: fontSizes.h5,
@@ -43,7 +44,6 @@ interface Props {
     subtitle?: string;
     subtitleShort?: string;
     backIcon?: boolean;
-    hidden?: "smDown";
 }
 
 export const NavbarTitle: React.FC<Props> = ({
@@ -52,17 +52,11 @@ export const NavbarTitle: React.FC<Props> = ({
     titleSuffix,
     subtitle,
     subtitleShort,
-    backIcon = false,
-    hidden
+    backIcon = false
 }) => {
     const classes = useStyles();
-    const isSmDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
-    const isMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
+    const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
-
-    if (hidden && isSmDown) {
-        return null;
-    }
 
     return (
         <Box className={classes.topBar}>
@@ -83,7 +77,7 @@ export const NavbarTitle: React.FC<Props> = ({
                         )}
                     </Typography>
                     <Typography fontSize={fontSizes.h5} color="inherit" className={classes.subtitle}>
-                        {!isMdDown ? (subtitle ?? "") : (subtitleShort ?? "")}
+                        {isMdUp ? (subtitle ?? "") : (subtitleShort ?? "")}
                     </Typography>
                 </Box>
             </Box>

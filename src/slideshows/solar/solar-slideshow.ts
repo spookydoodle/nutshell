@@ -1,10 +1,11 @@
 import { ThemeOptions } from "@mui/material";
-import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as MetricTypes from "../../components/metrics-dashboard/types";
+import { DesktopSolarContent } from "../../components/metrics-dashboard/DesktopSolarContent";
+import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as Types from "../../types";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import { NutshellSolar } from "../../pages";
+import { SmallScreenMessageSolar } from "../../components/metrics-dashboard/SmallScreenMessageSolar";
 
 export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/solar';
@@ -43,7 +44,8 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
         return this.data.ticker;
     };
     
-    public customSlideshow: React.ComponentType<{ slideshow: Slideshow<MetricTypes.StateDataMap>; }> = NutshellSolar;
+    public customSlideshow = DesktopSolarContent;
+    public smallScreenComponent = SmallScreenMessageSolar;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, useMediaQuery } from '@mui/material';
-import { Slideshow } from "../../logic/slideshow/slideshow";
+import { SlideComponentProps, Slideshow } from "../../logic/slideshow/slideshow";
 import { NavTitles } from "./NavTitles";
 import { Content } from "./Content";
 import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "./Bestsellers";
 import * as Hooks from '../../hooks';
 import * as MetricTypes from "./types";
-import { DesktopContainer } from "./DesktopContainer";
+import { convertToMap } from "../../utils/metrics";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -32,11 +32,7 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props {
-    slideshow: Slideshow;
-}
-
-export const DesktopMetricContent: React.FC<Props> = ({ slideshow }) => {
+export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data>> = ({ slideshow }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
@@ -46,7 +42,7 @@ export const DesktopMetricContent: React.FC<Props> = ({ slideshow }) => {
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
 
-    const slidesData = React.useMemo(() => slideshow.getSlidesData?.(), [slideshow]);
+    const slidesData = React.useMemo(() => convertToMap(slideshow.data).slides, [slideshow]);
 
     const dataKeys = slidesData ? [...slidesData.keys()] : [];
     const dataValues = slidesData ? [...slidesData.values()] : [];
@@ -118,7 +114,6 @@ export const DesktopMetricContent: React.FC<Props> = ({ slideshow }) => {
                 animationsInitialized={animationsInitialized}
                 current={slides[slideIndex].headers}
                 next={slides[(slideIndex + 1) % totalLen].headers}
-                play={play}
                 onSequenceClick={onSequenceClick}
                 index={slideIndex}
                 seqLen={seqLen}
@@ -126,17 +121,21 @@ export const DesktopMetricContent: React.FC<Props> = ({ slideshow }) => {
                 sequences={sequences}
                 currentSequence={slides[slideIndex].headers.sequence}
             />
-
-            {[...slides[slideIndex].data.entries()].map(([name, value], i) => !(isLgDown && i === 1) && !(hiddenMdDown && i > 0) ? (
-                <Content
-                    key={`${name}-${i}`}
-                    animationsInitialized={animationsInitialized}
-                    name={name}
-                    tileData={value.tile} // TODO: consider changing to Transitions and passing components
-                    components={getComponents(name)}
-                    index={slideIndex}
-                />
-            ) : null)}
+            {[...slides[slideIndex].data.entries()].map(([name, value], i) => {
+                if (!(isLgDown && i === 1) && !(hiddenMdDown && i > 0)) {
+                    const components = getComponents(name);
+                    return (
+                        <Content
+                            key={`${name}-${i}`}
+                            animationsInitialized={animationsInitialized}
+                            name={name}
+                            tileData={value.tile}
+                            component={components[Math.min(slideIndex, components.length - 1)]}
+                        />
+                    )
+                }
+                return null;
+            })}
         </>
     );
 };

@@ -46,16 +46,14 @@ interface Props {
     animationsInitialized?: boolean;
     name: string;
     tileData?: Types.Value;
-    components: JSX.Element[];
-    index: number;
+    component: JSX.Element;
 }
 
 export const Content: React.FC<Props> = ({
     animationsInitialized = true,
     name,
     tileData,
-    components,
-    index
+    component,
 }) => {
     const classes = useStyles();
 
@@ -66,7 +64,7 @@ export const Content: React.FC<Props> = ({
             </Box>
 
             <Box className={classNames(classes.card, classes.charts, { [classes.pauseAnim]: animationsInitialized })}>
-                <Transitions components={components} index={index} />
+                <Transitions component={component} />
             </Box>
         </Grid>
     );

@@ -83,7 +83,6 @@ interface Props {
     animationsInitialized?: boolean;
     current: Header;
     next: Header;
-    play?: boolean;
     onSequenceClick?: (index: number) => void;
     index: number;
     seqLen: number;
@@ -95,8 +94,6 @@ interface Props {
 export const NavTitles: React.FC<Props> = ({
     animationsInitialized = true,
     current,
-    // next,
-    play = true,
     onSequenceClick,
     index,
     seqLen,
@@ -156,7 +153,6 @@ export const NavTitles: React.FC<Props> = ({
                 <Grid item xs={4}>
                     <BreadCrumbs
                         animationsInitialized={animationsInitialized}
-                        play={play}
                         index={index % seqLen < 3 ? index % seqLen : 2}
                         color="white"
                         onBreadClick={onBreadClick}

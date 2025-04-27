@@ -4,8 +4,11 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
+import { Mobile } from "../../components/metrics-dashboard/mobile/Mobile";
+import { convertToMap } from "../../utils/metrics";
+import { CoinflowSlide } from "../../components/metrics-dashboard/CoinflowSlide";
 
-export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
+export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';
@@ -14,26 +17,25 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public caption = 'Data collected manually';
     public imageUrl = `${IMG_SERVER}/landing/gadgets.jpg`;
     public backgroundImageUrls = getImgArr("BG");
+    public title = 'Coinflow';
 
     // TODO: Add YTD/QTD/MTD
-    public getSlideTitle = (): string => "Coinflow";
+    public getSlideTitle = (slideIndex: number): string => "Coinflow";
     // TODO by realms, sectors, products
-    public getSlideSubtitle = (): string => "By TODO";
+    public getSlideSubtitle = (slideIndex: number): string => "By TODO";
 
-    public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
-        return this.data.slides;
-    };
+    private mappedData = convertToMap(this.data);
 
     public getSlidesLength = () => {
-        return this.data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
+        return this.mappedData.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
     };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
-        return this.data.ticker;
+        return this.mappedData.ticker;
     };
 
     public getPlayerLabels = (): Types.PlayerLabel[] => {
-        return [...this.data.slides.values()][0].map((slide) => ({ 
+        return [...this.mappedData.slides.values()][0].map((slide) => ({ 
             label: slide.headers.titleSecondaryShort,
             sequenceName: slide.headers.category === 'Products' ? 'Products' : 'Charts'
         }));
@@ -46,6 +48,9 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public onPlayerIndexChange = (index: number, playerLabelsLength: number) => {
         this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % playerLabelsLength))
     };
+
+    public slideComponent = CoinflowSlide;
+    public smallScreenComponent = Mobile;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

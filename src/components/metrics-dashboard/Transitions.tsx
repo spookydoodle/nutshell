@@ -18,22 +18,19 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    components: JSX.Element[];
-    index: number;
+    variant?: TransitionVariant;
+    component: JSX.Element;
     style?: React.ComponentProps<AnimatedComponent<"div">>['style'];
     className?: string;
-    variant?: TransitionVariant;
 }
 
 export const Transitions: React.FC<Props> = ({
     variant = "fade-in",
-    components,
-    index,
+    component,
     style,
     className,
 }: Props) => {
     const classes = useStyles();
-    const ind = Math.min(index, components.length - 1);
 
     const transitionsDef = {
         none: {
@@ -116,11 +113,7 @@ export const Transitions: React.FC<Props> = ({
 
     const transition = transitionsDef[variant];
 
-    const transitions = useTransition(
-        components[ind],
-        // (item) => index % components.length,
-        transition
-    );
+    const transitions = useTransition(component, transition);
 
     return (
         <>

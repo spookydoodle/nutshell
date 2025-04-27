@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Typography, Theme } from '@mui/material';
 import { useSpring, useChain, config, SpringRef, useSpringRef, AnimatedComponent, animated } from "@react-spring/web";
-import { NFSPanel } from "./NFSPanel";
+import { NFSPanel } from "../metrics-dashboard/NFSPanel";
 import { TVIcon } from "../../icons/TVIcon";
 
 const useStyles = makeStyles((theme: Theme) =>

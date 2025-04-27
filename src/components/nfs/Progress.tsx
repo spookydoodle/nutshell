@@ -45,7 +45,7 @@ export const Progress: React.FC<Props> = ({ slideIndex, onIndexChange, onPrevInd
 
     return (
         <div className={classes.progress}>
-            {new Array(imgPerSlide).fill(null).map((el, i) => (
+            {new Array(imgPerSlide).fill(null).map((_el, i) => (
                 <span
                     key={i}
                     className={classNames(classes.progressItem, {

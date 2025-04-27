@@ -5,6 +5,7 @@ import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { NutshellNFS } from "../../pages";
 import { imgPerSlide } from "./nfs-data";
+import { SmallScreenMessageNfs } from "../../components/nfs/SmallScreenMessageNfs";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public path = '/need-for-nutshell';
@@ -44,7 +45,6 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
     };
 
     public onPlayerSecondaryPreviousButtonClick = (playerLabelsLength: number) => {
-        console.log('previous', this.slideIndex$.value)
         this.slideIndex$.next(this.slideIndex$.value > 0 ? this.slideIndex$.value - 1 : playerLabelsLength * imgPerSlide - 1)
     };
 
@@ -53,7 +53,8 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         this.slideIndex$.next(this.slideIndex$.value < playerLabelsLength * imgPerSlide - 1 ? this.slideIndex$.value + 1 : 0)
     };
 
-    public customSlideshow: React.ComponentType<{ slideshow: Slideshow<NutshellData>; }> = NutshellNFS;
+    public customSlideshow = NutshellNFS;
+    public smallScreenComponent = SmallScreenMessageNfs;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {
