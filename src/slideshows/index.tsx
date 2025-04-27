@@ -6,6 +6,7 @@ import nutshellData from "./coinflow/coinflow-data";
 import { createStateData } from "./solar/solar-data";
 import { NEED_FOR_SPEED } from "./nfs/nfs-data";
 import { slideshows$ } from "../state";
+import { Slideshow } from "../logic/slideshow/slideshow";
 
 /**
  * Instantiates all available slideshows and sets the value of app state's `slideshows$`.
@@ -20,5 +21,5 @@ export const instantiateSlideshows = (): void => {
         smallScreenComponentBreakpoint: 'md'
     });
 
-    slideshows$.next([coinflowSlideshow, solarSlideshow, nfsSlideshow]);
+    slideshows$.next([coinflowSlideshow, solarSlideshow, nfsSlideshow] as Slideshow[]);
 };

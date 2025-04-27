@@ -114,8 +114,7 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
                     animationsInitialized={animationsInitialized}
                     name={name}
                     tileData={value.tile} // TODO: consider changing to Transitions and passing components
-                    components={getComponents(name)}
-                    index={slideIndex}
+                    component={getComponents(name)[slideIndex]}
                 />
             ) : null)}
         </>

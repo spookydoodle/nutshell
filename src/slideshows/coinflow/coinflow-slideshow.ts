@@ -4,9 +4,9 @@ import * as MetricTypes from "../../components/metrics-dashboard/types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import { DesktopMetricContent } from "../../components/metrics-dashboard/DesktopMetricContent";
 import { Mobile } from "../../components/metrics-dashboard/mobile/Mobile";
 import { convertToMap } from "../../utils/metrics";
+import { CoinflowSlide } from "../../components/metrics-dashboard/CoinflowSlide";
 
 export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public path = '/coinflow';
@@ -17,17 +17,14 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public caption = 'Data collected manually';
     public imageUrl = `${IMG_SERVER}/landing/gadgets.jpg`;
     public backgroundImageUrls = getImgArr("BG");
+    public title = 'Coinflow';
 
     // TODO: Add YTD/QTD/MTD
-    public getSlideTitle = (): string => "Coinflow";
+    public getSlideTitle = (slideIndex: number): string => "Coinflow";
     // TODO by realms, sectors, products
-    public getSlideSubtitle = (): string => "By TODO";
+    public getSlideSubtitle = (slideIndex: number): string => "By TODO";
 
     private mappedData = convertToMap(this.data);
-
-    public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
-        return this.mappedData.slides;
-    };
 
     public getSlidesLength = () => {
         return this.mappedData.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
@@ -52,7 +49,7 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
         this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % playerLabelsLength))
     };
 
-    public customSlideshow = DesktopMetricContent;
+    public slideComponent = CoinflowSlide;
     public smallScreenComponent = Mobile;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({

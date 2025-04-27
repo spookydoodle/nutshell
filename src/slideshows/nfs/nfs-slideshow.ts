@@ -45,7 +45,6 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
     };
 
     public onPlayerSecondaryPreviousButtonClick = (playerLabelsLength: number) => {
-        console.log('previous', this.slideIndex$.value)
         this.slideIndex$.next(this.slideIndex$.value > 0 ? this.slideIndex$.value - 1 : playerLabelsLength * imgPerSlide - 1)
     };
 

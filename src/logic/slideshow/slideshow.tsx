@@ -49,6 +49,11 @@ export interface SlideshowInitOptions {
     smallScreenComponentBreakpoint?: SmallScreenComponentBreakpoint;
 }
 
+export interface SlideComponentProps<T> {
+    slideshow: Slideshow<T>;
+    slideIndex: number;
+}
+
 export interface SmallScreenComponentProps {
     slideshow: Slideshow;
 }
@@ -80,6 +85,7 @@ export abstract class Slideshow<T = unknown> {
 
     public abstract path: string;
     public abstract name: string;
+    public title?: string;
     public shortName?: string;
     public abstract description: string;
     public abstract devices: Types.Device[];
@@ -175,14 +181,15 @@ export abstract class Slideshow<T = unknown> {
      */
     public abstract getSlidesLength: () => number;
 
-    // TODO: Change to static
-    public getSlideTitle?: () => string;
-    public getSlideSubtitle?: () => string;
-
     /**
-     * Returns data needed to render slides.
+     * Slide title to display.
      */
-    public getSlidesData?: () => MetricTypes.SlidesStateData | undefined;
+    public getSlideTitle?: (slideIndex: number) => string;
+    
+    /**
+     * Slide title to display.
+     */
+    public getSlideSubtitle?: (slideIndex: number ) => string;
 
     /**
      * Function which returns the index for the bottom Player component.
@@ -261,7 +268,8 @@ export abstract class Slideshow<T = unknown> {
     /**
      * If provided will render the custom slideshow instead of the default dashboard.
      */
-    public abstract customSlideshow: React.ComponentType<{ slideshow: Slideshow }>;
+    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow }>;
+    public slideComponent?: React.ComponentType<SlideComponentProps<T>>;
 
     /**
      * If provided, will be displayed on xs screen size.

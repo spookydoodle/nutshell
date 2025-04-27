@@ -69,9 +69,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
     animationsInitialized: boolean;
-    play?: boolean;
     index?: number;
-    name?: string;
     color?: "textSecondary" | "white";
     onBreadClick?: (index: number) => void;
 }

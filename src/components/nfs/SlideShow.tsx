@@ -58,6 +58,14 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     );
     const isSwitchingToEarlierSlide = !isSwitchingWithinSlide && (slideIndex < prevSlideIndex || (prevSlideIndex === 0 && slideIndex === totalLen * imgPerSlide - 1));
 
+    const backgroundComponents = slideshow.data.games
+    .map((slide) => slide.background.map((src, i) => <Background key={src} src={src} index={i} />))
+    .flat(1);
+
+    const gameComponents = slideshow.data.games
+    .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={!isSwitchingWithinSlide} />))
+    .flat(1);
+
     return (
         <>
             <Box className={classes.cinema}>
@@ -69,19 +77,13 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
                                 ? "swipe-cube-to-right"
                                 : "swipe-cube-to-left"
                     }
-                    components={slideshow.data.games
-                        .map(({ background }) => background.map((src, i) => <Background key={src} src={src} index={i} />))
-                        .flat(1)}
-                    index={slideIndex}
+                    component={backgroundComponents[Math.min(slideIndex, backgroundComponents.length - 1)]}
                 />
             </Box>
 
             <Transitions
                 variant={slideIndex % imgPerSlide === 0 ? "fade-in-slide-out" : "none"}
-                components={slideshow.data.games
-                    .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={!isSwitchingWithinSlide} />))
-                    .flat(1)}
-                index={slideIndex}
+                component={gameComponents[Math.min(slideIndex, backgroundComponents.length - 1)]}
             />
 
             <Progress slideIndex={slideIndex} onIndexChange={setSlideIndex} onPrevIndexChange={setPrevSlideIndex} />

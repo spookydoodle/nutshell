@@ -92,7 +92,7 @@ export const Player: React.FC<Props> = ({
         };
     }, [show]);
 
-    const handleMouseEnter = React.useCallback(() => setHover(true), []);
+    const handleMouseOver = React.useCallback(() => setHover(true), []);
     const handleMouseOut = React.useCallback(() => setHover(false), []);
     const handleSettingsOpen = React.useCallback(() => setOpenSettings(true), []);
     const handleSettingsClose = React.useCallback(() => setOpenSettings(false), []);
@@ -108,7 +108,7 @@ export const Player: React.FC<Props> = ({
         <>
             <Box>
                 <Slide in={slideIn} direction="up">
-                    <Grid container justifyContent="center" alignItems="center" onMouseEnter={handleMouseEnter} onMouseOut={handleMouseOut} className={classes.container}>
+                    <Grid container justifyContent="center" alignItems="center" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} className={classes.container}>
                         <Grid item xs={12} md={4} lg={3} container justifyContent="center" alignItems="center">
                             <PlayerButtons
                                 slideshow={slideshow}

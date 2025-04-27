@@ -14,7 +14,7 @@ interface Props {
 export const Mobile: React.FC<Props> = ({ slideshow }) => {
     const [timeboxIndex, setTimeboxIndex] = React.useState(0);
     const [chanIndex, setChanIndex] = React.useState(0);
-    const title = React.useMemo(() => slideshow.getSlideTitle?.() ?? "", [slideshow]);
+    const title = React.useMemo(() => slideshow.title ?? "", [slideshow]);
 
     const handleTimeboxChange = React.useCallback(
         (index: number) => setTimeboxIndex(index),
