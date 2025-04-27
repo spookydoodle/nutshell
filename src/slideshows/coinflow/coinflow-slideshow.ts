@@ -6,8 +6,9 @@ import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
 import { DesktopMetricContent } from "../../components/metrics-dashboard/DesktopMetricContent";
 import { Mobile } from "../../components/metrics-dashboard/mobile/Mobile";
+import { convertToMap } from "../../utils/metrics";
 
-export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
+export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';
@@ -22,20 +23,22 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     // TODO by realms, sectors, products
     public getSlideSubtitle = (): string => "By TODO";
 
+    private mappedData = convertToMap(this.data);
+
     public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
-        return this.data.slides;
+        return this.mappedData.slides;
     };
 
     public getSlidesLength = () => {
-        return this.data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
+        return this.mappedData.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
     };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
-        return this.data.ticker;
+        return this.mappedData.ticker;
     };
 
     public getPlayerLabels = (): Types.PlayerLabel[] => {
-        return [...this.data.slides.values()][0].map((slide) => ({ 
+        return [...this.mappedData.slides.values()][0].map((slide) => ({ 
             label: slide.headers.titleSecondaryShort,
             sequenceName: slide.headers.category === 'Products' ? 'Products' : 'Charts'
         }));
