@@ -43,7 +43,6 @@ export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data<Timebo
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const slidesData = React.useMemo(() => convertToMap(slideshow.data).slides, [slideshow]);
-    console.log({data:slideshow.data, slidesData})
 
     const dataKeys = slidesData ? [...slidesData.keys()] : [];
     const dataValues = slidesData ? [...slidesData.values()] : [];
