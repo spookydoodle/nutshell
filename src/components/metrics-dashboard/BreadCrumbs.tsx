@@ -7,7 +7,7 @@ import { fontSizes } from "../../styles/themes";
 import PublicIcon from "@mui/icons-material/Public";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
-import { Category } from './types';
+import { Category } from './metric-types';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

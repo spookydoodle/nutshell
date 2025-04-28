@@ -1,14 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, useMediaQuery } from '@mui/material';
-import { SlideComponentProps, Slideshow } from "../../logic/slideshow/slideshow";
-import { NavTitles } from "./NavTitles";
-import { Content } from "./Content";
-import { BarChart } from "../dataviz/HTMLCharts/BarChart";
-import { Bestsellers } from "./Bestsellers";
-import * as Hooks from '../../hooks';
-import * as MetricTypes from "./types";
-import { convertToMap } from "../../utils/metrics";
+import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
+import { NavTitles } from "../../../components/metrics-dashboard/NavTitles";
+import { Content } from "../../../components/metrics-dashboard/Content";
+import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
+import { Bestsellers } from "../../../components/metrics-dashboard/Bestsellers";
+import * as Hooks from '../../../hooks';
+import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
+import { convertToMap } from "../coinflow-data-utils";
+import { Timebox } from "../coinflow-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -32,7 +33,7 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data>> = ({ slideshow }) => {
+export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data<Timebox>>> = ({ slideshow }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
@@ -41,7 +42,6 @@ export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data>> = ({
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
-
     const slidesData = React.useMemo(() => convertToMap(slideshow.data).slides, [slideshow]);
 
     const dataKeys = slidesData ? [...slidesData.keys()] : [];

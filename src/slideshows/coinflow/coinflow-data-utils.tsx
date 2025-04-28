@@ -1,28 +1,29 @@
-import * as MetricTypes from "../components/metrics-dashboard/types";
-import * as Types from "../types";
-import * as FormatUtils from "./formats";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
+import * as Types from "../../types";
+import * as Utils from "../../utils";
+import { Timebox } from "./coinflow-types";
 
 const filterByPositive = (
-    data: MetricTypes.DataValue,
+    data: MetricTypes.DataValue<Timebox>,
     columnName: string,
-    timebox: string
-): MetricTypes.DataItem[] => {
+    timebox: Timebox
+): MetricTypes.DataItem<Timebox>[] => {
     return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueByTimebox[timebox]) > 0);
 };
 
 const filterByDimension = (
-    data: MetricTypes.ChartBreakdownItem[],
+    data: MetricTypes.ChartBreakdownItem<Timebox>[],
     name: string
-): Array<MetricTypes.DataItem> => {
+): Array<MetricTypes.DataItem<Timebox>> => {
     return data.filter((row) => row.characteristicValue.key === name);
 };
 
 const getTileData = (
-    data: MetricTypes.DataValue,
+    data: MetricTypes.DataValue<Timebox>,
     columnName: string,
-    timebox: string
+    timebox: Timebox
 ): MetricTypes.Datum[] => {
-    const tiles = filterByPositive(data, columnName, timebox) as MetricTypes.Tile[];
+    const tiles = filterByPositive(data, columnName, timebox);
 
     return tiles.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -31,9 +32,9 @@ const getTileData = (
         return {
             name: columnName,
             primary: primaryValue[timebox],
-            primaryFormatted: FormatUtils.formatNumber(primaryValue[timebox], primaryOptions),
+            primaryFormatted: Utils.Formats.formatNumber(primaryValue[timebox], primaryOptions),
             primaryDelta: deltaValue[timebox],
-            primaryDeltaFormatted: deltaOptions.unit === '%' ? FormatUtils.formatPercentageDelta(deltaValue[timebox], deltaOptions) : FormatUtils.formatNumber(deltaValue[timebox], deltaOptions),
+            primaryDeltaFormatted: deltaOptions.unit === '%' ? Utils.Formats.formatPercentageDelta(deltaValue[timebox], deltaOptions) : Utils.Formats.formatNumber(deltaValue[timebox], deltaOptions),
             primaryIsGood: Number(deltaValue[timebox]) > 0,
             primaryIsBad: Number(deltaValue[timebox]) <= 0,
         };
@@ -41,12 +42,12 @@ const getTileData = (
 };
 
 const getChartsData = (
-    data: MetricTypes.DataValue,
+    data: MetricTypes.DataValue<Timebox>,
     columnName: string,
-    timebox: string,
-    tickerItemsData?: MetricTypes.TickerItem[]
+    timebox: Timebox,
+    tickerItemsData?: MetricTypes.TickerItem<Timebox>[]
 ): MetricTypes.Datum[] => {
-    const charts = filterByPositive(data, columnName, timebox) as MetricTypes.ChartBreakdownItem[];
+    const charts = filterByPositive(data, columnName, timebox) as MetricTypes.ChartBreakdownItem<Timebox>[];
 
     return charts.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -56,9 +57,9 @@ const getChartsData = (
         return {
             name: row.characteristicValue.text,
             primary: primaryValue[timebox],
-            primaryFormatted: FormatUtils.formatNumber(primaryValue[timebox], primaryOptions),
+            primaryFormatted: Utils.Formats.formatNumber(primaryValue[timebox], primaryOptions),
             primaryDelta: deltaValue[timebox],
-            primaryDeltaFormatted: deltaOptions.unit === '%' ? FormatUtils.formatPercentageDelta(deltaValue[timebox], deltaOptions) : FormatUtils.formatNumber(deltaValue[timebox], deltaOptions),
+            primaryDeltaFormatted: deltaOptions.unit === '%' ? Utils.Formats.formatPercentageDelta(deltaValue[timebox], deltaOptions) : Utils.Formats.formatNumber(deltaValue[timebox], deltaOptions),
             primaryIsGood: Number(deltaValue[timebox]) > 0,
             primaryIsBad: Number(deltaValue[timebox]) <= 0,
             attributePrimary: row.characteristicValue,
@@ -68,9 +69,9 @@ const getChartsData = (
 };
 
 const getTickerItemsData = (
-    data: MetricTypes.TickerItem[],
+    data: MetricTypes.TickerItem<Timebox>[],
     columnNames: Array<string>,
-    timebox: string,
+    timebox: Timebox,
     tickerItemParent?: string,
     withTimebox?: boolean
 ): MetricTypes.Datum[] => {
@@ -83,11 +84,11 @@ const getTickerItemsData = (
 
             return {
                 key: row.tickerItem.key,
-                name: FormatUtils.formatTickerItemName(row.tickerItem, row.tickerItem, timebox, withTimebox),
+                name: Utils.Formats.formatTickerItemName(row.tickerItem, row.tickerItem, timebox, withTimebox),
                 primary: primaryValue[timebox],
-                primaryFormatted: `${FormatUtils.formatNumber(primaryValue[timebox], primaryOptions)}`,
+                primaryFormatted: `${Utils.Formats.formatNumber(primaryValue[timebox], primaryOptions)}`,
                 primaryDelta: deltaValue[timebox],
-                primaryDeltaFormatted: FormatUtils.formatPercentageDelta(deltaValue[timebox], deltaOptions),
+                primaryDeltaFormatted: Utils.Formats.formatPercentageDelta(deltaValue[timebox], deltaOptions),
                 primaryIsGood: Number(deltaValue[timebox]) > 0,
                 primaryIsBad: Number(deltaValue[timebox]) <= 0,
                 attributePrimary: row.columnName,
@@ -97,20 +98,21 @@ const getTickerItemsData = (
 };
 
 const getProductsData = (
-    data: MetricTypes.DataValue,
+    data: MetricTypes.DataValue<Timebox>,
     columnName: string,
-    timebox: string,
+    timebox: Timebox,
     slideName: string,
     rowName: MetricTypes.Dimension
 ): MetricTypes.Datum[] => {
-    return (filterByPositive(data, columnName, timebox) as MetricTypes.ProductsItem[])
+    // Fix type casting
+    return (filterByPositive(data, columnName, timebox) as MetricTypes.ProductsItem<Timebox>[])
         .filter((row) => row.slideName.key === slideName && row.rowName.key === rowName.key)
         .map((row) => {
             const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
             const datum: MetricTypes.Datum = {
                 name: row.attributePrimary.key,
                 primary: primaryValue[timebox],
-                primaryFormatted: FormatUtils.formatNumber(primaryValue[timebox], primaryOptions),
+                primaryFormatted: Utils.Formats.formatNumber(primaryValue[timebox], primaryOptions),
                 attributePrimary: row.attributePrimary,
                 attributeSecondary: row.attributeSecondary,
                 img: {
@@ -122,7 +124,7 @@ const getProductsData = (
                 const { valueByTimebox: secondaryValue, ...secondaryOptions } = row.measures.secondaryMeasure;
 
                 datum['secondary'] = secondaryValue[timebox];
-                datum['secondaryFormatted'] = FormatUtils.formatNumber(secondaryValue[timebox], secondaryOptions);
+                datum['secondaryFormatted'] = Utils.Formats.formatNumber(secondaryValue[timebox], secondaryOptions);
             }
 
             return datum;
@@ -131,7 +133,7 @@ const getProductsData = (
         .filter((row, i) => row.primary > 0 && i < 5);
 };
 
-export const getUnique = (res: MetricTypes.Data, key: 'slideName' | 'columnName' | 'rowName') => {
+export const getUnique = (res: MetricTypes.Data<Timebox>, key: 'slideName' | 'columnName' | 'rowName') => {
     const unique: MetricTypes.Dimension[] = [];
 
     for (const product of res.products) {
@@ -143,11 +145,11 @@ export const getUnique = (res: MetricTypes.Data, key: 'slideName' | 'columnName'
     return unique;
 };
 
-export const getUniqueTimeboxes = (res: MetricTypes.Data): string[] => {
-    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueByTimebox)).flat(1))];
+export const getUniqueTimeboxes = (res: MetricTypes.Data<Timebox>): Timebox[] => {
+    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueByTimebox) as Timebox[]).flat(1))];
 };
 
-export const convertToMapMobile = (res: MetricTypes.Data): MetricTypes.StateDataMapMobile => {
+export const convertToMapMobile = (res: MetricTypes.Data<Timebox>): MetricTypes.StateDataMapMobile => {
     const productSlides = getUnique(res, 'slideName');
     const rowNames = getUnique(res, 'rowName');
     const columnNames = getUnique(res, 'columnName').map((el) => el.text);
@@ -196,7 +198,7 @@ export const convertToMapMobile = (res: MetricTypes.Data): MetricTypes.StateData
     );
 };
 
-export const convertToMap = (res: MetricTypes.Data): MetricTypes.StateDataMap => {
+export const convertToMap = (res: MetricTypes.Data<Timebox>): MetricTypes.StateDataMap => {
     const productSlides = getUnique(res, 'slideName');
     const rowNames = getUnique(res, 'rowName');
     const columnNames = getUnique(res, 'columnName').map((el) => el.key);
@@ -304,6 +306,6 @@ export const convertToMap = (res: MetricTypes.Data): MetricTypes.StateDataMap =>
     };
 };
 
-const getUniqueTickerItemParents = (data: MetricTypes.TickerItem[]): Array<string> => [
+const getUniqueTickerItemParents = (data: MetricTypes.TickerItem<Timebox>[]): Array<string> => [
     ...new Set(data.map((row) => row.tickerItemParent.text)),
 ];

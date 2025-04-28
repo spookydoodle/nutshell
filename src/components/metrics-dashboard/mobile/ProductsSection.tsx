@@ -1,5 +1,5 @@
 import { ProductsScroll } from "./ProductsScroll";
-import * as MetricTypes from "../types";
+import * as MetricTypes from "../metric-types";
 
 interface Props {
     item: MetricTypes.MainDataItem;

@@ -1,4 +1,4 @@
-import * as MetricTypes from "../components/metrics-dashboard/types";
+import * as MetricTypes from "../components/metrics-dashboard/metric-types";
 
 export const getScalingLabel = (scaling?: MetricTypes.Scaling): string => {
     return scaling === 1000000 ? 'M' : scaling === 1000 ? 'K' : '';

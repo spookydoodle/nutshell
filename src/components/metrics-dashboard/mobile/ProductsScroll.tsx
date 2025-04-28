@@ -4,7 +4,7 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Typography, useTheme } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { ProductImageTile } from "./ProductImageTile";
-import * as MetricTypes from "../types";
+import * as MetricTypes from "../metric-types";
 import { fontSizes } from "../../../styles";
 
 const useStyles = makeStyles((_theme: Theme) =>

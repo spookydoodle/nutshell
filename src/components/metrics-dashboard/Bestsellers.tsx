@@ -1,6 +1,6 @@
 import { Divider } from '@mui/material';
 import { ProductTiles } from "./ProductTiles";
-import * as MetricTypes from "./types";
+import * as MetricTypes from "./metric-types";
 
 interface Props {
     title: string;

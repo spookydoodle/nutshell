@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Skeleton } from '@mui/material';
 import { ImageComponent, ImgErrorBoundary } from "../SuspenseImg";
-import * as MetricTypes from "./types";
+import * as MetricTypes from "./metric-types";
 import { IMG_SERVER } from "../../img/cmd";
 const imgServer = `${IMG_SERVER}/misc`;
 const notFoundImg = `${imgServer}/not-found.png`;

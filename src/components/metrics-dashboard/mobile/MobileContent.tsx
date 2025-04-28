@@ -7,8 +7,7 @@ import { ScoreList } from "../../dataviz/ScoreList";
 import { NestedScoreList } from "../../dataviz/NestedScoreList";
 import { MobileProducts } from "./MobileProducts";
 import { Tabstrip } from "../Tabstrip";
-import * as Utils from "../../../utils";
-import * as MetricTypes from "../types";
+import * as MetricTypes from "../metric-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -49,7 +48,9 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    data: MetricTypes.Data;
+    mobileData: MetricTypes.StateDataMapMobile;
+    productSlides: MetricTypes.Dimension[];
+    // TODO: Rename
     chanIndex: number;
     handleColumnNameChange: (index: number) => void;
     timeboxIndex: number;
@@ -59,7 +60,8 @@ interface Props {
 }
 
 export const MobileContent: React.FC<Props> = ({
-    data,
+    mobileData,
+    productSlides,
     chanIndex,
     // handleColumnNameChange,
     timeboxIndex,
@@ -68,16 +70,6 @@ export const MobileContent: React.FC<Props> = ({
     primaryMeasureName
 }) => {
     const classes = useStyles();
-
-    const mobileData = React.useMemo(
-        () => Utils.Metrics.convertToMapMobile(data),
-        [data]
-    );
-
-    const productSlides = React.useMemo(
-        () => Utils.Metrics.getUnique(data, 'slideName'),
-        [data]
-    );
 
     return (
         <Box className={classes.swiperContainer}>

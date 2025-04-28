@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Typography, Tooltip, Theme } from '@mui/material';
 import { ProductImage } from "./ProductImage";
-import * as MetricTypes from "./types";
+import * as MetricTypes from "./metric-types";
 import { fontSizes } from "../../styles/themes";
 
 const useStyles = makeStyles((theme: Theme) =>
