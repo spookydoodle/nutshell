@@ -1,17 +1,17 @@
 import React from "react";
-import { MobileHeader } from "./MobileHeader";
-import { MobileContent } from "./MobileContent";
-import { Footer } from "./Footer";
+import { MobileHeader } from "../../../components/metrics-dashboard/mobile/MobileHeader";
+import { MobileContent } from "../../../components/metrics-dashboard/mobile/MobileContent";
+import { Footer } from "../../../components/metrics-dashboard/mobile/Footer";
+import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
 import { Slideshow } from "../../../logic/slideshow/slideshow";
-import * as Utils from "../../../utils";
-import { Data } from "../types";
+import * as Utils from "../coinflow-data-utils";
+import { Timebox } from "../coinflow-types";
 
 interface Props {
-    slideshow: Slideshow;
+    slideshow: Slideshow<MetricTypes.Data<Timebox>>;
 }
 
-// TODO: Generalize types
-export const Mobile: React.FC<Props> = ({ slideshow }) => {
+export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
     const [timeboxIndex, setTimeboxIndex] = React.useState(0);
     const [chanIndex, setChanIndex] = React.useState(0);
     const title = React.useMemo(() => slideshow.title ?? "", [slideshow]);
@@ -27,12 +27,22 @@ export const Mobile: React.FC<Props> = ({ slideshow }) => {
     );
 
     const columnNames = React.useMemo(
-        () => Utils.Metrics.getUnique(slideshow.data as Data, 'columnName'),
+        () => Utils.getUnique(slideshow.data, 'columnName'),
         [slideshow.data]
     );
 
     const timeboxes = React.useMemo(
-        () => Utils.Metrics.getUniqueTimeboxes(slideshow.data as Data),
+        () => Utils.getUniqueTimeboxes(slideshow.data),
+        [slideshow.data]
+    );
+
+    const mobileData = React.useMemo(
+        () => Utils.convertToMapMobile(slideshow.data),
+        [slideshow.data]
+    );
+
+    const productSlides = React.useMemo(
+        () => Utils.getUnique(slideshow.data, 'slideName'),
         [slideshow.data]
     );
 
@@ -49,7 +59,8 @@ export const Mobile: React.FC<Props> = ({ slideshow }) => {
             />
 
             <MobileContent
-                data={slideshow.data as Data}
+                mobileData={mobileData}
+                productSlides={productSlides}
                 timeboxIndex={timeboxIndex}
                 chanIndex={chanIndex}
                 handleColumnNameChange={handleColumnNameChange}

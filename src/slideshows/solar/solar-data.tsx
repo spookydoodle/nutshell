@@ -6,7 +6,7 @@ import {
     METRIC_DEF,
 } from "./solar-system-data";
 import * as Utils from "../../utils";
-import { StateDataMap, TickerStateData, SlideData, Datum, MainDataItem } from "../../components/metrics-dashboard/types";
+import { StateDataMap, TickerStateData, SlideData, Datum, MainDataItem } from "../../components/metrics-dashboard/metric-types";
 
 const getMetricDelta = (val: number, metric: Metric): number => {
     return val / METRIC_DATA[metric].data["Earth"];

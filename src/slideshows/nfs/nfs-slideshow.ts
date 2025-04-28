@@ -1,11 +1,11 @@
 import { ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
-import { NutshellData } from "../../components/nfs/types";
+import { NutshellData } from "./nfs-types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { NutshellNFS } from "../../pages";
 import { imgPerSlide } from "./nfs-data";
-import { SmallScreenMessageNfs } from "../../components/nfs/SmallScreenMessageNfs";
+import { SmallScreenMessageNfs } from "./components/SmallScreenMessageNfs";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public path = '/need-for-nutshell';

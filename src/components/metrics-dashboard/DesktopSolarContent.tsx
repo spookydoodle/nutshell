@@ -8,7 +8,7 @@ import { ImgTiles } from "./ImgTiles";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { SlidesStateData, SlideData } from "../../types/types";
 import * as Hooks from '../../hooks';
-import { StateDataMap } from "./types";
+import { StateDataMap } from "./metric-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({

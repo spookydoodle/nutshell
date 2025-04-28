@@ -4,17 +4,17 @@ export interface Dimension {
     shortText?: string;
 }
 
-export interface Measures {
-    primaryMeasure: Measure;
+export interface Measures<TTimebox extends string> {
+    primaryMeasure: Measure<TTimebox>;
     /**
      * Difference from a reference measure value.
      */
-    primaryMeasureDelta: Measure;
-    secondaryMeasure?: Measure;
+    primaryMeasureDelta: Measure<TTimebox>;
+    secondaryMeasure?: Measure<TTimebox>;
 }
 
-export interface Measure extends MeasureOptions {
-    valueByTimebox: ValueByTimebox;
+export interface Measure<TTimebox extends string> extends MeasureOptions {
+    valueByTimebox: ValueByTimebox<TTimebox>;
 }
 
 export interface MeasureOptions {
@@ -31,14 +31,14 @@ export interface MeasureOptions {
     prefix?: string;
 }
 
-export type ValueByTimebox = {
-    [key in string]: number;
+export type ValueByTimebox<T extends string> = {
+    [key in T]: number;
 }
 
 export type Scaling = 1 | 1000 | 1000000;
 export type Decimals = 0 | 1 | 2 | 3 | 4;
 
-export interface Data {
+export interface Data<TTimebox extends string = string> {
     /**
      * Name of the primary measure to be displayed in top left title of the dashboard.
      */
@@ -46,26 +46,26 @@ export interface Data {
     /**
      * Defines data to display at all times in tile components above dynamic content, such as charts or products.
      */
-    tiles: Tile[];
+    tiles: Tile<TTimebox>[];
     /**
      * Defines data to display in horizontal bar charts. 
      * Each element will be displayed on a separate slide.
      */
-    charts: ChartData[]
+    charts: ChartData<TTimebox>[]
     /**
      * Defines data to display in the products section. Products will be grouped on each slide by `slideName`.
      */
-    products: ProductsItem[];
+    products: ProductsItem<TTimebox>[];
     /**
      * Defines data to display in the footer ticker component.
      */
-    ticker: TickerItem[];
+    ticker: TickerItem<TTimebox>[];
 }
 
-export interface ChartData {
+export interface ChartData<TTimebox extends string> {
     characteristicName: string;
     characteristicNameShort: string;
-    data: ChartBreakdownItem[];
+    data: ChartBreakdownItem<TTimebox>[];
 }
 
 export interface Chart {
@@ -76,15 +76,15 @@ export interface Chart {
 /**
  * Data required to display a KPI in a tile component.
  */
-export interface Tile {
+export interface Tile<TTimebox extends string> {
     columnName: Dimension;
-    measures: Measures;
+    measures: Measures<TTimebox>;
 }
 
 /**
  * Data required to display an element in the footer ticker.
  */
-export interface TickerItem {
+export interface TickerItem<TTimebox extends string> {
     /**
      * Used to group the sequence of ticker elements.
      */
@@ -94,22 +94,22 @@ export interface TickerItem {
      */
     tickerItem: Dimension;
     columnName: Dimension;
-    measures: Measures;
+    measures: Measures<TTimebox>;
 }
 
 /**
  * Data required to render a single bar in a horizontal bar chart.
  */
-export interface ChartBreakdownItem {
+export interface ChartBreakdownItem<TTimebox extends string> {
     columnName: Dimension;
     characteristicValue: Dimension;
-    measures: Measures;
+    measures: Measures<TTimebox>;
 }
 
 /**
  * Data required to show case a single product.
  */
-export interface ProductsItem {
+export interface ProductsItem<TTimebox extends string> {
     /**
      * Creates a slide per each
      */
@@ -131,17 +131,17 @@ export interface ProductsItem {
      */
     attributeSecondary: Dimension;
     imageURL: Dimension;
-    measures: Measures;
+    measures: Measures<TTimebox>;
 }
 
-export type DataValue = Tile[] | ChartBreakdownItem[] | TickerItem[] | ProductsItem[];
+export type DataValue<TTimebox extends string> = Tile<TTimebox>[] | ChartBreakdownItem<TTimebox>[] | TickerItem<TTimebox>[] | ProductsItem<TTimebox>[];
 
-export type DataItem =
-    | ChartBreakdownItem
-    | Tile
-    | ChartBreakdownItem
-    | TickerItem
-    | ProductsItem;
+export type DataItem<TTimebox extends string> =
+    | ChartBreakdownItem<TTimebox>
+    | Tile<TTimebox>
+    | ChartBreakdownItem<TTimebox>
+    | TickerItem<TTimebox>
+    | ProductsItem<TTimebox>;
 
 export interface Datum {
     key?: string;
@@ -299,9 +299,9 @@ type TickerStateData = Map<string, TickerData>;
  */
 type TickerData = Map<string, Datum[]>;
 
-interface StateType {
+interface StateType<TTimebox extends string> {
     whoAmIRequestDone: boolean;
-    data?: Data;
+    data?: Data<TTimebox>;
 }
 
 interface DataItemType {

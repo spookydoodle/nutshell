@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, Typography } from '@mui/material';
 import { ProductTileCol } from "./ProductTileCol";
 import { ProductTileRow } from "./ProductTileRow";
-import * as MetricTypes from "./types";
+import * as MetricTypes from "./metric-types";
 import { fontSizes } from "../../styles/themes";
 
 const useStyles = makeStyles((_theme: Theme) =>

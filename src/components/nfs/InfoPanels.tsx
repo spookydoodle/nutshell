@@ -2,7 +2,7 @@ import React from "react";
 import { Rating } from './Rating';
 import { TitlePanels } from "../metrics-dashboard/TitlePanels";
 import * as Utils from "../../utils";
-import * as Types from "./types";
+import * as Types from "../../slideshows/nfs/nfs-types";
 
 const unknownTx = [
     "Who knows...",

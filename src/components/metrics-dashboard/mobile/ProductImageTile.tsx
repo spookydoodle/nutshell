@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Typography, Theme } from '@mui/material';
 import { ProductImage } from "../ProductImage";
-import * as MetricTypes from "../types";
+import * as MetricTypes from "../metric-types";
 import { fontSizes } from "../../../styles";
 
 const useStyles = makeStyles((theme: Theme) =>

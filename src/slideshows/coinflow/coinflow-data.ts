@@ -1,7 +1,8 @@
-import * as MetricTypes from "../../components/metrics-dashboard/types";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { IMG_SERVER } from "../../img/cmd";
+import { Timebox } from "./coinflow-types";
 
-const data: MetricTypes.Data = {
+const data: MetricTypes.Data<Timebox> = {
     "primaryMeasureName": "Coinflow",
     "tiles": [
         {

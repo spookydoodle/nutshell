@@ -3,7 +3,7 @@ import React from "react";
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
-import * as MetricTypes from '../../components/metrics-dashboard/types';
+import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
 import * as Utils from "../../utils";
 import { Img } from '../../layouts/images';
 
@@ -54,8 +54,8 @@ export interface SlideComponentProps<T> {
     slideIndex: number;
 }
 
-export interface SmallScreenComponentProps {
-    slideshow: Slideshow;
+export interface SmallScreenComponentProps<T> {
+    slideshow: Slideshow<T>;
 }
 
 export type SmallScreenComponentBreakpoint = 'sm' | 'md';
@@ -274,7 +274,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * If provided, will be displayed on xs screen size.
      */
-    public abstract smallScreenComponent: React.ComponentType<SmallScreenComponentProps>;
+    public abstract smallScreenComponent: React.ComponentType<SmallScreenComponentProps<T>>;
 
     /**
      * Function which extends theme.

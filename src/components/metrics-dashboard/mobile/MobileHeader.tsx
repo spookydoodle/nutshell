@@ -20,7 +20,8 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     timeboxIndex: number;
-    handleTimeboxChange: (index: number) => void
+    handleTimeboxChange: (index: number) => void;
+    // TODO: Rename
     chanIndex: number;
     handleColumnNameChange: (index: number) => void;
     columnNames: string[];

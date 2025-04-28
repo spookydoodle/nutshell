@@ -1,14 +1,15 @@
 import { ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
-import * as MetricTypes from "../../components/metrics-dashboard/types";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import { Mobile } from "../../components/metrics-dashboard/mobile/Mobile";
-import { convertToMap } from "../../utils/metrics";
-import { CoinflowSlide } from "../../components/metrics-dashboard/CoinflowSlide";
+import { CoinflowMobile } from "./components/CoinflowMobile";
+import { CoinflowSlide } from "./components/CoinflowSlide";
+import { convertToMap } from "./coinflow-data-utils";
+import { Timebox } from "./coinflow-types";
 
-export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
+export class CoinflowSlideshow extends Slideshow<MetricTypes.Data<Timebox>> {
     public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';
@@ -50,7 +51,7 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data> {
     };
 
     public slideComponent = CoinflowSlide;
-    public smallScreenComponent = Mobile;
+    public smallScreenComponent = CoinflowMobile;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({
         palette: {

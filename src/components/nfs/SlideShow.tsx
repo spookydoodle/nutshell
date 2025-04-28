@@ -9,7 +9,7 @@ import { imgPerSlide } from "../../slideshows/nfs/nfs-data";
 import { Progress } from "./Progress";
 import { InfoPanels } from "./InfoPanels";
 import * as Hooks from '../../hooks';
-import { NutshellData } from "./types";
+import { NutshellData } from "../../slideshows/nfs/nfs-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({

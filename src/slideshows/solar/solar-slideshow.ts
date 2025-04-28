@@ -1,11 +1,11 @@
 import { ThemeOptions } from "@mui/material";
-import * as MetricTypes from "../../components/metrics-dashboard/types";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { DesktopSolarContent } from "../../components/metrics-dashboard/DesktopSolarContent";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as Types from "../../types";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import { SmallScreenMessageSolar } from "../../components/metrics-dashboard/SmallScreenMessageSolar";
+import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
 
 export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/solar';
