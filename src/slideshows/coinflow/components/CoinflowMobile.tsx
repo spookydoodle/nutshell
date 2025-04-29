@@ -2,13 +2,12 @@ import React from "react";
 import { MobileHeader } from "../../../components/metrics-dashboard/mobile/MobileHeader";
 import { MobileContent } from "../../../components/metrics-dashboard/mobile/MobileContent";
 import { Footer } from "../../../components/metrics-dashboard/mobile/Footer";
-import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
 import { Slideshow } from "../../../logic/slideshow/slideshow";
 import * as Utils from "../coinflow-data-utils";
-import { Timebox } from "../coinflow-types";
+import * as CoinflowTypes from "../coinflow-types";
 
 interface Props {
-    slideshow: Slideshow<MetricTypes.Data<Timebox>>;
+    slideshow: Slideshow<CoinflowTypes.Data>;
 }
 
 export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {

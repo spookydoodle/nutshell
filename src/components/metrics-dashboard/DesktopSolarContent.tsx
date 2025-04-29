@@ -95,8 +95,8 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
         <>
             <NavTitles
                 animationsInitialized={animationsInitialized}
-                current={slides[slideIndex].headers}
-                next={slides[(slideIndex + 1) % totalLen].headers}
+                current={slides[slideIndex].header}
+                next={slides[(slideIndex + 1) % totalLen].header}
                 play={play}
                 index={slideIndex}
                 setIndex={setSlideIndex}
@@ -107,7 +107,7 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
                     )
                 }
                 sequences={sequences}
-                currentSequence={slides[slideIndex].headers.sequence}
+                currentSequence={slides[slideIndex].header.sequence}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (
                 <Content

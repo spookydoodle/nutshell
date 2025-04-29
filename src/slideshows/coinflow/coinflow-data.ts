@@ -1,8 +1,7 @@
-import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { IMG_SERVER } from "../../img/cmd";
-import { Timebox } from "./coinflow-types";
+import * as CoinflowTypes from "./coinflow-types";
 
-const data: MetricTypes.Data<Timebox> = {
+const data: CoinflowTypes.Data = {
     "primaryMeasureName": "Coinflow",
     "tiles": [
         {
@@ -681,8 +680,7 @@ const data: MetricTypes.Data<Timebox> = {
     ],
     "charts": [
         {
-            "characteristicName": "Realms",
-            "characteristicNameShort": "REALMS",
+            "category": "Realms",
             "data": [
                 {
                     "columnName": {
@@ -1669,8 +1667,7 @@ const data: MetricTypes.Data<Timebox> = {
             ]
         },
         {
-            "characteristicName": "Sectors",
-            "characteristicNameShort": "SECTORS",
+            "category": "Sectors",
             "data": [
                 {
                     "columnName": {

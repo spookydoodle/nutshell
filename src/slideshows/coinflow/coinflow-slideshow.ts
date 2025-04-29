@@ -7,9 +7,9 @@ import { getImgArr } from "../../layouts/images";
 import { CoinflowMobile } from "./components/CoinflowMobile";
 import { CoinflowSlide } from "./components/CoinflowSlide";
 import { convertToMap } from "./coinflow-data-utils";
-import { Timebox } from "./coinflow-types";
+import * as CoinflowTypes from "./coinflow-types";
 
-export class CoinflowSlideshow extends Slideshow<MetricTypes.Data<Timebox>> {
+export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';
@@ -37,8 +37,8 @@ export class CoinflowSlideshow extends Slideshow<MetricTypes.Data<Timebox>> {
 
     public getPlayerLabels = (): Types.PlayerLabel[] => {
         return [...this.mappedData.slides.values()][0].map((slide) => ({ 
-            label: slide.headers.titleSecondaryShort,
-            sequenceName: slide.headers.category === 'Products' ? 'Products' : 'Charts'
+            label: slide.header.titleSecondaryShort,
+            sequenceName: slide.header.category === 'Products' ? 'Products' : 'Charts'
         }));
     };
 

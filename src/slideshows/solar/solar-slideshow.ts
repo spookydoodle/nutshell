@@ -29,7 +29,7 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     };
 
     public getPlayerLabels = (): Types.PlayerLabel[] => {
-        return [...this.data.slides.entries()].map(([sequenceName, slides]) => slides.map((slide): Types.PlayerLabel => ({ label: slide.headers.titleSecondaryShort, sequenceName }))).flat();
+        return [...this.data.slides.entries()].map(([sequenceName, slides]) => slides.map((slide): Types.PlayerLabel => ({ label: slide.header.titleSecondaryShort, sequenceName }))).flat();
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number): number => {

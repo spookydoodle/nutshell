@@ -1,15 +1,18 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, useMediaQuery } from '@mui/material';
+import PublicIcon from "@mui/icons-material/Public";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import LoyaltyIcon from "@mui/icons-material/Loyalty";
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
-import { NavTitles } from "../../../components/metrics-dashboard/NavTitles";
+import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
 import { Content } from "../../../components/metrics-dashboard/Content";
 import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "../../../components/metrics-dashboard/Bestsellers";
 import * as Hooks from '../../../hooks';
 import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
 import { convertToMap } from "../coinflow-data-utils";
-import { Timebox } from "../coinflow-types";
+import * as CoinflowTypes from "../coinflow-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -33,14 +36,14 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data<Timebox>>> = ({ slideshow }) => {
+export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = ({ slideshow }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const hiddenMdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
     const appId = Hooks.useAppId();
+    const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [play] = Hooks.useSubjectState(slideshow.play$);
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
-    const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
     const slidesData = React.useMemo(() => convertToMap(slideshow.data).slides, [slideshow]);
 
@@ -52,6 +55,24 @@ export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data<Timebo
     const totalLen = slides.length;
     const seqLen = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
     const sequences = dataKeys;
+
+    const breadcrumbItems = React.useMemo(
+        (): { name: CoinflowTypes.Category; icon: React.ComponentType; }[] => [
+            {
+                name: "Realms",
+                icon: PublicIcon,
+            },
+            {
+                name: "Sectors",
+                icon: BusinessCenterIcon,
+            },
+            {
+                name: "Products",
+                icon: LoyaltyIcon,
+            }
+        ],
+        []
+    );
 
     const getMaxRows = (_i: number) =>
         Math.max(
@@ -102,24 +123,29 @@ export const CoinflowSlide: React.FC<SlideComponentProps<MetricTypes.Data<Timebo
         setSlideIndex((prev) => ((prev % seqLen) + seqLen * seqInd));
     };
 
-    const onBreadClick = (index: number) => {
-        setSlideIndex(
-            (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
-        );
-    };
+    const onBreadcrumbClick = React.useCallback(
+        (name: CoinflowTypes.Category) => {
+            // TODO: Fix
+            const index: number = name === 'Realms' ? 0 : name === 'Sectors' ? 1 : 2;
+            setSlideIndex(
+                (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
+            );
+        },
+        []
+    );
     
     return (
         <>
-            <NavTitles
-                animationsInitialized={animationsInitialized}
-                current={slides[slideIndex].headers}
-                next={slides[(slideIndex + 1) % totalLen].headers}
+            <NavigationBar<CoinflowTypes.Category>
+                breadcrumbItems={breadcrumbItems}
+                activeBreadcrumbItem={breadcrumbItems[slideIndex % seqLen < 3 ? slideIndex % seqLen : 2].name}
+                pauseAnimations={animationsInitialized}
+                header={slides[slideIndex].header}
+                next={slides[(slideIndex + 1) % totalLen].header}
                 onSequenceClick={onSequenceClick}
-                index={slideIndex}
-                seqLen={seqLen}
-                onBreadClick={onBreadClick}
+                onBreadcrumbClick={onBreadcrumbClick}
                 sequences={sequences}
-                currentSequence={slides[slideIndex].headers.sequence}
+                currentSequence={slides[slideIndex].header.sequence}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => {
                 if (!(isLgDown && i === 1) && !(hiddenMdDown && i > 0)) {
