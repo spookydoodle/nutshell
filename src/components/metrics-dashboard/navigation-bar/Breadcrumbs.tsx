@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, Tooltip, Typography } from '@mui/material';
-import { animations } from "../../styles/animations";
-import { fontSizes } from "../../styles/themes";
+import { animations } from "../../../styles/animations";
+import { fontSizes } from "../../../styles/themes";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -69,33 +69,28 @@ export interface BreadcrumbItem<T> {
 }
 interface Props<TCategory extends string> {
     items: BreadcrumbItem<TCategory>[];
-    animationsInitialized: boolean;
-    index?: number;
+    activeItem: TCategory;
+    pauseAnimations: boolean;
     color?: "textSecondary" | "white";
-    onBreadClick?: (index: number) => void;
+    onClick?: (item: TCategory) => void;
 }
 
 export function Breadcrumbs <TCategory extends string>({
     items,
-    animationsInitialized = true,
-    index,
+    activeItem,
+    pauseAnimations = true,
     color = "textSecondary",
-    onBreadClick
+    onClick
 }: Props<TCategory>) {
     const classes = useStyles();
-
-    const handleClick = React.useCallback(
-        (i: number) => () => onBreadClick?.(i),
-        [onBreadClick]
-    );
 
     return (
         <Grid
             container
             justifyContent="center"
-            className={classNames(classes.grid, classes.slideUp, { [classes.pauseAnim]: animationsInitialized })}
+            className={classNames(classes.grid, classes.slideUp, { [classes.pauseAnim]: pauseAnimations })}
         >
-            {items.map((item, i) => (
+            {items.map((item) => (
                 <Tooltip
                     key={item.name}
                     title={`Switch to ${item.name}`}
@@ -104,9 +99,9 @@ export function Breadcrumbs <TCategory extends string>({
                 >
                     <Box
                         className={classNames(classes.breadcrumb, {
-                            [color === "white" ? classes.activeWhite : classes.active]: index === i,
+                            [color === "white" ? classes.activeWhite : classes.active]: activeItem === item.name,
                         })}
-                        onClick={handleClick(i)}
+                        onClick={() => onClick?.(item.name)}
                     >
                         <item.icon className={classes.breadcrumbIcon} />
                         <Typography

@@ -5,7 +5,7 @@ import PublicIcon from "@mui/icons-material/Public";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import LoyaltyIcon from "@mui/icons-material/Loyalty";
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
-import { NavTitles } from "../../../components/metrics-dashboard/NavTitles";
+import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
 import { Content } from "../../../components/metrics-dashboard/Content";
 import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
 import { Bestsellers } from "../../../components/metrics-dashboard/Bestsellers";
@@ -57,7 +57,7 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
     const sequences = dataKeys;
 
     const breadcrumbItems = React.useMemo(
-        (): { name: string; icon: React.ComponentType; }[] => [
+        (): { name: CoinflowTypes.Category; icon: React.ComponentType; }[] => [
             {
                 name: "Realms",
                 icon: PublicIcon,
@@ -123,23 +123,27 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
         setSlideIndex((prev) => ((prev % seqLen) + seqLen * seqInd));
     };
 
-    const onBreadClick = (index: number) => {
-        setSlideIndex(
-            (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
-        );
-    };
+    const onBreadcrumbClick = React.useCallback(
+        (name: CoinflowTypes.Category) => {
+            // TODO: Fix
+            const index: number = name === 'Realms' ? 0 : name === 'Sectors' ? 1 : 2;
+            setSlideIndex(
+                (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
+            );
+        },
+        []
+    );
     
     return (
         <>
-            <NavTitles
+            <NavigationBar<CoinflowTypes.Category>
                 breadcrumbItems={breadcrumbItems}
-                animationsInitialized={animationsInitialized}
+                activeBreadcrumbItem={breadcrumbItems[slideIndex % seqLen < 3 ? slideIndex % seqLen : 2].name}
+                pauseAnimations={animationsInitialized}
                 header={slides[slideIndex].header}
                 next={slides[(slideIndex + 1) % totalLen].header}
                 onSequenceClick={onSequenceClick}
-                index={slideIndex}
-                seqLen={seqLen}
-                onBreadClick={onBreadClick}
+                onBreadcrumbClick={onBreadcrumbClick}
                 sequences={sequences}
                 currentSequence={slides[slideIndex].header.sequence}
             />

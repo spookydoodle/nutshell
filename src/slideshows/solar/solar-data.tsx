@@ -51,7 +51,7 @@ const metricSlides: [string, SlideData][] = [
             },
             data: new Map(
                 Object.entries(METRIC_DATA)
-                    .filter((el, i) => i >= n * 3 && i < (n + 1) * 3)
+                    .filter((_el, i) => i >= n * 3 && i < (n + 1) * 3)
                     .map(([metric, metricData]): [string, Item] => [
                         metric,
                         {
@@ -166,10 +166,10 @@ const tickerData: TickerStateData = new Map([
     [
         "Solar System Metrics VS. the Earth",
         new Map(
-            Object.entries(METRIC_DATA).map(([metric, metricData]) => [
+            Object.entries(METRIC_DATA).map(([metric, metricData]): [string, Datum[]] => [
                 `${metric} (${metricData.unit})`,
 
-                Object.entries(metricData.data).map(([planet, value]) => {
+                Object.entries(metricData.data).map(([planet, value]): Datum => {
                     const delta = getMetricDelta(value, metric as Metric);
 
                     return {
