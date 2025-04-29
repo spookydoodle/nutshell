@@ -7,9 +7,9 @@ import { getImgArr } from "../../layouts/images";
 import { CoinflowMobile } from "./components/CoinflowMobile";
 import { CoinflowSlide } from "./components/CoinflowSlide";
 import { convertToMap } from "./coinflow-data-utils";
-import { Timebox } from "./coinflow-types";
+import * as CoinflowTypes from "./coinflow-types";
 
-export class CoinflowSlideshow extends Slideshow<MetricTypes.Data<Timebox>> {
+export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public path = '/coinflow';
     public name = '_COINFLOW_DASHBOARD';
     public shortName = '_COINFLOW';

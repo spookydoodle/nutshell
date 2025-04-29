@@ -38,30 +38,6 @@ export type ValueByTimebox<T extends string> = {
 export type Scaling = 1 | 1000 | 1000000;
 export type Decimals = 0 | 1 | 2 | 3 | 4;
 
-export interface Data<TTimebox extends string = string> {
-    /**
-     * Name of the primary measure to be displayed in top left title of the dashboard.
-     */
-    primaryMeasureName: string;
-    /**
-     * Defines data to display at all times in tile components above dynamic content, such as charts or products.
-     */
-    tiles: Tile<TTimebox>[];
-    /**
-     * Defines data to display in horizontal bar charts. 
-     * Each element will be displayed on a separate slide.
-     */
-    charts: ChartData<TTimebox>[]
-    /**
-     * Defines data to display in the products section. Products will be grouped on each slide by `slideName`.
-     */
-    products: ProductsItem<TTimebox>[];
-    /**
-     * Defines data to display in the footer ticker component.
-     */
-    ticker: TickerItem<TTimebox>[];
-}
-
 export interface ChartData<TTimebox extends string> {
     characteristicName: string;
     characteristicNameShort: string;
@@ -228,8 +204,6 @@ type StateDataItem = Array<{
     }>;
 }>;
 
-type Category = "Realms" | "Sectors" | "Products";
-
 type ComponentType = "bar-chart" | "items" | "tiles" | "ticker";
 
 // Example: YTD -> Column Name 1 -> tiles -> Data
@@ -299,11 +273,6 @@ type TickerStateData = Map<string, TickerData>;
  */
 type TickerData = Map<string, Datum[]>;
 
-interface StateType<TTimebox extends string> {
-    whoAmIRequestDone: boolean;
-    data?: Data<TTimebox>;
-}
-
 interface DataItemType {
     title: string;
     src: string;
@@ -358,10 +327,8 @@ interface LandingType {
 type Edge = "top" | "bottom" | "left" | "right";
 
 export type {
-    Category,
     StateDataMap,
     StateDataMapMobile,
-    StateType,
     ComponentType,
     DataItemType,
     ActionType,

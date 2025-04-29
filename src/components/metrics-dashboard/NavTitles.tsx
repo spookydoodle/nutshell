@@ -3,8 +3,8 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Grid, Typography, Tooltip, useMediaQuery } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { fontSizes } from "../../styles/themes";
-import { BreadCrumbs } from "./BreadCrumbs";
 import { Header } from "../../types/types";
+import { BreadcrumbItem, Breadcrumbs } from "./Breadcrumbs";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -80,6 +80,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 interface Props {
+    breadcrumbItems: BreadcrumbItem[]
     animationsInitialized?: boolean;
     current: Header;
     next: Header;
@@ -92,6 +93,7 @@ interface Props {
 }
 
 export const NavTitles: React.FC<Props> = ({
+    breadcrumbItems,
     animationsInitialized = true,
     current,
     onSequenceClick,
@@ -151,7 +153,8 @@ export const NavTitles: React.FC<Props> = ({
 
             {!isLgDown ? (
                 <Grid item xs={4}>
-                    <BreadCrumbs
+                    <Breadcrumbs
+                        items={breadcrumbItems}
                         animationsInitialized={animationsInitialized}
                         index={index % seqLen < 3 ? index % seqLen : 2}
                         color="white"

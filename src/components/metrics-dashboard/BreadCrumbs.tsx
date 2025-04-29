@@ -4,17 +4,13 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, Tooltip, Typography } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { fontSizes } from "../../styles/themes";
-import PublicIcon from "@mui/icons-material/Public";
-import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
-import LoyaltyIcon from "@mui/icons-material/Loyalty";
-import { Category } from './metric-types';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         grid: {
             columnGap: '15px'
         },
-        breadCrumb: {
+        breadcrumb: {
             textTransform: "uppercase",
             color: "rgba(255, 255, 255)",
             opacity: 0.5,
@@ -42,7 +38,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         active: {},
         activeWhite: {},
-        breadCrumbText: {
+        breadcrumbText: {
             fontSize: fontSizes.h7,
             [theme.breakpoints.only("xs")]: {
                 fontSize: fontSizes.h8,
@@ -50,7 +46,7 @@ const useStyles = makeStyles((theme: Theme) =>
             lineHeight: "20px",
             marginTop: "5px",
         },
-        breadCrumbIcon: {
+        breadcrumbIcon: {
             fontSize: fontSizes.h1,
             [theme.breakpoints.down("sm")]: {
                 fontSize: fontSizes.h2,
@@ -67,38 +63,26 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
+export interface BreadcrumbItem<T> {
+    name: T;
+    icon: React.ComponentType<{ className?: string }>;
+}
+interface Props<TCategory extends string> {
+    items: BreadcrumbItem<TCategory>[];
     animationsInitialized: boolean;
     index?: number;
     color?: "textSecondary" | "white";
     onBreadClick?: (index: number) => void;
 }
 
-export const BreadCrumbs: React.FC<Props> = ({
+export function Breadcrumbs <TCategory extends string>({
+    items,
     animationsInitialized = true,
     index,
     color = "textSecondary",
     onBreadClick
-}) => {
+}: Props<TCategory>) {
     const classes = useStyles();
-
-    const items = React.useMemo(
-        (): { name: Category; icon: React.ReactNode; }[] => [
-            {
-                name: "Realms",
-                icon: <PublicIcon className={classes.breadCrumbIcon} />,
-            },
-            {
-                name: "Sectors",
-                icon: <BusinessCenterIcon className={classes.breadCrumbIcon} />,
-            },
-            {
-                name: "Products",
-                icon: <LoyaltyIcon className={classes.breadCrumbIcon} />,
-            }
-        ],
-        [classes]
-    );
 
     const handleClick = React.useCallback(
         (i: number) => () => onBreadClick?.(i),
@@ -119,16 +103,16 @@ export const BreadCrumbs: React.FC<Props> = ({
                     arrow
                 >
                     <Box
-                        className={classNames(classes.breadCrumb, {
+                        className={classNames(classes.breadcrumb, {
                             [color === "white" ? classes.activeWhite : classes.active]: index === i,
                         })}
                         onClick={handleClick(i)}
                     >
-                        {item.icon}
+                        <item.icon className={classes.breadcrumbIcon} />
                         <Typography
                             color="inherit"
                             noWrap
-                            className={classes.breadCrumbText}
+                            className={classes.breadcrumbText}
                         >
                             {item.name}
                         </Typography>

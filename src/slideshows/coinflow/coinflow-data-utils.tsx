@@ -1,27 +1,27 @@
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import * as Types from "../../types";
 import * as Utils from "../../utils";
-import { Timebox } from "./coinflow-types";
+import * as CoinflowTypes from "./coinflow-types";
 
 const filterByPositive = (
-    data: MetricTypes.DataValue<Timebox>,
+    data: MetricTypes.DataValue<CoinflowTypes.Timebox>,
     columnName: string,
-    timebox: Timebox
-): MetricTypes.DataItem<Timebox>[] => {
+    timebox: CoinflowTypes.Timebox
+): MetricTypes.DataItem<CoinflowTypes.Timebox>[] => {
     return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueByTimebox[timebox]) > 0);
 };
 
 const filterByDimension = (
-    data: MetricTypes.ChartBreakdownItem<Timebox>[],
+    data: MetricTypes.ChartBreakdownItem<CoinflowTypes.Timebox>[],
     name: string
-): Array<MetricTypes.DataItem<Timebox>> => {
+): Array<MetricTypes.DataItem<CoinflowTypes.Timebox>> => {
     return data.filter((row) => row.characteristicValue.key === name);
 };
 
 const getTileData = (
-    data: MetricTypes.DataValue<Timebox>,
+    data: MetricTypes.DataValue<CoinflowTypes.Timebox>,
     columnName: string,
-    timebox: Timebox
+    timebox: CoinflowTypes.Timebox
 ): MetricTypes.Datum[] => {
     const tiles = filterByPositive(data, columnName, timebox);
 
@@ -42,12 +42,12 @@ const getTileData = (
 };
 
 const getChartsData = (
-    data: MetricTypes.DataValue<Timebox>,
+    data: MetricTypes.DataValue<CoinflowTypes.Timebox>,
     columnName: string,
-    timebox: Timebox,
-    tickerItemsData?: MetricTypes.TickerItem<Timebox>[]
+    timebox: CoinflowTypes.Timebox,
+    tickerItemsData?: MetricTypes.TickerItem<CoinflowTypes.Timebox>[]
 ): MetricTypes.Datum[] => {
-    const charts = filterByPositive(data, columnName, timebox) as MetricTypes.ChartBreakdownItem<Timebox>[];
+    const charts = filterByPositive(data, columnName, timebox) as MetricTypes.ChartBreakdownItem<CoinflowTypes.Timebox>[];
 
     return charts.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -69,9 +69,9 @@ const getChartsData = (
 };
 
 const getTickerItemsData = (
-    data: MetricTypes.TickerItem<Timebox>[],
+    data: MetricTypes.TickerItem<CoinflowTypes.Timebox>[],
     columnNames: Array<string>,
-    timebox: Timebox,
+    timebox: CoinflowTypes.Timebox,
     tickerItemParent?: string,
     withTimebox?: boolean
 ): MetricTypes.Datum[] => {
@@ -98,14 +98,14 @@ const getTickerItemsData = (
 };
 
 const getProductsData = (
-    data: MetricTypes.DataValue<Timebox>,
+    data: MetricTypes.DataValue<CoinflowTypes.Timebox>,
     columnName: string,
-    timebox: Timebox,
+    timebox: CoinflowTypes.Timebox,
     slideName: string,
     rowName: MetricTypes.Dimension
 ): MetricTypes.Datum[] => {
     // Fix type casting
-    return (filterByPositive(data, columnName, timebox) as MetricTypes.ProductsItem<Timebox>[])
+    return (filterByPositive(data, columnName, timebox) as MetricTypes.ProductsItem<CoinflowTypes.Timebox>[])
         .filter((row) => row.slideName.key === slideName && row.rowName.key === rowName.key)
         .map((row) => {
             const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -133,7 +133,7 @@ const getProductsData = (
         .filter((row, i) => row.primary > 0 && i < 5);
 };
 
-export const getUnique = (res: MetricTypes.Data<Timebox>, key: 'slideName' | 'columnName' | 'rowName') => {
+export const getUnique = (res:CoinflowTypes.Data, key: 'slideName' | 'columnName' | 'rowName') => {
     const unique: MetricTypes.Dimension[] = [];
 
     for (const product of res.products) {
@@ -145,11 +145,11 @@ export const getUnique = (res: MetricTypes.Data<Timebox>, key: 'slideName' | 'co
     return unique;
 };
 
-export const getUniqueTimeboxes = (res: MetricTypes.Data<Timebox>): Timebox[] => {
-    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueByTimebox) as Timebox[]).flat(1))];
+export const getUniqueTimeboxes = (res:CoinflowTypes.Data): CoinflowTypes.Timebox[] => {
+    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueByTimebox) as CoinflowTypes.Timebox[]).flat(1))];
 };
 
-export const convertToMapMobile = (res: MetricTypes.Data<Timebox>): MetricTypes.StateDataMapMobile => {
+export const convertToMapMobile = (res:CoinflowTypes.Data): MetricTypes.StateDataMapMobile => {
     const productSlides = getUnique(res, 'slideName');
     const rowNames = getUnique(res, 'rowName');
     const columnNames = getUnique(res, 'columnName').map((el) => el.text);
@@ -198,7 +198,7 @@ export const convertToMapMobile = (res: MetricTypes.Data<Timebox>): MetricTypes.
     );
 };
 
-export const convertToMap = (res: MetricTypes.Data<Timebox>): MetricTypes.StateDataMap => {
+export const convertToMap = (res:CoinflowTypes.Data): MetricTypes.StateDataMap => {
     const productSlides = getUnique(res, 'slideName');
     const rowNames = getUnique(res, 'rowName');
     const columnNames = getUnique(res, 'columnName').map((el) => el.key);
@@ -306,6 +306,6 @@ export const convertToMap = (res: MetricTypes.Data<Timebox>): MetricTypes.StateD
     };
 };
 
-const getUniqueTickerItemParents = (data: MetricTypes.TickerItem<Timebox>[]): Array<string> => [
+const getUniqueTickerItemParents = (data: MetricTypes.TickerItem<CoinflowTypes.Timebox>[]): Array<string> => [
     ...new Set(data.map((row) => row.tickerItemParent.text)),
 ];
