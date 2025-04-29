@@ -37,8 +37,8 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
 
     public getPlayerLabels = (): Types.PlayerLabel[] => {
         return [...this.mappedData.slides.values()][0].map((slide) => ({ 
-            label: slide.headers.titleSecondaryShort,
-            sequenceName: slide.headers.category === 'Products' ? 'Products' : 'Charts'
+            label: slide.header.titleSecondaryShort,
+            sequenceName: slide.header.category === 'Products' ? 'Products' : 'Charts'
         }));
     };
 

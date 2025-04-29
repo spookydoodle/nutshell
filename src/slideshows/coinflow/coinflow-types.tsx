@@ -17,7 +17,7 @@ export interface Data {
      * Defines data to display in horizontal bar charts. 
      * Each element will be displayed on a separate slide.
      */
-    charts: MetricTypes.ChartData<Timebox>[]
+    charts: MetricTypes.ChartData<Category, Timebox>[]
     /**
      * Defines data to display in the products section. Products will be grouped on each slide by `slideName`.
      */

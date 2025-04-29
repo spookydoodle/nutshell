@@ -38,9 +38,8 @@ export type ValueByTimebox<T extends string> = {
 export type Scaling = 1 | 1000 | 1000000;
 export type Decimals = 0 | 1 | 2 | 3 | 4;
 
-export interface ChartData<TTimebox extends string> {
-    characteristicName: string;
-    characteristicNameShort: string;
+export interface ChartData<TCategory extends string, TTimebox extends string> {
+    category: TCategory;
     data: ChartBreakdownItem<TTimebox>[];
 }
 
@@ -227,9 +226,10 @@ type StateDataMapMobile = Map<
 
 type SlidesStateData = Map<string, SlideData>;
 
-type SlideData = Array<SlideDataItem>;
+type SlideData = SlideDataItem[];
+
 interface SlideDataItem {
-    headers: Header;
+    header: Header;
     data: Map<string, Item>;
 }
 
@@ -239,7 +239,7 @@ interface Item {
     main: MainDataItem;
 }
 
-type Items = Array<Item>;
+type Items = Item[];
 
 type MainDataItem = Map<
     string,

@@ -680,8 +680,7 @@ const data: CoinflowTypes.Data = {
     ],
     "charts": [
         {
-            "characteristicName": "Realms",
-            "characteristicNameShort": "REALMS",
+            "category": "Realms",
             "data": [
                 {
                     "columnName": {
@@ -1668,8 +1667,7 @@ const data: CoinflowTypes.Data = {
             ]
         },
         {
-            "characteristicName": "Sectors",
-            "characteristicNameShort": "SECTORS",
+            "category": "Sectors",
             "data": [
                 {
                     "columnName": {

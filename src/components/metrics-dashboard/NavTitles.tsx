@@ -79,30 +79,30 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
-    breadcrumbItems: BreadcrumbItem[]
+interface Props<TCategory extends string> {
+    breadcrumbItems: BreadcrumbItem<TCategory>[];
     animationsInitialized?: boolean;
-    current: Header;
+    header: Header;
     next: Header;
     onSequenceClick?: (index: number) => void;
     index: number;
     seqLen: number;
     onBreadClick: (index: number) => void;
-    sequences?: Array<string>;
+    sequences?: string[];
     currentSequence: string;
 }
 
-export const NavTitles: React.FC<Props> = ({
+export function NavTitles <TCategory extends string>({
     breadcrumbItems,
     animationsInitialized = true,
-    current,
+    header,
     onSequenceClick,
     index,
     seqLen,
     onBreadClick,
     sequences,
     currentSequence
-}) => {
+}: Props<TCategory>) {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
     const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
@@ -125,9 +125,9 @@ export const NavTitles: React.FC<Props> = ({
                     className={classes.cardHeaderTitle}
                     noWrap
                 >
-                    {current.titlePrimary}
+                    {header.titlePrimary}
                 </Typography>
-                {current?.titleSecondary && (
+                {header?.titleSecondary && (
                     <>
                         <Typography
                             fontSize={fontSizes.h3}
@@ -145,7 +145,7 @@ export const NavTitles: React.FC<Props> = ({
                             className={classes.cardHeaderTitle}
                             noWrap
                         >
-                            {current.titleSecondary}
+                            {header.titleSecondary}
                         </Typography>
                     </>
                 )}
@@ -165,9 +165,9 @@ export const NavTitles: React.FC<Props> = ({
 
             {!isOnlyXs ? (
                 <Grid item xs={4} className={classes.breadCrumbsContainer}>
-                    {current?.titleSecondaryShort && (
+                    {header?.titleSecondaryShort && (
                         <Tooltip
-                            title={current.titleSecondary || current.titleSecondaryShort}
+                            title={header.titleSecondary || header.titleSecondaryShort}
                             placement="top"
                             arrow
                         >
@@ -177,37 +177,36 @@ export const NavTitles: React.FC<Props> = ({
                                 component="span"
                                 className={classes.breadCrumbsText}
                             >
-                                {current.titleSecondaryShort}
+                                {header.titleSecondaryShort}
                             </Typography>
                         </Tooltip>
                     )}
 
-                    {sequences &&
-                        sequences.map((sequence, i) => (
-                            <Tooltip
-                                key={i}
-                                title={sequence === currentSequence ? sequence : `Change to ${sequence}`}
-                                placement="top"
-                                arrow
+                    {sequences?.map((sequence, i) => (
+                        <Tooltip
+                            key={i}
+                            title={sequence === currentSequence ? sequence : `Change to ${sequence}`}
+                            placement="top"
+                            arrow
+                        >
+                            <Typography
+                                fontSize={fontSizes.h3}
+                                color="inherit"
+                                component="span"
+                                className={classNames(
+                                    classes.breadCrumbsText,
+                                    sequence === currentSequence
+                                        ? classes.active
+                                        : classes.inactive
+                                )}
+                                onClick={onSeqClick(i)}
                             >
-                                <Typography
-                                    fontSize={fontSizes.h3}
-                                    color="inherit"
-                                    component="span"
-                                    className={classNames(
-                                        classes.breadCrumbsText,
-                                        sequence === currentSequence
-                                            ? classes.active
-                                            : classes.inactive
-                                    )}
-                                    onClick={onSeqClick(i)}
-                                >
-                                    {sequence}
-                                </Typography>
-                            </Tooltip>
-                        ))}
+                                {sequence}
+                            </Typography>
+                        </Tooltip>
+                    )) ?? null}
                 </Grid>
             ) : null}
         </Grid>
     );
-};
+}

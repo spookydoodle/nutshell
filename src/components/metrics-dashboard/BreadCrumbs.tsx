@@ -121,4 +121,4 @@ export function Breadcrumbs <TCategory extends string>({
             ))}
         </Grid>
     );
-};
+}

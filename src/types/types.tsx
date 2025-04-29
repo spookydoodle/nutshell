@@ -90,11 +90,12 @@ export type StateDataMap = Map<
     }
 >;
 
+// TODO: Duplicates - remove?
 export type SlidesStateData = Map<string, SlideData>; // Sequence name => data
 
-export type SlideData = Array<SlideDataItem>;
+export type SlideData = SlideDataItem[];
 export interface SlideDataItem {
-    headers: Header;
+    header: Header;
     data: Map<
         string, // 90's / 00's / 10's or Mass / Density / Diameter
         {

@@ -134,14 +134,14 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
             <NavTitles
                 breadcrumbItems={breadcrumbItems}
                 animationsInitialized={animationsInitialized}
-                current={slides[slideIndex].headers}
-                next={slides[(slideIndex + 1) % totalLen].headers}
+                header={slides[slideIndex].header}
+                next={slides[(slideIndex + 1) % totalLen].header}
                 onSequenceClick={onSequenceClick}
                 index={slideIndex}
                 seqLen={seqLen}
                 onBreadClick={onBreadClick}
                 sequences={sequences}
-                currentSequence={slides[slideIndex].headers.sequence}
+                currentSequence={slides[slideIndex].header.sequence}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => {
                 if (!(isLgDown && i === 1) && !(hiddenMdDown && i > 0)) {
