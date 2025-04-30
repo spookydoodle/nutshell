@@ -61,7 +61,6 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
     const slides: MetricTypes.SlideData = dataValues.flat(1);
     const totalLen = slides.length;
     const sequenceLength = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
-    console.log({ data: slideshow.data, slidesData })
 
     const getMaxRows = (_i: number) =>
         Math.max(
