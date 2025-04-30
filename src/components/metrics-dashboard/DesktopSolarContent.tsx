@@ -6,9 +6,8 @@ import { Content } from "./Content";
 import { BarChart } from "../dataviz/HTMLCharts/BarChart";
 import { ImgTiles } from "./ImgTiles";
 import { Slideshow } from "../../logic/slideshow/slideshow";
-import { SlidesStateData, SlideData } from "../../types/types";
 import * as Hooks from '../../hooks';
-import { StateDataMap } from "./metric-types";
+import * as MetricTypes from "./metric-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -20,7 +19,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideshow: Slideshow;
+    slideshow: Slideshow<MetricTypes.StateDataMap>;
 }
 
 export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
@@ -31,11 +30,11 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [play] = Hooks.useSubjectState(slideshow.play$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
-    const data = (slideshow.data as StateDataMap).slides
+    const data = slideshow.data.slides
     const dataKeys = [...data.keys()];
     const dataValues = [...data.values()];
 
-    const slides: SlideData = dataValues.flat(1);
+    const slides = dataValues.flat(1);
     const sequences = dataKeys;
 
     const getMaxRows = (_i: number) =>

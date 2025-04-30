@@ -1,7 +1,7 @@
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Typography, Tooltip, Theme } from '@mui/material';
 import { fontSizes } from "../../styles/themes";
-import { Value } from "../../types/types";
+import { Datum } from "./metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface Props {
     name: string;
-    data?: Value;
+    data?: Datum;
 }
 
 export const Tile: React.FC<Props> = ({ name, data }) => {

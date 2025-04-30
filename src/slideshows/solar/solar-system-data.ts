@@ -21,9 +21,9 @@ export const METRIC_DEF = {
     "Global Magnetic Field": "Magnetic field, a vector field in the neighbourhood of a magnet, electric current, or changing electric field, in which magnetic forces are observable. Magnetic fields such as that of Earth cause magnetic compass needles and other permanent magnets to line up in the direction of the field. ",
 };
 
-type Property = 'Mass' | 'Diameter' | 'Density' | 'Gravity' | 'Escape Velocity' | 'Rotation Period' | 'Length of Day' | 'Distance from Sun' | 'Perihelion' | 'Aphelion' | 'Orbital Period'
+export type Property = 'Mass' | 'Diameter' | 'Density' | 'Gravity' | 'Escape Velocity' | 'Rotation Period' | 'Length of Day' | 'Distance from Sun' | 'Perihelion' | 'Aphelion' | 'Orbital Period'
     | 'Orbital Inclination' | 'Orbital Velocity' | 'Orbital Eccentricity' | 'Obliquity to Orbit' | 'Mean Temperature' | 'Number of Moons' | 'Surface Pressure';
-type Planet = 'Mercury' | 'Venus' | 'Earth' | 'Mars' | 'Jupiter' | 'Saturn' | 'Uranus' | 'Neptune' | 'Pluto';
+export type Planet = 'Mercury' | 'Venus' | 'Earth' | 'Mars' | 'Jupiter' | 'Saturn' | 'Uranus' | 'Neptune' | 'Pluto';
 
 export const METRIC_DATA: {
     [key in Property]: {

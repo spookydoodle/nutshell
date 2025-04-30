@@ -3,7 +3,7 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Grid, Typography } from '@mui/material';
 import { fontSizes } from "../../styles/themes";
 import { ImgTile } from "./ImgTile";
-import * as Types from "../../types/types";
+import { Datum } from "./metric-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -20,7 +20,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     title?: string;
-    data: Array<Types.Value>;
+    data: Datum[];
     variant?: "md" | "sm";
     topN?: number;
 }

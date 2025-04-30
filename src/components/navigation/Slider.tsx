@@ -2,7 +2,6 @@ import { useMemo } from 'react';
 import { makeStyles, createStyles, withStyles } from '@mui/styles';
 import { Grid, Slider as SliderComponent, Theme } from '@mui/material';
 import { Slideshow } from '../../logic/slideshow/slideshow';
-import * as Types from '../../types';
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -32,10 +31,15 @@ const PlayerSlider = withStyles((theme: Theme) => ({
     },
 }))(SliderComponent);
 
+export interface PlayerLabel {
+    label: string;
+    sequenceName?: string;
+}
+
 interface Props {
     slideshow: Slideshow
     index: number;
-    playerLabels: Types.PlayerLabel[]
+    playerLabels: PlayerLabel[]
 }
 
 export const Slider: React.FC<Props> = ({

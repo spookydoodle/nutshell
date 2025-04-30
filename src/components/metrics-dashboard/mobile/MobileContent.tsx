@@ -1,4 +1,3 @@
-import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box } from '@mui/material';
@@ -47,19 +46,19 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props {
-    mobileData: MetricTypes.StateDataMapMobile;
+interface Props<TTimebox extends string, TColumn extends string> {
+    mobileData: MetricTypes.StateDataMapMobile<TTimebox, TColumn>;
     productSlides: MetricTypes.Dimension[];
     // TODO: Rename
     chanIndex: number;
     handleColumnNameChange: (index: number) => void;
     timeboxIndex: number;
-    columnNames: string[];
-    timeboxes: string[];
+    columnNames: TColumn[];
+    timeboxes: TTimebox[];
     primaryMeasureName: string;
 }
 
-export const MobileContent: React.FC<Props> = ({
+export function MobileContent<TTimebox extends string, TColumn extends string>({
     mobileData,
     productSlides,
     chanIndex,
@@ -68,7 +67,7 @@ export const MobileContent: React.FC<Props> = ({
     columnNames,
     timeboxes,
     primaryMeasureName
-}) => {
+}: Props<TTimebox, TColumn>) {
     const classes = useStyles();
 
     return (
@@ -142,4 +141,4 @@ export const MobileContent: React.FC<Props> = ({
             ) : null}
         </Box>
     );
-};
+}

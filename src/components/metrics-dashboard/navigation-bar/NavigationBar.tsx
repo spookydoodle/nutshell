@@ -5,7 +5,7 @@ import { animations } from "../../../styles/animations";
 import { NavTitle } from "./NavTitle";
 import { BreadcrumbItem, Breadcrumbs } from "./Breadcrumbs";
 import { SideButtons } from "./SideButtons";
-import { Header } from "../../../types/types";
+import { Header } from "../metric-types";
 
 const useStyles = makeStyles(() =>
     createStyles({
@@ -22,28 +22,27 @@ const useStyles = makeStyles(() =>
     })
 );
 
-interface Props<TCategory extends string> {
-    breadcrumbItems: BreadcrumbItem<TCategory>[];
-    activeBreadcrumbItem: TCategory;
-    onBreadcrumbClick: (item: TCategory) => void;
-    pauseAnimations?: boolean;
+interface Props<TBreadcrumb extends string, TSideButton extends string> {
     header: Header;
-    next: Header;
-    onSequenceClick?: (index: number) => void;
-    sequences?: string[];
-    currentSequence: string;
+    pauseAnimations?: boolean;
+    breadcrumbItems?: BreadcrumbItem<TBreadcrumb>[];
+    activeBreadcrumbItem?: TBreadcrumb;
+    onBreadcrumbItemClick?: (item: TBreadcrumb, index: number) => void;
+    sequenceItems?: TSideButton[];
+    activeSequenceItem?: TSideButton;
+    onSequenceItemClick?: (item: TSideButton, index: number) => void;
 }
 
-export function NavigationBar<TCategory extends string>({
+export function NavigationBar<TBreadcrumb extends string = string, TSideButton extends string = string>({
     breadcrumbItems,
     activeBreadcrumbItem,
-    onBreadcrumbClick,
+    onBreadcrumbItemClick,
     pauseAnimations = true,
     header,
-    onSequenceClick,
-    sequences,
-    currentSequence
-}: Props<TCategory>) {
+    sequenceItems,
+    activeSequenceItem,
+    onSequenceItemClick
+}: Props<TBreadcrumb, TSideButton>) {
     const classes = useStyles();
     const isLgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
     const isSmUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
@@ -62,19 +61,24 @@ export function NavigationBar<TCategory extends string>({
 
             {isLgUp ? (
                 <Grid item xs={4}>
-                    <Breadcrumbs<TCategory>
-                        items={breadcrumbItems}
+                    <Breadcrumbs<TBreadcrumb>
+                        items={breadcrumbItems ?? []}
                         activeItem={activeBreadcrumbItem}
                         pauseAnimations={pauseAnimations}
                         color="white"
-                        onClick={onBreadcrumbClick}
+                        onClick={onBreadcrumbItemClick}
                     />
                 </Grid>
             ) : null}
 
             {isSmUp ? (
                 <Grid item xs={4}>
-                    <SideButtons header={header} sequences={sequences} onSequenceClick={onSequenceClick} currentSequence={currentSequence} />
+                    <SideButtons
+                        header={header}
+                        items={sequenceItems}
+                        activeItem={activeSequenceItem}
+                        onClick={onSequenceItemClick}
+                    />
                 </Grid>
             ) : null}
         </Grid>

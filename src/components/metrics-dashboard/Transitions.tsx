@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
 import { useTransition, config, AnimatedComponent, animated } from "@react-spring/web";
-import { TransitionVariant } from "../../types/types";
+
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -18,7 +18,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    variant?: TransitionVariant;
+    variant?: "none" | "fade-in" | "slide-in" | "fade-in-slide-out" | "swipe-cube-to-left" | "swipe-cube-to-right";
     component: JSX.Element;
     style?: React.ComponentProps<AnimatedComponent<"div">>['style'];
     className?: string;

@@ -4,7 +4,7 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Grid, Typography, Tooltip, useMediaQuery } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
 import { animations } from "../../../styles/animations";
-import { Header } from "../../../types/types";
+import { Header } from "../metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

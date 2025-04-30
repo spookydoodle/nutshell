@@ -1,11 +1,12 @@
 import { ThemeOptions } from "@mui/material";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { DesktopSolarContent } from "../../components/metrics-dashboard/DesktopSolarContent";
+import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
+import { PlayerLabel } from "../../components/navigation/Slider";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as Types from "../../types";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
 
 export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     public path = '/solar';
@@ -28,8 +29,8 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
         return this.data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);;
     };
 
-    public getPlayerLabels = (): Types.PlayerLabel[] => {
-        return [...this.data.slides.entries()].map(([sequenceName, slides]) => slides.map((slide): Types.PlayerLabel => ({ label: slide.header.titleSecondaryShort, sequenceName }))).flat();
+    public getPlayerLabels = (): PlayerLabel[] => {
+        return [...this.data.slides.entries()].map(([sequenceName, slides]) => slides.map((slide): PlayerLabel => ({ label: slide.header.titleSecondaryShort, sequenceName }))).flat();
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number): number => {

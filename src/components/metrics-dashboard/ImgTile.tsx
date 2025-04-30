@@ -2,7 +2,7 @@ import classNames from "classnames";
 import { Img } from "react-image";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Grid, Typography, Tooltip } from '@mui/material';
-import * as Types from "../../types/types";
+import { Datum } from "./metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     variant?: "sm" | "md";
     i: number;
-    value: Types.Value;
+    value: Datum;
 }
 
 export const ImgTile: React.FC<Props> = ({ variant = "md", i, value }) => {

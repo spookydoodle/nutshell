@@ -67,21 +67,21 @@ export interface BreadcrumbItem<T> {
     name: T;
     icon: React.ComponentType<{ className?: string }>;
 }
-interface Props<TCategory extends string> {
-    items: BreadcrumbItem<TCategory>[];
-    activeItem: TCategory;
+interface Props<TBreadcrumbItem extends string = string> {
+    items: BreadcrumbItem<TBreadcrumbItem>[];
+    activeItem?: TBreadcrumbItem;
     pauseAnimations: boolean;
     color?: "textSecondary" | "white";
-    onClick?: (item: TCategory) => void;
+    onClick?: (item: TBreadcrumbItem, index: number) => void;
 }
 
-export function Breadcrumbs <TCategory extends string>({
+export function Breadcrumbs <TBreadcrumbItem extends string>({
     items,
     activeItem,
     pauseAnimations = true,
     color = "textSecondary",
     onClick
-}: Props<TCategory>) {
+}: Props<TBreadcrumbItem>) {
     const classes = useStyles();
 
     return (
@@ -90,7 +90,7 @@ export function Breadcrumbs <TCategory extends string>({
             justifyContent="center"
             className={classNames(classes.grid, classes.slideUp, { [classes.pauseAnim]: pauseAnimations })}
         >
-            {items.map((item) => (
+            {items.map((item, i) => (
                 <Tooltip
                     key={item.name}
                     title={`Switch to ${item.name}`}
@@ -101,7 +101,7 @@ export function Breadcrumbs <TCategory extends string>({
                         className={classNames(classes.breadcrumb, {
                             [color === "white" ? classes.activeWhite : classes.active]: activeItem === item.name,
                         })}
-                        onClick={() => onClick?.(item.name)}
+                        onClick={() => onClick?.(item.name, i)}
                     >
                         <item.icon className={classes.breadcrumbIcon} />
                         <Typography

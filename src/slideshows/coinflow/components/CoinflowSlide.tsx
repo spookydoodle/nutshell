@@ -13,6 +13,7 @@ import * as Hooks from '../../../hooks';
 import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
 import { convertToMap } from "../coinflow-data-utils";
 import * as CoinflowTypes from "../coinflow-types";
+import { BreadcrumbItem } from "../../../components/metrics-dashboard/navigation-bar/Breadcrumbs";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -36,6 +37,14 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
+const breadcrumbItems: BreadcrumbItem<CoinflowTypes.Category>[] = [
+    { name: "Realms", icon: PublicIcon },
+    { name: "Sectors", icon: BusinessCenterIcon },
+    { name: "Products", icon: LoyaltyIcon },
+];
+
+const sequenceItems: CoinflowTypes.Timebox[] = ['YTD', 'QTD', 'MTD'];
+
 export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = ({ slideshow }) => {
     const classes = useStyles();
     const isLgDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('lg'));
@@ -49,30 +58,9 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
 
     const dataKeys = slidesData ? [...slidesData.keys()] : [];
     const dataValues = slidesData ? [...slidesData.values()] : [];
-
     const slides: MetricTypes.SlideData = dataValues.flat(1);
-
     const totalLen = slides.length;
-    const seqLen = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
-    const sequences = dataKeys;
-
-    const breadcrumbItems = React.useMemo(
-        (): { name: CoinflowTypes.Category; icon: React.ComponentType; }[] => [
-            {
-                name: "Realms",
-                icon: PublicIcon,
-            },
-            {
-                name: "Sectors",
-                icon: BusinessCenterIcon,
-            },
-            {
-                name: "Products",
-                icon: LoyaltyIcon,
-            }
-        ],
-        []
-    );
+    const sequenceLength = totalLen / dataKeys.length; // TODO: Repair this to get the seqLen of current time box
 
     const getMaxRows = (_i: number) =>
         Math.max(
@@ -119,33 +107,32 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
             </Box>;
         });
 
-    const onSequenceClick = (seqInd: number) => {
-        setSlideIndex((prev) => ((prev % seqLen) + seqLen * seqInd));
-    };
 
-    const onBreadcrumbClick = React.useCallback(
-        (name: CoinflowTypes.Category) => {
-            // TODO: Fix
-            const index: number = name === 'Realms' ? 0 : name === 'Sectors' ? 1 : 2;
-            setSlideIndex(
-                (prev) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
-            );
+    const handleBreadcrumbItemClick = React.useCallback(
+        (_name: CoinflowTypes.Category, index: number) => {
+            setSlideIndex((prev) => index + Math.floor(prev / sequenceLength) * sequenceLength);
+        },
+        []
+    );
+
+    const handleSequenceItemClick = React.useCallback(
+        (_name: CoinflowTypes.Timebox, index: number) => {
+            setSlideIndex((prev) => ((prev % sequenceLength) + sequenceLength * index));
         },
         []
     );
     
     return (
         <>
-            <NavigationBar<CoinflowTypes.Category>
-                breadcrumbItems={breadcrumbItems}
-                activeBreadcrumbItem={breadcrumbItems[slideIndex % seqLen < 3 ? slideIndex % seqLen : 2].name}
-                pauseAnimations={animationsInitialized}
+            <NavigationBar<CoinflowTypes.Category, CoinflowTypes.Timebox>
                 header={slides[slideIndex].header}
-                next={slides[(slideIndex + 1) % totalLen].header}
-                onSequenceClick={onSequenceClick}
-                onBreadcrumbClick={onBreadcrumbClick}
-                sequences={sequences}
-                currentSequence={slides[slideIndex].header.sequence}
+                pauseAnimations={animationsInitialized}
+                breadcrumbItems={breadcrumbItems}
+                activeBreadcrumbItem={breadcrumbItems[slideIndex % sequenceLength < 3 ? slideIndex % sequenceLength : 2].name}
+                onBreadcrumbItemClick={handleBreadcrumbItemClick}
+                sequenceItems={sequenceItems}
+                activeSequenceItem={sequenceItems[Math.floor(slideIndex / (totalLen / sequenceItems.length))]}
+                onSequenceItemClick={handleSequenceItemClick}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => {
                 if (!(isLgDown && i === 1) && !(hiddenMdDown && i > 0)) {
