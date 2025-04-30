@@ -1,11 +1,12 @@
 import { ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
+import { CoinflowMobile } from "./components/CoinflowMobile";
+import { CoinflowSlide } from "./components/CoinflowSlide";
+import { PlayerLabel } from "../../components/navigation/Slider";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import { CoinflowMobile } from "./components/CoinflowMobile";
-import { CoinflowSlide } from "./components/CoinflowSlide";
 import { convertToMap } from "./coinflow-data-utils";
 import * as CoinflowTypes from "./coinflow-types";
 
@@ -35,7 +36,7 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         return this.mappedData.ticker;
     };
 
-    public getPlayerLabels = (): Types.PlayerLabel[] => {
+    public getPlayerLabels = (): PlayerLabel[] => {
         return [...this.mappedData.slides.values()][0].map((slide) => ({ 
             label: slide.header.titleSecondaryShort,
             sequenceName: slide.header.category === 'Products' ? 'Products' : 'Charts'

@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { Grid, Typography, Box } from "@mui/material";
 import { useStyles } from "./styles";
-import { BarProps } from "./types";
+import { BarProps } from "./html-chart-types";
 
 export const BarChartRowAbsDelta: React.FC<BarProps> = ({
     i,

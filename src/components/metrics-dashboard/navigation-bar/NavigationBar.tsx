@@ -5,7 +5,7 @@ import { animations } from "../../../styles/animations";
 import { NavTitle } from "./NavTitle";
 import { BreadcrumbItem, Breadcrumbs } from "./Breadcrumbs";
 import { SideButtons } from "./SideButtons";
-import { Header } from "../../../types/types";
+import { Header } from "../metric-types";
 
 const useStyles = makeStyles(() =>
     createStyles({

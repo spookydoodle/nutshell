@@ -3,9 +3,9 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Typography } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
-import * as Types from "../../../types/types";
 import { TickerElement } from "./TickerElement";
 import { TickerItem } from "./TickerItem";
+import { TickerStateData } from "../metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     animationsInitialized: boolean;
     title: string;
-    data: Types.TickerStateData;
+    data: TickerStateData;
 }
 
 export const Ticker: React.FC<Props> = ({ animationsInitialized, title, data }) => {

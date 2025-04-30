@@ -2,8 +2,9 @@
 import React from "react";
 import * as rxjs from 'rxjs';
 import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
-import * as Types from "../../types";
 import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
+import { PlayerLabel } from "../../components/navigation/Slider";
+import * as Types from "../../types";
 import * as Utils from "../../utils";
 import { Img } from '../../layouts/images';
 
@@ -199,7 +200,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns list of labels for Player navigation.
      */
-    public abstract getPlayerLabels: () => Types.PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
+    public abstract getPlayerLabels: () => PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
 
     /**
      * Handler on index change using Player slider and previous/next buttons.
@@ -268,7 +269,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * If provided will render the custom slideshow instead of the default dashboard.
      */
-    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow }>;
+    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T> }>;
     public slideComponent?: React.ComponentType<SlideComponentProps<T>>;
 
     /**

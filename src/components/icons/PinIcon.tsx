@@ -1,6 +1,6 @@
 import React from "react";
 import { SvgIcon } from "@mui/material";
-import * as Types from './types';
+import * as Types from './icons-types';
 
 interface Props {
     color?: Types.Color;

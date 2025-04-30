@@ -5,7 +5,7 @@ import { Theme, Grid, Box } from '@mui/material';
 import { animations } from "../../styles/animations";
 import { Tile } from "./Tile";
 import { Transitions } from "./Transitions";
-import * as Types from "../../types/types";
+import { Datum } from "./metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props {
     animationsInitialized?: boolean;
     name: string;
-    tileData?: Types.Value;
+    tileData?: Datum;
     component: JSX.Element;
 }
 

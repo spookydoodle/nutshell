@@ -1,3 +1,5 @@
+import { ImgSrc } from "../../types";
+
 export interface Dimension<T extends string = string, TText extends string = string> {
     key: T;
     text: TText;
@@ -185,11 +187,6 @@ export interface Datum {
     description?: string;
     tooltip?: string;
     link?: string;
-}
-
-export interface ImgSrc {
-    src: string;
-    fallback?: string;
 }
 
 export type StateDataArr = {

@@ -1,14 +1,14 @@
-import { Decimals, Metric } from "../../types/types";
 import {
     PLANET_IMG,
     PLANET_FACTS,
     METRIC_DATA,
     METRIC_DEF,
+    Property,
 } from "./solar-system-data";
 import * as Utils from "../../utils";
-import { StateDataMap, TickerStateData, SlideData, Datum, MainDataItem, SlideDataItem, Item } from "../../components/metrics-dashboard/metric-types";
+import { StateDataMap, TickerStateData, SlideData, Datum, MainDataItem, SlideDataItem, Item, Decimals } from "../../components/metrics-dashboard/metric-types";
 
-const getMetricDelta = (val: number, metric: Metric): number => {
+const getMetricDelta = (val: number, metric: Property): number => {
     return val / METRIC_DATA[metric].data["Earth"];
 };
 
@@ -52,8 +52,8 @@ const metricSlides: [string, SlideData][] = [
             data: new Map(
                 Object.entries(METRIC_DATA)
                     .filter((_el, i) => i >= n * 3 && i < (n + 1) * 3)
-                    .map(([metric, metricData]): [string, Item] => [
-                        metric,
+                    .map(([metric, metricData]): [Property, Item] => [
+                        metric as Property,
                         {
                             main: new Map([
                                 [
@@ -63,7 +63,7 @@ const metricSlides: [string, SlideData][] = [
                                         name: "TODO: Name",
                                         data: Object.entries(metricData.data).map(
                                             ([planet, value]): Datum => {
-                                                const delta = getMetricDelta(value, metric as Metric);
+                                                const delta = getMetricDelta(value, metric as Property);
 
                                                 return {
                                                     name: planet,
@@ -91,7 +91,7 @@ const metricSlides: [string, SlideData][] = [
                             ]),
                             tile: {
                                 name: metric,
-                                tooltip: METRIC_DEF[metric as Metric],
+                                tooltip: METRIC_DEF[metric as Property],
                                 primary: getSum(Object.values(metricData.data)),
                                 primaryFormatted: `${getRange(
                                     Object.values(metricData.data)
@@ -170,7 +170,7 @@ const tickerData: TickerStateData = new Map([
                 `${metric} (${metricData.unit})`,
 
                 Object.entries(metricData.data).map(([planet, value]): Datum => {
-                    const delta = getMetricDelta(value, metric as Metric);
+                    const delta = getMetricDelta(value, metric as Property);
 
                     return {
                         name: planet,

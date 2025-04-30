@@ -6,7 +6,7 @@ import { BarChartRowAbsDelta } from "./BarChartRowAbsDelta";
 import { BarChartRowDeltaAbs } from "./BarChartRowDeltaAbs";
 import { BarChartRowAbsDeltaMulti } from "./BarChartRowAbsDeltaMulti";
 import { BarChartData, BarChartDataItem } from "../../../logic/datavizTypes";
-import { BarProps } from './types';
+import { BarProps } from './html-chart-types';
 import { useStyles } from "./styles";
 
 const SCROLL_DURATION = 2000;
