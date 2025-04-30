@@ -4,19 +4,9 @@ import { Theme, Typography, Tooltip } from '@mui/material';
 import { animations } from "../../../styles/animations";
 import { fontSizes } from "../../../styles/themes";
 import { Header } from "../../../types/types";
-import React from "react";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        cardHeader: {
-            marginTop: "2vh !important",
-            paddingLeft: "5px",
-            paddingRight: "5px",
-            color: "rgba(255, 255, 255, .6)",
-            opacity: 0,
-            transform: "translateY(2em)",
-            animation: `$no-transform 2s 3s cubic-bezier(0, .5, 0, 1) forwards`,
-        },
         container: {
             textTransform: "uppercase",
             display: "flex",
@@ -25,16 +15,7 @@ const useStyles = makeStyles((theme: Theme) =>
             justifyContent: "flex-end",
             columnGap: "5px"
         },
-        breadCrumbsText: {
-            fontSize: fontSizes.h2,
-            [theme.breakpoints.down("md")]: {
-                fontSize: fontSizes.h3,
-            },
-            [theme.breakpoints.only("xs")]: {
-                fontSize: fontSizes.h4,
-            },
-            color: "white",
-            marginRight: ".5em",
+        text: {
             "&$active": {
                 opacity: 1,
             },
@@ -52,21 +33,20 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
+interface Props<TSideButtonItem extends string> {
     header: Header;
-    onSequenceClick?: (index: number) => void;
-    sequences?: string[];
-    currentSequence: string;
+    items?: TSideButtonItem[];
+    activeItem?: TSideButtonItem;
+    onClick?: (item: TSideButtonItem, index: number) => void;
 }
 
-export const SideButtons: React.FC<Props> = ({
+export function SideButtons<TSideButtonItem extends string = string>({
     header,
-    onSequenceClick,
-    sequences,
-    currentSequence
-}) => {
+    items,
+    activeItem,
+    onClick,
+}: Props<TSideButtonItem>) {
     const classes = useStyles();
-    const onSeqClick = (i: number) => () => onSequenceClick?.(i);
 
     return (
         <div className={classes.container}>
@@ -80,17 +60,17 @@ export const SideButtons: React.FC<Props> = ({
                         fontSize={fontSizes.h3}
                         color="inherit"
                         component="span"
-                        className={classes.breadCrumbsText}
+                        className={classes.text}
                     >
                         {header.titleSecondaryShort}
                     </Typography>
                 </Tooltip>
             )}
 
-            {sequences?.map((sequence, i) => (
+            {items?.map((item, i) => (
                 <Tooltip
                     key={i}
-                    title={sequence === currentSequence ? sequence : `Change to ${sequence}`}
+                    title={item === activeItem ? item : `Change to ${item}`}
                     placement="top"
                     arrow
                 >
@@ -99,14 +79,14 @@ export const SideButtons: React.FC<Props> = ({
                         color="inherit"
                         component="span"
                         className={classNames(
-                            classes.breadCrumbsText,
-                            sequence === currentSequence
+                            classes.text,
+                            item === activeItem
                                 ? classes.active
                                 : classes.inactive
                         )}
-                        onClick={onSeqClick(i)}
+                        onClick={() => onClick?.(item, i)}
                     >
-                        {sequence}
+                        {item}
                     </Typography>
                 </Tooltip>
             )) ?? null}
