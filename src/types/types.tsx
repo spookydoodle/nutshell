@@ -58,6 +58,7 @@ export interface Value {
     link?: string;
 }
 
+// TODO: Delete duplicates
 export type StateDataArr = Array<{
     name: string;
     value: StateDataItem;
@@ -71,7 +72,7 @@ export type StateDataItem = Array<{
             name: string; // tiles / bar-charts / items
             value: Array<{
                 name: string; // some categories
-                value: Array<Value>; // name: Hot Pursuit / Mercuryt, value: $ 100 K, delta: "+10% VS previous title / 1.2 x Earth"
+                value: Value[]; // name: Hot Pursuit / Mercuryt, value: $ 100 K, delta: "+10% VS previous title / 1.2 x Earth"
             }>;
         }>;
     }>;
@@ -127,11 +128,6 @@ export type DataItem = Array<Value>;
 
 export interface State {
     appId: string;
-}
-
-export interface DataItemType {
-    title: string;
-    src: string;
 }
 
 export interface Action {

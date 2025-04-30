@@ -14,7 +14,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    data: MetricTypes.Items;
+    data: MetricTypes.Item[];
 }
 
 export const MobileProducts: React.FC<Props> = ({ data }) => {

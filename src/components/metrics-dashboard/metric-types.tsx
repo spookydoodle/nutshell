@@ -1,6 +1,6 @@
-export interface Dimension {
-    key: string;
-    text: string;
+export interface Dimension<T extends string = string, TText extends string = string> {
+    key: T;
+    text: TText;
     shortText?: string;
 }
 
@@ -38,12 +38,12 @@ export type ValueByTimebox<T extends string> = {
 export type Scaling = 1 | 1000 | 1000000;
 export type Decimals = 0 | 1 | 2 | 3 | 4;
 
-export interface ChartData<TCategory extends string, TTimebox extends string> {
+export interface ChartData<TCategory extends string, TTimebox extends string, TColumn extends string> {
     category: TCategory;
-    data: ChartBreakdownItem<TTimebox>[];
+    data: ChartBreakdownItem<TTimebox, TColumn>[];
 }
 
-export interface Chart {
+export interface ChartMobile {
     characteristicName: string;
     data: Datum[];
 }
@@ -51,15 +51,15 @@ export interface Chart {
 /**
  * Data required to display a KPI in a tile component.
  */
-export interface Tile<TTimebox extends string> {
-    columnName: Dimension;
+export interface Tile<TTimebox extends string, TColumn extends string> {
+    columnName: Dimension<TColumn, TColumn>;
     measures: Measures<TTimebox>;
 }
 
 /**
  * Data required to display an element in the footer ticker.
  */
-export interface TickerItem<TTimebox extends string> {
+export interface TickerItem<TTimebox extends string, TColumn extends string> {
     /**
      * Used to group the sequence of ticker elements.
      */
@@ -68,15 +68,15 @@ export interface TickerItem<TTimebox extends string> {
      * Characteristic for ticker element.
      */
     tickerItem: Dimension;
-    columnName: Dimension;
+    columnName: Dimension<TColumn, TColumn>;
     measures: Measures<TTimebox>;
 }
 
 /**
  * Data required to render a single bar in a horizontal bar chart.
  */
-export interface ChartBreakdownItem<TTimebox extends string> {
-    columnName: Dimension;
+export interface ChartBreakdownItem<TTimebox extends string, TColumn extends string> {
+    columnName: Dimension<TColumn, TColumn>;
     characteristicValue: Dimension;
     measures: Measures<TTimebox>;
 }
@@ -84,7 +84,7 @@ export interface ChartBreakdownItem<TTimebox extends string> {
 /**
  * Data required to show case a single product.
  */
-export interface ProductsItem<TTimebox extends string> {
+export interface ProductsItem<TTimebox extends string, TColumn extends string, TRow extends string> {
     /**
      * Creates a slide per each
      */
@@ -92,11 +92,11 @@ export interface ProductsItem<TTimebox extends string> {
     /**
      * Name of the column by which to split the dashboard in columns.
      */
-    columnName: Dimension;
+    columnName: Dimension<TColumn, TColumn>;
     /**
-     * Splits product section into two rows.
+     * Splits product section into rows.
      */
-    rowName: Dimension;
+    rowName: Dimension<TRow, TRow>;
     /**
      * Displayed in tooltip on hover of the product image
      */
@@ -109,14 +109,22 @@ export interface ProductsItem<TTimebox extends string> {
     measures: Measures<TTimebox>;
 }
 
-export type DataValue<TTimebox extends string> = Tile<TTimebox>[] | ChartBreakdownItem<TTimebox>[] | TickerItem<TTimebox>[] | ProductsItem<TTimebox>[];
+export type DataValue<
+    TTimebox extends string,
+    TColumn extends string,
+    TRow extends string
+> = Tile<TTimebox, TColumn>[] | ChartBreakdownItem<TTimebox, TColumn>[] | TickerItem<TTimebox, TColumn>[] | ProductsItem<TTimebox, TColumn, TRow>[];
 
-export type DataItem<TTimebox extends string> =
-    | ChartBreakdownItem<TTimebox>
-    | Tile<TTimebox>
-    | ChartBreakdownItem<TTimebox>
-    | TickerItem<TTimebox>
-    | ProductsItem<TTimebox>;
+export type DataItem<
+TTimebox extends string,
+TColumn extends string,
+TRow extends string
+> =
+    | ChartBreakdownItem<TTimebox, TColumn>
+    | Tile<TTimebox, TColumn>
+    | ChartBreakdownItem<TTimebox, TColumn>
+    | TickerItem<TTimebox, TColumn>
+    | ProductsItem<TTimebox, TColumn, TRow>;
 
 export interface Datum {
     key?: string;
@@ -184,12 +192,12 @@ export interface ImgSrc {
     fallback?: string;
 }
 
-export type StateDataArr = Array<{
+export type StateDataArr = {
     name: string; // FF
     value: StateDataItem;
-}>;
+}[];
 
-type StateDataItem = Array<{
+export type StateDataItem = Array<{
     name: string; // YTD, MTD
     value: Array<{
         name: string; // Colum nName 1, Column Name 2, Column Name 3
@@ -203,54 +211,61 @@ type StateDataItem = Array<{
     }>;
 }>;
 
-type ComponentType = "bar-chart" | "items" | "tiles" | "ticker";
+export type ComponentType = "bar-chart" | "items" | "tiles" | "ticker";
 
-// Example: YTD -> Column Name 1 -> tiles -> Data
-// Example: YTD -> Column Name 1 -> bar-charts -> Realms Bar Chart Data
-type StateDataMap = {
+/**
+ * @example YTD -> Column Name 1 -> tiles -> Data
+ * @example MTD -> Column Name 1 -> bar-charts -> Realms Bar Chart Data
+ */
+export type StateDataMap = {
     slides: SlidesStateData;
     ticker?: TickerStateData;
 };
 
-type StateDataMapMobile = Map<
-    string, // timebox
-    Map<
-        string,
-        {
-            tile: Datum;
-            charts: Chart[];
-            products: Items;
-        }
-    >
+export type StateDataMapMobile<TTimebox extends string, TColumn extends string> = Map<
+    TTimebox,
+    StateDataMapItemMobile<TColumn>
 >;
 
-type SlidesStateData = Map<string, SlideData>;
+export type StateDataMapItemMobile<TColumn extends string> = Map<
+    TColumn,
+    StateDataItemMobile
+>;
 
-type SlideData = SlideDataItem[];
+export interface StateDataItemMobile {
+    tile: Datum;
+    charts: ChartMobile[];
+    products: Item[];
+}
 
-interface SlideDataItem {
+export type SlidesStateData = Map<string, SlideData>;
+
+export type SlideData = SlideDataItem[];
+
+export interface SlideDataItem {
     header: Header;
     data: Map<string, Item>;
 }
 
-// TODO: rename
-interface Item {
-    tile: Datum; // Could be also Values
+// TODO: Rename
+export interface Item {
+    tile: Datum;
     main: MainDataItem;
 }
 
-type Items = Item[];
-
-type MainDataItem = Map<
+// TODO: Rename
+export type MainDataItem = Map<
     string,
-    {
-        type: ComponentType;
-        name: string;
-        data: Datum[];
-    }
+    MainDataItemItem
 >;
 
-interface Header {
+export interface MainDataItemItem {
+    type: ComponentType;
+    name: string;
+    data: Datum[];
+}
+
+export interface Header {
     /**
      * Will be used for breadcrumbs and player sequence name
      */
@@ -266,87 +281,9 @@ interface Header {
  * Keys of the map are the main sections of the data, for example periodic value such as: YTD, QTD.
  * Values are further mappings for sub sections.
  */
-type TickerStateData = Map<string, TickerData>; 
+export type TickerStateData = Map<string, TickerData>; 
 
 /**
  * Keys of the map are sub sections of main sections, for example a region value
  */
-type TickerData = Map<string, Datum[]>;
-
-interface DataItemType {
-    title: string;
-    src: string;
-}
-
-interface ActionType {
-    name: string;
-    path: string;
-}
-
-interface CommentType {
-    _id: string;
-    author: string;
-    created: Date;
-    body: string;
-}
-
-interface ValidationErrorType {
-    error: string;
-    touched: boolean;
-}
-
-interface PostLayoutType {
-    id: string;
-    title: string;
-    subtitle: string;
-    body?: string;
-    content?: React.ReactElement;
-    additional?: React.ReactNode;
-}
-
-interface PostType {
-    id: string;
-    title: string;
-    subtitle: string;
-    body?: string;
-    content?: React.ReactNode;
-}
-
-interface FeedLayoutType {
-    children?: React.ReactNode;
-    contentLeft: React.ReactNode;
-    contentRight: React.ReactNode;
-}
-
-interface LandingType {
-    title: string;
-    subtitle: string;
-    button: { name: string; path: string };
-}
-
-type Edge = "top" | "bottom" | "left" | "right";
-
-export type {
-    StateDataMap,
-    StateDataMapMobile,
-    ComponentType,
-    DataItemType,
-    ActionType,
-    CommentType,
-    ValidationErrorType,
-    PostLayoutType,
-    PostType,
-    FeedLayoutType,
-    LandingType,
-    StateDataItem,
-    TickerStateData,
-    TickerData,
-    SlidesStateData,
-    SlideData,
-    SlideDataItem,
-    Item,
-    Items,
-    MainDataItem,
-    Header,
-    Edge,
-};
+export type TickerData = Map<string, Datum[]>;
