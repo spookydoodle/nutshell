@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Theme, useMediaQuery } from '@mui/material';
 import { Slideshow } from "../../../logic/slideshow/slideshow";
-import { Content } from "../../../components/metrics-dashboard/Content";
+import { Column } from "../../../components/metrics-dashboard/Column";
 import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
 import { ImgTiles } from "../../../components/metrics-dashboard/ImgTiles";
 import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
@@ -108,7 +108,7 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
                 onSequenceItemClick={handleSequenceItemClick}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (
-                <Content
+                <Column
                     animationsInitialized={animationsInitialized}
                     name={name}
                     tileData={value.tile} // TODO: consider changing to Transitions and passing components

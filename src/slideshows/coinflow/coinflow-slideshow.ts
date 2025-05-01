@@ -12,7 +12,7 @@ import { PlayerLabel } from "../../components/navigation/Slider";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import * as CoinflowTypes from "./coinflow-types";
 import * as Types from "../../types";
-import { convertToMap } from "./coinflow-data-utils";
+import { getTickerItemsData } from "./coinflow-data-utils";
 
 export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public path = '/coinflow';
@@ -33,6 +33,19 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
 
     public static sequenceItems: CoinflowTypes.Timebox[] = ['YTD', 'QTD', 'MTD'];
     public static chartsSlidesCount = 2;
+    public static columns: CoinflowTypes.Column[] = ['The Cogwheel Bazaar', 'PneumaPost Catalogue', 'The AetherNet Emporium'];
+    public static productRows: CoinflowTypes.Row[] = ['Main line', 'Secondary line'];
+
+    public static getColumnsToRender = ({ isMdUp, isLgUp }: { isMdUp: boolean; isLgUp: boolean }): CoinflowTypes.Column[] => {
+        const result: CoinflowTypes.Column[] = ["The Cogwheel Bazaar"];
+        if (isLgUp) {
+            result.push("PneumaPost Catalogue")
+        }
+        if (isMdUp) {
+            result.push("The AetherNet Emporium");
+        }
+        return result;
+    }
 
     public static getSequenceLabels = (data: CoinflowTypes.Data): PlayerLabel[] => {
         const realmsChart = data.charts.find((chart) => chart.category === 'Realms');
@@ -76,15 +89,28 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
             titleSecondaryShort: category,        }
     };
 
-    private mappedData = convertToMap(this.data);
-
     public getSlidesLength = () => {
         const sequenceLabels = CoinflowSlideshow.getSequenceLabels(this.data)
         return CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
     };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
-        return this.mappedData.ticker;
+        return new Map(
+            CoinflowSlideshow.sequenceItems.map((timebox): [string, MetricTypes.TickerData] => [
+                timebox,
+                new Map(
+                    [...new Set(this.data.ticker.map((row) => row.tickerItemParent.text))]
+                    .map((tickerItemParent: string): [string, MetricTypes.Datum[]] => [
+                        tickerItemParent,
+                        getTickerItemsData(
+                            this.data.ticker,
+                            CoinflowSlideshow.columns,
+                            timebox,
+                        ),
+                    ])
+                ),
+            ])
+        );
     };
 
     public getPlayerLabels = (): PlayerLabel[] => {

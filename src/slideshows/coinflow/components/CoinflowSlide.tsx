@@ -30,7 +30,7 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
         (_name: CoinflowTypes.Category, index: number) => {
             setSlideIndex(index + sequenceIndex * sequenceLabels.length);
         },
-        [sequenceLabels, sequenceIndex]
+        [sequenceIndex, sequenceLabels]
     );
 
     const handleSequenceItemClick = React.useCallback(
@@ -59,7 +59,14 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
                 activeSequenceIndex={Math.floor(slideIndex / (totalSlidesLength / CoinflowSlideshow.sequenceItems.length))}
                 onSequenceItemClick={handleSequenceItemClick}
             />
-            <Slide slideshow={slideshow} slideIndex={slideIndex} sequenceIndex={sequenceIndex} />
+            <Slide
+                slideshow={slideshow}
+                slideIndex={slideIndex}
+                category={category}
+                timebox={sequence}
+                sequenceLabels={sequenceLabels}
+                indexWithinSequence={indexWithinSequence}
+            />
         </>
     );
 };
