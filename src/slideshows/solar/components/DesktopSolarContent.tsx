@@ -1,13 +1,14 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Theme, useMediaQuery } from '@mui/material';
+import { Slideshow } from "../../../logic/slideshow/slideshow";
 import { Content } from "../../../components/metrics-dashboard/Content";
 import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
 import { ImgTiles } from "../../../components/metrics-dashboard/ImgTiles";
-import { Slideshow } from "../../../logic/slideshow/slideshow";
-import * as Hooks from '../../../hooks';
-import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
 import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
+import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
+import * as Hooks from '../../../hooks';
+import * as SolarTypes from "../solar-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -19,7 +20,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideshow: Slideshow<MetricTypes.StateDataMap>;
+    slideshow: Slideshow<MetricTypes.StateDataMap<SolarTypes.Category>>;
 }
 
 export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
@@ -103,7 +104,7 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
                 header={slides[slideIndex].header}
                 pauseAnimations={animationsInitialized}
                 sequenceItems={sequences}
-                activeSequenceItem={slides[slideIndex].header.sequence}
+                activeSequenceIndex={sequences.findIndex((s) => s === slides[slideIndex].header.sequence)}
                 onSequenceItemClick={handleSequenceItemClick}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (

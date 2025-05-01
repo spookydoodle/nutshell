@@ -1,14 +1,15 @@
 import { ThemeOptions } from "@mui/material";
+import { IMG_SERVER } from "../../img/cmd";
+import { getImgArr } from "../../layouts/images";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { DesktopSolarContent } from "./components/DesktopSolarContent";
 import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
 import { PlayerLabel } from "../../components/navigation/Slider";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as Types from "../../types";
-import { IMG_SERVER } from "../../img/cmd";
-import { getImgArr } from "../../layouts/images";
+import * as SolarTypes from './solar-types';
 
-export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
+export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarTypes.Category>> {
     public path = '/solar';
     public name = '_SOLAR_NUTSHELL';
     public shortName = '_SOL_NUT';
@@ -21,7 +22,7 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
 
     public getSlideTitle = (): string => "Solar system";
     public getSlideSubtitle = (): string => "Vs. the Earth"; // TODO:  Vs the earth, Planets show
-    public getSlidesData = (): MetricTypes.SlidesStateData | undefined => {
+    public getSlidesData = (): MetricTypes.SlidesStateData<SolarTypes.Category> | undefined => {
         return this.data.slides;
     };
 
@@ -30,7 +31,7 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap> {
     };
 
     public getPlayerLabels = (): PlayerLabel[] => {
-        return [...this.data.slides.entries()].map(([sequenceName, slides]) => slides.map((slide): PlayerLabel => ({ label: slide.header.titleSecondaryShort, sequenceName }))).flat();
+        return [...this.data.slides.entries()].map(([subSequenceName, slides]) => slides.map((slide): PlayerLabel => ({ label: slide.header.titleSecondaryShort, subSequenceName }))).flat();
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number): number => {

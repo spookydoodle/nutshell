@@ -69,7 +69,7 @@ export interface BreadcrumbItem<T> {
 }
 interface Props<TBreadcrumbItem extends string = string> {
     items: BreadcrumbItem<TBreadcrumbItem>[];
-    activeItem?: TBreadcrumbItem;
+    activeItemIndex?: number;
     pauseAnimations: boolean;
     color?: "textSecondary" | "white";
     onClick?: (item: TBreadcrumbItem, index: number) => void;
@@ -77,7 +77,7 @@ interface Props<TBreadcrumbItem extends string = string> {
 
 export function Breadcrumbs <TBreadcrumbItem extends string>({
     items,
-    activeItem,
+    activeItemIndex,
     pauseAnimations = true,
     color = "textSecondary",
     onClick
@@ -99,7 +99,7 @@ export function Breadcrumbs <TBreadcrumbItem extends string>({
                 >
                     <Box
                         className={classNames(classes.breadcrumb, {
-                            [color === "white" ? classes.activeWhite : classes.active]: activeItem === item.name,
+                            [color === "white" ? classes.activeWhite : classes.active]: i === activeItemIndex,
                         })}
                         onClick={() => onClick?.(item.name, i)}
                     >

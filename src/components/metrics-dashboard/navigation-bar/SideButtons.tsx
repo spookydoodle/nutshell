@@ -36,14 +36,14 @@ const useStyles = makeStyles((theme: Theme) =>
 interface Props<TSideButtonItem extends string> {
     header: Header;
     items?: TSideButtonItem[];
-    activeItem?: TSideButtonItem;
+    activeItemIndex?: number;
     onClick?: (item: TSideButtonItem, index: number) => void;
 }
 
 export function SideButtons<TSideButtonItem extends string = string>({
     header,
     items,
-    activeItem,
+    activeItemIndex,
     onClick,
 }: Props<TSideButtonItem>) {
     const classes = useStyles();
@@ -70,7 +70,7 @@ export function SideButtons<TSideButtonItem extends string = string>({
             {items?.map((item, i) => (
                 <Tooltip
                     key={i}
-                    title={item === activeItem ? item : `Change to ${item}`}
+                    title={i === activeItemIndex ? item : `Change to ${item}`}
                     placement="top"
                     arrow
                 >
@@ -80,7 +80,7 @@ export function SideButtons<TSideButtonItem extends string = string>({
                         component="span"
                         className={classNames(
                             classes.text,
-                            item === activeItem
+                            i === activeItemIndex
                                 ? classes.active
                                 : classes.inactive
                         )}

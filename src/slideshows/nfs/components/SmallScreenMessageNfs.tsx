@@ -1,12 +1,11 @@
-import { AnimatedComponent, SpringRef, useSpring, config, useSpringRef, useChain, animated } from "@react-spring/web";
+import { AnimatedComponent, SpringRef, useSpring, config, useSpringRef, useChain } from "@react-spring/web";
+import classNames from "classnames";
 import { Typography, Theme } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
 import { NutshellData } from "../nfs-types";
 import { SmallScreenComponentProps } from "../../../logic/slideshow/slideshow";
-import * as Hooks from '../../../hooks';
 import { NFSPanel } from "../../../components/metrics-dashboard/NFSPanel";
 import { TVIcon } from "../../../icons/TVIcon";
-import classNames from "classnames";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

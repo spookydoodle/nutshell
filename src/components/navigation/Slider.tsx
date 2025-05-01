@@ -33,7 +33,7 @@ const PlayerSlider = withStyles((theme: Theme) => ({
 
 export interface PlayerLabel {
     label: string;
-    sequenceName?: string;
+    subSequenceName?: string;
 }
 
 interface Props {
@@ -53,14 +53,14 @@ export const Slider: React.FC<Props> = ({
         label: playerLabel.label,
     }));
     
-    const sequences = useMemo(
+    const subSequences = useMemo(
         (): [string, number][] => playerLabels.reduce<[string, number][]>((acc, val, i) => {
-            const sequenceName = val.sequenceName ?? '';
-            if (i > 0 && acc[acc.length - 1][0] === sequenceName) {
+            const subSequenceName = val.subSequenceName ?? '';
+            if (i > 0 && acc[acc.length - 1][0] === subSequenceName) {
                 acc[acc.length - 1][1] = acc[acc.length - 1][1] + 1;
                 return acc;
             }
-            return acc.concat([[sequenceName, 1]])
+            return acc.concat([[subSequenceName, 1]])
         }, []),
         [playerLabels]
     );
@@ -68,16 +68,16 @@ export const Slider: React.FC<Props> = ({
     return (
         <Grid item container direction="column" xs={12} md={5} lg={6}>
             <Grid item container justifyContent="center">
-                {sequences.map(([sequenceName, sequenceLength], i) => (
+                {subSequences.map(([subSequenceName, sequenceLength], i) => (
                     <Grid
-                        key={sequenceName}
+                        key={subSequenceName}
                         item
                         container
                         justifyContent="center"
                         style={{ width: `${sequenceLength / playerLabels.length * 100}%` }}
                         className={classes.border}
                     >
-                        {sequenceName}
+                        {subSequenceName}
                     </Grid>
                 ))}
             </Grid>

@@ -6,7 +6,8 @@ import {
     Property,
 } from "./solar-system-data";
 import * as Utils from "../../utils";
-import { StateDataMap, TickerStateData, SlideData, Datum, MainDataItem, SlideDataItem, Item, Decimals } from "../../components/metrics-dashboard/metric-types";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
+import * as SolarTypes from './solar-types';
 
 const getMetricDelta = (val: number, metric: Property): number => {
     return val / METRIC_DATA[metric].data["Earth"];
@@ -37,10 +38,10 @@ const arr = new Array(
     Math.floor(planetNames.length / 3 + (planetNames.length % 3 !== 0 ? 1 : 0))
 ).fill(null);
 
-const metricSlides: [string, SlideData][] = [
+const metricSlides: [SolarTypes.Category, MetricTypes.SlideData<SolarTypes.Category>][] = [
     [
         "Metrics",
-        arr.map((x, n): SlideDataItem => ({
+        arr.map((x, n): MetricTypes.SlideDataItem<SolarTypes.Category> => ({
             header: {
                 category: "Metrics",
                 sequence: "Metrics",
@@ -52,7 +53,7 @@ const metricSlides: [string, SlideData][] = [
             data: new Map(
                 Object.entries(METRIC_DATA)
                     .filter((_el, i) => i >= n * 3 && i < (n + 1) * 3)
-                    .map(([metric, metricData]): [Property, Item] => [
+                    .map(([metric, metricData]): [Property, MetricTypes.Item] => [
                         metric as Property,
                         {
                             main: new Map([
@@ -62,7 +63,7 @@ const metricSlides: [string, SlideData][] = [
                                         type: "bar-chart",
                                         name: "TODO: Name",
                                         data: Object.entries(metricData.data).map(
-                                            ([planet, value]): Datum => {
+                                            ([planet, value]): MetricTypes.Datum => {
                                                 const delta = getMetricDelta(value, metric as Property);
 
                                                 return {
@@ -109,7 +110,7 @@ const metricSlides: [string, SlideData][] = [
     ],
 ];
 
-const planetsSlides: [string, SlideData][] = [
+const planetsSlides: [SolarTypes.Category, MetricTypes.SlideData<SolarTypes.Category>][] = [
     [
         "Planets",
         new Array(
@@ -117,7 +118,7 @@ const planetsSlides: [string, SlideData][] = [
             (Object.keys(PLANET_IMG).length % 3 !== 0 ? 1 : 0)
         )
             .fill(null)
-            .map((x, n): SlideDataItem => ({
+            .map((_x, n): MetricTypes.SlideDataItem<SolarTypes.Category> => ({
                 header: {
                     category: "Planets",
                     sequence: "Planets",
@@ -129,13 +130,13 @@ const planetsSlides: [string, SlideData][] = [
                 data: new Map(
                     Object.entries(PLANET_IMG)
                         .filter((_planet, i) => i >= n * 3 && i < (n + 1) * 3)
-                        .map(([planet, planetData], i): [string, Item] => {
-                            const tile: Datum =  {
+                        .map(([planet, planetData], i): [string, MetricTypes.Item] => {
+                            const tile: MetricTypes.Datum =  {
                                 name: planet,
                                 primary: i + 1,
                                 primaryFormatted: PLANET_FACTS[n * 3 + i],
                             };
-                            const main: MainDataItem = new Map([
+                            const main: MetricTypes.MainDataItem = new Map([
                                 [
                                     "Total",
                                     {
@@ -162,14 +163,14 @@ const planetsSlides: [string, SlideData][] = [
     ],
 ];
 
-const tickerData: TickerStateData = new Map([
+const tickerData: MetricTypes.TickerStateData = new Map([
     [
         "Solar System Metrics VS. the Earth",
         new Map(
-            Object.entries(METRIC_DATA).map(([metric, metricData]): [string, Datum[]] => [
+            Object.entries(METRIC_DATA).map(([metric, metricData]): [string, MetricTypes.Datum[]] => [
                 `${metric} (${metricData.unit})`,
 
-                Object.entries(metricData.data).map(([planet, value]): Datum => {
+                Object.entries(metricData.data).map(([planet, value]): MetricTypes.Datum => {
                     const delta = getMetricDelta(value, metric as Property);
 
                     return {
@@ -177,7 +178,7 @@ const tickerData: TickerStateData = new Map([
                         primary: value,
                         primaryFormatted: Utils.Formats.formatNumber(
                             value,
-                            { scaling: 1, decimals: metricData.decimals as Decimals }
+                            { scaling: 1, decimals: metricData.decimals as MetricTypes.Decimals }
                         ),
                         primaryDelta: delta,
                         primaryDeltaFormatted: `${Utils.Formats.formatNumber(delta, { scaling: 1, decimals: 3 })}${suffix}`,
@@ -190,7 +191,7 @@ const tickerData: TickerStateData = new Map([
     ],
 ]);
 
-export const createStateData = (): StateDataMap => ({
+export const createStateData = (): MetricTypes.StateDataMap<SolarTypes.Category> => ({
     slides: new Map([...metricSlides, ...planetsSlides]),
     ticker: tickerData,
 });

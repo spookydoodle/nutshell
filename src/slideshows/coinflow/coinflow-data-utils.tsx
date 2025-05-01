@@ -197,7 +197,7 @@ export const convertToMapMobile = (res:CoinflowTypes.Data): MetricTypes.StateDat
     );
 };
 
-export const convertToMap = (res: CoinflowTypes.Data): MetricTypes.StateDataMap => {
+export const convertToMap = (res: CoinflowTypes.Data): MetricTypes.StateDataMap<CoinflowTypes.Category> => {
     const productSlides = getUnique(res, 'slideName');
     const rowNames = getUnique(res, 'rowName');
     const columnNames = getUnique(res, 'columnName').map((el) => el.key);
@@ -205,10 +205,10 @@ export const convertToMap = (res: CoinflowTypes.Data): MetricTypes.StateDataMap 
 
     return {
         slides: new Map(
-            timeboxes.map((timebox): [string, MetricTypes.SlideData] => [
+            timeboxes.map((timebox): [string, MetricTypes.SlideData<CoinflowTypes.Category>] => [
                 timebox,
                 [
-                    ...res.charts.map((c): MetricTypes.SlideDataItem => ({
+                    ...res.charts.map((c): MetricTypes.SlideDataItem<CoinflowTypes.Category> => ({
                         header: {
                             category: c.category,
                             sequence: timebox,
@@ -240,7 +240,7 @@ export const convertToMap = (res: CoinflowTypes.Data): MetricTypes.StateDataMap 
                             ])
                         ),
                     })),
-                    ...productSlides.map((slide): MetricTypes.SlideDataItem => ({
+                    ...productSlides.map((slide): MetricTypes.SlideDataItem<CoinflowTypes.Category> => ({
                         header: {
                             category: "Products",
                             sequence: timebox,
