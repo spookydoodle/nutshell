@@ -1,9 +1,17 @@
 import React from "react";
 import { SvgIcon } from "@mui/material";
-import * as Types from './icons-types';
+
+type Color =
+    | "inherit"
+    | "disabled"
+    | "action"
+    | "primary"
+    | "secondary"
+    | "error"
+    | undefined;
 
 interface Props {
-    color?: Types.Color;
+    color?: Color;
     style?: React.CSSProperties;
     className?: string;
 }

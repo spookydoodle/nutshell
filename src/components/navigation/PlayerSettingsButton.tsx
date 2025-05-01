@@ -44,9 +44,7 @@ export const PlayerSettingsButton: React.FC<Props> = ({
                     onClick={() => setPin((prev: boolean) => !prev)}
                     className={classes.icon}
                 >
-                    <PinIcon
-                        className={`${classes.pinIcon} ${pin ? classes.active : undefined}`}
-                    />
+                    <PinIcon className={`${classes.pinIcon} ${pin ? classes.active : undefined}`} />
                 </IconButton>
             </Tooltip>
 

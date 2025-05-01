@@ -4,7 +4,7 @@ import { makeStyles, createStyles, withStyles } from '@mui/styles';
 import { Accordion as MUIAccordion, AccordionSummary as MUIAccordionSummary, AccordionDetails as MUIAccordionDetails, Theme, Box, Typography } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ScoreList } from "./ScoreList";
-import { BarChartData, DataRow } from "../../logic/datavizTypes";
+import { BarChartData, DataRow } from "./dataviz-types";
 
 const Accordion = withStyles(() => ({
     root: {

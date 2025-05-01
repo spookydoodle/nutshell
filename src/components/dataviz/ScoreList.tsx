@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Typography, Divider, Theme } from '@mui/material';
-import { BarChartData, DataRow } from "../../logic/datavizTypes";
+import { BarChartData, DataRow } from "./dataviz-types";
 import { fontSizes } from "../../styles";
 
 const useStyles = makeStyles((theme: Theme) =>

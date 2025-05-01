@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Typography } from '@mui/material';
-import * as MetricTypes from "./metric-types";
+import * as MetricTypes from "../metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

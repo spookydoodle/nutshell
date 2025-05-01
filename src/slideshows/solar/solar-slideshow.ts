@@ -1,6 +1,6 @@
 import { ThemeOptions } from "@mui/material";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
-import { DesktopSolarContent } from "../../components/metrics-dashboard/DesktopSolarContent";
+import { DesktopSolarContent } from "./components/DesktopSolarContent";
 import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
 import { PlayerLabel } from "../../components/navigation/Slider";
 import { Slideshow } from "../../logic/slideshow/slideshow";
