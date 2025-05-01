@@ -1,14 +1,18 @@
 import { ThemeOptions } from "@mui/material";
-import * as Types from "../../types";
-import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
+import PublicIcon from "@mui/icons-material/Public";
+import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
+import LoyaltyIcon from "@mui/icons-material/Loyalty";
+import { getImgArr } from "../../layouts/images";
+import { Slideshow } from "../../logic/slideshow/slideshow";
+import { IMG_SERVER } from "../../img/cmd";
+import { BreadcrumbItem } from "../../components/metrics-dashboard/navigation-bar/Breadcrumbs";
 import { CoinflowMobile } from "./components/CoinflowMobile";
 import { CoinflowSlide } from "./components/CoinflowSlide";
 import { PlayerLabel } from "../../components/navigation/Slider";
-import { Slideshow } from "../../logic/slideshow/slideshow";
-import { IMG_SERVER } from "../../img/cmd";
-import { getImgArr } from "../../layouts/images";
-import { convertToMap } from "./coinflow-data-utils";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import * as CoinflowTypes from "./coinflow-types";
+import * as Types from "../../types";
+import { getTickerItemsData } from "./coinflow-data-utils";
 
 export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public path = '/coinflow';
@@ -21,26 +25,96 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public backgroundImageUrls = getImgArr("BG");
     public title = 'Coinflow';
 
-    // TODO: Add YTD/QTD/MTD
-    public getSlideTitle = (slideIndex: number): string => "Coinflow";
-    // TODO by realms, sectors, products
-    public getSlideSubtitle = (slideIndex: number): string => "By TODO";
+    public static breadcrumbItems: BreadcrumbItem<CoinflowTypes.Category>[] = [
+        { name: "Realms", icon: PublicIcon },
+        { name: "Sectors", icon: BusinessCenterIcon },
+        { name: "Products", icon: LoyaltyIcon },
+    ]
 
-    private mappedData = convertToMap(this.data);
+    public static sequenceItems: CoinflowTypes.Timebox[] = ['YTD', 'QTD', 'MTD'];
+    public static chartsSlidesCount = 2;
+    public static columns: CoinflowTypes.Column[] = ['The Cogwheel Bazaar', 'PneumaPost Catalogue', 'The AetherNet Emporium'];
+    public static productRows: CoinflowTypes.Row[] = ['Main line', 'Secondary line'];
+
+    public static getColumnsToRender = ({ isMdUp, isLgUp }: { isMdUp: boolean; isLgUp: boolean }): CoinflowTypes.Column[] => {
+        const result: CoinflowTypes.Column[] = ["The Cogwheel Bazaar"];
+        if (isLgUp) {
+            result.push("PneumaPost Catalogue")
+        }
+        if (isMdUp) {
+            result.push("The AetherNet Emporium");
+        }
+        return result;
+    }
+
+    public static getSequenceLabels = (data: CoinflowTypes.Data): PlayerLabel[] => {
+        const realmsChart = data.charts.find((chart) => chart.category === 'Realms');
+        const sectorsChart = data.charts.find((chart) => chart.category === 'Sectors');
+        if (!realmsChart || !sectorsChart) {
+            throw new Error('Chart data missing');
+        }
+        const chartSlidesLabels: PlayerLabel[] = [realmsChart, sectorsChart].map((el) => ({ label: el.category, subSequenceName: 'Charts' }));
+        const productSlidesLabels: PlayerLabel[] = [
+            ...data.products.reduce<Set<string>>((acc, val) => acc.add(val.slideName.text), new Set<string>())
+        ].map((el) => ({ label: el, subSequenceName: 'Products' }));
+        
+        return chartSlidesLabels.concat(productSlidesLabels);
+    };
+
+    public static getTotalSlidesLength = (sequenceLabels: PlayerLabel[]) => {
+        return CoinflowSlideshow.sequenceItems.length * sequenceLabels.length;
+    };
+
+    public static getSlideStats = (data: CoinflowTypes.Data, slideIndex: number) => {
+        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(data);
+        const totalSlidesLength = CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
+        const sequenceIndex = Math.floor(slideIndex / sequenceLabels.length);
+        const sequence = CoinflowSlideshow.sequenceItems[sequenceIndex];
+        const indexWithinSequence = slideIndex % sequenceLabels.length;
+        const activeBreadcrumbIndex = Math.min(indexWithinSequence, CoinflowSlideshow.breadcrumbItems.length - 1);
+        const isChartSlide = indexWithinSequence < CoinflowSlideshow.chartsSlidesCount;
+        const category = isChartSlide ? data.charts[indexWithinSequence].category : 'Products';
+
+        return {
+            sequenceLabels,
+            sequenceIndex,
+            sequence,
+            indexWithinSequence,
+            totalSlidesLength,
+            activeBreadcrumbIndex,
+            category,
+            titlePrimary: `${sequence} ${data.primaryMeasureName}`,
+            titlePrimaryShort: `${sequence} ${data.primaryMeasureName}`,
+            titleSecondary: isChartSlide ? `By ${category}` : sequenceLabels[indexWithinSequence].label,
+            titleSecondaryShort: category,        }
+    };
 
     public getSlidesLength = () => {
-        return this.mappedData.slides.values().reduce<number>((acc, val) => acc + val.length, 0);
+        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(this.data)
+        return CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
     };
 
     public getTickerData = (): MetricTypes.TickerStateData | undefined => {
-        return this.mappedData.ticker;
+        return new Map(
+            CoinflowSlideshow.sequenceItems.map((timebox): [string, MetricTypes.TickerData] => [
+                timebox,
+                new Map(
+                    [...new Set(this.data.ticker.map((row) => row.tickerItemParent.text))]
+                    .map((tickerItemParent: string): [string, MetricTypes.Datum[]] => [
+                        tickerItemParent,
+                        getTickerItemsData(
+                            this.data.ticker,
+                            CoinflowSlideshow.columns,
+                            timebox,
+                        ),
+                    ])
+                ),
+            ])
+        );
     };
 
     public getPlayerLabels = (): PlayerLabel[] => {
-        return [...this.mappedData.slides.values()][0].map((slide) => ({ 
-            label: slide.header.titleSecondaryShort,
-            sequenceName: slide.header.category === 'Products' ? 'Products' : 'Charts'
-        }));
+        return CoinflowSlideshow.getSequenceLabels(this.data);
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number) => {

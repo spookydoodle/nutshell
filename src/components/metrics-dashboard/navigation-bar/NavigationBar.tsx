@@ -26,21 +26,21 @@ interface Props<TBreadcrumb extends string, TSideButton extends string> {
     header: Header;
     pauseAnimations?: boolean;
     breadcrumbItems?: BreadcrumbItem<TBreadcrumb>[];
-    activeBreadcrumbItem?: TBreadcrumb;
+    activeBreadcrumbIndex?: number;
     onBreadcrumbItemClick?: (item: TBreadcrumb, index: number) => void;
     sequenceItems?: TSideButton[];
-    activeSequenceItem?: TSideButton;
+    activeSequenceIndex?: number;
     onSequenceItemClick?: (item: TSideButton, index: number) => void;
 }
 
 export function NavigationBar<TBreadcrumb extends string = string, TSideButton extends string = string>({
     breadcrumbItems,
-    activeBreadcrumbItem,
+    activeBreadcrumbIndex,
     onBreadcrumbItemClick,
     pauseAnimations = true,
     header,
     sequenceItems,
-    activeSequenceItem,
+    activeSequenceIndex,
     onSequenceItemClick
 }: Props<TBreadcrumb, TSideButton>) {
     const classes = useStyles();
@@ -63,7 +63,7 @@ export function NavigationBar<TBreadcrumb extends string = string, TSideButton e
                 <Grid item xs={4}>
                     <Breadcrumbs<TBreadcrumb>
                         items={breadcrumbItems ?? []}
-                        activeItem={activeBreadcrumbItem}
+                        activeItemIndex={activeBreadcrumbIndex}
                         pauseAnimations={pauseAnimations}
                         color="white"
                         onClick={onBreadcrumbItemClick}
@@ -76,7 +76,7 @@ export function NavigationBar<TBreadcrumb extends string = string, TSideButton e
                     <SideButtons
                         header={header}
                         items={sequenceItems}
-                        activeItem={activeSequenceItem}
+                        activeItemIndex={activeSequenceIndex}
                         onClick={onSequenceItemClick}
                     />
                 </Grid>

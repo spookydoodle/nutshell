@@ -3,6 +3,7 @@ import { Typography, Theme } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
 import classNames from "classnames";
 import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
+import * as SolarTypes from '../solar-types';
 import { SmallScreenComponentProps } from "../../../logic/slideshow/slideshow";
 import { TVIcon } from "../../../icons/TVIcon";
 
@@ -82,7 +83,7 @@ const useSolarAnimation = (newRef: SpringRef): Style => {
     return spring;
 };
 
-export const SmallScreenMessageSolar: React.FC<SmallScreenComponentProps<MetricTypes.StateDataMap>> = ({ slideshow }) => {
+export const SmallScreenMessageSolar: React.FC<SmallScreenComponentProps<MetricTypes.StateDataMap<SolarTypes.Category>>> = ({ slideshow }) => {
     const classes = useStyles();
 
     const solarRef1 = useSpringRef();

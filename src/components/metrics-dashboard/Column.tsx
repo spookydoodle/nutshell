@@ -49,11 +49,11 @@ interface Props {
     component: JSX.Element;
 }
 
-export const Content: React.FC<Props> = ({
+export const Column: React.FC<Props> = ({
     animationsInitialized = true,
     name,
     tileData,
-    component,
+    component
 }) => {
     const classes = useStyles();
 

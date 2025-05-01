@@ -102,7 +102,7 @@ export interface Datum {
     link?: string;
 }
 
-export interface Header {
+export interface Header<TCategory extends string = string> {
     /**
      * Will be used for breadcrumbs and player sequence name
      */
@@ -136,8 +136,8 @@ export interface MainDataItemItem {
  * @example YTD -> Column Name 1 -> tiles -> Data
  * @example MTD -> Column Name 1 -> bar-charts -> Realms Bar Chart Data
  */
-export type StateDataMap = {
-    slides: SlidesStateData;
+export type StateDataMap<TCategory extends string> = {
+    slides: SlidesStateData<TCategory>;
     ticker?: TickerStateData;
 };
 
@@ -162,12 +162,12 @@ export interface ChartMobile {
     data: Datum[];
 }
 
-export type SlidesStateData = Map<string, SlideData>;
+export type SlidesStateData<TCategory extends string> = Map<string, SlideData<TCategory>>;
 
-export type SlideData = SlideDataItem[];
+export type SlideData<TCategory extends string> = SlideDataItem<TCategory>[];
 
-export interface SlideDataItem {
-    header: Header;
+export interface SlideDataItem<TCategory extends string> {
+    header: Header<TCategory>;
     data: Map<string, Item>;
 }
 

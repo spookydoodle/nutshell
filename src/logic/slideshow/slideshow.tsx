@@ -183,16 +183,6 @@ export abstract class Slideshow<T = unknown> {
     public abstract getSlidesLength: () => number;
 
     /**
-     * Slide title to display.
-     */
-    public getSlideTitle?: (slideIndex: number) => string;
-    
-    /**
-     * Slide title to display.
-     */
-    public getSlideSubtitle?: (slideIndex: number ) => string;
-
-    /**
      * Function which returns the index for the bottom Player component.
      */
     public abstract getPlayerIndex: (slideIndex: number, playerLabelsLength: number) => number;
