@@ -1,5 +1,9 @@
 import { ImgSrc } from "../../types";
 
+export type Scaling = 1 | 1000 | 1000000;
+export type Decimals = 0 | 1 | 2 | 3 | 4;
+export type ComponentType = "bar-chart" | "items" | "tiles" | "ticker";
+
 export interface Dimension<T extends string = string, TText extends string = string> {
     key: T;
     text: TText;
@@ -36,97 +40,6 @@ export interface MeasureOptions {
 export type ValueByTimebox<T extends string> = {
     [key in T]: number;
 }
-
-export type Scaling = 1 | 1000 | 1000000;
-export type Decimals = 0 | 1 | 2 | 3 | 4;
-
-export interface ChartData<TCategory extends string, TTimebox extends string, TColumn extends string> {
-    category: TCategory;
-    data: ChartBreakdownItem<TTimebox, TColumn>[];
-}
-
-export interface ChartMobile {
-    characteristicName: string;
-    data: Datum[];
-}
-
-/**
- * Data required to display a KPI in a tile component.
- */
-export interface Tile<TTimebox extends string, TColumn extends string> {
-    columnName: Dimension<TColumn, TColumn>;
-    measures: Measures<TTimebox>;
-}
-
-/**
- * Data required to display an element in the footer ticker.
- */
-export interface TickerItem<TTimebox extends string, TColumn extends string> {
-    /**
-     * Used to group the sequence of ticker elements.
-     */
-    tickerItemParent: Dimension;
-    /**
-     * Characteristic for ticker element.
-     */
-    tickerItem: Dimension;
-    columnName: Dimension<TColumn, TColumn>;
-    measures: Measures<TTimebox>;
-}
-
-/**
- * Data required to render a single bar in a horizontal bar chart.
- */
-export interface ChartBreakdownItem<TTimebox extends string, TColumn extends string> {
-    columnName: Dimension<TColumn, TColumn>;
-    characteristicValue: Dimension;
-    measures: Measures<TTimebox>;
-}
-
-/**
- * Data required to show case a single product.
- */
-export interface ProductsItem<TTimebox extends string, TColumn extends string, TRow extends string> {
-    /**
-     * Creates a slide per each
-     */
-    slideName: Dimension;
-    /**
-     * Name of the column by which to split the dashboard in columns.
-     */
-    columnName: Dimension<TColumn, TColumn>;
-    /**
-     * Splits product section into rows.
-     */
-    rowName: Dimension<TRow, TRow>;
-    /**
-     * Displayed in tooltip on hover of the product image
-     */
-    attributePrimary: Dimension;
-    /**
-     * Displayed in tooltip on hover of the product image
-     */
-    attributeSecondary: Dimension;
-    imageURL: Dimension;
-    measures: Measures<TTimebox>;
-}
-
-export type DataValue<
-    TTimebox extends string,
-    TColumn extends string,
-    TRow extends string
-> = Tile<TTimebox, TColumn>[] | ChartBreakdownItem<TTimebox, TColumn>[] | TickerItem<TTimebox, TColumn>[] | ProductsItem<TTimebox, TColumn, TRow>[];
-
-export type DataItem<
-TTimebox extends string,
-TColumn extends string,
-TRow extends string
-> =
-    | ChartBreakdownItem<TTimebox, TColumn>
-    | Tile<TTimebox, TColumn>
-    | ChartBreakdownItem<TTimebox, TColumn>
-    | TickerItem<TTimebox, TColumn>
-    | ProductsItem<TTimebox, TColumn, TRow>;
 
 export interface Datum {
     key?: string;
@@ -189,26 +102,35 @@ export interface Datum {
     link?: string;
 }
 
-export type StateDataArr = {
-    name: string; // FF
-    value: StateDataItem;
-}[];
+export interface Header {
+    /**
+     * Will be used for breadcrumbs and player sequence name
+     */
+    category: string;
+    sequence: string;
+    titlePrimary: string;
+    titlePrimaryShort: string;
+    titleSecondary: string;
+    titleSecondaryShort: string;
+}
 
-export type StateDataItem = Array<{
-    name: string; // YTD, MTD
-    value: Array<{
-        name: string; // Colum nName 1, Column Name 2, Column Name 3
-        value: Array<{
-            name: string; // tiles / bar-charts / items
-            value: Array<{
-                name: string; // Total / Realms / Sectors / Product Type 1 / Product Type 2
-                value: Datum[];
-            }>;
-        }>;
-    }>;
-}>;
+// TODO: Rename
+export interface Item {
+    tile: Datum;
+    main: MainDataItem;
+}
 
-export type ComponentType = "bar-chart" | "items" | "tiles" | "ticker";
+// TODO: Rename
+export type MainDataItem = Map<
+    string,
+    MainDataItemItem
+>;
+
+export interface MainDataItemItem {
+    type: ComponentType;
+    name: string;
+    data: Datum[];
+}
 
 /**
  * @example YTD -> Column Name 1 -> tiles -> Data
@@ -235,6 +157,11 @@ export interface StateDataItemMobile {
     products: Item[];
 }
 
+export interface ChartMobile {
+    characteristicName: string;
+    data: Datum[];
+}
+
 export type SlidesStateData = Map<string, SlideData>;
 
 export type SlideData = SlideDataItem[];
@@ -242,36 +169,6 @@ export type SlideData = SlideDataItem[];
 export interface SlideDataItem {
     header: Header;
     data: Map<string, Item>;
-}
-
-// TODO: Rename
-export interface Item {
-    tile: Datum;
-    main: MainDataItem;
-}
-
-// TODO: Rename
-export type MainDataItem = Map<
-    string,
-    MainDataItemItem
->;
-
-export interface MainDataItemItem {
-    type: ComponentType;
-    name: string;
-    data: Datum[];
-}
-
-export interface Header {
-    /**
-     * Will be used for breadcrumbs and player sequence name
-     */
-    category: string;
-    sequence: string;
-    titlePrimary: string;
-    titlePrimaryShort: string;
-    titleSecondary: string;
-    titleSecondaryShort: string;
 }
 
 /**
