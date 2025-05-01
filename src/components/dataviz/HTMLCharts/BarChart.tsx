@@ -2,12 +2,9 @@ import React from "react";
 import { animateScroll } from "react-scroll";
 import classNames from "classnames";
 import { Box } from "@mui/material";
-import { BarChartRowAbsDelta } from "./BarChartRowAbsDelta";
-import { BarChartRowDeltaAbs } from "./BarChartRowDeltaAbs";
-import { BarChartRowAbsDeltaMulti } from "./BarChartRowAbsDeltaMulti";
-import { BarChartData, BarChartDataItem } from "../../../logic/datavizTypes";
-import { BarProps } from './html-chart-types';
+import { BarChartData, BarChartDataItem, BarChartType } from "../dataviz-types";
 import { useStyles } from "./styles";
+import { BarChartRow } from "./BarChartRow";
 
 const SCROLL_DURATION = 2000;
 
@@ -42,7 +39,7 @@ interface Props {
      * - `abs-delta` same as above just the other way around. 
      * - `abs-delta-multi` same as above but will also display the delta as green or red bars in a second chart to the right of the one with absolute values.
      */
-    type: "delta-abs" | "abs-delta" | "abs-delta-multi";
+    type: BarChartType;
     /**
      * Color of chart bars. Refers to theme's color palette.
      */
@@ -153,17 +150,6 @@ export const BarChart: React.FC<Props> = ({
         [filteredData, fillerBars, applySort, variant, index]
     );
 
-    const BarComponent = React.useMemo(
-        (): React.ComponentType<BarProps> => {
-            switch (type) {
-                case 'abs-delta': return BarChartRowAbsDelta;
-                case 'delta-abs': return BarChartRowDeltaAbs;
-                case 'abs-delta-multi': return BarChartRowAbsDeltaMulti;
-            }
-        },
-        [type]
-    );
-
     return (
         <Box
             id={scrollID}
@@ -173,8 +159,9 @@ export const BarChart: React.FC<Props> = ({
         >
             <div className={classes.bars}>
                 {barsData.map((row, i) =>
-                    <BarComponent
+                    <BarChartRow
                         key={`chart-bar-${i}-${row.category}`}
+                        type={type}
                         i={i + index * 10}
                         category={row.category}
                         filler={!!row.filler}

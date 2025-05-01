@@ -2,7 +2,23 @@ import React from "react";
 import classNames from "classnames";
 import { Grid, Typography, Box } from "@mui/material";
 import { useStyles } from "./styles";
-import { BarProps } from "./html-chart-types";
+
+export interface BarProps {
+    i: number;
+    category: string;
+    filler: boolean;
+    value?: number;
+    valueFormatted?: string;
+    delta?: number;
+    deltaFormatted?: string;
+    isDeltaGood?: boolean;
+    isDeltaBad?: boolean;
+    max: number;
+    min: number;
+    rankColor?: "primary" | "secondary";
+    labelSize?: "sm" | "md";
+    absPosition?: "behind-bar" | "align-column";
+}
 
 export const BarChartRowAbsDelta: React.FC<BarProps> = ({
     i,

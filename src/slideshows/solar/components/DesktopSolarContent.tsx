@@ -1,13 +1,13 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Grid, Theme, useMediaQuery } from '@mui/material';
-import { NavTitles } from "./solar/NavTitles";
-import { Content } from "./Content";
-import { BarChart } from "../dataviz/HTMLCharts/BarChart";
-import { ImgTiles } from "./ImgTiles";
-import { Slideshow } from "../../logic/slideshow/slideshow";
-import * as Hooks from '../../hooks';
-import * as MetricTypes from "./metric-types";
+import { Content } from "../../../components/metrics-dashboard/Content";
+import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
+import { ImgTiles } from "../../../components/metrics-dashboard/ImgTiles";
+import { Slideshow } from "../../../logic/slideshow/slideshow";
+import * as Hooks from '../../../hooks';
+import * as MetricTypes from "../../../components/metrics-dashboard/metric-types";
+import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -90,23 +90,21 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
             </>
         ));
 
+    const handleSequenceItemClick = React.useCallback(
+        (_name: string, index: number) => {
+            setSlideIndex(index === 0 ? 0 : 6); // TODO: Calculate
+        },
+        []
+    );
+
     return (
         <>
-            <NavTitles
-                animationsInitialized={animationsInitialized}
-                current={slides[slideIndex].header}
-                next={slides[(slideIndex + 1) % totalLen].header}
-                play={play}
-                index={slideIndex}
-                setIndex={setSlideIndex}
-                seqLen={seqLen}
-                onBreadClick={(index: number) =>
-                    setSlideIndex(
-                        (prev: number) => index + Math.floor(prev / seqLen) * seqLen // TODO: repair this to take into consideration current sequence name
-                    )
-                }
-                sequences={sequences}
-                currentSequence={slides[slideIndex].header.sequence}
+            <NavigationBar
+                header={slides[slideIndex].header}
+                pauseAnimations={animationsInitialized}
+                sequenceItems={sequences}
+                activeSequenceItem={slides[slideIndex].header.sequence}
+                onSequenceItemClick={handleSequenceItemClick}
             />
             {[...slides[slideIndex].data.entries()].map(([name, value], i) => !(i > 0 && isOnlyXs) ? (
                 <Content

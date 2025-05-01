@@ -14,18 +14,104 @@ export interface Data {
     /**
      * Defines data to display at all times in tile components above dynamic content, such as charts or products.
      */
-    tiles: MetricTypes.Tile<Timebox, Column>[];
+    tiles: Tile<Timebox, Column>[];
     /**
      * Defines data to display in horizontal bar charts. 
      * Each element will be displayed on a separate slide.
      */
-    charts: MetricTypes.ChartData<Category, Timebox, Column>[]
+    charts: ChartData<Category, Timebox, Column>[]
     /**
      * Defines data to display in the products section. Products will be grouped on each slide by `slideName`.
      */
-    products: MetricTypes.ProductsItem<Timebox, Column, Row>[];
+    products: ProductsItem<Timebox, Column, Row>[];
     /**
      * Defines data to display in the footer ticker component.
      */
-    ticker: MetricTypes.TickerItem<Timebox, Column>[];
+    ticker: TickerItem<Timebox, Column>[];
 }
+
+
+/**
+ * Data required to display a KPI in a tile component.
+ */
+export interface Tile<TTimebox extends string, TColumn extends string> {
+    columnName: MetricTypes.Dimension<TColumn, TColumn>;
+    measures: MetricTypes.Measures<TTimebox>;
+}
+
+
+export interface ChartData<TCategory extends string, TTimebox extends string, TColumn extends string> {
+    category: TCategory;
+    data: ChartBreakdownItem<TTimebox, TColumn>[];
+}
+
+/**
+ * Data required to render a single bar in a horizontal bar chart.
+ */
+export interface ChartBreakdownItem<TTimebox extends string, TColumn extends string> {
+    columnName: MetricTypes.Dimension<TColumn, TColumn>;
+    characteristicValue: MetricTypes.Dimension;
+    measures: MetricTypes.Measures<TTimebox>;
+}
+
+
+/**
+ * Data required to show case a single product.
+ */
+export interface ProductsItem<TTimebox extends string, TColumn extends string, TRow extends string> {
+    /**
+     * Creates a slide per each
+     */
+    slideName: MetricTypes.Dimension;
+    /**
+     * Name of the column by which to split the dashboard in columns.
+     */
+    columnName: MetricTypes.Dimension<TColumn, TColumn>;
+    /**
+     * Splits product section into rows.
+     */
+    rowName: MetricTypes.Dimension<TRow, TRow>;
+    /**
+     * Displayed in tooltip on hover of the product image
+     */
+    attributePrimary: MetricTypes.Dimension;
+    /**
+     * Displayed in tooltip on hover of the product image
+     */
+    attributeSecondary: MetricTypes.Dimension;
+    imageURL: MetricTypes.Dimension;
+    measures: MetricTypes.Measures<TTimebox>;
+}
+
+/**
+ * Data required to display an element in the footer ticker.
+ */
+export interface TickerItem<TTimebox extends string, TColumn extends string> {
+    /**
+     * Used to group the sequence of ticker elements.
+     */
+    tickerItemParent: MetricTypes.Dimension;
+    /**
+     * Characteristic for ticker element.
+     */
+    tickerItem: MetricTypes.Dimension;
+    columnName: MetricTypes.Dimension<TColumn, TColumn>;
+    measures: MetricTypes.Measures<TTimebox>;
+}
+
+export type DataValue<
+    TTimebox extends string,
+    TColumn extends string,
+    TRow extends string
+> = Tile<TTimebox, TColumn>[] | ChartBreakdownItem<TTimebox, TColumn>[] | TickerItem<TTimebox, TColumn>[] | ProductsItem<TTimebox, TColumn, TRow>[];
+
+export type DataItem<
+    TTimebox extends string,
+    TColumn extends string,
+    TRow extends string
+> =
+    | ChartBreakdownItem<TTimebox, TColumn>
+    | Tile<TTimebox, TColumn>
+    | ChartBreakdownItem<TTimebox, TColumn>
+    | TickerItem<TTimebox, TColumn>
+    | ProductsItem<TTimebox, TColumn, TRow>;

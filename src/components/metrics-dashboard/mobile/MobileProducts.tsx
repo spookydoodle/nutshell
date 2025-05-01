@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Theme } from '@mui/material';
 import { ProductsSection } from "./ProductsSection";
-import { HeaderKPI } from "../HeaderKPI";
+import { HeaderKPI } from "./HeaderKPI";
 import * as MetricTypes from "../metric-types";
 
 const useStyles = makeStyles((_theme: Theme) =>

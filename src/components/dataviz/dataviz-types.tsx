@@ -1,28 +1,28 @@
-interface Size {
+export interface Size {
     width: number;
     height: number;
 }
 
-interface Position {
+export interface Position {
     top: number;
     bottom: number;
     right: number;
     left: number;
 }
 
-interface DataRow {
+export interface DataRow {
     category: string;
     value: number;
 }
 
-interface BarChart {
+export interface BarChart {
     data: Array<{ category: string; value: number }>;
     size: Size;
     resize?: "fixed" | "responsive";
     color?: string;
 }
 
-interface BarChartDataItem {
+export interface BarChartDataItem {
     category: string;
     subcategory?: string;
     value: number;
@@ -35,13 +35,6 @@ interface BarChartDataItem {
     subitems?: BarChartData;
 }
 
-type BarChartData = Array<BarChartDataItem>;
+export type BarChartData = Array<BarChartDataItem>;
 
-export type {
-    Size,
-    Position,
-    BarChart,
-    BarChartDataItem,
-    BarChartData,
-    DataRow,
-};
+export type BarChartType = "delta-abs" | "abs-delta" | "abs-delta-multi";

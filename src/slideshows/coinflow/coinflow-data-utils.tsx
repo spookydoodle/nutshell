@@ -3,22 +3,22 @@ import * as Utils from "../../utils";
 import * as CoinflowTypes from "./coinflow-types";
 
 const filterByPositive = (
-    data: MetricTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
+    data: CoinflowTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
     columnName: string,
     timebox: CoinflowTypes.Timebox
-): MetricTypes.DataItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[] => {
+): CoinflowTypes.DataItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[] => {
     return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueByTimebox[timebox]) > 0);
 };
 
 const filterByDimension = (
-    data: MetricTypes.ChartBreakdownItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[],
+    data: CoinflowTypes.ChartBreakdownItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[],
     name: string
-): MetricTypes.DataItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[] => {
+): CoinflowTypes.DataItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[] => {
     return data.filter((row) => row.characteristicValue.key === name);
 };
 
 const getTileData = (
-    data: MetricTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
+    data: CoinflowTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
     columnName: string,
     timebox: CoinflowTypes.Timebox
 ): MetricTypes.Datum[] => {
@@ -41,12 +41,12 @@ const getTileData = (
 };
 
 const getChartsData = (
-    data: MetricTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
+    data: CoinflowTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
     columnName: string,
     timebox: CoinflowTypes.Timebox,
-    tickerItemsData?: MetricTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[]
+    tickerItemsData?: CoinflowTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[]
 ): MetricTypes.Datum[] => {
-    const charts = filterByPositive(data, columnName, timebox) as MetricTypes.ChartBreakdownItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[];
+    const charts = filterByPositive(data, columnName, timebox) as CoinflowTypes.ChartBreakdownItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[];
 
     return charts.map((row) => {
         const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -68,7 +68,7 @@ const getChartsData = (
 };
 
 const getTickerItemsData = (
-    data: MetricTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[],
+    data: CoinflowTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[],
     columnNames: string[],
     timebox: CoinflowTypes.Timebox,
     tickerItemParent?: string,
@@ -97,14 +97,14 @@ const getTickerItemsData = (
 };
 
 const getProductsData = (
-    data: MetricTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
+    data: CoinflowTypes.DataValue<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>,
     columnName: string,
     timebox: CoinflowTypes.Timebox,
     slideName: string,
     rowName: MetricTypes.Dimension
 ): MetricTypes.Datum[] => {
     // Fix type casting
-    return (filterByPositive(data, columnName, timebox) as MetricTypes.ProductsItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[])
+    return (filterByPositive(data, columnName, timebox) as CoinflowTypes.ProductsItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[])
         .filter((row) => row.slideName.key === slideName && row.rowName.key === rowName.key)
         .map((row) => {
             const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
@@ -305,6 +305,6 @@ export const convertToMap = (res: CoinflowTypes.Data): MetricTypes.StateDataMap 
     };
 };
 
-const getUniqueTickerItemParents = (data: MetricTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[]): string[] => [
+const getUniqueTickerItemParents = (data: CoinflowTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[]): string[] => [
     ...new Set(data.map((row) => row.tickerItemParent.text)),
 ];
