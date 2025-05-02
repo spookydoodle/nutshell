@@ -1,4 +1,3 @@
-import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Button } from '@mui/material';
 
@@ -7,7 +6,7 @@ const useStyles = makeStyles((theme: Theme) =>
         selector: {
             width: "100%",
             display: "flex",
-            alignItems: "center",
+            alignItems: "stretch",
             justifyContent: "space-between",
             columnGap: '10px'
         },

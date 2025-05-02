@@ -15,6 +15,7 @@ const useStyles = makeStyles((_theme: Theme) =>
             overflow: "hidden",
         },
         img: {
+            pointerEvents: 'none',
             display: "block",
             objectFit: "contain",
             marginLeft: "auto",
