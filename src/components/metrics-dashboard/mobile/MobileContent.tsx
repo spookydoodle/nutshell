@@ -46,7 +46,6 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-// TODO: Dynamic types not necessary once  mobileData removed
 export interface MobileContentProps<TSequence extends string, TColumn extends string> {
     tiles: (MetricTypes.Datum | undefined)[];
     charts: { name: string; data: MetricTypes.Datum[]; }[][];
