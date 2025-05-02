@@ -1,7 +1,8 @@
 import React from "react";
 import { MobileHeader } from "../../../components/metrics-dashboard/mobile/MobileHeader";
-import { MobileContent } from "../../../components/metrics-dashboard/mobile/MobileContent";
+import { MobileContent, MobileContentProps } from "../../../components/metrics-dashboard/mobile/MobileContent";
 import { Footer } from "../../../components/metrics-dashboard/mobile/Footer";
+import * as MetricTypes from '../../../components/metrics-dashboard/metric-types';
 import { Slideshow } from "../../../logic/slideshow/slideshow";
 import * as Utils from "../coinflow-data-utils";
 import * as CoinflowTypes from "../coinflow-types";
@@ -26,14 +27,56 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
         []
     );
 
-    const mobileData = React.useMemo(
-        () => Utils.convertToMapMobile(slideshow.data),
+    const tiles = React.useMemo(
+        (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['tiles'] => {
+            return CoinflowSlideshow.columns.map((c) => Utils.getTileData(slideshow.data.tiles, c, selectedSequence));
+        },
+        [slideshow.data, selectedSequence]
+    );
+
+    const charts = React.useMemo(
+        (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['charts'] => {
+            return CoinflowSlideshow.columns.map((c) => slideshow.data.charts.map((chart) => ({
+                name: chart.category,
+                data: Utils.getChartsData(chart.data, c, selectedSequence)
+            })));
+        },
+        [slideshow.data, selectedSequence]
+    );
+
+    const sequenceLabels = React.useMemo(
+        () => CoinflowSlideshow.getSequenceLabels(slideshow.data),
         [slideshow.data]
     );
 
     const productSlides = React.useMemo(
-        () => Utils.getUnique(slideshow.data, 'slideName'),
-        [slideshow.data]
+        () => sequenceLabels.filter((el) => el.subSequenceName === 'Products').map((el) => el.label),
+        [sequenceLabels]
+    );
+
+    const products = React.useMemo(
+        (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['products'] => {            
+            return CoinflowSlideshow.columns.map((column) => {
+                return productSlides.map((slideName) => {
+                    const tileData = Utils.filterByDimension(slideshow.data.charts.find((chart) => chart.category === 'Sectors')?.data ?? [], slideName);
+
+                    return {
+                        tile: Utils.getTileData(tileData, column, selectedSequence),
+                        main: new Map(
+                            CoinflowSlideshow.productRows.map((row): [string, MetricTypes.MainDataItemItem] => [
+                                row,
+                                {
+                                    type: "items",
+                                    name: slideName,
+                                    data: Utils.getProductsData(slideshow.data.products, column, selectedSequence, slideName, { key: row, text: row }),
+                                },
+                            ])
+                        )
+                    };
+                })
+            });
+        },
+        [productSlides, slideshow.data, selectedSequence]
     );
 
     return (
@@ -48,7 +91,9 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
                 onColumnChange={handleColumnChange}
             />
             <MobileContent
-                mobileData={mobileData}
+                tiles={tiles}
+                charts={charts}
+                products={products}
                 productSlides={productSlides}
                 primaryMeasureName={title}
                 selectedSequence={selectedSequence}

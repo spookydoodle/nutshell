@@ -47,10 +47,12 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 // TODO: Dynamic types not necessary once  mobileData removed
-interface Props<TSequence extends string, TColumn extends string> {
-    mobileData: MetricTypes.StateDataMapMobile<TSequence, TColumn>;
+export interface MobileContentProps<TSequence extends string, TColumn extends string> {
+    tiles: (MetricTypes.Datum | undefined)[];
+    charts: { name: string; data: MetricTypes.Datum[]; }[][];
+    products: MetricTypes.Item[][];
+    productSlides: string[];
     primaryMeasureName: string;
-    productSlides: MetricTypes.Dimension[];
     columns: TColumn[];
     selectedColumn: TColumn;
     onColumnChange: (column: TColumn) => void;
@@ -58,85 +60,79 @@ interface Props<TSequence extends string, TColumn extends string> {
 }
 
 export function MobileContent<TSequence extends string, TColumn extends string>({
-    mobileData,
+    tiles,
+    charts,
+    products,
     productSlides,
     primaryMeasureName,
     columns,
     selectedColumn,
     onColumnChange, // TODO: Keep and repair swipe
     selectedSequence
-}: Props<TSequence, TColumn>) {
+}: MobileContentProps<TSequence, TColumn>) {
     const classes = useStyles();
 
     return (
         <Box className={classes.swiperContainer}>
             <Box className={classes.spacing} />
 
-            {mobileData ? (
-                <Box className={classes.swiper} style={{ transform: `translateX(${-100 * columns.findIndex((c) => c === selectedColumn)}%)`, }}>
-                    {columns.map((columnName) => (
-                        <Box key={`${columnName}-box`} id={`${columnName}-box`} className={classes.swipeItem}>
-                            <Box className={classNames(classes.card, classes.borderRadiusAll)}>
-                                <Tile
-                                    name={`${columnName} ${primaryMeasureName} ${selectedSequence}`}
-                                    data={mobileData?.get(selectedSequence)?.get(columnName)?.tile}
-                                />
-                            </Box>
-
-                            <Tabstrip
-                                expandable={true}
-                                items={mobileData
-                                    ?.get(selectedSequence)
-                                    ?.get(columnName)
-                                    ?.charts.map((chart) => ({
-                                        name: chart.characteristicName,
-                                        component: chart.data.some((datum) => (datum.subitems?.length ?? 0) > 0) ? (
-                                            <NestedScoreList
-                                                data={chart.data.map((datum) => ({
-                                                    category: datum.name,
-                                                    subcategory: datum.attributePrimary?.key,
-                                                    value: datum.primary,
-                                                    valueFormatted: `${datum.primaryFormatted}`,
-                                                    delta: datum.primaryDelta,
-                                                    deltaFormatted: datum.primaryDeltaFormatted,
-                                                    isDeltaGood: datum.primaryIsGood,
-                                                    isDeltaBad: datum.primaryIsBad,
-                                                    subitems: (datum.subitems ?? []).map((tickerItem) => ({
-                                                        category: tickerItem.name,
-                                                        subcategory: tickerItem.key,
-                                                        value: tickerItem.primary,
-                                                        valueFormatted: `${tickerItem.primaryFormatted}`,
-                                                        delta: tickerItem.primaryDelta,
-                                                        deltaFormatted: tickerItem.primaryDeltaFormatted,
-                                                        isDeltaGood: tickerItem.primaryIsGood,
-                                                        isDeltaBad: tickerItem.primaryIsBad,
-                                                    })),
-                                                }))
-                                                }
-                                            />
-                                        ) : (
-                                            <ScoreList
-                                                data={chart.data.map((datum) => ({
-                                                    category: datum.name,
-                                                    subcategory: productSlides.filter((div: { key: string }) => div.key === datum.attributePrimary?.key)[0]?.shortText,
-                                                    value: datum.primary,
-                                                    valueFormatted: `${datum.primaryFormatted}`,
-                                                    delta: datum.primaryDelta,
-                                                    deltaFormatted: datum.primaryDeltaFormatted,
-                                                    isDeltaGood: datum.primaryIsGood,
-                                                    isDeltaBad: datum.primaryIsBad,
-                                                })) || []
-                                                }
-                                            />
-                                        )
-                                    })) ?? []}
-                            />
-
-                            <MobileProducts data={mobileData?.get(selectedSequence)?.get(columnName)?.products || []} />
+            <Box className={classes.swiper} style={{ transform: `translateX(${-100 * columns.findIndex((c) => c === selectedColumn)}%)`, }}>
+                {columns.map((column, i) => (
+                    <Box key={`${column}-box`} id={`${column}-box`} className={classes.swipeItem}>
+                        <Box className={classNames(classes.card, classes.borderRadiusAll)}>
+                            <Tile name={`${column} ${primaryMeasureName} ${selectedSequence}`} data={tiles[i]} />
                         </Box>
-                    ))}
-                </Box>
-            ) : null}
+
+                        <Tabstrip
+                            expandable={true}
+                            items={charts[i].map((chart) => ({
+                                name: chart.name,
+                                component: chart.data.some((datum) => (datum.subitems?.length ?? 0) > 0) ? (
+                                    <NestedScoreList
+                                        data={chart.data.map((datum) => ({
+                                            category: datum.name,
+                                            subcategory: datum.attributePrimary?.key,
+                                            value: datum.primary,
+                                            valueFormatted: `${datum.primaryFormatted}`,
+                                            delta: datum.primaryDelta,
+                                            deltaFormatted: datum.primaryDeltaFormatted,
+                                            isDeltaGood: datum.primaryIsGood,
+                                            isDeltaBad: datum.primaryIsBad,
+                                            subitems: (datum.subitems ?? []).map((tickerItem) => ({
+                                                category: tickerItem.name,
+                                                subcategory: tickerItem.key,
+                                                value: tickerItem.primary,
+                                                valueFormatted: `${tickerItem.primaryFormatted}`,
+                                                delta: tickerItem.primaryDelta,
+                                                deltaFormatted: tickerItem.primaryDeltaFormatted,
+                                                isDeltaGood: tickerItem.primaryIsGood,
+                                                isDeltaBad: tickerItem.primaryIsBad,
+                                            })),
+                                        }))
+                                        }
+                                    />
+                                ) : (
+                                    <ScoreList
+                                        data={chart.data.map((datum) => ({
+                                            category: datum.name,
+                                            subcategory: productSlides.find((slideName) => slideName === datum.attributePrimary?.key) ?? '',
+                                            value: datum.primary,
+                                            valueFormatted: `${datum.primaryFormatted}`,
+                                            delta: datum.primaryDelta,
+                                            deltaFormatted: datum.primaryDeltaFormatted,
+                                            isDeltaGood: datum.primaryIsGood,
+                                            isDeltaBad: datum.primaryIsBad,
+                                        })) || []
+                                        }
+                                    />
+                                )
+                            })) ?? []}
+                        />
+
+                        <MobileProducts data={products[i]} />
+                    </Box>
+                ))}
+            </Box>
         </Box>
     );
 }
