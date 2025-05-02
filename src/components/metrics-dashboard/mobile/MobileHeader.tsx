@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box } from '@mui/material';
 import { ColumnButtons } from "./ColumnButtons";
-import { CategoryDropdown } from "./CategoryDropdown";
+import { SequenceDropdown } from "./SequenceDropdown";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -18,32 +18,31 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props {
-    timeboxIndex: number;
-    handleTimeboxChange: (index: number) => void;
-    // TODO: Rename
-    chanIndex: number;
-    handleColumnNameChange: (index: number) => void;
-    columnNames: string[];
-    timeboxes: string[];
+interface Props<TSequence extends string, TColumn extends string> {
     title: string;
+    sequenceItems: TSequence[];
+    selectedSequence: TSequence;
+    onSequenceChange: (sequence: TSequence) => void;
+    columns: TColumn[];
+    selectedColumn: TColumn;
+    onColumnChange: (column: TColumn) => void;
 }
 
-export const MobileHeader: React.FC<Props> = ({
-    timeboxIndex,
-    handleTimeboxChange,
-    chanIndex,
-    handleColumnNameChange,
-    columnNames,
-    timeboxes,
-    title
-}) => {
+export function MobileHeader<TSequence extends string, TColumn extends string>({
+    title,
+    sequenceItems,
+    selectedSequence,
+    onSequenceChange,
+    columns,
+    selectedColumn,
+    onColumnChange
+}: Props<TSequence, TColumn>) {
     const classes = useStyles();
 
     return (
         <Box className={classes.navbar}>
-                <CategoryDropdown items={timeboxes} index={timeboxIndex} onChange={handleTimeboxChange} title={title} />
-                <ColumnButtons buttons={columnNames} index={chanIndex} onChange={handleColumnNameChange} />
+            <SequenceDropdown title={title} items={sequenceItems} selectedSequence={selectedSequence} onChange={onSequenceChange} />
+            <ColumnButtons columns={columns} selectedColumn={selectedColumn} onChange={onColumnChange} />
         </Box>
     );
-};
+}

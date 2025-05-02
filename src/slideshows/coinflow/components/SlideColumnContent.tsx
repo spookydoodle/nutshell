@@ -41,22 +41,24 @@ export const SlideColumnContent: React.FC<SlideComponentProps<CoinflowTypes.Data
 
     return (
         <Box className={classes.spaceEvenly}>
-            {category === 'Realms' || category === 'Sectors'
-                ? <SlideColumnChart
-                slideshow={slideshow}
-                category={category}
-                column={column}
-                columnsToRender={columnsToRender}
-                slideIndex={slideIndex}
-                timebox={timebox}
+            {category === 'Realms' || category === 'Sectors' ? (
+                <SlideColumnChart
+                    slideshow={slideshow}
+                    category={category}
+                    column={column}
+                    columnsToRender={columnsToRender}
+                    slideIndex={slideIndex}
+                    timebox={timebox}
                 />
-                : <SlideColumnProducts
+            ) : (
+                <SlideColumnProducts
                     slideshow={slideshow}
                     slideIndex={slideIndex}
                     column={column}
                     timebox={timebox}
                     sequenceLabel={sequenceLabels[indexWithinSequence].label}
-                />}
+                />
+            )}
         </Box>
     );
 };

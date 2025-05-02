@@ -33,35 +33,34 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
-    buttons: Array<string>;
-    index: number;
-    onChange: (index: number) => void;
+interface Props<TColumn extends string> {
+    columns: TColumn[];
+    selectedColumn: TColumn;
+    onChange: (column: TColumn) => void;
 }
 
-export const ColumnButtons: React.FC<Props> = ({ buttons, index, onChange }) => {
+export function ColumnButtons<TColumn extends string>({
+    columns,
+    selectedColumn,
+    onChange
+}: Props<TColumn>) {
     const classes = useStyles();
-
-    const handleChange = React.useCallback(
-        (i: number) => () => onChange(i),
-        [onChange]
-    );
 
     return (
         <Box className={classes.selector}>
-            {buttons.map((columnName: string, i: number) => (
+            {columns.map((column) => (
                 <Button
-                    key={columnName}
+                    key={column}
                     variant="contained"
                     size="medium"
-                    onClick={handleChange(i)}
-                    color={i === index ? "secondary" : "inherit"}
+                    onClick={() => onChange(column)}
+                    color={column === selectedColumn ? "secondary" : "inherit"}
                     disableFocusRipple
-                    className={i === index ? classes.active : classes.inactive}
+                    className={column === selectedColumn ? classes.active : classes.inactive}
                 >
-                    {columnName}
+                    {column}
                 </Button>
             ))}
         </Box>
     );
-};
+}

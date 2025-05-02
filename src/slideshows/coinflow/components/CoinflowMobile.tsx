@@ -5,34 +5,25 @@ import { Footer } from "../../../components/metrics-dashboard/mobile/Footer";
 import { Slideshow } from "../../../logic/slideshow/slideshow";
 import * as Utils from "../coinflow-data-utils";
 import * as CoinflowTypes from "../coinflow-types";
+import { CoinflowSlideshow } from "../coinflow-slideshow";
 
 interface Props {
     slideshow: Slideshow<CoinflowTypes.Data>;
 }
 
 export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
-    const [timeboxIndex, setTimeboxIndex] = React.useState(0);
-    const [chanIndex, setChanIndex] = React.useState(0);
+    const [selectedSequence, setSelectedSequence] = React.useState<CoinflowTypes.Timebox>(CoinflowSlideshow.sequenceItems[0]);
+    const [selectedColumn, setSelectedColumn] = React.useState<CoinflowTypes.Column>(CoinflowSlideshow.columns[0]);
     const title = React.useMemo(() => slideshow.title ?? "", [slideshow]);
 
-    const handleTimeboxChange = React.useCallback(
-        (index: number) => setTimeboxIndex(index),
+    const handleSequenceChange = React.useCallback(
+        (s: CoinflowTypes.Timebox) => setSelectedSequence(s),
         []
     );
 
-    const handleColumnNameChange = React.useCallback(
-        (index: number) => setChanIndex(index),
+    const handleColumnChange = React.useCallback(
+        (c: CoinflowTypes.Column) => setSelectedColumn(c),
         []
-    );
-
-    const columnNames = React.useMemo(
-        () => Utils.getUnique(slideshow.data, 'columnName'),
-        [slideshow.data]
-    );
-
-    const timeboxes = React.useMemo(
-        () => Utils.getUniqueTimeboxes(slideshow.data),
-        [slideshow.data]
     );
 
     const mobileData = React.useMemo(
@@ -48,26 +39,23 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
     return (
         <>
             <MobileHeader
-                timeboxIndex={timeboxIndex}
-                handleTimeboxChange={handleTimeboxChange}
-                chanIndex={chanIndex}
-                handleColumnNameChange={handleColumnNameChange}
-                columnNames={columnNames.map((el) => el.key)}
-                timeboxes={timeboxes}
                 title={title}
+                sequenceItems={CoinflowSlideshow.sequenceItems}
+                selectedSequence={selectedSequence}
+                onSequenceChange={handleSequenceChange}
+                columns={CoinflowSlideshow.columns}
+                selectedColumn={selectedColumn}
+                onColumnChange={handleColumnChange}
             />
-
             <MobileContent
                 mobileData={mobileData}
                 productSlides={productSlides}
-                timeboxIndex={timeboxIndex}
-                chanIndex={chanIndex}
-                handleColumnNameChange={handleColumnNameChange}
-                columnNames={columnNames.map((el) => el.key)}
-                timeboxes={timeboxes}
                 primaryMeasureName={title}
+                selectedSequence={selectedSequence}
+                onColumnChange={handleColumnChange}
+                columns={CoinflowSlideshow.columns}
+                selectedColumn={selectedColumn}
             />
-
             <Footer text="Turbocharged by spookydoodle" />
         </>
     );

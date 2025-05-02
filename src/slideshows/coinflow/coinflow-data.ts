@@ -11,7 +11,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345678,
                         "QTD": 12354678,
                         "MTD": 3456789
@@ -24,14 +24,14 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 15.3,
                         "QTD": 25.8,
                         "MTD": 5.6
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 1234567,
                         "QTD": 234567,
                         "MTD": 89012
@@ -47,7 +47,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 15347678,
                         "QTD": 12354678,
                         "MTD": 3456789
@@ -60,14 +60,14 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 47.8,
                         "QTD": 34.3,
                         "MTD": -8.5
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 1234567,
                         "QTD": 234567,
                         "MTD": 89012
@@ -83,7 +83,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345678,
                         "QTD": 12354678,
                         "MTD": 3456789
@@ -96,14 +96,14 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 20.5,
                         "QTD": -10.2,
                         "MTD": 70.6
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 1234567,
                         "QTD": 234567,
                         "MTD": 89012
@@ -129,7 +129,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678
@@ -142,7 +142,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -150,7 +150,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -175,7 +175,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -189,7 +189,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -197,7 +197,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -222,7 +222,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -236,7 +236,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -244,7 +244,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -269,7 +269,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -283,7 +283,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -291,7 +291,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -316,7 +316,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -330,7 +330,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -338,7 +338,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -363,7 +363,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -377,7 +377,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -385,7 +385,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -410,7 +410,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -424,7 +424,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -432,7 +432,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -457,7 +457,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -471,7 +471,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -479,7 +479,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -504,7 +504,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -518,7 +518,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -526,7 +526,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -551,7 +551,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -565,7 +565,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -573,7 +573,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -598,7 +598,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -612,7 +612,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -620,7 +620,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -645,7 +645,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 23455,
                         "MTD": 5678,
@@ -659,7 +659,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12.3,
                         "QTD": -12.3,
                         "MTD": 29,
@@ -667,7 +667,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 9123,
                         "QTD": 1234,
                         "MTD": 234,
@@ -693,7 +693,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 24456789,
                                 "QTD": 4667890,
                                 "MTD": 11345677,
@@ -706,7 +706,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -714,7 +714,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -735,7 +735,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 20456789,
                                 "QTD": 4267890,
                                 "MTD": 19345677,
@@ -749,7 +749,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -757,7 +757,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -778,7 +778,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 25456789,
                                 "QTD": 4067890,
                                 "MTD": 17345677,
@@ -792,7 +792,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -800,7 +800,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -821,7 +821,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 27456789,
                                 "QTD": 4067890,
                                 "MTD": 16345677,
@@ -835,7 +835,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -843,7 +843,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -864,7 +864,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 20756789,
                                 "QTD": 4237890,
                                 "MTD": 14745677,
@@ -878,7 +878,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -886,7 +886,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -907,7 +907,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 8756789,
                                 "QTD": 4487890,
                                 "MTD": 13645677,
@@ -921,7 +921,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -929,7 +929,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -950,7 +950,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 20966789,
                                 "QTD": 4097890,
                                 "MTD": 20145677
@@ -963,7 +963,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -971,7 +971,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -992,7 +992,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 15856789,
                                 "QTD": 3037890,
                                 "MTD": 10345677
@@ -1005,7 +1005,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -1013,7 +1013,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1034,7 +1034,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 18156789,
                                 "QTD": 3367890,
                                 "MTD": 9345677
@@ -1047,7 +1047,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -1055,7 +1055,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1075,7 +1075,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 16756789,
                                 "QTD": 3027890,
                                 "MTD": 955677
@@ -1088,7 +1088,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -1096,7 +1096,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1117,7 +1117,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 6756789,
                                 "QTD": 1267890,
                                 "MTD": 8645677,
@@ -1131,7 +1131,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10.1,
                                 "QTD": -5.3,
                                 "MTD": 2.6,
@@ -1139,7 +1139,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1160,7 +1160,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 15256789,
                                 "QTD": 3067890,
                                 "MTD": 9045677
@@ -1173,7 +1173,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -10.1,
                                 "QTD": 5.3,
                                 "MTD": -2.6,
@@ -1181,7 +1181,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1202,7 +1202,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 19356789,
                                 "QTD": 3427890,
                                 "MTD": 255677,
@@ -1216,7 +1216,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 5.1,
                                 "QTD": 65.3,
                                 "MTD": 45.2,
@@ -1224,7 +1224,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1245,7 +1245,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 4356789,
                                 "QTD": 1510890,
                                 "MTD": 10045677,
@@ -1259,7 +1259,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 50.1,
                                 "QTD": -12.3,
                                 "MTD": -23.1,
@@ -1267,7 +1267,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1288,7 +1288,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 6086789,
                                 "QTD": 3477890,
                                 "MTD": 7945677,
@@ -1302,7 +1302,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -89.1,
                                 "QTD": -9,
                                 "MTD": 12.6,
@@ -1310,7 +1310,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1331,7 +1331,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 10356789,
                                 "QTD": 3187890,
                                 "MTD": 204677,
@@ -1345,7 +1345,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -61.1,
                                 "QTD": 65.3,
                                 "MTD": -12.4,
@@ -1353,7 +1353,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 35678,
@@ -1374,7 +1374,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1856789,
                                 "QTD": 1310890,
                                 "MTD": 12045677,
@@ -1388,7 +1388,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 32.1,
                                 "QTD": 22.3,
                                 "MTD": -23.1,
@@ -1396,7 +1396,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1417,7 +1417,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 14256789,
                                 "QTD": 2567890,
                                 "MTD": 9045677,
@@ -1431,7 +1431,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -10.1,
                                 "QTD": 45.3,
                                 "MTD": -2.6,
@@ -1439,7 +1439,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1460,7 +1460,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 8356789,
                                 "QTD": 3427890,
                                 "MTD": 255677,
@@ -1474,7 +1474,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -34.6,
                                 "QTD": 65.3,
                                 "MTD": 45.2,
@@ -1482,7 +1482,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1503,7 +1503,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 3856789,
                                 "QTD": 1510890,
                                 "MTD": 10045677,
@@ -1517,7 +1517,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 50.1,
                                 "QTD": -12.3,
                                 "MTD": -23.1,
@@ -1525,7 +1525,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1546,7 +1546,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 9256789,
                                 "QTD": 3067890,
                                 "MTD": 9045677,
@@ -1560,7 +1560,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -10.1,
                                 "QTD": 5.3,
                                 "MTD": -2.6,
@@ -1568,7 +1568,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1589,7 +1589,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 18356789,
                                 "QTD": 3427890,
                                 "MTD": 255677,
@@ -1603,7 +1603,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 5.1,
                                 "QTD": 65.3,
                                 "MTD": 45.2,
@@ -1611,7 +1611,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1632,7 +1632,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 2356789,
                                 "QTD": 1510890,
                                 "MTD": 10045677,
@@ -1646,7 +1646,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 50.1,
                                 "QTD": -12.3,
                                 "MTD": -23.1,
@@ -1654,7 +1654,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 567890,
                                 "QTD": 123456,
                                 "MTD": 45678,
@@ -1681,7 +1681,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 51278901,
                                 "QTD": 6989012,
                                 "MTD": 1645678,
@@ -1695,7 +1695,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -1703,7 +1703,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1934567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -1724,7 +1724,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1678901,
                                 "QTD": 4389012,
                                 "MTD": 1245678
@@ -1737,7 +1737,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -1745,7 +1745,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -1766,7 +1766,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 28478901,
                                 "QTD": 4389012,
                                 "MTD": 1255678
@@ -1779,7 +1779,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -1787,7 +1787,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -1808,7 +1808,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 29078901,
                                 "QTD": 4309012,
                                 "MTD": 1505678,
@@ -1822,7 +1822,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -1830,7 +1830,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -1852,7 +1852,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 94378901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -1866,7 +1866,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -32.3,
                                 "QTD": -2.9,
                                 "MTD": -40.2,
@@ -1874,7 +1874,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -1895,7 +1895,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 39078901,
                                 "QTD": 6089012,
                                 "MTD": 1945678,
@@ -1909,7 +1909,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 42.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -1917,7 +1917,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 245678,
                                 "MTD": 56789,
@@ -1939,7 +1939,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 45678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -1953,7 +1953,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -1961,7 +1961,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -1982,7 +1982,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 41678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -1996,7 +1996,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2004,7 +2004,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2025,7 +2025,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 31678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2039,7 +2039,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2047,7 +2047,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2068,7 +2068,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 62678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2082,7 +2082,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2090,7 +2090,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2112,7 +2112,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 45678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2126,7 +2126,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2134,7 +2134,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2155,7 +2155,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 36678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2169,7 +2169,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2177,7 +2177,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2198,7 +2198,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 23678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2212,7 +2212,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -42.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2220,7 +2220,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2241,7 +2241,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2255,7 +2255,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2263,7 +2263,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2285,7 +2285,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 37678901,
                                 "QTD": 6909012,
                                 "MTD": 2955678,
@@ -2299,7 +2299,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -42.3,
                                 "QTD": -2.9,
                                 "MTD": -70.2,
@@ -2307,7 +2307,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 395678,
                                 "MTD": 56789,
@@ -2329,7 +2329,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 31678901,
                                 "QTD": 6909012,
                                 "MTD": 2955678,
@@ -2343,7 +2343,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -42.3,
                                 "QTD": -2.9,
                                 "MTD": -70.2,
@@ -2351,7 +2351,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 395678,
                                 "MTD": 56789,
@@ -2372,7 +2372,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 7878901,
                                 "QTD": 6129012,
                                 "MTD": 2065678,
@@ -2386,7 +2386,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -62.3,
                                 "QTD": 2.9,
                                 "MTD": 90.2,
@@ -2394,7 +2394,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2415,7 +2415,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 3878901,
                                 "QTD": 6129012,
                                 "MTD": 2065678,
@@ -2429,7 +2429,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": -62.3,
                                 "QTD": 2.9,
                                 "MTD": 90.2,
@@ -2437,7 +2437,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2459,7 +2459,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 5678901,
                                 "QTD": 4889012,
                                 "MTD": 1835678,
@@ -2473,7 +2473,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": -2.9,
                                 "MTD": -50.2,
@@ -2481,7 +2481,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2503,7 +2503,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12678901,
                                 "QTD": 4889012,
                                 "MTD": 1835678,
@@ -2517,7 +2517,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": -2.9,
                                 "MTD": -50.2,
@@ -2525,7 +2525,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2546,7 +2546,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 13678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2560,7 +2560,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2568,7 +2568,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2589,7 +2589,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 45678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2603,7 +2603,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2611,7 +2611,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2632,7 +2632,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 25678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2646,7 +2646,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2654,7 +2654,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2675,7 +2675,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 51678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2689,7 +2689,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2697,7 +2697,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2719,7 +2719,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 38678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2733,7 +2733,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2741,7 +2741,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2763,7 +2763,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 47678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2777,7 +2777,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2785,7 +2785,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2806,7 +2806,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 54678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2820,7 +2820,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2828,7 +2828,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2849,7 +2849,7 @@ const data: CoinflowTypes.Data = {
                     },
                     "measures": {
                         "primaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 42678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678,
@@ -2863,7 +2863,7 @@ const data: CoinflowTypes.Data = {
                         "primaryMeasureDelta": {
 
                             "unit": "%",
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 12.3,
                                 "QTD": 2.9,
                                 "MTD": -10.2,
@@ -2871,7 +2871,7 @@ const data: CoinflowTypes.Data = {
                             }
                         },
                         "secondaryMeasure": {
-                            "valueByTimebox": {
+                            "valueBySequence": {
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789,
@@ -2913,7 +2913,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 557456,
                         "QTD": 410456,
                         "MTD": 29001,
@@ -2927,7 +2927,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -2935,7 +2935,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -2973,7 +2973,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 535446,
                         "QTD": 183444,
                         "MTD": 19545
@@ -2986,7 +2986,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -2994,7 +2994,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3032,7 +3032,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3046,7 +3046,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3054,7 +3054,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3092,7 +3092,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3106,7 +3106,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3114,7 +3114,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3152,7 +3152,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3166,7 +3166,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3174,7 +3174,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3212,7 +3212,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3226,7 +3226,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3234,7 +3234,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3272,7 +3272,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3286,7 +3286,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3294,7 +3294,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3332,7 +3332,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3346,7 +3346,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3354,7 +3354,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3392,7 +3392,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3406,7 +3406,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3414,7 +3414,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3452,7 +3452,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 200056,
                         "QTD": 219016,
                         "MTD": 28345
@@ -3465,7 +3465,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3473,7 +3473,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3511,7 +3511,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 455556,
                         "QTD": 223456,
                         "MTD": 30905
@@ -3524,7 +3524,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3532,7 +3532,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3570,7 +3570,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 213456,
                         "QTD": 163456,
                         "MTD": 13345,
@@ -3584,7 +3584,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3592,7 +3592,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3630,7 +3630,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3644,7 +3644,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3652,7 +3652,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3690,7 +3690,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3704,7 +3704,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3712,7 +3712,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3750,7 +3750,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3764,7 +3764,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3772,7 +3772,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3810,7 +3810,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3824,7 +3824,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3832,7 +3832,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3870,7 +3870,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3884,7 +3884,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3892,7 +3892,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3930,7 +3930,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -3944,7 +3944,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -3952,7 +3952,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -3990,7 +3990,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 637456,
                         "QTD": 203456,
                         "MTD": 26905,
@@ -4004,7 +4004,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4012,7 +4012,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4050,7 +4050,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4064,7 +4064,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4072,7 +4072,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4110,7 +4110,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 142356,
                         "QTD": 203456,
                         "MTD": 27845,
@@ -4124,7 +4124,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4132,7 +4132,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4170,7 +4170,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4184,7 +4184,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4192,7 +4192,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4230,7 +4230,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4244,7 +4244,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4252,7 +4252,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4290,7 +4290,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4304,7 +4304,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4312,7 +4312,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4350,7 +4350,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4364,7 +4364,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4372,7 +4372,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4410,7 +4410,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4424,7 +4424,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4432,7 +4432,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -4470,7 +4470,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -4484,7 +4484,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -4492,547 +4492,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5070,7 +4530,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5084,7 +4544,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5092,7 +4552,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5130,7 +4590,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5144,7 +4604,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5152,7 +4612,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5190,7 +4650,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5204,7 +4664,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5212,7 +4672,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5250,7 +4710,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5264,7 +4724,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5272,7 +4732,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5310,7 +4770,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5324,7 +4784,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5332,7 +4792,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5370,7 +4830,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5384,7 +4844,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5392,7 +4852,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5430,7 +4890,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5444,7 +4904,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5452,7 +4912,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5490,7 +4950,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5504,7 +4964,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5512,7 +4972,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5550,7 +5010,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5564,7 +5024,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5572,7 +5032,547 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5610,7 +5610,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 593456,
                         "QTD": 213456,
                         "MTD": 73345,
@@ -5624,7 +5624,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5632,7 +5632,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5670,7 +5670,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 624323,
                         "QTD": 290456,
                         "MTD": 12345
@@ -5683,7 +5683,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5691,7 +5691,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5729,7 +5729,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 432654,
                         "QTD": 173456,
                         "MTD": 43845
@@ -5742,7 +5742,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5750,7 +5750,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5788,7 +5788,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5802,7 +5802,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5810,7 +5810,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5848,7 +5848,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5862,7 +5862,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5870,7 +5870,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5908,7 +5908,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5922,7 +5922,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5930,7 +5930,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -5968,7 +5968,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -5982,7 +5982,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -5990,7 +5990,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6028,7 +6028,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6042,7 +6042,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6050,7 +6050,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6088,7 +6088,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6102,7 +6102,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6110,7 +6110,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6148,7 +6148,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 423456,
                         "QTD": 223456,
                         "MTD": 32345,
@@ -6162,7 +6162,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6170,7 +6170,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6208,7 +6208,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6222,7 +6222,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6230,7 +6230,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6268,7 +6268,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6282,7 +6282,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6290,7 +6290,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6328,7 +6328,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6342,7 +6342,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6350,7 +6350,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6388,7 +6388,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6402,7 +6402,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6410,7 +6410,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6448,7 +6448,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6462,7 +6462,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6470,7 +6470,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6508,7 +6508,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6522,7 +6522,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6530,7 +6530,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6568,7 +6568,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6582,7 +6582,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6590,7 +6590,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6628,7 +6628,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6642,7 +6642,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6650,7 +6650,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6688,7 +6688,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 323456,
                         "QTD": 223456,
                         "MTD": 89945
@@ -6701,7 +6701,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6709,7 +6709,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6747,7 +6747,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 980456,
                         "QTD": 271900,
                         "MTD": 32994
@@ -6760,7 +6760,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6768,7 +6768,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6806,7 +6806,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 323456,
                         "QTD": 313456,
                         "MTD": 38845
@@ -6819,7 +6819,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6827,7 +6827,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6865,7 +6865,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6879,7 +6879,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6887,7 +6887,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6925,7 +6925,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6939,7 +6939,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -6947,7 +6947,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -6985,7 +6985,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -6999,7 +6999,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7007,7 +7007,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7045,7 +7045,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7059,7 +7059,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7067,7 +7067,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7105,7 +7105,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7119,7 +7119,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7127,7 +7127,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7165,7 +7165,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7179,7 +7179,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7187,547 +7187,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueByTimebox": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueByTimebox": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7765,7 +7225,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7779,7 +7239,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7787,7 +7247,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7825,7 +7285,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7839,7 +7299,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7847,7 +7307,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7885,7 +7345,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7899,7 +7359,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7907,7 +7367,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -7945,7 +7405,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -7959,7 +7419,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -7967,7 +7427,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -8005,7 +7465,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -8019,7 +7479,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -8027,7 +7487,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -8065,7 +7525,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -8079,7 +7539,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -8087,7 +7547,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -8125,7 +7585,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -8139,7 +7599,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -8147,7 +7607,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -8185,7 +7645,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -8199,7 +7659,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -8207,7 +7667,7 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,
@@ -8245,7 +7705,7 @@ const data: CoinflowTypes.Data = {
             },
             "measures": {
                 "primaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 123456,
                         "QTD": 123456,
                         "MTD": 12345,
@@ -8259,7 +7719,7 @@ const data: CoinflowTypes.Data = {
                 "primaryMeasureDelta": {
 
                     "unit": "%",
-                    "valueByTimebox": {
+                    "valueBySequence": {
                         "YTD": 0,
                         "QTD": 0,
                         "MTD": 0,
@@ -8267,7 +7727,547 @@ const data: CoinflowTypes.Data = {
                     }
                 },
                 "secondaryMeasure": {
-                    "valueByTimebox": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
                         "YTD": 12345,
                         "QTD": 2345,
                         "MTD": 123,

@@ -32,7 +32,6 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     ]
 
     public static sequenceItems: CoinflowTypes.Timebox[] = ['YTD', 'QTD', 'MTD'];
-    public static chartsSlidesCount = 2;
     public static columns: CoinflowTypes.Column[] = ['The Cogwheel Bazaar', 'PneumaPost Catalogue', 'The AetherNet Emporium'];
     public static productRows: CoinflowTypes.Row[] = ['Main line', 'Secondary line'];
 
@@ -72,7 +71,7 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         const sequence = CoinflowSlideshow.sequenceItems[sequenceIndex];
         const indexWithinSequence = slideIndex % sequenceLabels.length;
         const activeBreadcrumbIndex = Math.min(indexWithinSequence, CoinflowSlideshow.breadcrumbItems.length - 1);
-        const isChartSlide = indexWithinSequence < CoinflowSlideshow.chartsSlidesCount;
+        const isChartSlide = indexWithinSequence < sequenceLabels.filter((l) => l.subSequenceName === 'Charts').length;
         const category = isChartSlide ? data.charts[indexWithinSequence].category : 'Products';
 
         return {

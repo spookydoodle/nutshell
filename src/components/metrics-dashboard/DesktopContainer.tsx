@@ -23,7 +23,6 @@ interface Props {
 
 export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
     const classes = useStyles();
-    const isSmUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('sm'));
     const isLgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
@@ -38,7 +37,7 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
             <Grid container item className={classes.content}>
                 {children}
                 {tickerData ? <Ticker animationsInitialized={animationsInitialized} title={Slideshow.tickerTitle} data={tickerData} /> : null}
-                {isSmUp ? <Player slideshow={slideshow} /> : null}
+                <Player slideshow={slideshow} />
             </Grid>
         </Grid>
     );

@@ -7,7 +7,7 @@ const filterByPositive = (
     columnName: string,
     timebox: CoinflowTypes.Timebox
 ): CoinflowTypes.DataItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[] => {
-    return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueByTimebox[timebox]) > 0);
+    return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueBySequence[timebox]) > 0);
 };
 
 const filterByDimension = (
@@ -25,8 +25,8 @@ export const getTileData = (
     const tiles = filterByPositive(data, columnName, timebox);
 
     return tiles.map((row) => {
-        const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
-        const { valueByTimebox: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
+        const { valueBySequence: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
+        const { valueBySequence: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
 
         return {
             name: columnName,
@@ -49,8 +49,8 @@ export const getChartsData = (
     const charts = filterByPositive(data, columnName, timebox) as CoinflowTypes.ChartBreakdownItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[];
 
     return charts.map((row) => {
-        const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
-        const { valueByTimebox: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
+        const { valueBySequence: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
+        const { valueBySequence: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
         const subitems = tickerItemsData ? getTickerItemsData(tickerItemsData, [columnName], timebox, row.characteristicValue.text) : undefined;
 
         return {
@@ -75,11 +75,11 @@ export const getTickerItemsData = (
     withTimebox?: boolean
 ): MetricTypes.Datum[] => {
     return data
-        .filter((row) => (row.tickerItemParent.text !== "" || row.tickerItem.text !== "") && row.measures.primaryMeasure.valueByTimebox[timebox] > 0)
+        .filter((row) => (row.tickerItemParent.text !== "" || row.tickerItem.text !== "") && row.measures.primaryMeasure.valueBySequence[timebox] > 0)
         .filter((row) => columnNames.includes(row.columnName.key) && (!tickerItemParent || tickerItemParent === row.tickerItemParent.text))
         .map((row) => {
-            const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
-            const { valueByTimebox: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
+            const { valueBySequence: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
+            const { valueBySequence: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;
 
             return {
                 key: row.tickerItem.key,
@@ -107,7 +107,7 @@ export const getProductsData = (
     return (filterByPositive(data, columnName, timebox) as CoinflowTypes.ProductsItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[])
         .filter((row) => row.slideName.text === slideName && row.rowName.text === rowName.text)
         .map((row) => {
-            const { valueByTimebox: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
+            const { valueBySequence: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
             const datum: MetricTypes.Datum = {
                 name: row.attributePrimary.key,
                 primary: primaryValue[timebox],
@@ -120,7 +120,7 @@ export const getProductsData = (
             };
 
             if (row.measures.secondaryMeasure) {
-                const { valueByTimebox: secondaryValue, ...secondaryOptions } = row.measures.secondaryMeasure;
+                const { valueBySequence: secondaryValue, ...secondaryOptions } = row.measures.secondaryMeasure;
 
                 datum['secondary'] = secondaryValue[timebox];
                 datum['secondaryFormatted'] = Utils.Formats.formatNumber(secondaryValue[timebox], secondaryOptions);
@@ -145,10 +145,10 @@ export const getUnique = (res:CoinflowTypes.Data, key: 'slideName' | 'columnName
 };
 
 export const getUniqueTimeboxes = (res:CoinflowTypes.Data): CoinflowTypes.Timebox[] => {
-    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueByTimebox) as CoinflowTypes.Timebox[]).flat(1))];
+    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueBySequence) as CoinflowTypes.Timebox[]).flat(1))];
 };
 
-export const convertToMapMobile = (res:CoinflowTypes.Data): MetricTypes.StateDataMapMobile<CoinflowTypes.Timebox, string> => {
+export const convertToMapMobile = (res:CoinflowTypes.Data): MetricTypes.StateDataMapMobile<CoinflowTypes.Timebox, CoinflowTypes.Column> => {
     const productSlides = getUnique(res, 'slideName');
     const rowNames = getUnique(res, 'rowName');
     const columnNames = getUnique(res, 'columnName').map((el) => el.text) as CoinflowTypes.Column[]; // TODO: Types?

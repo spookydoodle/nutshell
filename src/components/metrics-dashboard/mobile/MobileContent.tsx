@@ -46,28 +46,26 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props<TTimebox extends string, TColumn extends string> {
-    mobileData: MetricTypes.StateDataMapMobile<TTimebox, TColumn>;
-    productSlides: MetricTypes.Dimension[];
-    // TODO: Rename
-    chanIndex: number;
-    handleColumnNameChange: (index: number) => void;
-    timeboxIndex: number;
-    columnNames: TColumn[];
-    timeboxes: TTimebox[];
+// TODO: Dynamic types not necessary once  mobileData removed
+interface Props<TSequence extends string, TColumn extends string> {
+    mobileData: MetricTypes.StateDataMapMobile<TSequence, TColumn>;
     primaryMeasureName: string;
+    productSlides: MetricTypes.Dimension[];
+    columns: TColumn[];
+    selectedColumn: TColumn;
+    onColumnChange: (column: TColumn) => void;
+    selectedSequence: TSequence;
 }
 
-export function MobileContent<TTimebox extends string, TColumn extends string>({
+export function MobileContent<TSequence extends string, TColumn extends string>({
     mobileData,
     productSlides,
-    chanIndex,
-    // handleColumnNameChange,
-    timeboxIndex,
-    columnNames,
-    timeboxes,
-    primaryMeasureName
-}: Props<TTimebox, TColumn>) {
+    primaryMeasureName,
+    columns,
+    selectedColumn,
+    onColumnChange, // TODO: Keep and repair swipe
+    selectedSequence
+}: Props<TSequence, TColumn>) {
     const classes = useStyles();
 
     return (
@@ -75,20 +73,20 @@ export function MobileContent<TTimebox extends string, TColumn extends string>({
             <Box className={classes.spacing} />
 
             {mobileData ? (
-                <Box className={classes.swiper} style={{ transform: `translateX(${-100 * chanIndex}%)`, }}>
-                    {columnNames.map((columnName) => (
+                <Box className={classes.swiper} style={{ transform: `translateX(${-100 * columns.findIndex((c) => c === selectedColumn)}%)`, }}>
+                    {columns.map((columnName) => (
                         <Box key={`${columnName}-box`} id={`${columnName}-box`} className={classes.swipeItem}>
                             <Box className={classNames(classes.card, classes.borderRadiusAll)}>
                                 <Tile
-                                    name={`${columnName} ${primaryMeasureName} ${timeboxes[timeboxIndex]}`}
-                                    data={mobileData?.get(timeboxes[timeboxIndex])?.get(columnName)?.tile}
+                                    name={`${columnName} ${primaryMeasureName} ${selectedSequence}`}
+                                    data={mobileData?.get(selectedSequence)?.get(columnName)?.tile}
                                 />
                             </Box>
 
                             <Tabstrip
                                 expandable={true}
                                 items={mobileData
-                                    ?.get(timeboxes[timeboxIndex])
+                                    ?.get(selectedSequence)
                                     ?.get(columnName)
                                     ?.charts.map((chart) => ({
                                         name: chart.characteristicName,
@@ -134,7 +132,7 @@ export function MobileContent<TTimebox extends string, TColumn extends string>({
                                     })) ?? []}
                             />
 
-                            <MobileProducts data={mobileData?.get(timeboxes[timeboxIndex])?.get(columnName)?.products || []} />
+                            <MobileProducts data={mobileData?.get(selectedSequence)?.get(columnName)?.products || []} />
                         </Box>
                     ))}
                 </Box>
