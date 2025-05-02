@@ -10,11 +10,11 @@ const filterByPositive = (
     return data.filter((row) => row?.columnName?.key === columnName && Number(row.measures.primaryMeasure.valueBySequence[timebox]) > 0);
 };
 
-export const filterByDimension = (
+export const filterByDimensionText = (
     data: CoinflowTypes.ChartBreakdownItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[],
-    name: string
+    text: string
 ): CoinflowTypes.DataItem<CoinflowTypes.Timebox, CoinflowTypes.Column, CoinflowTypes.Row>[] => {
-    return data.filter((row) => row.characteristicValue.key === name);
+    return data.filter((row) => row.characteristicValue.text === text);
 };
 
 export const getTileData = (
@@ -130,20 +130,4 @@ export const getProductsData = (
         })
         .sort((a, b) => Number(b.primary) - Number(a.primary))
         .filter((row, i) => row.primary > 0 && i < 5);
-};
-
-export const getUnique = (res:CoinflowTypes.Data, key: 'slideName' | 'columnName' | 'rowName') => {
-    const unique: MetricTypes.Dimension[] = [];
-
-    for (const product of res.products) {
-        if (!unique.some((s) => s.key === product[key].key)) {
-            unique.push(product[key]);
-        }
-    }
-
-    return unique;
-};
-
-export const getUniqueTimeboxes = (res:CoinflowTypes.Data): CoinflowTypes.Timebox[] => {
-    return [...new Set(res.tiles.map((tile) => Object.keys(tile.measures.primaryMeasure.valueBySequence) as CoinflowTypes.Timebox[]).flat(1))];
 };
