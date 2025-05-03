@@ -43,7 +43,7 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
         },
         [slideshow.data, selectedSequence]
     );
-console.log({ data: slideshow.data, charts})
+    
     const sequenceLabels = React.useMemo(
         () => CoinflowSlideshow.getSequenceLabels(slideshow.data),
         [slideshow.data]
