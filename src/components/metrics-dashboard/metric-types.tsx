@@ -10,17 +10,17 @@ export interface Dimension<T extends string = string, TText extends string = str
     shortText?: string;
 }
 
-export interface Measures<TTimebox extends string> {
-    primaryMeasure: Measure<TTimebox>;
+export interface Measures<TSequence extends string> {
+    primaryMeasure: Measure<TSequence>;
     /**
      * Difference from a reference measure value.
      */
-    primaryMeasureDelta: Measure<TTimebox>;
-    secondaryMeasure?: Measure<TTimebox>;
+    primaryMeasureDelta: Measure<TSequence>;
+    secondaryMeasure?: Measure<TSequence>;
 }
 
-export interface Measure<TTimebox extends string> extends MeasureOptions {
-    valueByTimebox: ValueByTimebox<TTimebox>;
+export interface Measure<TSequence extends string> extends MeasureOptions {
+    valueBySequence: ValueBySequence<TSequence>;
 }
 
 export interface MeasureOptions {
@@ -37,7 +37,7 @@ export interface MeasureOptions {
     prefix?: string;
 }
 
-export type ValueByTimebox<T extends string> = {
+export type ValueBySequence<T extends string> = {
     [key in T]: number;
 }
 
@@ -141,8 +141,8 @@ export type StateDataMap<TCategory extends string> = {
     ticker?: TickerStateData;
 };
 
-export type StateDataMapMobile<TTimebox extends string, TColumn extends string> = Map<
-    TTimebox,
+export type StateDataMapMobile<TSequence extends string, TColumn extends string> = Map<
+    TSequence,
     StateDataMapItemMobile<TColumn>
 >;
 

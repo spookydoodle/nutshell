@@ -32,17 +32,16 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     ]
 
     public static sequenceItems: CoinflowTypes.Timebox[] = ['YTD', 'QTD', 'MTD'];
-    public static chartsSlidesCount = 2;
-    public static columns: CoinflowTypes.Column[] = ['The Cogwheel Bazaar', 'PneumaPost Catalogue', 'The AetherNet Emporium'];
+    public static columns: CoinflowTypes.Column[] = ['PneumaPost Catalogue', 'The Cogwheel Bazaar', 'The AetherNet Emporium'];
     public static productRows: CoinflowTypes.Row[] = ['Main line', 'Secondary line'];
 
     public static getColumnsToRender = ({ isMdUp, isLgUp }: { isMdUp: boolean; isLgUp: boolean }): CoinflowTypes.Column[] => {
-        const result: CoinflowTypes.Column[] = ["The Cogwheel Bazaar"];
+        const result: CoinflowTypes.Column[] = [CoinflowSlideshow.columns[0]];
         if (isLgUp) {
-            result.push("PneumaPost Catalogue")
+            result.push(CoinflowSlideshow.columns[1])
         }
         if (isMdUp) {
-            result.push("The AetherNet Emporium");
+            result.push(CoinflowSlideshow.columns[2]);
         }
         return result;
     }
@@ -72,7 +71,7 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         const sequence = CoinflowSlideshow.sequenceItems[sequenceIndex];
         const indexWithinSequence = slideIndex % sequenceLabels.length;
         const activeBreadcrumbIndex = Math.min(indexWithinSequence, CoinflowSlideshow.breadcrumbItems.length - 1);
-        const isChartSlide = indexWithinSequence < CoinflowSlideshow.chartsSlidesCount;
+        const isChartSlide = indexWithinSequence < sequenceLabels.filter((l) => l.subSequenceName === 'Charts').length;
         const category = isChartSlide ? data.charts[indexWithinSequence].category : 'Products';
 
         return {

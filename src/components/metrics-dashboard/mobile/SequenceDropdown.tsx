@@ -38,26 +38,20 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props {
-    items: Array<string>;
-    index: number;
-    onChange: (value: number) => void;
+interface Props<TSequence extends string> {
     title?: string;
+    items: TSequence[];
+    selectedSequence: TSequence;
+    onChange: (value: TSequence) => void;
 }
 
-export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, title }) => {
+export function SequenceDropdown<TSequence extends string>({
+    title,
+    items,
+    selectedSequence,
+    onChange
+}: Props<TSequence>) {
     const classes = useStyles();
-
-    const handleChange = React.useCallback(
-        (event: SelectChangeEvent<unknown>, _child: React.ReactNode) => {
-            const val = Number(event.target.value);
-            if (isNaN(val)) {
-                return;
-            }
-            onChange(val);
-        },
-        [onChange]
-    );
 
     return (
         <Box className={classes.navtitle}>
@@ -66,9 +60,9 @@ export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, titl
             </Typography>
 
             <FormControl variant="outlined" className={classes.formControl}>
-                <Select id="select-item" value={index} onChange={handleChange} className={classes.select}>
-                    {items.map((item: string, i: number) => (
-                        <MenuItem key={i} value={i}>
+                <Select id="select-item" value={selectedSequence} onChange={(e) => onChange(e.target.value as TSequence)} className={classes.select}>
+                    {items.map((item: string) => (
+                        <MenuItem key={item} value={item}>
                             {item}
                         </MenuItem>
                     ))}
@@ -76,4 +70,4 @@ export const CategoryDropdown: React.FC<Props> = ({ items, index, onChange, titl
             </FormControl>
         </Box>
     );
-};
+}

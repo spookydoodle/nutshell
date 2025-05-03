@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box } from '@mui/material';
@@ -46,99 +47,97 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props<TTimebox extends string, TColumn extends string> {
-    mobileData: MetricTypes.StateDataMapMobile<TTimebox, TColumn>;
-    productSlides: MetricTypes.Dimension[];
-    // TODO: Rename
-    chanIndex: number;
-    handleColumnNameChange: (index: number) => void;
-    timeboxIndex: number;
-    columnNames: TColumn[];
-    timeboxes: TTimebox[];
+export interface MobileContentProps<TSequence extends string, TColumn extends string> {
+    tiles: (MetricTypes.Datum | undefined)[];
+    charts: { name: string; data: MetricTypes.Datum[]; }[][];
+    products: MetricTypes.Item[][];
+    productSlides: string[];
     primaryMeasureName: string;
+    columns: TColumn[];
+    selectedColumn: TColumn;
+    onColumnChange: (column: TColumn) => void;
+    selectedSequence: TSequence;
 }
 
-export function MobileContent<TTimebox extends string, TColumn extends string>({
-    mobileData,
+export function MobileContent<TSequence extends string, TColumn extends string>({
+    tiles,
+    charts,
+    products,
     productSlides,
-    chanIndex,
-    // handleColumnNameChange,
-    timeboxIndex,
-    columnNames,
-    timeboxes,
-    primaryMeasureName
-}: Props<TTimebox, TColumn>) {
+    primaryMeasureName,
+    columns,
+    selectedColumn,
+    onColumnChange, // TODO: Keep and repair swipe
+    selectedSequence
+}: MobileContentProps<TSequence, TColumn>) {
     const classes = useStyles();
+    const [swipeX, setSwipeX] = React.useState(0);
 
     return (
         <Box className={classes.swiperContainer}>
             <Box className={classes.spacing} />
 
-            {mobileData ? (
-                <Box className={classes.swiper} style={{ transform: `translateX(${-100 * chanIndex}%)`, }}>
-                    {columnNames.map((columnName) => (
-                        <Box key={`${columnName}-box`} id={`${columnName}-box`} className={classes.swipeItem}>
-                            <Box className={classNames(classes.card, classes.borderRadiusAll)}>
-                                <Tile
-                                    name={`${columnName} ${primaryMeasureName} ${timeboxes[timeboxIndex]}`}
-                                    data={mobileData?.get(timeboxes[timeboxIndex])?.get(columnName)?.tile}
-                                />
-                            </Box>
-
-                            <Tabstrip
-                                expandable={true}
-                                items={mobileData
-                                    ?.get(timeboxes[timeboxIndex])
-                                    ?.get(columnName)
-                                    ?.charts.map((chart) => ({
-                                        name: chart.characteristicName,
-                                        component: chart.data.some((datum) => (datum.subitems?.length ?? 0) > 0) ? (
-                                            <NestedScoreList
-                                                data={chart.data.map((datum) => ({
-                                                    category: datum.name,
-                                                    subcategory: datum.attributePrimary?.key,
-                                                    value: datum.primary,
-                                                    valueFormatted: `${datum.primaryFormatted}`,
-                                                    delta: datum.primaryDelta,
-                                                    deltaFormatted: datum.primaryDeltaFormatted,
-                                                    isDeltaGood: datum.primaryIsGood,
-                                                    isDeltaBad: datum.primaryIsBad,
-                                                    subitems: (datum.subitems ?? []).map((tickerItem) => ({
-                                                        category: tickerItem.name,
-                                                        subcategory: tickerItem.key,
-                                                        value: tickerItem.primary,
-                                                        valueFormatted: `${tickerItem.primaryFormatted}`,
-                                                        delta: tickerItem.primaryDelta,
-                                                        deltaFormatted: tickerItem.primaryDeltaFormatted,
-                                                        isDeltaGood: tickerItem.primaryIsGood,
-                                                        isDeltaBad: tickerItem.primaryIsBad,
-                                                    })),
-                                                }))
-                                                }
-                                            />
-                                        ) : (
-                                            <ScoreList
-                                                data={chart.data.map((datum) => ({
-                                                    category: datum.name,
-                                                    subcategory: productSlides.filter((div: { key: string }) => div.key === datum.attributePrimary?.key)[0]?.shortText,
-                                                    value: datum.primary,
-                                                    valueFormatted: `${datum.primaryFormatted}`,
-                                                    delta: datum.primaryDelta,
-                                                    deltaFormatted: datum.primaryDeltaFormatted,
-                                                    isDeltaGood: datum.primaryIsGood,
-                                                    isDeltaBad: datum.primaryIsBad,
-                                                })) || []
-                                                }
-                                            />
-                                        )
-                                    })) ?? []}
-                            />
-
-                            <MobileProducts data={mobileData?.get(timeboxes[timeboxIndex])?.get(columnName)?.products || []} />
+            <Box
+                // onT
+                className={classes.swiper}
+                style={{ transform: `translateX(${-100 * columns.findIndex((c) => c === selectedColumn)}%)`, }}
+            >
+                {columns.map((column, i) => (
+                    <Box key={`${column}-box`} id={`${column}-box`} className={classes.swipeItem}>
+                        <Box className={classNames(classes.card, classes.borderRadiusAll)}>
+                            <Tile name={`${column} ${primaryMeasureName} ${selectedSequence}`} data={tiles[i]} />
                         </Box>
-                    ))}
-                </Box>
-            ) : null}
+
+                        <Tabstrip
+                            expandable={true}
+                            items={charts[i].map((chart) => ({
+                                name: chart.name,
+                                component: chart.data.some((datum) => (datum.subitems?.length ?? 0) > 0) ? (
+                                    <NestedScoreList
+                                        data={chart.data.map((datum) => ({
+                                            category: datum.name,
+                                            subcategory: datum.attributePrimary?.key,
+                                            value: datum.primary,
+                                            valueFormatted: `${datum.primaryFormatted}`,
+                                            delta: datum.primaryDelta,
+                                            deltaFormatted: datum.primaryDeltaFormatted,
+                                            isDeltaGood: datum.primaryIsGood,
+                                            isDeltaBad: datum.primaryIsBad,
+                                            subitems: (datum.subitems ?? []).map((tickerItem) => ({
+                                                category: tickerItem.name,
+                                                subcategory: tickerItem.key,
+                                                value: tickerItem.primary,
+                                                valueFormatted: `${tickerItem.primaryFormatted}`,
+                                                delta: tickerItem.primaryDelta,
+                                                deltaFormatted: tickerItem.primaryDeltaFormatted,
+                                                isDeltaGood: tickerItem.primaryIsGood,
+                                                isDeltaBad: tickerItem.primaryIsBad,
+                                            })),
+                                        }))
+                                        }
+                                    />
+                                ) : (
+                                    <ScoreList
+                                        data={chart.data.map((datum) => ({
+                                            category: datum.name,
+                                            subcategory: productSlides.find((slideName) => slideName === datum.attributePrimary?.key) ?? '',
+                                            value: datum.primary,
+                                            valueFormatted: `${datum.primaryFormatted}`,
+                                            delta: datum.primaryDelta,
+                                            deltaFormatted: datum.primaryDeltaFormatted,
+                                            isDeltaGood: datum.primaryIsGood,
+                                            isDeltaBad: datum.primaryIsBad,
+                                        })) || []
+                                        }
+                                    />
+                                )
+                            })) ?? []}
+                        />
+
+                        <MobileProducts data={products[i]} />
+                    </Box>
+                ))}
+            </Box>
         </Box>
     );
 }

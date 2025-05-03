@@ -34,31 +34,31 @@ export interface Data {
 /**
  * Data required to display a KPI in a tile component.
  */
-export interface Tile<TTimebox extends string, TColumn extends string> {
+export interface Tile<TSequence extends string, TColumn extends string> {
     columnName: MetricTypes.Dimension<TColumn, TColumn>;
-    measures: MetricTypes.Measures<TTimebox>;
+    measures: MetricTypes.Measures<TSequence>;
 }
 
 
-export interface ChartData<TCategory extends string, TTimebox extends string, TColumn extends string> {
+export interface ChartData<TCategory extends string, TSequence extends string, TColumn extends string> {
     category: TCategory;
-    data: ChartBreakdownItem<TTimebox, TColumn>[];
+    data: ChartBreakdownItem<TSequence, TColumn>[];
 }
 
 /**
  * Data required to render a single bar in a horizontal bar chart.
  */
-export interface ChartBreakdownItem<TTimebox extends string, TColumn extends string> {
+export interface ChartBreakdownItem<TSequence extends string, TColumn extends string> {
     columnName: MetricTypes.Dimension<TColumn, TColumn>;
     characteristicValue: MetricTypes.Dimension;
-    measures: MetricTypes.Measures<TTimebox>;
+    measures: MetricTypes.Measures<TSequence>;
 }
 
 
 /**
  * Data required to show case a single product.
  */
-export interface ProductsItem<TTimebox extends string, TColumn extends string, TRow extends string> {
+export interface ProductsItem<TSequence extends string, TColumn extends string, TRow extends string> {
     /**
      * Creates a slide per each
      */
@@ -80,13 +80,13 @@ export interface ProductsItem<TTimebox extends string, TColumn extends string, T
      */
     attributeSecondary: MetricTypes.Dimension;
     imageURL: MetricTypes.Dimension;
-    measures: MetricTypes.Measures<TTimebox>;
+    measures: MetricTypes.Measures<TSequence>;
 }
 
 /**
  * Data required to display an element in the footer ticker.
  */
-export interface TickerItem<TTimebox extends string, TColumn extends string> {
+export interface TickerItem<TSequence extends string, TColumn extends string> {
     /**
      * Used to group the sequence of ticker elements.
      */
@@ -96,22 +96,22 @@ export interface TickerItem<TTimebox extends string, TColumn extends string> {
      */
     tickerItem: MetricTypes.Dimension;
     columnName: MetricTypes.Dimension<TColumn, TColumn>;
-    measures: MetricTypes.Measures<TTimebox>;
+    measures: MetricTypes.Measures<TSequence>;
 }
 
 export type DataValue<
-    TTimebox extends string,
+    TSequence extends string,
     TColumn extends string,
     TRow extends string
-> = Tile<TTimebox, TColumn>[] | ChartBreakdownItem<TTimebox, TColumn>[] | TickerItem<TTimebox, TColumn>[] | ProductsItem<TTimebox, TColumn, TRow>[];
+> = Tile<TSequence, TColumn>[] | ChartBreakdownItem<TSequence, TColumn>[] | TickerItem<TSequence, TColumn>[] | ProductsItem<TSequence, TColumn, TRow>[];
 
 export type DataItem<
-    TTimebox extends string,
+    TSequence extends string,
     TColumn extends string,
     TRow extends string
 > =
-    | ChartBreakdownItem<TTimebox, TColumn>
-    | Tile<TTimebox, TColumn>
-    | ChartBreakdownItem<TTimebox, TColumn>
-    | TickerItem<TTimebox, TColumn>
-    | ProductsItem<TTimebox, TColumn, TRow>;
+    | ChartBreakdownItem<TSequence, TColumn>
+    | Tile<TSequence, TColumn>
+    | ChartBreakdownItem<TSequence, TColumn>
+    | TickerItem<TSequence, TColumn>
+    | ProductsItem<TSequence, TColumn, TRow>;
