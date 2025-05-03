@@ -69,14 +69,18 @@ export const getChartsData = (
 
 export const getTickerItemsData = (
     data: CoinflowTypes.TickerItem<CoinflowTypes.Timebox, CoinflowTypes.Column>[],
-    columnNames: string[],
+    columns: CoinflowTypes.Column[],
     timebox: CoinflowTypes.Timebox,
     tickerItemParent?: string,
     withTimebox?: boolean
 ): MetricTypes.Datum[] => {
     return data
-        .filter((row) => (row.tickerItemParent.text !== "" || row.tickerItem.text !== "") && row.measures.primaryMeasure.valueBySequence[timebox] > 0)
-        .filter((row) => columnNames.includes(row.columnName.key) && (!tickerItemParent || tickerItemParent === row.tickerItemParent.text))
+        .filter((row) =>
+            columns.includes(row.columnName.text) 
+            && (!tickerItemParent || tickerItemParent === row.tickerItemParent.text)
+            && (row.tickerItemParent.text !== "" || row.tickerItem.text !== "") 
+            && row.measures.primaryMeasure.valueBySequence[timebox] > 0
+        )
         .map((row) => {
             const { valueBySequence: primaryValue, ...primaryOptions } = row.measures.primaryMeasure;
             const { valueBySequence: deltaValue, ...deltaOptions } = row.measures.primaryMeasureDelta;

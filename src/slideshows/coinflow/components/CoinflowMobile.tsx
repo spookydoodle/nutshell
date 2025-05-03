@@ -38,12 +38,12 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow }) => {
         (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['charts'] => {
             return CoinflowSlideshow.columns.map((c) => slideshow.data.charts.map((chart) => ({
                 name: chart.category,
-                data: Utils.getChartsData(chart.data, c, selectedSequence)
+                data: Utils.getChartsData(chart.data, c, selectedSequence, slideshow.data.ticker)
             })));
         },
         [slideshow.data, selectedSequence]
     );
-
+console.log({ data: slideshow.data, charts})
     const sequenceLabels = React.useMemo(
         () => CoinflowSlideshow.getSequenceLabels(slideshow.data),
         [slideshow.data]

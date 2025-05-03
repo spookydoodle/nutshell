@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box } from '@mui/material';
@@ -70,12 +71,17 @@ export function MobileContent<TSequence extends string, TColumn extends string>(
     selectedSequence
 }: MobileContentProps<TSequence, TColumn>) {
     const classes = useStyles();
+    const [swipeX, setSwipeX] = React.useState(0);
 
     return (
         <Box className={classes.swiperContainer}>
             <Box className={classes.spacing} />
 
-            <Box className={classes.swiper} style={{ transform: `translateX(${-100 * columns.findIndex((c) => c === selectedColumn)}%)`, }}>
+            <Box
+                // onT
+                className={classes.swiper}
+                style={{ transform: `translateX(${-100 * columns.findIndex((c) => c === selectedColumn)}%)`, }}
+            >
                 {columns.map((column, i) => (
                     <Box key={`${column}-box`} id={`${column}-box`} className={classes.swipeItem}>
                         <Box className={classNames(classes.card, classes.borderRadiusAll)}>

@@ -22,7 +22,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 15.3,
@@ -58,7 +57,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 47.8,
@@ -94,7 +92,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 20.5,
@@ -140,7 +137,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -187,7 +183,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -234,7 +229,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -281,7 +275,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -328,7 +321,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -375,7 +367,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -422,7 +413,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -469,7 +459,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -516,7 +505,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -563,7 +551,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -610,7 +597,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -657,7 +643,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 12.3,
@@ -2925,7 +2910,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -2984,7 +2968,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3044,7 +3027,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3104,7 +3086,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3164,7 +3145,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3224,7 +3204,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3284,7 +3263,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3344,7 +3322,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3404,7 +3381,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3463,7 +3439,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3522,7 +3497,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3582,7 +3556,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3642,7 +3615,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3702,7 +3674,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3762,7 +3733,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3822,7 +3792,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3882,7 +3851,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -3942,7 +3910,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4002,7 +3969,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4062,7 +4028,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4122,7 +4087,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4182,7 +4146,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4242,7 +4205,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4302,7 +4264,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4362,7 +4323,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4422,7 +4382,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -4482,547 +4441,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-01.png`,
-                "text": `${IMG_SERVER}/products/product-01.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Main line",
-                "text": "Main line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5082,7 +4500,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5142,7 +4559,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5202,7 +4618,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5262,7 +4677,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5322,7 +4736,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5382,7 +4795,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5442,7 +4854,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5502,7 +4913,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5562,7 +4972,537 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
 
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAAA",
+                "text": "Cool Product"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-01.png`,
+                "text": `${IMG_SERVER}/products/product-01.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Main line",
+                "text": "Main line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5622,7 +5562,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5681,7 +5620,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5740,7 +5678,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5800,7 +5737,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5860,7 +5796,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5920,7 +5855,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -5980,7 +5914,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6040,7 +5973,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6100,7 +6032,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6160,7 +6091,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6220,7 +6150,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6280,7 +6209,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6340,7 +6268,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6400,7 +6327,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6460,7 +6386,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6520,7 +6445,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6580,7 +6504,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6640,7 +6563,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6699,7 +6621,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6758,7 +6679,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6817,7 +6737,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6877,7 +6796,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6937,7 +6855,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -6997,7 +6914,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7057,7 +6973,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7117,7 +7032,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7177,7 +7091,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7237,7 +7150,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7297,7 +7209,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7357,7 +7268,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7417,7 +7327,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7477,7 +7386,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7537,7 +7445,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7597,7 +7504,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7657,7 +7563,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7717,7 +7622,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7777,7 +7681,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7837,7 +7740,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7897,7 +7799,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -7957,7 +7858,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -8017,7 +7917,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -8077,7 +7976,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -8137,7 +8035,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -8197,7 +8094,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
@@ -8257,7 +8153,6 @@ const data: CoinflowTypes.Data = {
                     "unit": "ᘐ"
                 },
                 "primaryMeasureDelta": {
-
                     "unit": "%",
                     "valueBySequence": {
                         "YTD": 0,
