@@ -3,12 +3,12 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Typography } from '@mui/material';
 import * as MetricTypes from "../metric-types";
+import { fontSizes } from "../../../styles";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         header: {
             color: "rgba(255, 255, 255, .87)",
-            fontSize: "1.4rem",
             textTransform: "uppercase",
             fontWeight: "bold",
         },
@@ -41,7 +41,7 @@ interface Props {
     name: string;
     item: MetricTypes.Item;
 }
-
+// TODO: Fix font sizes
 export const HeaderKPI: React.FC<Props> = ({ name, item }) => {
     const classes = useStyles();
     const { tile } = item;

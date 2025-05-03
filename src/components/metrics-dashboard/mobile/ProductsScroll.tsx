@@ -37,7 +37,7 @@ export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
 
     return values.length > 0 ? (
         <>
-            <Typography fontSize={fontSizes.h3} className={classes.header} paragraph>
+            <Typography fontSize={fontSizes.h5} className={classes.header} paragraph>
                 {title}
             </Typography>
             <Swiper

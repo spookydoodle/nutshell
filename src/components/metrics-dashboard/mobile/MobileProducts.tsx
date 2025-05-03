@@ -16,7 +16,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 interface Props {
     data: MetricTypes.Item[];
 }
-
+//  TODO: Fix overlapping images
 export const MobileProducts: React.FC<Props> = ({ data }) => {
     const classes = useStyles();
 
