@@ -101,7 +101,7 @@ export function MobileContent<TSequence extends string, TColumn extends string>(
                                         deltaFormatted: datum.primaryDeltaFormatted,
                                         isDeltaGood: datum.primaryIsGood,
                                         isDeltaBad: datum.primaryIsBad,
-                                    })) || []
+                                    }))
                                     }
                                 />
                             )

@@ -1,4 +1,5 @@
 import React from "react";
+import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box } from '@mui/material';
 
@@ -31,6 +32,7 @@ interface Props<TColumn extends string> {
     columns: TColumn[];
     selectedColumn: TColumn;
     onColumnChange: (column: TColumn) => void;
+    className?: string;
     children: React.ReactNode;
 }
 
@@ -38,6 +40,7 @@ export function Swiper<TColumn extends string>({
     columns,
     selectedColumn,
     onColumnChange,
+    className,
     children
 }: Props<TColumn>) {
     const classes = useStyles();
@@ -97,7 +100,7 @@ export function Swiper<TColumn extends string>({
             if (!swipeX) {
                 return;
             }
-            const threshold = window.innerWidth / 3;
+            const threshold = window.innerWidth / 4;
             const isAboveThreshold = Math.abs(swipeX) >= threshold;
             if (swipeX > 0) {
                 if (selectedColumnIndex > 0 && isAboveThreshold) {
@@ -114,7 +117,7 @@ export function Swiper<TColumn extends string>({
     );
 
     return (
-        <Box className={classes.swiperContainer}>
+        <Box className={classNames(classes.swiperContainer, className)}>
             <Box
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}

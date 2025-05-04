@@ -15,18 +15,15 @@ const useStyles = makeStyles((theme: Theme) =>
         spaceBetween: {
             display: "flex",
             justifyContent: "space-between",
-            marginBottom: "1rem",
         },
         value: {
             color: "rgba(255, 255, 255, .87)",
             textAlign: "right",
             fontWeight: "bold",
-            fontSize: "1.4rem",
         },
         delta: {
             fontWeight: "bold",
             textAlign: "right",
-            fontSize: "1rem",
         },
         deltaPos: {
             color: theme.palette.success.main,
@@ -48,11 +45,11 @@ export const HeaderKPI: React.FC<Props> = ({ name, item }) => {
 
     return (
         <Box className={classes.spaceBetween}>
-            <Typography className={classes.header} paragraph>
+            <Typography fontSize={fontSizes.h3} className={classes.header}>
                 {name}
             </Typography>
             <Box>
-                <Typography noWrap className={classes.value}>
+                <Typography fontSize={fontSizes.h3} noWrap className={classes.value}>
                     {tile?.primary
                         ? (tile?.primaryFormatted ?? tile.primary)
                         : 0}
