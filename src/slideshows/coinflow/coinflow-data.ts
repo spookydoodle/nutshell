@@ -3057,8 +3057,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA4",
+                "text": "Cool Product 4"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3116,8 +3116,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA5",
+                "text": "Cool Product 5"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3175,8 +3175,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA2",
+                "text": "Cool Product 2"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-10.png`,
@@ -3234,8 +3234,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA3",
+                "text": "Cool Product 3"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3293,8 +3293,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA6",
+                "text": "Cool Product 6"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3352,8 +3352,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA7",
+                "text": "Cool Product 7"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3586,8 +3586,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA8",
+                "text": "Cool Product 8"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3645,8 +3645,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA9",
+                "text": "Cool Product 9"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3704,8 +3704,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA6",
+                "text": "Cool Product 6"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-06.png`,
@@ -3763,8 +3763,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots",
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA10",
+                "text": "Cool Product 10"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3822,8 +3822,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA11",
+                "text": "Cool Product 11"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -3881,8 +3881,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA12",
+                "text": "Cool Product 12"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4117,8 +4117,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA13",
+                "text": "Cool Product 13"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4176,8 +4176,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA14",
+                "text": "Cool Product 14"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4235,8 +4235,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA7",
+                "text": "Cool Product 7"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-07.png`,
@@ -4294,8 +4294,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA15",
+                "text": "Cool Product 15"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4353,8 +4353,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA16",
+                "text": "Cool Product 16"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4412,8 +4412,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA17",
+                "text": "Cool Product 17"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4471,8 +4471,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA18",
+                "text": "Cool Product 18"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4530,8 +4530,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA19",
+                "text": "Cool Product 19"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4589,8 +4589,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA20",
+                "text": "Cool Product 20"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4648,8 +4648,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA21",
+                "text": "Cool Product 21"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4707,8 +4707,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA22",
+                "text": "Cool Product 22"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4766,8 +4766,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAAA23",
+                "text": "Cool Product 23"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4825,8 +4825,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA24",
+                "text": "Cool Product 24"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4884,8 +4884,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA25",
+                "text": "Cool Product 25"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -4943,8 +4943,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA26",
+                "text": "Cool Product 26"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5002,8 +5002,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA27",
+                "text": "Cool Product 27"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5061,8 +5061,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA28",
+                "text": "Cool Product 28"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5120,8 +5120,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA29",
+                "text": "Cool Product 29"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5179,8 +5179,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA30",
+                "text": "Cool Product 30"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5238,8 +5238,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA32",
+                "text": "Cool Product 32"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5297,8 +5297,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA34",
+                "text": "Cool Product 34"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5356,8 +5356,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA25",
+                "text": "Cool Product 35"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5415,8 +5415,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA36",
+                "text": "Cool Product 36"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5474,8 +5474,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA37",
+                "text": "Cool Product 37"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-01.png`,
@@ -5708,8 +5708,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA2CB",
+                "text": "Cool Product 2cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -5767,8 +5767,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA2P",
+                "text": "Cool Product 2p"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -5826,8 +5826,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA2EM",
+                "text": "Cool Product 2em"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -5885,8 +5885,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA3cb",
+                "text": "Cool Product 3cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -5944,8 +5944,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA4CAT",
+                "text": "Cool Product 4cat"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6003,8 +6003,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA2NET",
+                "text": "Cool Product 2net"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6239,8 +6239,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA4CB",
+                "text": "Cool Product 4cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6298,8 +6298,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA3P",
+                "text": "Cool Product 3p"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6357,8 +6357,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA3EM",
+                "text": "Cool Product 3em"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6416,8 +6416,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA5cb",
+                "text": "Cool Product 5cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6475,8 +6475,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA3CAT",
+                "text": "Cool Product 3cat"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6534,8 +6534,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA3NET",
+                "text": "Cool Product 3net"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6767,8 +6767,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA6CB",
+                "text": "Cool Product 6cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6826,8 +6826,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA4P",
+                "text": "Cool Product 4p"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6885,8 +6885,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA4EM",
+                "text": "Cool Product 4em"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -6944,8 +6944,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA7cb",
+                "text": "Cool Product 7cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7003,8 +7003,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA5CAT",
+                "text": "Cool Product 5cat"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7062,539 +7062,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "01",
-                "text": "Aether Propulsion",
-                "shortText": "Aether Propulsion"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "02",
-                "text": "ChronoWorks",
-                "shortText": "ChronoWorks"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The Cogwheel Bazaar",
-                "text": "The Cogwheel Bazaar"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "PneumaPost Catalogue",
-                "text": "PneumaPost Catalogue"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
-            },
-            "imageURL": {
-                "key": `${IMG_SERVER}/products/product-02.png`,
-                "text": `${IMG_SERVER}/products/product-02.png`
-            },
-            "attributeSecondary": {
-                "key": "01",
-                "text": "Product Bar"
-            },
-            "rowName": {
-                "key": "Secondary line",
-                "text": "Secondary line"
-            },
-            "measures": {
-                "primaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 123456,
-                        "QTD": 123456,
-                        "MTD": 12345,
-
-                    },
-                    "showUnitBefore": true,
-                    "scaling": 1000,
-                    "decimals": 0,
-                    "unit": "ᘐ"
-                },
-                "primaryMeasureDelta": {
-                    "unit": "%",
-                    "valueBySequence": {
-                        "YTD": 0,
-                        "QTD": 0,
-                        "MTD": 0,
-
-                    }
-                },
-                "secondaryMeasure": {
-                    "valueBySequence": {
-                        "YTD": 12345,
-                        "QTD": 2345,
-                        "MTD": 123,
-
-                    },
-                    "unit": "pc"
-                }
-            }
-        },
-        {
-            "columnName": {
-                "key": "The AetherNet Emporium",
-                "text": "The AetherNet Emporium"
-            },
-            "slideName": {
-                "key": "03",
-                "text": "CogBots",
-                "shortText": "CogBots"
-            },
-            "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA4NET",
+                "text": "Cool Product 4net"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7652,8 +7121,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA2a",
+                "text": "Cool Product 2a"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7711,8 +7180,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA2AE",
+                "text": "Cool Product 2ae"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7770,8 +7239,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "Aether Propulsion"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA45",
+                "text": "Cool Product 45"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7829,8 +7298,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA8CB",
+                "text": "Cool Product 8cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7888,8 +7357,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAAA5P",
+                "text": "Cool Product 5p"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -7947,8 +7416,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "ChronoWorks"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA5EM",
+                "text": "Cool Product 5em"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -8006,8 +7475,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAAA9cb",
+                "text": "Cool Product 9cb"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -8065,8 +7534,8 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA6CAT",
+                "text": "Cool Product 6cat"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,
@@ -8124,8 +7593,539 @@ const data: CoinflowTypes.Data = {
                 "shortText": "CogBots"
             },
             "attributePrimary": {
-                "key": "AAAAAAAAAA",
-                "text": "Cool Product"
+                "key": "AAAAAA5NET",
+                "text": "Cool Product 5net"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAA3a",
+                "text": "Cool Product 3a"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAA3AE",
+                "text": "Cool Product 3ae"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "01",
+                "text": "Aether Propulsion",
+                "shortText": "Aether Propulsion"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAAA2",
+                "text": "Cool Product 56"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAA10CB",
+                "text": "Cool Product 10cb"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAAA6P",
+                "text": "Cool Product 6p"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "02",
+                "text": "ChronoWorks",
+                "shortText": "ChronoWorks"
+            },
+            "attributePrimary": {
+                "key": "AAAAAAA6EM",
+                "text": "Cool Product 6em"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The Cogwheel Bazaar",
+                "text": "The Cogwheel Bazaar"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAA11cb",
+                "text": "Cool Product 11cb"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "PneumaPost Catalogue",
+                "text": "PneumaPost Catalogue"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAA2CAT",
+                "text": "Cool Product 2cat"
+            },
+            "imageURL": {
+                "key": `${IMG_SERVER}/products/product-02.png`,
+                "text": `${IMG_SERVER}/products/product-02.png`
+            },
+            "attributeSecondary": {
+                "key": "01",
+                "text": "Product Bar"
+            },
+            "rowName": {
+                "key": "Secondary line",
+                "text": "Secondary line"
+            },
+            "measures": {
+                "primaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 123456,
+                        "QTD": 123456,
+                        "MTD": 12345,
+
+                    },
+                    "showUnitBefore": true,
+                    "scaling": 1000,
+                    "decimals": 0,
+                    "unit": "ᘐ"
+                },
+                "primaryMeasureDelta": {
+                    "unit": "%",
+                    "valueBySequence": {
+                        "YTD": 0,
+                        "QTD": 0,
+                        "MTD": 0,
+
+                    }
+                },
+                "secondaryMeasure": {
+                    "valueBySequence": {
+                        "YTD": 12345,
+                        "QTD": 2345,
+                        "MTD": 123,
+
+                    },
+                    "unit": "pc"
+                }
+            }
+        },
+        {
+            "columnName": {
+                "key": "The AetherNet Emporium",
+                "text": "The AetherNet Emporium"
+            },
+            "slideName": {
+                "key": "03",
+                "text": "CogBots",
+                "shortText": "CogBots"
+            },
+            "attributePrimary": {
+                "key": "AAAAAA6NET",
+                "text": "Cool Product 6net"
             },
             "imageURL": {
                 "key": `${IMG_SERVER}/products/product-02.png`,

@@ -23,7 +23,7 @@ export const MobileProducts: React.FC<Props> = ({ data }) => {
     return (
         <>
             {data.map((item) => (
-                <Box key={item.tile.name} className={classes.container}>
+                <Box key={[...item.main.values()][0].name} className={classes.container}>
                     <HeaderKPI name={[...item.main.values()][0].name} item={item} />
                     <ProductsSection item={item.main} />
                 </Box>

@@ -32,14 +32,16 @@ interface Props<TColumn extends string> {
     columns: TColumn[];
     selectedColumn: TColumn;
     onColumnChange: (column: TColumn) => void;
+    columnComponent: (column: TColumn) => React.ReactNode;
     className?: string;
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }
 
 export function Swiper<TColumn extends string>({
     columns,
     selectedColumn,
     onColumnChange,
+    columnComponent,
     className,
     children
 }: Props<TColumn>) {
@@ -125,9 +127,10 @@ export function Swiper<TColumn extends string>({
                 className={classes.swiper}
                 style={{ transform: `translateX(calc(${-100 * columns.findIndex((c) => c === selectedColumn)}% + ${swipeX}px))`, }}
             >
+                {children}
                 {columns.map((column) => (
                     <Box key={`${column}-box`} id={`${column}-box`} className={classes.swipeItem}>
-                        {children}
+                        {columnComponent(column)}
                     </Box>
                 ))}
             </Box>
