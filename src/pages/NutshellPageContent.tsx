@@ -3,6 +3,9 @@ import { Theme, useMediaQuery } from '@mui/material';
 import { Desktop } from "../components/metrics-dashboard/Desktop";
 import { Slideshow } from "../logic/slideshow/slideshow";
 import * as Hooks from '../hooks';
+import { ErrorAlert } from "../components/ErrorAlert";
+import { LinearBuffer } from "../components/Loading";
+import { NoData } from "../components/NoData";
 
 interface Props<T = unknown> {
     slideshow: Slideshow<T>;
@@ -37,18 +40,15 @@ export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
     }, []);
 
     if (isLoading) {
-        // TODO: Add default loading component
-        return slideshow.loadingComponent ? <slideshow.loadingComponent /> : null;
+        return slideshow.loadingComponent ? <slideshow.loadingComponent /> : <LinearBuffer />;
     }
 
     if (error) {
-        // TODO: Add default error component
-        return slideshow.errorComponent ? <slideshow.errorComponent error={error} /> : null;
+        return slideshow.errorComponent ? <slideshow.errorComponent error={error} /> : <ErrorAlert error={error} />;
     }
 
     if (!data) {
-        // TODO: Add default no data component
-        return slideshow.noDataComponent ? <slideshow.noDataComponent /> : null;
+        return slideshow.noDataComponent ? <slideshow.noDataComponent /> : <NoData />;
     }
 
     if (isSmallScreen && slideshow.smallScreenComponent) {

@@ -56,6 +56,10 @@ export interface SlideComponentProps<T> {
     slideIndex: number;
 }
 
+export interface SlideshowErrorComponentProps {
+    error: Error;
+}
+
 export interface SmallScreenComponentProps<T> {
     slideshow: Slideshow<T>;
     data: T;
@@ -279,7 +283,7 @@ export abstract class Slideshow<T = unknown> {
     public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T>; data: T; }>;
     public slideComponent?: React.ComponentType<SlideComponentProps<T>>;
     public loadingComponent?: React.ComponentType;
-    public errorComponent?: React.ComponentType<{ error: Error }>;
+    public errorComponent?: React.ComponentType<SlideshowErrorComponentProps>;
     public noDataComponent?: React.ComponentType;
 
     /**

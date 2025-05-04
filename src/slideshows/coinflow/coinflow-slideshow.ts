@@ -14,7 +14,6 @@ import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import * as Types from "../../types";
 import * as CoinflowTypes from "./coinflow-types";
 import { getTickerItemsData } from "./coinflow-data-utils";
-import { CoinflowLoading } from "./components/CoinflowLoading";
 import coinflowData from "./coinflow-data.json";
 
 export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
@@ -131,7 +130,6 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % playerLabelsLength))
     };
 
-    public loadingComponent = CoinflowLoading;
     public slideComponent = CoinflowSlide;
     public smallScreenComponent = CoinflowMobile;
 
