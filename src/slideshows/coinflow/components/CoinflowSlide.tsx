@@ -1,7 +1,7 @@
 import React from "react";
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
-import { CoinflowSlideshow } from "../coinflow-slideshow";
 import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
+import { CoinflowSlideshow } from "../coinflow-slideshow";
 import * as CoinflowTypes from "../coinflow-types";
 import * as Hooks from '../../../hooks';
 import { Slide } from "./Slide";

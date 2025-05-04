@@ -53,6 +53,7 @@ export const Player: React.FC<Props> = ({
 }) => {
     const classes = useStyles();
     const isXlUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('xl'));
+    const isLgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
     const isMdUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('md'));
     const isMdDown = !isMdUp;
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
@@ -64,8 +65,8 @@ export const Player: React.FC<Props> = ({
     const [openSettings, setOpenSettings] = React.useState(false);
 
     const playerLabels = React.useMemo(
-        () => slideshow.getPlayerLabels(data),
-        [slideshow, data]
+        () => slideshow.getPlayerLabels(data, { isLgUp }),
+        [slideshow, data, isLgUp]
     );
 
     const playerIndex = React.useMemo(

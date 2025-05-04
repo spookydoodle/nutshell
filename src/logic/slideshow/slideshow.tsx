@@ -1,7 +1,7 @@
 
 import React from "react";
 import * as rxjs from 'rxjs';
-import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
+import { Breakpoints, createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
 import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
 import { PlayerLabel } from "../../components/navigation/Slider";
 import * as Types from "../../types";
@@ -66,6 +66,10 @@ export interface SmallScreenComponentProps<T> {
 }
 
 export type SmallScreenComponentBreakpoint = 'sm' | 'md';
+
+export interface SlideshowBreakpoint {
+    isLgUp: boolean;
+}
 
 /**
  * Abstract class to be extended by specific slideshow classes.
@@ -201,7 +205,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns number of slides which value of `slideIndex$` refers to.
      */
-    public abstract getSlidesLength: (data: T) => number;
+    public abstract getSlidesLength: (data: T, { isLgUp }: SlideshowBreakpoint) => number;
 
     /**
      * Function which returns the index for the bottom Player component.
@@ -211,7 +215,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns list of labels for Player navigation.
      */
-    public abstract getPlayerLabels: (data: T) => PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
+    public abstract getPlayerLabels: (data: T, { isLgUp }: SlideshowBreakpoint) => PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
 
     /**
      * Handler on index change using Player slider and previous/next buttons.
@@ -248,14 +252,14 @@ export abstract class Slideshow<T = unknown> {
      * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
      * @param timeout If provided, will delay setting `play$` (if autoplay initially set) and `animationsInitialized$` values.
      */
-    public start = (data: T): void => {
+    public start = (data: T, { isLgUp }: SlideshowBreakpoint): void => {
         this.slideIndex$.next(0);
         this.timeout = setTimeout(() => {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
         
-        const slidesLength = this.getSlidesLength(data);
+        const slidesLength = this.getSlidesLength(data, { isLgUp });
         this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
             clearInterval(this.playInterval);
             if (play) {

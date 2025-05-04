@@ -83,7 +83,7 @@ const useSolarAnimation = (newRef: SpringRef): Style => {
     return spring;
 };
 
-export const SmallScreenMessageSolar: React.FC<SmallScreenComponentProps<MetricTypes.StateDataMap<SolarTypes.Category>>> = ({ slideshow }) => {
+export const SmallScreenMessageSolar: React.FC<SmallScreenComponentProps<SolarTypes.SolarData>> = ({ slideshow }) => {
     const classes = useStyles();
 
     const solarRef1 = useSpringRef();

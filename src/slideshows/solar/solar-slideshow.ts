@@ -1,16 +1,17 @@
-import { ThemeOptions } from "@mui/material";
+import { Breakpoints, ThemeOptions } from "@mui/material";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
-import { DesktopSolarContent } from "./components/DesktopSolarContent";
+import { SolarSlide } from "./components/SolarSlide";
 import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
 import { PlayerLabel } from "../../components/navigation/Slider";
-import { Slideshow } from "../../logic/slideshow/slideshow";
+import { Slideshow, SlideshowBreakpoint } from "../../logic/slideshow/slideshow";
 import * as Types from "../../types";
 import * as SolarTypes from './solar-types';
-import { createStateData } from "./solar-data";
+import solarData from "./solar-data.json";
+import { getTickerData } from "./solar-data-utils";
 
-export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarTypes.Category>> {
+export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     public path = '/solar';
     public name = '_SOLAR_NUTSHELL';
     public shortName = '_SOL_NUT';
@@ -20,21 +21,113 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarType
     public imageUrl = `${IMG_SERVER}/landing/solar.jpg`
     public links = ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/"];
     public backgroundImageUrls = getImgArr("SS");
+    public title = 'Solar system';
+    public static title = 'Solar system';
 
-    public fetchData = async (_abortSignal: AbortSignal): Promise<MetricTypes.StateDataMap<SolarTypes.Category>> => {
-        return createStateData();
+    public static sequenceItems: SolarTypes.Category[] = ['Metrics', 'Planets'];
+    public static metricColumns: SolarTypes.Property[] = [
+        'Mass',
+        'Diameter',
+        'Density',
+        'Gravity',
+        'Escape Velocity',
+        'Rotation Period',
+        'Length of Day',
+        'Distance from Sun',
+        'Perihelion',
+        'Aphelion',
+        'Orbital Period',
+        'Orbital Velocity',
+        'Orbital Inclination',
+        'Orbital Eccentricity',
+        'Obliquity to Orbit',
+        'Mean Temperature',
+        'Surface Pressure',
+        'Number of Moons',
+    ];
+
+    public static planetColumns: SolarTypes.Planet[] = [
+        'Mercury',
+        'Venus',
+        'Earth',
+        'Mars',
+        'Jupiter',
+        'Saturn',
+        'Uranus',
+        'Neptune',
+        'Pluto'
+    ];
+
+    public static getColumnsToRender = (slideIndex: number, { isLgUp }: SlideshowBreakpoint): string[] => {
+        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
+        const { metricsSlidesCount } = SolarSlideshow.getSubSequenceSlidesLength({ isLgUp });
+        if (slideIndex <= metricsSlidesCount) {
+            return SolarSlideshow.metricColumns.slice(slideIndex * columnsPerSlide, slideIndex * columnsPerSlide + columnsPerSlide);
+        }
+        const planetsIndex = slideIndex - metricsSlidesCount;
+        return SolarSlideshow.planetColumns.slice(planetsIndex * columnsPerSlide, planetsIndex * columnsPerSlide + columnsPerSlide);
+    }
+
+    public static getColumnsPerSlide = ({ isLgUp }: SlideshowBreakpoint): number => isLgUp ? 3 : 2;
+
+    public static getSlideStats = (slideIndex: number, { isLgUp }: SlideshowBreakpoint) => {
+        const { metricsSlidesCount, planetsSlidesCount } = SolarSlideshow.getSubSequenceSlidesLength({ isLgUp });
+        const activeSequence =  slideIndex < metricsSlidesCount ? 'Metrics' : 'Planets';
+        const titleSecondary = activeSequence === 'Metrics' ? 'Vs. the Earth' : 'Planets show';
+        
+        return {
+            metricsSlidesCount,
+            planetsSlidesCount,
+            category: activeSequence,
+            activeSequence,
+            activeSequenceIndex: SolarSlideshow.sequenceItems.findIndex((s) => s === activeSequence),
+            titlePrimary: this.title,
+            titlePrimaryShort: this.title,
+            titleSecondary,
+            titleSecondaryShort: titleSecondary
+        }
+    };
+
+    public fetchData = async (_abortSignal: AbortSignal): Promise<SolarTypes.SolarData> => {
+        return solarData as SolarTypes.SolarData;
     };
 
     public getSlidesData = (data: MetricTypes.StateDataMap<SolarTypes.Category>): MetricTypes.SlidesStateData<SolarTypes.Category> | undefined => {
         return data.slides;
     };
 
-    public getSlidesLength = (data: MetricTypes.StateDataMap<SolarTypes.Category>): number => {
-        return data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);;
+    public static getSubSequenceSlidesLength = ({ isLgUp }: SlideshowBreakpoint) => {
+        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
+        const metricsSlidesCount = Math.ceil(SolarSlideshow.metricColumns.length / columnsPerSlide);
+        const planetsSlidesCount = Math.ceil(SolarSlideshow.planetColumns.length / columnsPerSlide);
+        
+        return { metricsSlidesCount, planetsSlidesCount };
     };
 
-    public getPlayerLabels = (data: MetricTypes.StateDataMap<SolarTypes.Category>): PlayerLabel[] => {
-        return [...data.slides.entries()].map(([subSequenceName, slides]) => slides.map((slide): PlayerLabel => ({ label: slide.header.titleSecondaryShort, subSequenceName }))).flat();
+    public getSlidesLength = (_data: SolarTypes.SolarData, { isLgUp }: SlideshowBreakpoint): number => {
+        const { metricsSlidesCount, planetsSlidesCount } = SolarSlideshow.getSubSequenceSlidesLength({ isLgUp });
+
+        return metricsSlidesCount + planetsSlidesCount;
+    };
+
+    public getPlayerLabels = (_data: SolarTypes.SolarData, { isLgUp }: { isLgUp: boolean }): PlayerLabel[] => {
+        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
+
+        const metricsSlides: PlayerLabel[] = new Array(Math.ceil(SolarSlideshow.metricColumns.length / columnsPerSlide))
+            .fill(null)
+            .map((_el, i): PlayerLabel => ({
+                label: `M${i * columnsPerSlide + 1}-${(i * columnsPerSlide) + columnsPerSlide}`,
+                subSequenceName: 'Metrics'
+            }));
+
+        const planetsSlides: PlayerLabel[] = new Array(Math.ceil(SolarSlideshow.planetColumns.length / columnsPerSlide))
+            .fill(null)
+            .map((_el, i): PlayerLabel => ({
+                label: `M${i * columnsPerSlide + 1}-${(i * columnsPerSlide) + columnsPerSlide}`,
+                subSequenceName: 'Planets'
+            }));
+
+        return metricsSlides.concat(planetsSlides);
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number): number => {
@@ -42,14 +135,14 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarType
     };
 
     public onPlayerIndexChange = (index: number, _playerLabelsLength: number) => {
-        this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % length));
+        this.slideIndex$.next(index);
     };
 
-    public getTickerData = (data: MetricTypes.StateDataMap<SolarTypes.Category>): MetricTypes.TickerStateData | undefined => {
-        return data.ticker;
+    public getTickerData = (data: SolarTypes.SolarData): MetricTypes.TickerStateData | undefined => {
+        return getTickerData(data.metrics);
     };
     
-    public customSlideshow = DesktopSolarContent;
+    public slideComponent = SolarSlide;
     public smallScreenComponent = SmallScreenMessageSolar;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({

@@ -87,7 +87,8 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
             titlePrimary: `${sequence} ${data.primaryMeasureName}`,
             titlePrimaryShort: `${sequence} ${data.primaryMeasureName}`,
             titleSecondary: isChartSlide ? `By ${category}` : sequenceLabels[indexWithinSequence].label,
-            titleSecondaryShort: category,        }
+            titleSecondaryShort: category
+        }
     };
 
     public fetchData = async (_abortSignal: AbortSignal): Promise<CoinflowTypes.Data> => {

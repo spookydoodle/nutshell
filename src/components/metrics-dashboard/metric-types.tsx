@@ -109,9 +109,9 @@ export interface Header<TCategory extends string = string> {
     category: string;
     sequence: string;
     titlePrimary: string;
-    titlePrimaryShort: string;
+    titlePrimaryShort?: string;
     titleSecondary: string;
-    titleSecondaryShort: string;
+    titleSecondaryShort?: string;
 }
 
 // TODO: Rename
@@ -132,6 +132,7 @@ export interface MainDataItemItem {
     data: Datum[];
 }
 
+// TODO: Delete
 /**
  * @example YTD -> Column Name 1 -> tiles -> Data
  * @example MTD -> Column Name 1 -> bar-charts -> Realms Bar Chart Data
