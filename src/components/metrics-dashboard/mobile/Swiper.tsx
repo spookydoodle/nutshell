@@ -100,7 +100,7 @@ export function Swiper<TColumn extends string>({
             if (!swipeX) {
                 return;
             }
-            const threshold = window.innerWidth / 3;
+            const threshold = window.innerWidth / 4;
             const isAboveThreshold = Math.abs(swipeX) >= threshold;
             if (swipeX > 0) {
                 if (selectedColumnIndex > 0 && isAboveThreshold) {
