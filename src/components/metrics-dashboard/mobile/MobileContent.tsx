@@ -52,19 +52,22 @@ export function MobileContent<TSequence extends string, TColumn extends string>(
     selectedSequence
 }: MobileContentProps<TSequence, TColumn>) {
     const classes = useStyles();
+    const selectedColumnIndex = React.useMemo(() => columns.findIndex((c) => c === selectedColumn), [columns, selectedColumn]);
 
     return (
-        <Swiper columns={columns} selectedColumn={selectedColumn} onColumnChange={onColumnChange}>
-            <Box className={classes.spacing} />
-            {columns.map((column, i) => (
-                <React.Fragment key={column}>
+        <Swiper
+            columns={columns}
+            selectedColumn={selectedColumn}
+            onColumnChange={onColumnChange}
+            columnComponent={(column) => (
+                <Box>
                     <Box className={classNames(classes.card, classes.borderRadiusAll)}>
-                        <Tile name={`${column} ${primaryMeasureName} ${selectedSequence}`} data={tiles[i]} />
+                        <Tile name={`${column} ${primaryMeasureName} ${selectedSequence}`} data={tiles[selectedColumnIndex]} />
                     </Box>
 
                     <Tabstrip
                         expandable={true}
-                        items={charts[i].map((chart) => ({
+                        items={charts[selectedColumnIndex].map((chart) => ({
                             name: chart.name,
                             component: chart.data.some((datum) => (datum.subitems?.length ?? 0) > 0) ? (
                                 <NestedScoreList
@@ -108,9 +111,11 @@ export function MobileContent<TSequence extends string, TColumn extends string>(
                         })) ?? []}
                     />
 
-                    <MobileProducts data={products[i]} />
-                </React.Fragment>
-            ))}
+                    <MobileProducts data={products[selectedColumnIndex]} />
+                </Box>
+            )}
+        >
+            <Box className={classes.spacing} />
         </Swiper>
     );
 }

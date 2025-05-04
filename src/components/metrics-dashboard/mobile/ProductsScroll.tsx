@@ -10,7 +10,10 @@ const useStyles = makeStyles((_theme: Theme) =>
         horizontalScroll: {
             display: "flex",
             columnGap: "20px",
-            width: "100%",
+            marginLeft: "-16px",
+            padding: "0 15px",
+            boxSizing: "border-box",
+            width: "100vw",
             overflowX: "auto",
             scrollbarWidth: "none",
             "&::-webkit-scrollbar": {
@@ -37,12 +40,14 @@ export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
             <Typography fontSize={fontSizes.h4} className={classes.header} paragraph>
                 {title}
             </Typography>
-            <Box onTouchMove={(e) => e.stopPropagation()} className={classes.horizontalScroll}>
-                {values.map((value, i) => (
-                    <Box key={`slide-${value.name}`}>
-                        <ProductImageTile value={value} i={i} />
-                    </Box>
-                ))}
+            <Box onTouchMove={(e) => e.stopPropagation()}>
+                <Box className={classes.horizontalScroll}>
+                    {values.map((value, i) => (
+                        <Box key={`slide-${value.attributePrimary?.text}`}>
+                            <ProductImageTile value={value} i={i} />
+                        </Box>
+                    ))}
+                </Box>
             </Box>
         </Box>
     );
