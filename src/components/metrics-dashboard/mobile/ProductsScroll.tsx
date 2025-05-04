@@ -1,8 +1,6 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { makeStyles, createStyles } from '@mui/styles';
-import { Theme, Typography, useTheme } from '@mui/material';
-import useMediaQuery from '@mui/material/useMediaQuery';
+import { Box, Theme, Typography, useTheme } from '@mui/material';
 import { ProductImageTile } from "./ProductImageTile";
 import * as MetricTypes from "../metric-types";
 import { fontSizes } from "../../../styles";
@@ -11,11 +9,12 @@ const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         horizontalScroll: {
             display: "flex",
+            columnGap: "20px",
             width: "100%",
-            overflowX: "hidden",
-            marginBottom: "32px",
-            "& > div": {
-                display: "flex",
+            overflowX: "auto",
+            scrollbarWidth: "none",
+            "&::-webkit-scrollbar": {
+                display: "none"
             },
         },
         header: {
@@ -32,29 +31,19 @@ interface Props {
 
 export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
     const classes = useStyles();
-    const theme = useTheme();
-    const isOnlyXs = useMediaQuery(theme.breakpoints.only("xs"));
 
-    // TODO: Stop propagation - rewrite swiper and remove lib
-    return values.length > 0 ? (
-        <>
-            <Typography fontSize={fontSizes.h5} className={classes.header} paragraph>
+    return (
+        <Box>
+            <Typography fontSize={fontSizes.h4} className={classes.header} paragraph>
                 {title}
             </Typography>
-            <Swiper
-                slidesPerView={isOnlyXs ? 2.4 : 4.4}
-                spaceBetween={10}
-                freeMode={true}
-                className={classes.horizontalScroll}
-            >
+            <Box onTouchMove={(e) => e.stopPropagation()} className={classes.horizontalScroll}>
                 {values.map((value, i) => (
-                    <SwiperSlide key={`slide-${i}`}>
+                    <Box key={`slide-${value.name}`}>
                         <ProductImageTile value={value} i={i} />
-                    </SwiperSlide>
+                    </Box>
                 ))}
-            </Swiper>
-        </>
-    ) : (
-        <></>
+            </Box>
+        </Box>
     );
 };

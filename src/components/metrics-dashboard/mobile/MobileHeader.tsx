@@ -7,7 +7,7 @@ import { SequenceDropdown } from "./SequenceDropdown";
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
         navbar: {
-            padding: "8px 16px",
+            padding: "16px",
             marginTop: "-50px",
             paddingTop: "50px",
             backgroundColor: "#000",

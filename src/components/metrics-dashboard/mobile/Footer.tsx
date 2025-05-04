@@ -3,13 +3,10 @@ import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Typography } from '@mui/material';
 import { fontSizes } from "../../../styles";
 
-const FOOTER_HEIGHT = 20;
+const FOOTER_HEIGHT = 30;
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
-        offset: {
-            height: `${FOOTER_HEIGHT}px`,
-        },
         footer: {
             position: "fixed",
             bottom: 0,
@@ -37,11 +34,8 @@ export const Footer: React.FC<Props> = ({ text }) => {
     const classes = useStyles();
 
     return (
-        <>
-            <Box className={classes.offset} />
-            <Box className={classes.footer}>
-                <Typography fontSize={fontSizes.h6} className={classes.text}>{text}</Typography>
-            </Box>
-        </>
+        <Box className={classes.footer}>
+            <Typography fontSize={fontSizes.h6} className={classes.text}>{text}</Typography>
+        </Box>
     );
 };

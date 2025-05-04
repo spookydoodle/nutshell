@@ -3,7 +3,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import * as Pages from "./pages";
 import * as Hooks from "./hooks";
 import * as AppState from "./state";
-import "./App.css";
 
 const App: React.FC = () => {
     const [slideshows] = Hooks.useSubjectState(AppState.slideshows$);

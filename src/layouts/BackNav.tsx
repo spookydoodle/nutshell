@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme: Theme) =>
             height: "4vh",
             width: "4vh",
             marginRight: "1vh",
+            boxSizing: "border-box",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",

@@ -29,7 +29,6 @@ const useStyles = makeStyles((theme: Theme) =>
             width: "120px",
             display: "flex",
             flexDirection: "column",
-            marginRight: theme.spacing(2),
         },
         tileTitle: {
             color: "rgba(255, 255, 255, .76)"
