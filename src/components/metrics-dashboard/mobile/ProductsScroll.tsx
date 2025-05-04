@@ -35,6 +35,7 @@ export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
     const theme = useTheme();
     const isOnlyXs = useMediaQuery(theme.breakpoints.only("xs"));
 
+    // TODO: Stop propagation - rewrite swiper and remove lib
     return values.length > 0 ? (
         <>
             <Typography fontSize={fontSizes.h5} className={classes.header} paragraph>

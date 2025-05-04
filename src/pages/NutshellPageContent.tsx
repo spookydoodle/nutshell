@@ -9,13 +9,8 @@ interface Props {
 
 export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
     const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down(slideshow.smallScreenComponentBreakpoint));
-    
-    const showSmallScreenComponent = React.useMemo(
-        () => navigator.maxTouchPoints > 0 || isSmallScreen,
-        [isSmallScreen]
-    );
 
-    if (showSmallScreenComponent) {
+    if (isSmallScreen) {
         return <slideshow.smallScreenComponent slideshow={slideshow} />;
     }
 
