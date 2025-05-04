@@ -5,7 +5,6 @@ import { Slideshow } from "../logic/slideshow/slideshow";
 import * as Hooks from '../hooks';
 import { ErrorAlert } from "../components/ErrorAlert";
 import { LinearBuffer } from "../components/Loading";
-import { NoData } from "../components/NoData";
 
 interface Props<T = unknown> {
     slideshow: Slideshow<T>;
@@ -48,7 +47,7 @@ export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
     }
 
     if (!data) {
-        return slideshow.noDataComponent ? <slideshow.noDataComponent /> : <NoData />;
+        return slideshow.noDataComponent ? <slideshow.noDataComponent /> : null;
     }
 
     if (isSmallScreen && slideshow.smallScreenComponent) {

@@ -272,9 +272,9 @@ export abstract class Slideshow<T = unknown> {
     public stop = (): void => {
         clearTimeout(this.timeout);
         this.play$.next(false);
-        this.animationsInitialized$.next(false);
         this.slideIndex$.next(0);
         this.playSubscription?.unsubscribe();
+        this.animationsInitialized$.next(false);
     };
 
     /**
