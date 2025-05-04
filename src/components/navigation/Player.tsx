@@ -38,14 +38,16 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-interface Props {
-    slideshow: Slideshow;
+interface Props<T = unknown> {
+    slideshow: Slideshow<T>;
+    data: T;
     categoryPrimary?: string;
     categorySecondary?: string;
 }
 
 export const Player: React.FC<Props> = ({
     slideshow,
+    data,
     categoryPrimary,
     categorySecondary,
 }) => {
@@ -62,8 +64,8 @@ export const Player: React.FC<Props> = ({
     const [openSettings, setOpenSettings] = React.useState(false);
 
     const playerLabels = React.useMemo(
-        () => slideshow.getPlayerLabels(),
-        [slideshow]
+        () => slideshow.getPlayerLabels(data),
+        [slideshow, data]
     );
 
     const playerIndex = React.useMemo(

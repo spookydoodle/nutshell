@@ -21,9 +21,10 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow: Slideshow<MetricTypes.StateDataMap<SolarTypes.Category>>;
+    data: MetricTypes.StateDataMap<SolarTypes.Category>;
 }
 
-export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
+export const DesktopSolarContent: React.FC<Props> = ({ slideshow, data }) => {
     const classes = useStyles();
     const isOnlyXs = useMediaQuery((theme: Theme) => theme.breakpoints.only('xs'));
     const appId = Hooks.useAppId();
@@ -31,9 +32,9 @@ export const DesktopSolarContent: React.FC<Props> = ({ slideshow }) => {
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [play] = Hooks.useSubjectState(slideshow.play$);
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
-    const data = slideshow.data.slides
-    const dataKeys = [...data.keys()];
-    const dataValues = [...data.values()];
+    const slidesData = data.slides
+    const dataKeys = [...slidesData.keys()];
+    const dataValues = [...slidesData.values()];
 
     const slides = dataValues.flat(1);
     const sequences = dataKeys;

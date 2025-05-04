@@ -28,6 +28,7 @@ interface Props {
 
 export const SlideColumnChart: React.FC<SlideComponentProps<CoinflowTypes.Data> & Props> = ({
     slideshow,
+    data,
     category,
     timebox,
     column,
@@ -39,11 +40,11 @@ export const SlideColumnChart: React.FC<SlideComponentProps<CoinflowTypes.Data> 
     const [duration] = Hooks.useSubjectState(slideshow.duration$);
 
     const chart = React.useMemo(
-        () => slideshow.data.charts.find((el) => el.category === category),
-        [slideshow.data, category]
+        () => data.charts.find((el) => el.category === category),
+        [data, category]
     );
 
-    const data = React.useMemo(
+    const chartsData = React.useMemo(
         () => chart ? Utils.getChartsData(chart.data, column, timebox) : undefined,
         [chart, column, timebox]
     );
@@ -65,7 +66,7 @@ export const SlideColumnChart: React.FC<SlideComponentProps<CoinflowTypes.Data> 
                 play={play}
                 scrollId={`${appId}-${column.replace(" ", "-").toLowerCase()}`}
                 slideDuration={duration}
-                data={data?.map((row) => ({
+                data={chartsData?.map((row) => ({
                     category: row.name,
                     value: row.primary,
                     valueFormatted: row.primaryFormatted,

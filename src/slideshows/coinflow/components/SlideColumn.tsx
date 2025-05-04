@@ -10,8 +10,8 @@ export const SlideColumn: React.FC<SlideComponentProps<CoinflowTypes.Data> & Sli
     const [animationsInitialized] = Hooks.useSubjectState(props.slideshow.animationsInitialized$);
 
     const tile = React.useMemo(
-        () => Utils.getTileData(props.slideshow.data.tiles, props.column, props.timebox),
-        [props.slideshow.data, props.column, props.timebox]
+        () => Utils.getTileData(props.data.tiles, props.column, props.timebox),
+        [props.data, props.column, props.timebox]
     );
 
     return (

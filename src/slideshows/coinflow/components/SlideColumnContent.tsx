@@ -19,6 +19,7 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 export interface SlideColumnContentProps {
+    data: CoinflowTypes.Data;
     category: CoinflowTypes.Category;
     timebox: CoinflowTypes.Timebox;
     column: CoinflowTypes.Column;
@@ -29,6 +30,7 @@ export interface SlideColumnContentProps {
 
 export const SlideColumnContent: React.FC<SlideComponentProps<CoinflowTypes.Data> & SlideColumnContentProps> = ({
     slideshow,
+    data,
     slideIndex,
     category,
     column,
@@ -44,15 +46,17 @@ export const SlideColumnContent: React.FC<SlideComponentProps<CoinflowTypes.Data
             {category === 'Realms' || category === 'Sectors' ? (
                 <SlideColumnChart
                     slideshow={slideshow}
+                    data={data}
+                    slideIndex={slideIndex}
                     category={category}
                     column={column}
                     columnsToRender={columnsToRender}
-                    slideIndex={slideIndex}
                     timebox={timebox}
                 />
             ) : (
                 <SlideColumnProducts
                     slideshow={slideshow}
+                    data={data}
                     slideIndex={slideIndex}
                     column={column}
                     timebox={timebox}

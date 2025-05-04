@@ -1,3 +1,4 @@
+import axios from "axios";
 import { ThemeOptions } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
@@ -10,9 +11,11 @@ import { CoinflowMobile } from "./components/CoinflowMobile";
 import { CoinflowSlide } from "./components/CoinflowSlide";
 import { PlayerLabel } from "../../components/navigation/Slider";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
-import * as CoinflowTypes from "./coinflow-types";
 import * as Types from "../../types";
+import * as CoinflowTypes from "./coinflow-types";
 import { getTickerItemsData } from "./coinflow-data-utils";
+import { CoinflowLoading } from "./components/CoinflowLoading";
+import coinflowData from "./coinflow-data.json";
 
 export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public path = '/coinflow';
@@ -88,21 +91,25 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
             titleSecondaryShort: category,        }
     };
 
-    public getSlidesLength = () => {
-        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(this.data)
+    public fetchData = async (_abortSignal: AbortSignal): Promise<CoinflowTypes.Data> => {
+        return JSON.parse(JSON.stringify(coinflowData).replaceAll('{IMG_SERVER}', IMG_SERVER)) as CoinflowTypes.Data;
+    };
+
+    public getSlidesLength = (data: CoinflowTypes.Data) => {
+        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(data)
         return CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
     };
 
-    public getTickerData = (): MetricTypes.TickerStateData | undefined => {
+    public getTickerData = (data: CoinflowTypes.Data): MetricTypes.TickerStateData | undefined => {
         return new Map(
             CoinflowSlideshow.sequenceItems.map((timebox): [string, MetricTypes.TickerData] => [
                 timebox,
                 new Map(
-                    [...new Set(this.data.ticker.map((row) => row.tickerItemParent.text))]
+                    [...new Set(data.ticker.map((row) => row.tickerItemParent.text))]
                     .map((tickerItemParent: string): [string, MetricTypes.Datum[]] => [
                         tickerItemParent,
                         getTickerItemsData(
-                            this.data.ticker,
+                            data.ticker,
                             CoinflowSlideshow.columns,
                             timebox,
                         ),
@@ -112,8 +119,8 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         );
     };
 
-    public getPlayerLabels = (): PlayerLabel[] => {
-        return CoinflowSlideshow.getSequenceLabels(this.data);
+    public getPlayerLabels = (data: CoinflowTypes.Data): PlayerLabel[] => {
+        return CoinflowSlideshow.getSequenceLabels(data);
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number) => {
@@ -124,6 +131,7 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % playerLabelsLength))
     };
 
+    public loadingComponent = CoinflowLoading;
     public slideComponent = CoinflowSlide;
     public smallScreenComponent = CoinflowMobile;
 

@@ -8,6 +8,7 @@ import { PlayerLabel } from "../../components/navigation/Slider";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import * as Types from "../../types";
 import * as SolarTypes from './solar-types';
+import { createStateData } from "./solar-data";
 
 export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarTypes.Category>> {
     public path = '/solar';
@@ -20,18 +21,20 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarType
     public links = ["https://nssdc.gsfc.nasa.gov/planetary/factsheet/"];
     public backgroundImageUrls = getImgArr("SS");
 
-    public getSlideTitle = (): string => "Solar system";
-    public getSlideSubtitle = (): string => "Vs. the Earth"; // TODO:  Vs the earth, Planets show
-    public getSlidesData = (): MetricTypes.SlidesStateData<SolarTypes.Category> | undefined => {
-        return this.data.slides;
+    public fetchData = async (_abortSignal: AbortSignal): Promise<MetricTypes.StateDataMap<SolarTypes.Category>> => {
+        return createStateData();
     };
 
-    public getSlidesLength = (): number => {
-        return this.data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);;
+    public getSlidesData = (data: MetricTypes.StateDataMap<SolarTypes.Category>): MetricTypes.SlidesStateData<SolarTypes.Category> | undefined => {
+        return data.slides;
     };
 
-    public getPlayerLabels = (): PlayerLabel[] => {
-        return [...this.data.slides.entries()].map(([subSequenceName, slides]) => slides.map((slide): PlayerLabel => ({ label: slide.header.titleSecondaryShort, subSequenceName }))).flat();
+    public getSlidesLength = (data: MetricTypes.StateDataMap<SolarTypes.Category>): number => {
+        return data.slides.values().reduce<number>((acc, val) => acc + val.length, 0);;
+    };
+
+    public getPlayerLabels = (data: MetricTypes.StateDataMap<SolarTypes.Category>): PlayerLabel[] => {
+        return [...data.slides.entries()].map(([subSequenceName, slides]) => slides.map((slide): PlayerLabel => ({ label: slide.header.titleSecondaryShort, subSequenceName }))).flat();
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number): number => {
@@ -42,8 +45,8 @@ export class SolarSlideshow extends Slideshow<MetricTypes.StateDataMap<SolarType
         this.slideIndex$.next(this.slideIndex$.value + (index - this.slideIndex$.value % length));
     };
 
-    public getTickerData = (): MetricTypes.TickerStateData | undefined => {
-        return this.data.ticker;
+    public getTickerData = (data: MetricTypes.StateDataMap<SolarTypes.Category>): MetricTypes.TickerStateData | undefined => {
+        return data.ticker;
     };
     
     public customSlideshow = DesktopSolarContent;

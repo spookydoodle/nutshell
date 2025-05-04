@@ -13,19 +13,19 @@ interface Props {
 }
 
 export const SlideColumnProductsLine: React.FC<SlideComponentProps<CoinflowTypes.Data> & Props> = ({
-    slideshow,
+    data,
     timebox,
     column,
     row,
     sequenceLabel,
     divider
 }) => {
-    const data = React.useMemo(
-        () => Utils.getProductsData(slideshow.data.products, column, timebox, sequenceLabel, { key: row, text: row }),
-        [slideshow.data, column, timebox, sequenceLabel, row]
+    const productsData = React.useMemo(
+        () => Utils.getProductsData(data.products, column, timebox, sequenceLabel, { key: row, text: row }),
+        [data, column, timebox, sequenceLabel, row]
     );
 
     return (
-        <Bestsellers key={row} title={row} data={data} divider={divider} />
+        <Bestsellers key={row} title={row} data={productsData} divider={divider} />
     );
 };

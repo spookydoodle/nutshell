@@ -3,26 +3,27 @@ import { Slideshow } from "../../logic/slideshow/slideshow";
 import { DesktopContainer } from "./DesktopContainer";
 import * as Hooks from '../../hooks';
 
-interface Props {
-    slideshow: Slideshow;
+interface Props<T = unknown> {
+    slideshow: Slideshow<T>;
+    data: T;
 }
 
-export const Desktop: React.FC<Props> = ({ slideshow }) => {
+export const Desktop: React.FC<Props> = ({ slideshow, data }) => {
     const [slideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
 
     React.useEffect(() => {
-        slideshow.start();
+        slideshow.start(data);
 
         return () => {
             slideshow.stop();
         };
     }, []);
-    
+
     return (
-        <DesktopContainer slideshow={slideshow}>
-            {slideshow.slideComponent 
-                ? <slideshow.slideComponent slideIndex={slideIndex} slideshow={slideshow} /> 
-                : slideshow.customSlideshow ? <slideshow.customSlideshow slideshow={slideshow} /> : null}
+        <DesktopContainer slideshow={slideshow} data={data}>
+            {slideshow.slideComponent
+                ? <slideshow.slideComponent slideshow={slideshow} data={data} slideIndex={slideIndex} />
+                : slideshow.customSlideshow ? <slideshow.customSlideshow slideshow={slideshow} data={data} /> : null}
         </DesktopContainer>
     );
 };

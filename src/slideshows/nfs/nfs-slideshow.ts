@@ -4,7 +4,7 @@ import { NutshellData } from "./nfs-types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
 import { NutshellNFS } from "../../pages";
-import { imgPerSlide } from "./nfs-data";
+import { NEED_FOR_SPEED, imgPerSlide } from "./nfs-data";
 import { SmallScreenMessageNfs } from "./components/SmallScreenMessageNfs";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
@@ -19,17 +19,21 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://vgsales.fandom.com/wiki/Need_for_Speed",
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
+    
+    public fetchData = async (_abortSignal: AbortSignal): Promise<NutshellData> => {
+        return NEED_FOR_SPEED;
+    };
 
     public getAutoIncrementInterval = (duration: number): number => {
         return duration / imgPerSlide;
     };
 
-    public getSlidesLength = (): number => {
-        return this.data.games.length * imgPerSlide
+    public getSlidesLength = (data: NutshellData): number => {
+        return data.games.length * imgPerSlide
     };
 
-    public getPlayerLabels = (): { label: string; sequenceName?: string; }[] => {
-        return this.data.games.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
+    public getPlayerLabels = (data: NutshellData): { label: string; sequenceName?: string; }[] => {
+        return data.games.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
     };
 
     public getPlayerIndex = (slideIndex: number, _playerLabelsLength: number): number => {

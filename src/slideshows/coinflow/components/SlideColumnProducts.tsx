@@ -12,6 +12,7 @@ interface Props {
 
 export const SlideColumnProducts: React.FC<SlideComponentProps<CoinflowTypes.Data> & Props> = ({
     slideshow,
+    data,
     slideIndex,
     timebox,
     column,
@@ -23,6 +24,7 @@ export const SlideColumnProducts: React.FC<SlideComponentProps<CoinflowTypes.Dat
                 <SlideColumnProductsLine
                     key={row}
                     slideshow={slideshow}
+                    data={data}
                     slideIndex={slideIndex}
                     sequenceLabel={sequenceLabel}
                     timebox={timebox}

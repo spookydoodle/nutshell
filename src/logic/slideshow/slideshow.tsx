@@ -52,11 +52,13 @@ export interface SlideshowInitOptions {
 
 export interface SlideComponentProps<T> {
     slideshow: Slideshow<T>;
+    data: T;
     slideIndex: number;
 }
 
 export interface SmallScreenComponentProps<T> {
     slideshow: Slideshow<T>;
+    data: T;
 }
 
 export type SmallScreenComponentBreakpoint = 'sm' | 'md';
@@ -108,11 +110,6 @@ export abstract class Slideshow<T = unknown> {
     private initOptions?: SlideshowInitOptions;
 
     /**
-     * Data to present on the slides.
-     */
-    public data: T;
-
-    /**
      * Whether intro animations have been initialized and the slideshow can begin.
      * Intro animations can include sliding or fading the background and various components in their places.
      */
@@ -149,7 +146,7 @@ export abstract class Slideshow<T = unknown> {
      * @param data
      * @param options 
      */
-    public constructor(data: T, options: SlideshowInitOptions) {
+    public constructor(options: SlideshowInitOptions) {
         const {
             animationsInitialized = this.defaultAnimationsInitialized,
             duration = this.defaultDuration,
@@ -158,7 +155,6 @@ export abstract class Slideshow<T = unknown> {
             smallScreenComponentBreakpoint = this.defaultSmallScreenComponentBreakpoint
         } = options ?? {};
         this.initOptions = options;
-        this.data = data;
         this.animationsInitialized$ = new rxjs.BehaviorSubject<boolean>(animationsInitialized);
         this.duration$ = new rxjs.BehaviorSubject<number>(duration);
         this.showTicker$ = new rxjs.BehaviorSubject<boolean>(showTicker);
@@ -166,6 +162,21 @@ export abstract class Slideshow<T = unknown> {
         this.startDelay = startDelay;
         this.smallScreenComponentBreakpoint = smallScreenComponentBreakpoint;
     }
+
+    /**
+     * Data to present on the slides.
+     */
+    public data$ = new rxjs.BehaviorSubject<T | null>(null);
+
+    /**
+     * Whether data is being loaded.
+     */
+    public isLoading$ = new rxjs.BehaviorSubject<boolean>(false);
+
+    /**
+     * Error message if slideshow cannot be played.
+     */
+    public error$ = new rxjs.BehaviorSubject<Error | null>(null);
 
     /**
      * Whether the slideshow is playing.
@@ -178,9 +189,15 @@ export abstract class Slideshow<T = unknown> {
     public slideIndex$ = new rxjs.BehaviorSubject<number>(0);
 
     /**
+     * Method which fetches data just before mounting the slideshow.
+     * The flag `isLoading$` will be set to `true` for the duration of the promise execution.
+     */
+    public abstract fetchData: (abortSignal: AbortSignal) => Promise<T>;
+
+    /**
      * Returns number of slides which value of `slideIndex$` refers to.
      */
-    public abstract getSlidesLength: () => number;
+    public abstract getSlidesLength: (data: T) => number;
 
     /**
      * Function which returns the index for the bottom Player component.
@@ -190,7 +207,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns list of labels for Player navigation.
      */
-    public abstract getPlayerLabels: () => PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
+    public abstract getPlayerLabels: (data: T) => PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
 
     /**
      * Handler on index change using Player slider and previous/next buttons.
@@ -212,7 +229,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns data needed to render bottom ticker.
      */
-    public getTickerData?: () => MetricTypes.TickerStateData | undefined;
+    public getTickerData?: (data: T) => MetricTypes.TickerStateData | undefined;
 
     /**
      * If index should be incremented with a custom interval than selected `duration` value.
@@ -227,14 +244,14 @@ export abstract class Slideshow<T = unknown> {
      * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
      * @param timeout If provided, will delay setting `play$` (if autoplay initially set) and `animationsInitialized$` values.
      */
-    public start = (): void => {
+    public start = (data: T): void => {
         this.slideIndex$.next(0);
         this.timeout = setTimeout(() => {
             this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
         
-        const slidesLength = this.getSlidesLength();
+        const slidesLength = this.getSlidesLength(data);
         this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
             clearInterval(this.playInterval);
             if (play) {
@@ -259,13 +276,16 @@ export abstract class Slideshow<T = unknown> {
     /**
      * If provided will render the custom slideshow instead of the default dashboard.
      */
-    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T> }>;
+    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T>; data: T; }>;
     public slideComponent?: React.ComponentType<SlideComponentProps<T>>;
+    public loadingComponent?: React.ComponentType;
+    public errorComponent?: React.ComponentType<{ error: Error }>;
+    public noDataComponent?: React.ComponentType;
 
     /**
      * If provided, will be displayed on xs screen size.
      */
-    public abstract smallScreenComponent: React.ComponentType<SmallScreenComponentProps<T>>;
+    public smallScreenComponent?: React.ComponentType<SmallScreenComponentProps<T>>;
 
     /**
      * Function which extends theme.
