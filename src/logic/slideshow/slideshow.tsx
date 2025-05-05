@@ -246,7 +246,7 @@ export abstract class Slideshow<T = unknown> {
 
     private timeout: NodeJS.Timeout | undefined;
     private playSubscription: rxjs.Subscription | undefined;
-    private playInterval: NodeJS.Timeout | undefined;
+    private incrementSlideIndexTimeout: NodeJS.Timeout | undefined;
 
     /**
      * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
@@ -260,10 +260,10 @@ export abstract class Slideshow<T = unknown> {
         }, this.startDelay);
         
         const slidesLength = this.getSlidesLength(data, { isLgUp });
-        this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
-            clearInterval(this.playInterval);
+        this.playSubscription = rxjs.combineLatest([this.slideIndex$, this.play$, this.duration$]).subscribe(([slideIndex, play, duration]) => {
+            clearTimeout(this.incrementSlideIndexTimeout);
             if (play) {
-                this.playInterval = setInterval(() => {
+                this.incrementSlideIndexTimeout = setTimeout(() => {
                     this.slideIndex$.next((this.slideIndex$.value + 1) % slidesLength);
                 }, this.getAutoIncrementInterval?.(duration) ?? duration);
             }

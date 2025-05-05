@@ -312,16 +312,16 @@
             "fact": "Hot",
             "posts": [
                 {
-                    "name": "Global Mosaic",
-                    "img": "https://www.universetoday.com/wp-content/uploads/2011/12/mercury-global-mosaic.png",
-                    "description": "Until relatively recently, Mercury was one of the most poorly understood planets in the inner solar system. The MESSENGER mission to Mercury, is changing all of the that. New results from the Mercury Laser Altimeter (MLA) and gravity measurements are showing us that the planet closest to our sun is thin skinned and wrinkled, which is very different from what we originally thought.",
-                    "link": "https://www.universetoday.com/94571/thin-skinned-and-wrinkled-mercury-is-full-of-surprises/"
+                    "name": "Layer of diamonds",
+                    "img": "https://www.earth.com/assets/_next/image/?url=https%3A%2F%2Fcff2.earth.com%2Fuploads%2F2024%2F08%2F19133804%2Fplanet-mercury_10-mile-thick-diamond-layer_1m-1400x850.jpg&w=1200&q=75",
+                    "description": "Planet Mercury is scorched and easy to overlook, yet the innermost planet keeps tossing cosmic curveballs. Now researchers suggest an even wilder twist: a layer of diamond roughly 10 miles thick may sit inside the planet.",
+                    "link": "https://www.earth.com/news/nasa-messenger-finds-diamond-layer-10-miles-thick-on-planet-mercury/"
                 },
                 {
-                    "name": "Messenger Orbit",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/728322main_messenger_orbit_image20130218_2.jpg",
-                    "description": "This colorful view of Mercury was produced by using images from the color base map imaging campaign during MESSENGER's primary mission. These colors are not what Mercury would look like to the human eye, but rather the colors enhance the chemical, mineralogical, and physical differences between the rocks that make up Mercury's surface.",
-                    "link": "https://www.nasa.gov/mediacast/gravity-assist-podcast-mercury-with-faith-vilas"
+                    "name": "A New Theory",
+                    "img": "https://www.universetoday.com/assets/mercury-spectra.jpeg",
+                    "description": "Mercury is the smallest planet in our Solar System and the closest to the Sun. It’s a rocky world with a cratered surface that to the untrained eye somewhat resembles our own Moon. It’s orbital parameters mean that it experiences extreme temperature variations, ranging from -180°C at night to 430°C during the day. It completes an orbit around the Sun every 88 Earth days and rotates slowly on its axis and, despite its proximity to the Sun, still has ice in permanently shadowed craters near its poles. We know a good amount about Mercury but one aspect that has eluded us is the story of its formation.",
+                    "link": "https://www.universetoday.com/articles/a-new-theory-explains-the-surprising-origin-of-the-planet-mercury"
                 }
             ]
         },
@@ -330,7 +330,7 @@
             "posts": [
                 {
                     "name": "Venus",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/venus20191211-16.jpg",
+                    "img": "https://www.nasa.gov/wp-content/uploads/2019/12/venus20191211-16.jpg",
                     "description": "Venus hides a wealth of information that could help us better understand Earth and exoplanets. NASA's JPL is designing mission concepts to survive the planet's extreme temperatures and atmospheric pressure. This image is a composite of data from NASA's Magellan spacecraft and Pioneer Venus Orbiter.",
                     "link": "https://www.nasa.gov/feature/jpl/the-return-to-venus-and-what-it-means-for-earth"
                 },
@@ -360,11 +360,11 @@
             ]
         },
         "Mars": {
-            "fact": "Elon-land",
+            "fact": "687 day long year",
             "posts": [
                 {
                     "name": "Mars",
-                    "img": "https://www.jpl.nasa.gov/images/mars/20160421/PIA00407-16.jpg",
+                    "img": "https://d2pn8kiwq2w21t.cloudfront.net/original_images/imagesmars20160421PIA00407-16.jpg",
                     "description": "Six major missions are planned in this decade as part of a scientific tapestry that will weave a tale of new understanding of Earth's sometimes enigmatic and surprising neighbor.",
                     "link": "https://www.jpl.nasa.gov/news/news.php?feature=4870"
                 },
@@ -381,7 +381,7 @@
             "posts": [
                 {
                     "name": "Jupiter",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/stsci-h-p1936a-m-1999x2000.png",
+                    "img": "https://assets.science.nasa.gov/dynamicimage/assets/science/missions/hubble/releases/2019/08/STScI-01EVSV9JYWYARC4A8336KMKNTQ.tif?w=1525&h=1525&fit=crop&crop=faces%2Cfocalpoint",
                     "description": "This new Hubble Space Telescope view of Jupiter, taken on June 27, 2019, reveals the giant planet's trademark Great Red Spot, and a more intense color palette in the clouds swirling in Jupiter's turbulent atmosphere than seen in previous years. The colors, and their changes, provide important clues to ongoing processes in Jupiter's atmosphere. The new image was taken in visible light as part of the Outer Planets Atmospheres Legacy program, or OPAL. The program provides yearly Hubble global views of the outer planets to look for changes in their storms, winds and clouds. Hubble's Wide Field Camera 3 observed Jupiter when the planet was 400 million miles from Earth, when Jupiter was near \"opposition\" or almost directly opposite the Sun in the sky.",
                     "link": "https://www.nasa.gov/feature/goddard/2019/hubble-new-portrait-of-jupiter/"
                 },
