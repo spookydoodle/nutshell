@@ -27,14 +27,18 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     slideshow: Slideshow<NutshellData>;
+    data: NutshellData;
 }
 
-export const SlideShow: React.FC<Props> = ({ slideshow }) => {
+export const SlideShow: React.FC<Props> = ({ slideshow, data }) => {
     const classes = useStyles();
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [prevSlideIndex, setPrevSlideIndex] = useState(0);
 
-    const totalLen = React.useMemo(() => slideshow.data?.games?.length || 0, [slideshow]);
+    const totalLen = React.useMemo(
+        () => data?.games?.length || 0,
+        [data]
+    );
 
     React.useEffect(() => {
         const subscription = slideshow.slideIndex$
@@ -58,13 +62,19 @@ export const SlideShow: React.FC<Props> = ({ slideshow }) => {
     );
     const isSwitchingToEarlierSlide = !isSwitchingWithinSlide && (slideIndex < prevSlideIndex || (prevSlideIndex === 0 && slideIndex === totalLen * imgPerSlide - 1));
 
-    const backgroundComponents = slideshow.data.games
-    .map((slide) => slide.background.map((src, i) => <Background key={src} src={src} index={i} />))
-    .flat(1);
+    const backgroundComponents = React.useMemo(
+        () => data.games
+            .map((slide) => slide.background.map((src, i) => <Background key={src} src={src} index={i} />))
+            .flat(1),
+        [data]
+    );
 
-    const gameComponents = slideshow.data.games
-    .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={!isSwitchingWithinSlide} />))
-    .flat(1);
+    const gameComponents = React.useMemo(
+        () => data.games
+            .map((slide, ind) => slide.background.map(() => <InfoPanels slide={slide} ind={ind} applyStyle={!isSwitchingWithinSlide} />))
+            .flat(1),
+        [data, isSwitchingWithinSlide]
+    );
 
     return (
         <>

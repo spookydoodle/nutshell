@@ -1,12 +1,12 @@
 import React from "react";
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
-import { CoinflowSlideshow } from "../coinflow-slideshow";
 import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
+import { CoinflowSlideshow } from "../coinflow-slideshow";
 import * as CoinflowTypes from "../coinflow-types";
 import * as Hooks from '../../../hooks';
 import { Slide } from "./Slide";
 
-export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = ({ slideshow }) => {
+export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = ({ slideshow, data }) => {
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const {
@@ -22,8 +22,8 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
         titleSecondary,
         titleSecondaryShort
     } = React.useMemo(
-        () => CoinflowSlideshow.getSlideStats(slideshow.data, slideIndex),
-        [slideshow.data, slideIndex]
+        () => CoinflowSlideshow.getSlideStats(data, slideIndex),
+        [data, slideIndex]
     );
 
     const handleBreadcrumbItemClick = React.useCallback(
@@ -61,6 +61,7 @@ export const CoinflowSlide: React.FC<SlideComponentProps<CoinflowTypes.Data>> = 
             />
             <Slide
                 slideshow={slideshow}
+                data={data}
                 slideIndex={slideIndex}
                 category={category}
                 timebox={sequence}

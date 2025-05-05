@@ -18,10 +18,18 @@ const useStyles = makeStyles((theme: Theme) =>
             width: "100%",
             paddingTop: "2.5em",
         },
+        fullScreen: {
+            height: "100vh",
+            width: "100%"
+        },
+        loadingFullScreen: {
+            minHeight: "100vh",
+            width: "100%"
+        }
     })
 );
 
-export const Loading = () => {
+export const Loading: React.FC = () => {
     const classes = useStyles();
 
     return (
@@ -31,7 +39,7 @@ export const Loading = () => {
     );
 };
 
-export const Empty = () => {
+export const Empty: React.FC = () => {
     const classes = useStyles();
 
     return (
@@ -42,7 +50,7 @@ export const Empty = () => {
     );
 };
 
-export const LinearBuffer = () => {
+export const LinearBuffer: React.FC = () => {
     const classes = useStyles();
     const [progress, setProgress] = useState(0);
     const [buffer, setBuffer] = useState(10);
@@ -84,21 +92,21 @@ export const LinearBuffer = () => {
     );
 };
 
-export const LinearBufferFullScreen = () => {
-    const style = { height: "100vh", width: "100%" };
+export const LinearBufferFullScreen: React.FC = () => {
+    const classes = useStyles();
 
     return (
-        <Grid item container alignItems="center" style={style}>
+        <Grid item container alignItems="center" className={classes.fullScreen}>
             <LinearBuffer />
         </Grid>
     );
 };
 
-export const LoadingFullScreen = () => {
-    const style = { minHeight: "100vh", width: "100%" };
+export const LoadingFullScreen: React.FC = () => {
+    const classes = useStyles();
 
     return (
-        <Grid item container alignItems="center" justifyContent="center" style={style}>
+        <Grid item container alignItems="center" justifyContent="center" className={classes.loadingFullScreen}>
             <Loading />
         </Grid>
     );

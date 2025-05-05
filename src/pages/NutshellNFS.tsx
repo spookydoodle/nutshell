@@ -6,12 +6,13 @@ import { Slideshow } from "../logic/slideshow/slideshow";
 
 interface Props {
     slideshow: Slideshow<NutshellData>;
+    data: NutshellData;
 }
 
-export const NutshellNFS: React.FC<Props> = ({ slideshow }) => {
+export const NutshellNFS: React.FC<Props> = ({ slideshow, data }) => {
     return (
         <ImagePreloadWrapper>
-            <SlideShow slideshow={slideshow as Slideshow<NutshellData>} />
+            <SlideShow slideshow={slideshow} data={data} />
         </ImagePreloadWrapper>
     );
 };

@@ -35,6 +35,6 @@ export interface BarChartDataItem {
     subitems?: BarChartData;
 }
 
-export type BarChartData = Array<BarChartDataItem>;
+export type BarChartData = BarChartDataItem[];
 
 export type BarChartType = "delta-abs" | "abs-delta" | "abs-delta-multi";

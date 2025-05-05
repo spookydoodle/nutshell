@@ -1,7 +1,7 @@
 import React from "react";
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
 import { Bestsellers } from "../../../components/metrics-dashboard/Bestsellers";
-import * as Utils from '../coinflow-data-utils';
+import * as CoinflowUtils from '../coinflow-data-utils';
 import * as CoinflowTypes from "../coinflow-types";
 
 interface Props {
@@ -13,19 +13,19 @@ interface Props {
 }
 
 export const SlideColumnProductsLine: React.FC<SlideComponentProps<CoinflowTypes.Data> & Props> = ({
-    slideshow,
+    data,
     timebox,
     column,
     row,
     sequenceLabel,
     divider
 }) => {
-    const data = React.useMemo(
-        () => Utils.getProductsData(slideshow.data.products, column, timebox, sequenceLabel, { key: row, text: row }),
-        [slideshow.data, column, timebox, sequenceLabel, row]
+    const productsData = React.useMemo(
+        () => CoinflowUtils.getProductsData(data.products, column, timebox, sequenceLabel, { key: row, text: row }),
+        [data, column, timebox, sequenceLabel, row]
     );
 
     return (
-        <Bestsellers key={row} title={row} data={data} divider={divider} />
+        <Bestsellers key={row} title={row} data={productsData} divider={divider} />
     );
 };

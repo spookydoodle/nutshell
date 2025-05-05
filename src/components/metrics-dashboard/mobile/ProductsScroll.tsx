@@ -40,15 +40,13 @@ export const ProductsScroll: React.FC<Props> = ({ title, values }) => {
             <Typography fontSize={fontSizes.h4} className={classes.header} paragraph>
                 {title}
             </Typography>
-            <Box onTouchMove={(e) => e.stopPropagation()}>
-                <Box className={classes.horizontalScroll}>
+                <Box className={classes.horizontalScroll} onTouchMove={(e) => e.stopPropagation()}>
                     {values.map((value, i) => (
                         <Box key={`slide-${value.attributePrimary?.text}`}>
                             <ProductImageTile value={value} i={i} />
                         </Box>
                     ))}
                 </Box>
-            </Box>
         </Box>
     );
 };

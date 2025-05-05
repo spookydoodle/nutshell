@@ -16,20 +16,21 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-interface Props {
-    slideshow: Slideshow;
+interface Props<T = unknown> {
+    slideshow: Slideshow<T>;
+    data: T;
     children?: React.ReactNode;
 }
 
-export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
+export const DesktopContainer: React.FC<Props> = ({ slideshow, data, children }) => {
     const classes = useStyles();
     const isLgUp = useMediaQuery((theme: Theme) => theme.breakpoints.up('lg'));
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [showTicker] = Hooks.useSubjectState(slideshow.showTicker$);
 
     const tickerData = React.useMemo(
-        () => isLgUp && showTicker ? slideshow.getTickerData?.() : undefined,
-        [slideshow, showTicker, isLgUp]
+        () => isLgUp && showTicker ? slideshow.getTickerData?.(data) : undefined,
+        [slideshow, data, showTicker, isLgUp]
     );
     
     return (
@@ -37,7 +38,7 @@ export const DesktopContainer: React.FC<Props> = ({ slideshow, children }) => {
             <Grid container item className={classes.content}>
                 {children}
                 {tickerData ? <Ticker animationsInitialized={animationsInitialized} title={Slideshow.tickerTitle} data={tickerData} /> : null}
-                <Player slideshow={slideshow} />
+                <Player slideshow={slideshow} data={data} />
             </Grid>
         </Grid>
     );

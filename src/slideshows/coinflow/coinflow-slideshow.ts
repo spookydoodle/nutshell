@@ -1,3 +1,4 @@
+import axios from "axios";
 import { ThemeOptions } from "@mui/material";
 import PublicIcon from "@mui/icons-material/Public";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
@@ -10,9 +11,10 @@ import { CoinflowMobile } from "./components/CoinflowMobile";
 import { CoinflowSlide } from "./components/CoinflowSlide";
 import { PlayerLabel } from "../../components/navigation/Slider";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
-import * as CoinflowTypes from "./coinflow-types";
 import * as Types from "../../types";
-import { getTickerItemsData } from "./coinflow-data-utils";
+import * as CoinflowTypes from "./coinflow-types";
+import * as CoinflowUtils from "./coinflow-data-utils";
+import coinflowData from "./coinflow-data.json";
 
 export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public path = '/coinflow';
@@ -36,12 +38,12 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public static productRows: CoinflowTypes.Row[] = ['Main line', 'Secondary line'];
 
     public static getColumnsToRender = ({ isMdUp, isLgUp }: { isMdUp: boolean; isLgUp: boolean }): CoinflowTypes.Column[] => {
-        const result: CoinflowTypes.Column[] = [CoinflowSlideshow.columns[0]];
+        const result: CoinflowTypes.Column[] = [this.columns[0]];
         if (isLgUp) {
-            result.push(CoinflowSlideshow.columns[1])
+            result.push(this.columns[1])
         }
         if (isMdUp) {
-            result.push(CoinflowSlideshow.columns[2]);
+            result.push(this.columns[2]);
         }
         return result;
     }
@@ -61,16 +63,16 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     };
 
     public static getTotalSlidesLength = (sequenceLabels: PlayerLabel[]) => {
-        return CoinflowSlideshow.sequenceItems.length * sequenceLabels.length;
+        return this.sequenceItems.length * sequenceLabels.length;
     };
 
     public static getSlideStats = (data: CoinflowTypes.Data, slideIndex: number) => {
-        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(data);
-        const totalSlidesLength = CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
+        const sequenceLabels = this.getSequenceLabels(data);
+        const totalSlidesLength = this.getTotalSlidesLength(sequenceLabels);
         const sequenceIndex = Math.floor(slideIndex / sequenceLabels.length);
-        const sequence = CoinflowSlideshow.sequenceItems[sequenceIndex];
+        const sequence = this.sequenceItems[sequenceIndex];
         const indexWithinSequence = slideIndex % sequenceLabels.length;
-        const activeBreadcrumbIndex = Math.min(indexWithinSequence, CoinflowSlideshow.breadcrumbItems.length - 1);
+        const activeBreadcrumbIndex = Math.min(indexWithinSequence, this.breadcrumbItems.length - 1);
         const isChartSlide = indexWithinSequence < sequenceLabels.filter((l) => l.subSequenceName === 'Charts').length;
         const category = isChartSlide ? data.charts[indexWithinSequence].category : 'Products';
 
@@ -85,24 +87,29 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
             titlePrimary: `${sequence} ${data.primaryMeasureName}`,
             titlePrimaryShort: `${sequence} ${data.primaryMeasureName}`,
             titleSecondary: isChartSlide ? `By ${category}` : sequenceLabels[indexWithinSequence].label,
-            titleSecondaryShort: category,        }
+            titleSecondaryShort: category
+        }
     };
 
-    public getSlidesLength = () => {
-        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(this.data)
+    public fetchData = async (_abortSignal: AbortSignal): Promise<CoinflowTypes.Data> => {
+        return JSON.parse(JSON.stringify(coinflowData).replaceAll('{IMG_SERVER}', IMG_SERVER)) as CoinflowTypes.Data;
+    };
+
+    public getSlidesLength = (data: CoinflowTypes.Data) => {
+        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(data)
         return CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
     };
 
-    public getTickerData = (): MetricTypes.TickerStateData | undefined => {
+    public getTickerData = (data: CoinflowTypes.Data): MetricTypes.TickerStateData | undefined => {
         return new Map(
             CoinflowSlideshow.sequenceItems.map((timebox): [string, MetricTypes.TickerData] => [
                 timebox,
                 new Map(
-                    [...new Set(this.data.ticker.map((row) => row.tickerItemParent.text))]
+                    [...new Set(data.ticker.map((row) => row.tickerItemParent.text))]
                     .map((tickerItemParent: string): [string, MetricTypes.Datum[]] => [
                         tickerItemParent,
-                        getTickerItemsData(
-                            this.data.ticker,
+                        CoinflowUtils.getTickerItemsData(
+                            data.ticker,
                             CoinflowSlideshow.columns,
                             timebox,
                         ),
@@ -112,8 +119,8 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         );
     };
 
-    public getPlayerLabels = (): PlayerLabel[] => {
-        return CoinflowSlideshow.getSequenceLabels(this.data);
+    public getPlayerLabels = (data: CoinflowTypes.Data): PlayerLabel[] => {
+        return CoinflowSlideshow.getSequenceLabels(data);
     };
 
     public getPlayerIndex = (slideIndex: number, playerLabelsLength: number) => {
