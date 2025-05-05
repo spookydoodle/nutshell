@@ -13,7 +13,7 @@ import { PlayerLabel } from "../../components/navigation/Slider";
 import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import * as Types from "../../types";
 import * as CoinflowTypes from "./coinflow-types";
-import { getTickerItemsData } from "./coinflow-data-utils";
+import * as CoinflowUtils from "./coinflow-data-utils";
 import coinflowData from "./coinflow-data.json";
 
 export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
@@ -108,7 +108,7 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
                     [...new Set(data.ticker.map((row) => row.tickerItemParent.text))]
                     .map((tickerItemParent: string): [string, MetricTypes.Datum[]] => [
                         tickerItemParent,
-                        getTickerItemsData(
+                        CoinflowUtils.getTickerItemsData(
                             data.ticker,
                             CoinflowSlideshow.columns,
                             timebox,

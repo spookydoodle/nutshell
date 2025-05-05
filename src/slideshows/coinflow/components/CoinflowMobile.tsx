@@ -5,7 +5,7 @@ import { MobileHeader } from "../../../components/metrics-dashboard/mobile/Mobil
 import { MobileContent, MobileContentProps } from "../../../components/metrics-dashboard/mobile/MobileContent";
 import { Footer } from "../../../components/metrics-dashboard/mobile/Footer";
 import * as MetricTypes from '../../../components/metrics-dashboard/metric-types';
-import * as Utils from "../coinflow-data-utils";
+import * as CoinflowUtils from "../coinflow-data-utils";
 import * as CoinflowTypes from "../coinflow-types";
 
 interface Props {
@@ -30,7 +30,7 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow, data }) => {
 
     const tiles = React.useMemo(
         (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['tiles'] => {
-            return CoinflowSlideshow.columns.map((c) => Utils.getTileData(data.tiles, c, selectedSequence));
+            return CoinflowSlideshow.columns.map((c) => CoinflowUtils.getTileData(data.tiles, c, selectedSequence));
         },
         [data, selectedSequence]
     );
@@ -39,7 +39,7 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow, data }) => {
         (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['charts'] => {
             return CoinflowSlideshow.columns.map((c) => data.charts.map((chart) => ({
                 name: chart.category,
-                data: Utils.getChartsData(chart.data, c, selectedSequence, data.ticker)
+                data: CoinflowUtils.getChartsData(chart.data, c, selectedSequence, data.ticker)
             })));
         },
         [data, selectedSequence]
@@ -59,17 +59,17 @@ export const CoinflowMobile: React.FC<Props> = ({ slideshow, data }) => {
         (): MobileContentProps<CoinflowTypes.Timebox, CoinflowTypes.Column>['products'] => {            
             return CoinflowSlideshow.columns.map((column) => {
                 return productSlides.map((slideName) => {
-                    const tileData = Utils.filterByDimensionText(data.charts.find((chart) => chart.category === 'Sectors')?.data ?? [], slideName);
+                    const tileData = CoinflowUtils.filterByDimensionText(data.charts.find((chart) => chart.category === 'Sectors')?.data ?? [], slideName);
 
                     return {
-                        tile: Utils.getTileData(tileData, column, selectedSequence),
+                        tile: CoinflowUtils.getTileData(tileData, column, selectedSequence),
                         main: new Map(
                             CoinflowSlideshow.productRows.map((row): [string, MetricTypes.MainDataItemItem] => [
                                 row,
                                 {
                                     type: "items",
                                     name: slideName,
-                                    data: Utils.getProductsData(data.products, column, selectedSequence, slideName, { key: row, text: row }),
+                                    data: CoinflowUtils.getProductsData(data.products, column, selectedSequence, slideName, { key: row, text: row }),
                                 },
                             ])
                         )

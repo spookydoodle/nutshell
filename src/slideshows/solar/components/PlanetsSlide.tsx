@@ -5,7 +5,6 @@ import { Slideshow } from "../../../logic/slideshow/slideshow";
 import { Column } from "../../../components/metrics-dashboard/Column";
 import * as Hooks from '../../../hooks';
 import * as SolarTypes from "../solar-types";
-import * as Utils from '../solar-data-utils';
 
 interface Props {
     slideshow: Slideshow<SolarTypes.SolarData>;

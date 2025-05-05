@@ -9,7 +9,7 @@ import { Slideshow, SlideshowBreakpoint } from "../../logic/slideshow/slideshow"
 import * as Types from "../../types";
 import * as SolarTypes from './solar-types';
 import solarData from "./solar-data.json";
-import { getTickerData } from "./solar-data-utils";
+import * as SolarUtils from "./solar-data-utils";
 
 export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     public path = '/solar';
@@ -164,7 +164,7 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     };
 
     public getTickerData = (data: SolarTypes.SolarData): MetricTypes.TickerStateData | undefined => {
-        return getTickerData(data.metrics);
+        return SolarUtils.getTickerData(data.metrics);
     };
     
     public slideComponent = SolarSlide;

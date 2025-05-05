@@ -4,7 +4,7 @@ import { Theme, Box } from '@mui/material';
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
 import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
 import * as Hooks from '../../../hooks';
-import * as Utils from '../coinflow-data-utils';
+import * as CoinflowUtils from '../coinflow-data-utils';
 import * as CoinflowTypes from "../coinflow-types";
 
 const useStyles = makeStyles((_theme: Theme) =>
@@ -45,7 +45,7 @@ export const SlideColumnChart: React.FC<SlideComponentProps<CoinflowTypes.Data> 
     );
 
     const chartsData = React.useMemo(
-        () => chart ? Utils.getChartsData(chart.data, column, timebox) : undefined,
+        () => chart ? CoinflowUtils.getChartsData(chart.data, column, timebox) : undefined,
         [chart, column, timebox]
     );
 
