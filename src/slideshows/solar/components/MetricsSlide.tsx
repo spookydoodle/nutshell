@@ -28,15 +28,7 @@ export const MetricsSlide: React.FC<Props> = ({ slideshow, data }) => {
         [columnsToRender, data.metrics]
     );
 
-    return (
-        columnsToRender.map((column) => (
-            <MetricsColumn
-                slideshow={slideshow}
-                data={data}
-                column={column}
-                maxRows={maxRows}
-                property={data.metrics[column]}
-            />
-        ))
-    );
+    return columnsToRender.map((column) => (
+        <MetricsColumn key={column} slideshow={slideshow} data={data} column={column} maxRows={maxRows} property={data.metrics[column]} />
+    ));
 };
