@@ -1,12 +1,12 @@
 
 import React from "react";
 import * as rxjs from 'rxjs';
-import { Breakpoints, createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
-import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
+import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
+import { Img } from '../../layouts/images';
 import { PlayerLabel } from "../../components/navigation/Slider";
+import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
 import * as Types from "../../types";
 import * as Utils from "../../utils";
-import { Img } from '../../layouts/images';
 
 /**
  * Initial options to create a slideshow with
@@ -94,7 +94,14 @@ export abstract class Slideshow<T = unknown> {
     public static subtitleShort = 'Yo';
     public static tickerTitle = 'Turbocharged by spookydoodle';
 
+    /**
+     * Client path where the slideshow will be found.
+     */
     public abstract path: string;
+
+    /**
+     * Name which is displayed in the application top bar.
+     */
     public abstract name: string;
     public title?: string;
     public shortName?: string;
@@ -244,7 +251,7 @@ export abstract class Slideshow<T = unknown> {
      */
     public getAutoIncrementInterval?: (duration: number) => number;
 
-    private timeout: NodeJS.Timeout | undefined;
+    private playTimeout: NodeJS.Timeout | undefined;
     private playSubscription: rxjs.Subscription | undefined;
     private incrementSlideIndexTimeout: NodeJS.Timeout | undefined;
 
@@ -254,7 +261,7 @@ export abstract class Slideshow<T = unknown> {
      */
     public start = (data: T, { isLgUp }: SlideshowBreakpoint): void => {
         this.slideIndex$.next(0);
-        this.timeout = setTimeout(() => {
+        this.playTimeout = setTimeout(() => {
             this.animationsInitialized$.next(true);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
@@ -274,7 +281,7 @@ export abstract class Slideshow<T = unknown> {
      * Resets observables needed to start the slideshow.
      */
     public stop = (): void => {
-        clearTimeout(this.timeout);
+        clearTimeout(this.playTimeout);
         this.play$.next(false);
         this.slideIndex$.next(0);
         this.playSubscription?.unsubscribe();

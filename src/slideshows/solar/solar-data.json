@@ -449,13 +449,13 @@
             "posts": [
                 {
                     "name": "Colorful Pluto",
-                    "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/nh_pluto_10.png",
+                    "img": "https://www.nasa.gov/wp-content/uploads/2020/10/nh_pluto_10.png",
                     "description": "Enhanced color global view of Pluto, taken when NASA’s New Horizons spacecraft was 280,000 miles (450,000 kilometers) away.",
                     "link": "https://www.nasa.gov/feature/five-years-after-new-horizons-historic-flyby-here-are-10-cool-things-we-learned-about-plut-0/"
                 },
                 {
                     "name": "Infared",
-                    "img": "https://s23527.pcdn.co/wp-content/uploads/2018/06/pluto-infrared.jpg.optimal.jpg",
+                    "img": "https://www.diyphotography.net/wp-content/uploads/2018/06/pluto-infrared.jpg",
                     "description": "It was three years ago when NASA shared the first image of Pluto taken with a camera named Ralph. An enhanced image showed us rich and wonderful color variations, and now there’s an infrared image as well. It’s amazingly rich in details, and the colors are just gorgeous.",
                     "link": "https://www.diyphotography.net/this-is-how-no-longer-a-planet-pluto-looks-like-in-infrared/"
                 }
