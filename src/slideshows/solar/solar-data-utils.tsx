@@ -183,8 +183,3 @@ export const getTickerData = (metricsData: SolarTypes.MetricsData): MetricTypes.
         ),
     ],
 ]);
-
-// export const createStateData = (): MetricTypes.StateDataMap<SolarTypes.Category> => ({
-//     slides: new Map([...metricSlides, ...planetsSlides]),
-//     ticker: tickerData,
-// });

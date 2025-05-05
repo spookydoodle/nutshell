@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme: Theme) =>
             textAlign: "center",
             color: "white",
             flex: "1 1 0",
-            minWidth: "300px",
+            minWidth: "min(300px, calc(100vw - 40px))",
             maxWidth: "500px",
         },
         imgContainer: {

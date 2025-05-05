@@ -255,7 +255,7 @@ export abstract class Slideshow<T = unknown> {
     public start = (data: T, { isLgUp }: SlideshowBreakpoint): void => {
         this.slideIndex$.next(0);
         this.timeout = setTimeout(() => {
-            this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
+            this.animationsInitialized$.next(true);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
         
@@ -278,7 +278,7 @@ export abstract class Slideshow<T = unknown> {
         this.play$.next(false);
         this.slideIndex$.next(0);
         this.playSubscription?.unsubscribe();
-        this.animationsInitialized$.next(false);
+        this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
     };
 
     /**

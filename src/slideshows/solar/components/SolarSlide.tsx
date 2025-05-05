@@ -1,23 +1,12 @@
 import React from "react";
-import { makeStyles, createStyles } from '@mui/styles';
-import { Grid, Theme, useMediaQuery } from '@mui/material';
+import { Theme, useMediaQuery } from '@mui/material';
 import { Slideshow } from "../../../logic/slideshow/slideshow";
 import { NavigationBar } from "../../../components/metrics-dashboard/navigation-bar/NavigationBar";
-import { Column } from "../../../components/metrics-dashboard/Column";
-import { BarChart } from "../../../components/dataviz/HTMLCharts/BarChart";
-import { ImgTiles } from "../../../components/metrics-dashboard/ImgTiles";
 import * as Hooks from '../../../hooks';
 import * as SolarTypes from "../solar-types";
 import { SolarSlideshow } from "../solar-slideshow";
-
-const useStyles = makeStyles((_theme: Theme) =>
-    createStyles({
-        chartContainer: {
-            height: "100%",
-            overflow: "hidden"
-        }
-    })
-);
+import { MetricsSlide } from "./MetricsSlide";
+import { PlanetsSlide } from "./PlanetsSlide";
 
 interface Props {
     slideshow: Slideshow<SolarTypes.SolarData>;
@@ -25,12 +14,8 @@ interface Props {
 }
 
 export const SolarSlide: React.FC<Props> = ({ slideshow, data }) => {
-    const classes = useStyles();
-    const appId = Hooks.useAppId();
     const [animationsInitialized] = Hooks.useSubjectState(slideshow.animationsInitialized$);
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
-    const [play] = Hooks.useSubjectState(slideshow.play$);
-    const [duration] = Hooks.useSubjectState(slideshow.duration$);
     // const slidesData = data.slides
     // const dataKeys = [...slidesData.keys()];
     // const dataValues = [...slidesData.values()];
@@ -110,12 +95,6 @@ export const SolarSlide: React.FC<Props> = ({ slideshow, data }) => {
         [isLgUp, metricsSlidesCount]
     );
 
-    const columnsToRender = React.useMemo(
-        () => SolarSlideshow.getColumnsToRender(slideIndex, { isLgUp }),
-        [slideIndex, isLgUp]
-    );
-    console.log({ data, slideIndex, columnsToRender });
-
     return (
         <>
             <NavigationBar
@@ -132,14 +111,9 @@ export const SolarSlide: React.FC<Props> = ({ slideshow, data }) => {
                 activeSequenceIndex={activeSequenceIndex}
                 onSequenceItemClick={handleSequenceItemClick}
             />
-            {/* {[...slides[slideIndex].data.entries()].map(([name, value]) => (
-                <Column
-                    animationsInitialized={animationsInitialized}
-                    name={name}
-                    tileData={value.tile} // TODO: consider changing to Transitions and passing components
-                    component={getComponents(name)[slideIndex]}
-                />
-            ))} */}
+            {slideIndex < metricsSlidesCount
+                ? <MetricsSlide slideshow={slideshow} data={data} />
+                : <PlanetsSlide slideshow={slideshow} data={data} />}
         </>
     );
 };
