@@ -32,13 +32,15 @@ export type Planet =
     | 'Pluto';
 
 export type MetricsData = {
-    [key in Property]: {
-        data: { [key in (Planet | 'Moon')]: number };
-        definition: string;
-        unit: string;
-        decimals: number;
-    };
+    [key in Property]: PropertyValue;
 }
+
+export interface PropertyValue {
+    data: { [key in (Planet | 'Moon')]: number };
+    definition: string;
+    unit: string;
+    decimals: number;
+};
 
 export type PlanetsData = {
     [key in Planet]: {

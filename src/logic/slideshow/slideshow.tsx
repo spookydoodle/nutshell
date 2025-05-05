@@ -203,7 +203,7 @@ export abstract class Slideshow<T = unknown> {
     public abstract fetchData: (abortSignal: AbortSignal) => Promise<T>;
 
     /**
-     * Returns number of slides which value of `slideIndex$` refers to.
+     * Returns number of slides which the value of `slideIndex$` refers to.
      */
     public abstract getSlidesLength: (data: T, { isLgUp }: SlideshowBreakpoint) => number;
 
@@ -213,7 +213,7 @@ export abstract class Slideshow<T = unknown> {
     public abstract getPlayerIndex: (slideIndex: number, playerLabelsLength: number) => number;
 
     /**
-     * Returns list of labels for Player navigation.
+     * Returns list of labels for Player navigation referred to by the value returned by the `getPlayerIndex`.
      */
     public abstract getPlayerLabels: (data: T, { isLgUp }: SlideshowBreakpoint) => PlayerLabel[]; // TODO: Consider Map type sequenceName -> label[]
 
