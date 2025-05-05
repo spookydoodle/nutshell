@@ -328,7 +328,7 @@ export abstract class Slideshow<T = unknown> {
      * Creates default theme for slideshows with slideshow breakpoints, color palette and typography.
      */
     public static createDefaultTheme = (mode: Types.Mode): Theme => {
-        return Slideshow.createResponsiveTheme(Slideshow.getDefaultThemeOptions(mode));
+        return this.createResponsiveTheme(this.getDefaultThemeOptions(mode));
     };
 
     /**

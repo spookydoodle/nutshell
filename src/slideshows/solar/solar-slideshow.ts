@@ -1,15 +1,15 @@
-import { Breakpoints, ThemeOptions } from "@mui/material";
+import { ThemeOptions } from "@mui/material";
 import { IMG_SERVER } from "../../img/cmd";
 import { getImgArr } from "../../layouts/images";
-import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import { SolarSlide } from "./components/SolarSlide";
 import { SmallScreenMessageSolar } from "./components/SmallScreenMessageSolar";
 import { PlayerLabel } from "../../components/navigation/Slider";
 import { Slideshow, SlideshowBreakpoint } from "../../logic/slideshow/slideshow";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
 import * as Types from "../../types";
 import * as SolarTypes from './solar-types';
-import solarData from "./solar-data.json";
 import * as SolarUtils from "./solar-data-utils";
+import solarData from "./solar-data.json";
 
 export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     public path = '/solar';
@@ -59,41 +59,41 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     ];
 
     public static getMetricsColumnsToRender = (slideIndex: number, { isLgUp }: SlideshowBreakpoint): SolarTypes.Property[] => {
-        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
+        const columnsPerSlide = this.getColumnsPerSlide({ isLgUp });
 
-        return SolarSlideshow.metricColumns.slice(slideIndex * columnsPerSlide, slideIndex * columnsPerSlide + columnsPerSlide);
+        return this.metricColumns.slice(slideIndex * columnsPerSlide, slideIndex * columnsPerSlide + columnsPerSlide);
     }
 
     public static getPlanetsColumnsToRender = (slideIndex: number, { isLgUp }: SlideshowBreakpoint): SolarTypes.Planet[] => {
-        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
-        const { metricsSlidesCount } = SolarSlideshow.getSubSequenceSlidesLength({ isLgUp });
+        const columnsPerSlide = this.getColumnsPerSlide({ isLgUp });
+        const { metricsSlidesCount } = this.getSubSequenceSlidesLength({ isLgUp });
         const planetsIndex = slideIndex - metricsSlidesCount;
 
-        return SolarSlideshow.planetColumns.slice(planetsIndex * columnsPerSlide, planetsIndex * columnsPerSlide + columnsPerSlide);
+        return this.planetColumns.slice(planetsIndex * columnsPerSlide, planetsIndex * columnsPerSlide + columnsPerSlide);
     }
 
     public static getColumnsToRender = (slideIndex: number, { isLgUp }: SlideshowBreakpoint): string[] => {
-        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
-        const { metricsSlidesCount } = SolarSlideshow.getSubSequenceSlidesLength({ isLgUp });
+        const columnsPerSlide = this.getColumnsPerSlide({ isLgUp });
+        const { metricsSlidesCount } = this.getSubSequenceSlidesLength({ isLgUp });
         if (slideIndex < metricsSlidesCount) {
-            return SolarSlideshow.metricColumns.slice(slideIndex * columnsPerSlide, slideIndex * columnsPerSlide + columnsPerSlide);
+            return this.metricColumns.slice(slideIndex * columnsPerSlide, slideIndex * columnsPerSlide + columnsPerSlide);
         }
         const planetsIndex = slideIndex - metricsSlidesCount;
 
-        return SolarSlideshow.planetColumns.slice(planetsIndex * columnsPerSlide, planetsIndex * columnsPerSlide + columnsPerSlide);
+        return this.planetColumns.slice(planetsIndex * columnsPerSlide, planetsIndex * columnsPerSlide + columnsPerSlide);
     }
 
     public static getColumnsPerSlide = ({ isLgUp }: SlideshowBreakpoint): number => isLgUp ? 3 : 2;
 
     public static getSlideStats = (slideIndex: number, { isLgUp }: SlideshowBreakpoint) => {
-        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
-        const { metricsSlidesCount, planetsSlidesCount } = SolarSlideshow.getSubSequenceSlidesLength({ isLgUp });
-        const activeSequence =  slideIndex < metricsSlidesCount ? 'Metrics' : 'Planets';
-        const metricsSlidesLabels = new Array(Math.ceil(SolarSlideshow.metricColumns.length / columnsPerSlide))
+        const columnsPerSlide = this.getColumnsPerSlide({ isLgUp });
+        const { metricsSlidesCount, planetsSlidesCount } = this.getSubSequenceSlidesLength({ isLgUp });
+        const activeSequence = slideIndex < metricsSlidesCount ? 'Metrics' : 'Planets';
+        const metricsSlidesLabels = new Array(Math.ceil(this.metricColumns.length / columnsPerSlide))
             .fill(null)
-            .map((_el, i) =>  `M${i * columnsPerSlide + 1}-${(i * columnsPerSlide) + columnsPerSlide}`);
+            .map((_el, i) => `M${i * columnsPerSlide + 1}-${(i * columnsPerSlide) + columnsPerSlide}`);
 
-        const planetsSlidesLabels = new Array(Math.ceil(SolarSlideshow.planetColumns.length / columnsPerSlide))
+        const planetsSlidesLabels = new Array(Math.ceil(this.planetColumns.length / columnsPerSlide))
             .fill(null)
             .map((_el, i) => `P${i * columnsPerSlide + 1}-${(i * columnsPerSlide) + columnsPerSlide}`);
         const sequenceLabels = metricsSlidesLabels.concat(planetsSlidesLabels);
@@ -105,7 +105,7 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
             planetsSlidesCount,
             category: activeSequence,
             activeSequence,
-            activeSequenceIndex: SolarSlideshow.sequenceItems.findIndex((s) => s === activeSequence),
+            activeSequenceIndex: this.sequenceItems.findIndex((s) => s === activeSequence),
             titlePrimary: this.title,
             titlePrimaryShort: this.title,
             titleSecondary: activeSequence === 'Metrics' ? 'Vs. the Earth' : 'Planets show',
@@ -117,15 +117,11 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
         return solarData as SolarTypes.SolarData;
     };
 
-    public getSlidesData = (data: MetricTypes.StateDataMap<SolarTypes.Category>): MetricTypes.SlidesStateData<SolarTypes.Category> | undefined => {
-        return data.slides;
-    };
-
     public static getSubSequenceSlidesLength = ({ isLgUp }: SlideshowBreakpoint) => {
-        const columnsPerSlide = SolarSlideshow.getColumnsPerSlide({ isLgUp });
-        const metricsSlidesCount = Math.ceil(SolarSlideshow.metricColumns.length / columnsPerSlide);
-        const planetsSlidesCount = Math.ceil(SolarSlideshow.planetColumns.length / columnsPerSlide);
-        
+        const columnsPerSlide = this.getColumnsPerSlide({ isLgUp });
+        const metricsSlidesCount = Math.ceil(this.metricColumns.length / columnsPerSlide);
+        const planetsSlidesCount = Math.ceil(this.planetColumns.length / columnsPerSlide);
+
         return { metricsSlidesCount, planetsSlidesCount };
     };
 
@@ -166,7 +162,7 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     public getTickerData = (data: SolarTypes.SolarData): MetricTypes.TickerStateData | undefined => {
         return SolarUtils.getTickerData(data.metrics);
     };
-    
+
     public slideComponent = SolarSlide;
     public smallScreenComponent = SmallScreenMessageSolar;
 

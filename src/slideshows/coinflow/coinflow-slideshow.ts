@@ -38,12 +38,12 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     public static productRows: CoinflowTypes.Row[] = ['Main line', 'Secondary line'];
 
     public static getColumnsToRender = ({ isMdUp, isLgUp }: { isMdUp: boolean; isLgUp: boolean }): CoinflowTypes.Column[] => {
-        const result: CoinflowTypes.Column[] = [CoinflowSlideshow.columns[0]];
+        const result: CoinflowTypes.Column[] = [this.columns[0]];
         if (isLgUp) {
-            result.push(CoinflowSlideshow.columns[1])
+            result.push(this.columns[1])
         }
         if (isMdUp) {
-            result.push(CoinflowSlideshow.columns[2]);
+            result.push(this.columns[2]);
         }
         return result;
     }
@@ -63,16 +63,16 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
     };
 
     public static getTotalSlidesLength = (sequenceLabels: PlayerLabel[]) => {
-        return CoinflowSlideshow.sequenceItems.length * sequenceLabels.length;
+        return this.sequenceItems.length * sequenceLabels.length;
     };
 
     public static getSlideStats = (data: CoinflowTypes.Data, slideIndex: number) => {
-        const sequenceLabels = CoinflowSlideshow.getSequenceLabels(data);
-        const totalSlidesLength = CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
+        const sequenceLabels = this.getSequenceLabels(data);
+        const totalSlidesLength = this.getTotalSlidesLength(sequenceLabels);
         const sequenceIndex = Math.floor(slideIndex / sequenceLabels.length);
-        const sequence = CoinflowSlideshow.sequenceItems[sequenceIndex];
+        const sequence = this.sequenceItems[sequenceIndex];
         const indexWithinSequence = slideIndex % sequenceLabels.length;
-        const activeBreadcrumbIndex = Math.min(indexWithinSequence, CoinflowSlideshow.breadcrumbItems.length - 1);
+        const activeBreadcrumbIndex = Math.min(indexWithinSequence, this.breadcrumbItems.length - 1);
         const isChartSlide = indexWithinSequence < sequenceLabels.filter((l) => l.subSequenceName === 'Charts').length;
         const category = isChartSlide ? data.charts[indexWithinSequence].category : 'Products';
 
