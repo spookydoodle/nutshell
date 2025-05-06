@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import { SuspenseImg } from "../SuspenseImg";
-import nothing from "../../img/misc/nothing.jpg";
+import { SuspenseImg } from "../../../components/SuspenseImg";
+import nothing from "../../../img/misc/nothing.jpg";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -59,22 +59,21 @@ const useStyles = makeStyles((_theme: Theme) =>
 
 interface Props {
     src: string;
-    index: number;
 }
 
-export const Background: React.FC<Props> = ({ src, index }) => {
+export const Background: React.FC<Props> = ({ src }) => {
     const classes = useStyles();
 
     return (
         <div className={classes.container}>
             <SuspenseImg
-                alt={`alt-img-bg-${index}`}
+                alt="alt-img"
                 img={{ img: src, className: classes.imgBg }}
                 fallback={{ img: nothing, className: classes.imgBg }}
             />
 
             <SuspenseImg
-                alt={`alt-img-${index}`}
+                alt="alt-img"
                 img={{ img: src, className: classes.img }}
                 fallback={{ img: nothing, className: classes.img }}
             />

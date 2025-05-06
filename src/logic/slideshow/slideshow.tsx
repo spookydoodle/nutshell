@@ -56,6 +56,10 @@ export interface SlideComponentProps<T> {
     slideIndex: number;
 }
 
+export interface LoadingComponentProps {
+    progress: number;
+}
+
 export interface SlideshowErrorComponentProps {
     error: Error;
 }
@@ -207,7 +211,7 @@ export abstract class Slideshow<T = unknown> {
      * Method which fetches data just before mounting the slideshow.
      * The flag `isLoading$` will be set to `true` for the duration of the promise execution.
      */
-    public abstract fetchData: (abortSignal: AbortSignal) => Promise<T>;
+    public abstract fetchData: (abortSignal: AbortSignal, onLoadProgress: (v: number) => void) => Promise<T>;
 
     /**
      * Returns number of slides which the value of `slideIndex$` refers to.
@@ -288,12 +292,8 @@ export abstract class Slideshow<T = unknown> {
         this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
     };
 
-    /**
-     * If provided will render the custom slideshow instead of the default dashboard.
-     */
-    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T>; data: T; }>;
-    public slideComponent?: React.ComponentType<SlideComponentProps<T>>;
-    public loadingComponent?: React.ComponentType;
+    public abstract slideComponent: React.ComponentType<SlideComponentProps<T>>;
+    public loadingComponent?: React.ComponentType<LoadingComponentProps>;
     public errorComponent?: React.ComponentType<SlideshowErrorComponentProps>;
     public noDataComponent?: React.ComponentType;
 

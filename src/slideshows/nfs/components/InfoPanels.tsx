@@ -1,8 +1,8 @@
 import React from "react";
 import { Rating } from './Rating';
-import { TitlePanels } from "../metrics-dashboard/TitlePanels";
-import * as Utils from "../../utils";
-import * as Types from "../../slideshows/nfs/nfs-types";
+import { TitlePanels } from "../../../components/metrics-dashboard/TitlePanels";
+import * as Utils from "../../../utils";
+import * as Types from "../../../slideshows/nfs/nfs-types";
 
 const unknownTx = [
     "Who knows...",
@@ -16,11 +16,11 @@ const unknownTx = [
 
 interface Props {
     slide: Types.GameDataItem;
-    ind: number;
+    index: number;
     applyStyle?: boolean;
 }
 
-export const InfoPanels: React.FC<Props> = ({ slide, ind, applyStyle }) => {
+export const InfoPanels: React.FC<Props> = ({ slide, index, applyStyle }) => {
     const salesAmount = React.useMemo(
         () => {
             const r = Math.floor(Math.random());
@@ -36,7 +36,7 @@ export const InfoPanels: React.FC<Props> = ({ slide, ind, applyStyle }) => {
 
     return (
         <TitlePanels
-            primary={{ name: `#${ind + 1}`, body: slide.game.text }}
+            primary={{ name: `#${index + 1}`, body: slide.game.text }}
             primaryContent={<Rating rating={slide.rating} />}
             secondary={{ name: "Year", body: slide.year }}
             tertiary={{ name: "Sales", body: salesAmount }}

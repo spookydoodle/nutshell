@@ -2,11 +2,11 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import { imgPerSlide } from "../../slideshows/nfs/nfs-data";
+import { imgPerSlide } from "../nfs-data";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
-        progress: {
+        container: {
             zIndex: 10,
             position: "absolute",
             top: "-2vh",
@@ -15,7 +15,7 @@ const useStyles = makeStyles((_theme: Theme) =>
             justifyContent: "center",
             alignItems: "flex-start",
         },
-        progressItem: {
+        item: {
             width: "1vh",
             height: "1vh",
             borderRadius: "50%",
@@ -35,30 +35,20 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    slideIndex: number;
-    onIndexChange: React.Dispatch<React.SetStateAction<number>>;
-    onPrevIndexChange: React.Dispatch<React.SetStateAction<number>>;
+    activeItemIndex: number;
+    onClick: (i: number) => void;
 }
 
-export const Progress: React.FC<Props> = ({ slideIndex, onIndexChange, onPrevIndexChange }) => {
+export const SlideNavigation: React.FC<Props> = ({ activeItemIndex, onClick }) => {
     const classes = useStyles();
 
     return (
-        <div className={classes.progress}>
+        <div className={classes.container}>
             {new Array(imgPerSlide).fill(null).map((_el, i) => (
                 <span
                     key={i}
-                    className={classNames(classes.progressItem, {
-                        [classes.active]: i === slideIndex % imgPerSlide,
-                    })}
-                    onClick={() => {
-                        if (i !== slideIndex % imgPerSlide) {
-                            onIndexChange((prev: number) => {
-                                onPrevIndexChange(prev);
-                                return prev - (prev % imgPerSlide) + i;
-                            });
-                        }
-                    }}
+                    className={classNames(classes.item, { [classes.active]: i === activeItemIndex })}
+                    onClick={() => onClick(i)}
                 />
             ))}
         </div>

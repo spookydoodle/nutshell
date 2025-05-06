@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Theme, useMediaQuery } from '@mui/material';
 import { Desktop } from "../components/metrics-dashboard/Desktop";
 import { Slideshow } from "../logic/slideshow/slideshow";
@@ -14,14 +14,15 @@ export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
     const isSmallScreen = useMediaQuery((theme: Theme) => theme.breakpoints.down(slideshow.smallScreenComponentBreakpoint));
     const [data, setData] = Hooks.useSubjectState(slideshow.data$);
     const [isLoading, setIsLoading] = Hooks.useSubjectState(slideshow.isLoading$);
+    const [loadingProgress, setLoadingProgress] = useState(0);
     const [error, setError] = Hooks.useSubjectState(slideshow.error$);
-
+    
     React.useEffect(() => {
         const abortController = new AbortController();
         setError(null);
         setIsLoading(true);
 
-        slideshow.fetchData(abortController.signal)
+        slideshow.fetchData(abortController.signal, setLoadingProgress)
             .then((d) => {
                 setData(d);
                 setIsLoading(false)
@@ -39,7 +40,7 @@ export const NutshellPageContent: React.FC<Props> = ({ slideshow }) => {
     }, []);
 
     if (isLoading) {
-        return slideshow.loadingComponent ? <slideshow.loadingComponent /> : <LinearBuffer />;
+        return slideshow.loadingComponent ? <slideshow.loadingComponent progress={loadingProgress} /> : <LinearBuffer />;
     }
 
     if (error) {
