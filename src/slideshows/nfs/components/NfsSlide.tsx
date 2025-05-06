@@ -88,13 +88,11 @@ export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.NutshellData>> = ({
         <>
             <Box className={classes.cinema}>
                 <Transitions
-                    variant={
-                        isSwitchingWithinSlide
-                            ? "fade-in"
-                            : isSwitchingToEarlierSlide
-                                ? "swipe-cube-to-right"
-                                : "swipe-cube-to-left"
-                    }
+                    variant={isSwitchingWithinSlide
+                        ? "fade-in"
+                        : isSwitchingToEarlierSlide
+                            ? "swipe-cube-to-right"
+                            : "swipe-cube-to-left"}
                     component={<Background src={backgroundSrc} />}
                 />
             </Box>

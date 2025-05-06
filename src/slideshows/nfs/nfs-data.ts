@@ -9,7 +9,8 @@ const nfs: Dimension = {
 };
 
 const testNumber = "";
-export const imgPerSlide = 6;
+const imgNames = ["0_cover", "0_garage", "0_ui", "1", "2", "3"];
+export const imgPerSlide = imgNames.length;
 
 type IndexNr =
     | "01"
@@ -44,49 +45,7 @@ type IndexNr =
     | "30";
 
 const getImgArr = (nn: IndexNr): string[] => {
-    return ["0_cover", "0_garage", "0_ui", "1", "2", "3"].map((el) => `${imgServer}/${nn}_${el}.jpg`);
-};
-
-/**
- * Fixed list is applied in order to assure that all tiles show a game from the same year at the same time
- */
-export const DECADES = {
-    "1990": [
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_1", text: "The Need for Speed" },
-        { key: "nfs_2", text: "Need for Speed II" },
-        { key: "nfs_3", text: "Need for Speed III: Hot Pursuit" },
-        { key: "nfs_4", text: "Need for Speed: High Stakes" },
-    ],
-    "2000": [
-        { key: "nfs_5", text: "Need for Speed: Porsche Unleashed" },
-        { key: "nfs_6", text: "Need for Speed: Hot Pursuit 2" },
-        { key: "nfs_7", text: "Need for Speed: Underground" },
-        { key: "nfs_8", text: "Need for Speed: Underground 2" },
-        { key: "nfs_9", text: "Need for Speed: Most Wanted" },
-        { key: "nfs_10", text: "Need for Speed: Carbon" },
-        { key: "nfs_11", text: "Need for Speed: ProStreet" },
-        { key: "nfs_12", text: "Need for Speed: Undercover" },
-        { key: "nfs_13", text: "Need for Speed: Shift" },
-        { key: "nfs_14", text: "Need for Speed: Nitro" },
-    ],
-    "2010": [
-        { key: "nfs_15", text: "Need for Speed: World" },
-        { key: "nfs_16", text: "Need for Speed: Hot Pursuit" },
-        { key: "nfs_17", text: "Shift 2: Unleashed" },
-        { key: "nfs_18", text: "Need for Speed: The Run" },
-        { key: "nfs_19", text: "Need for Speed: Most Wanted" },
-        { key: "nfs_20", text: "Need for Speed Rivals" },
-        { key: "nfs_21", text: "Need for Speed: No Limits" },
-        { key: "nfs_22", text: "Need for Speed" },
-        { key: "nfs_23", text: "Need for Speed Payback" },
-        { key: "nfs_24", text: "Need for Speed Heat" },
-    ],
+    return imgNames.map((el) => `${imgServer}/${nn}_${el}.jpg`);
 };
 
 /**
