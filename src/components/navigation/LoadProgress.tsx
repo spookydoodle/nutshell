@@ -35,13 +35,11 @@ const useStyles = makeStyles((_theme: Theme) =>
 );
 
 interface Props {
-    index: number;
-    length: number;
+    progress: number;
 }
 
-export const LoadProgress: React.FC<Props> = ({ index, length }) => {
+export const LoadProgress: React.FC<Props> = ({ progress }) => {
     const classes = useStyles();
-    const progress = index / length;
 
     return (
         <div className={classes.container}>

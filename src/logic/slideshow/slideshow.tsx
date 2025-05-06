@@ -1,12 +1,12 @@
 
 import React from "react";
 import * as rxjs from 'rxjs';
-import { Breakpoints, createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
-import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
+import { createTheme, responsiveFontSizes, Theme, ThemeOptions } from "@mui/material";
+import { Img } from '../../layouts/images';
 import { PlayerLabel } from "../../components/navigation/Slider";
+import * as MetricTypes from '../../components/metrics-dashboard/metric-types';
 import * as Types from "../../types";
 import * as Utils from "../../utils";
-import { Img } from '../../layouts/images';
 
 /**
  * Initial options to create a slideshow with
@@ -56,6 +56,10 @@ export interface SlideComponentProps<T> {
     slideIndex: number;
 }
 
+export interface LoadingComponentProps {
+    progress: number;
+}
+
 export interface SlideshowErrorComponentProps {
     error: Error;
 }
@@ -94,7 +98,14 @@ export abstract class Slideshow<T = unknown> {
     public static subtitleShort = 'Yo';
     public static tickerTitle = 'Turbocharged by spookydoodle';
 
+    /**
+     * Client path where the slideshow will be found.
+     */
     public abstract path: string;
+
+    /**
+     * Name which is displayed in the application top bar.
+     */
     public abstract name: string;
     public title?: string;
     public shortName?: string;
@@ -200,7 +211,7 @@ export abstract class Slideshow<T = unknown> {
      * Method which fetches data just before mounting the slideshow.
      * The flag `isLoading$` will be set to `true` for the duration of the promise execution.
      */
-    public abstract fetchData: (abortSignal: AbortSignal) => Promise<T>;
+    public abstract fetchData: (abortSignal: AbortSignal, onLoadProgress: (v: number) => void) => Promise<T>;
 
     /**
      * Returns number of slides which the value of `slideIndex$` refers to.
@@ -244,9 +255,9 @@ export abstract class Slideshow<T = unknown> {
      */
     public getAutoIncrementInterval?: (duration: number) => number;
 
-    private timeout: NodeJS.Timeout | undefined;
+    private playTimeout: NodeJS.Timeout | undefined;
     private playSubscription: rxjs.Subscription | undefined;
-    private playInterval: NodeJS.Timeout | undefined;
+    private incrementSlideIndexTimeout: NodeJS.Timeout | undefined;
 
     /**
      * Sets the indexes to 0 and `play$` and `animationsInitialized$` values to those provided in the constructor.
@@ -254,16 +265,16 @@ export abstract class Slideshow<T = unknown> {
      */
     public start = (data: T, { isLgUp }: SlideshowBreakpoint): void => {
         this.slideIndex$.next(0);
-        this.timeout = setTimeout(() => {
+        this.playTimeout = setTimeout(() => {
             this.animationsInitialized$.next(true);
             this.play$.next(this.initOptions?.autoplay ?? this.defaultAutoPlay);
         }, this.startDelay);
         
         const slidesLength = this.getSlidesLength(data, { isLgUp });
-        this.playSubscription = rxjs.combineLatest([this.play$, this.duration$]).subscribe(([play, duration]) => {
-            clearInterval(this.playInterval);
+        this.playSubscription = rxjs.combineLatest([this.slideIndex$, this.play$, this.duration$]).subscribe(([slideIndex, play, duration]) => {
+            clearTimeout(this.incrementSlideIndexTimeout);
             if (play) {
-                this.playInterval = setInterval(() => {
+                this.incrementSlideIndexTimeout = setTimeout(() => {
                     this.slideIndex$.next((this.slideIndex$.value + 1) % slidesLength);
                 }, this.getAutoIncrementInterval?.(duration) ?? duration);
             }
@@ -274,19 +285,15 @@ export abstract class Slideshow<T = unknown> {
      * Resets observables needed to start the slideshow.
      */
     public stop = (): void => {
-        clearTimeout(this.timeout);
+        clearTimeout(this.playTimeout);
         this.play$.next(false);
         this.slideIndex$.next(0);
         this.playSubscription?.unsubscribe();
         this.animationsInitialized$.next(this.initOptions?.animationsInitialized ?? this.defaultAnimationsInitialized);
     };
 
-    /**
-     * If provided will render the custom slideshow instead of the default dashboard.
-     */
-    public customSlideshow?: React.ComponentType<{ slideshow: Slideshow<T>; data: T; }>;
-    public slideComponent?: React.ComponentType<SlideComponentProps<T>>;
-    public loadingComponent?: React.ComponentType;
+    public abstract slideComponent: React.ComponentType<SlideComponentProps<T>>;
+    public loadingComponent?: React.ComponentType<LoadingComponentProps>;
     public errorComponent?: React.ComponentType<SlideshowErrorComponentProps>;
     public noDataComponent?: React.ComponentType;
 

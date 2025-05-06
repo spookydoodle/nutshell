@@ -3,9 +3,10 @@ import * as Types from "../../types";
 import { NutshellData } from "./nfs-types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
-import { NutshellNFS } from "../../pages";
 import { NEED_FOR_SPEED, imgPerSlide } from "./nfs-data";
 import { SmallScreenMessageNfs } from "./components/SmallScreenMessageNfs";
+import { ImagePreloadWrapper } from "./components/ImagePreloadWrapper";
+import { NfsSlide } from "./components/NfsSlide";
 
 export class NfsSlideshow extends Slideshow<NutshellData> {
     public path = '/need-for-nutshell';
@@ -19,8 +20,16 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://vgsales.fandom.com/wiki/Need_for_Speed",
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
-    
-    public fetchData = async (_abortSignal: AbortSignal): Promise<NutshellData> => {
+
+    public fetchData = async (abortSignal: AbortSignal, onLoadProgress: (value: number) => void): Promise<NutshellData> => {
+        const imagesToPreload = NEED_FOR_SPEED.games.map(({ background }) => background).flat(1);
+        let progress = 0;
+        await Promise.all(imagesToPreload.map((url) => {
+            return fetch(url, { signal: abortSignal }).then(() => {
+                const result = ++progress / imagesToPreload.length;
+                onLoadProgress(result);
+            });
+        }));
         return NEED_FOR_SPEED;
     };
 
@@ -56,7 +65,8 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         this.slideIndex$.next(this.slideIndex$.value < playerLabelsLength * imgPerSlide - 1 ? this.slideIndex$.value + 1 : 0)
     };
 
-    public customSlideshow = NutshellNFS;
+    public loadingComponent = ImagePreloadWrapper;
+    public slideComponent = NfsSlide;
     public smallScreenComponent = SmallScreenMessageNfs;
 
     public getThemeOptions = (mode: Types.Mode): ThemeOptions => ({

@@ -23,9 +23,7 @@ export const Desktop: React.FC<Props> = ({ slideshow, data }) => {
 
     return (
         <DesktopContainer slideshow={slideshow} data={data}>
-            {slideshow.slideComponent
-                ? <slideshow.slideComponent slideshow={slideshow} data={data} slideIndex={slideIndex} />
-                : slideshow.customSlideshow ? <slideshow.customSlideshow slideshow={slideshow} data={data} /> : null}
+            <slideshow.slideComponent slideshow={slideshow} data={data} slideIndex={slideIndex} />
         </DesktopContainer>
     );
 };
