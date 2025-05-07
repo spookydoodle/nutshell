@@ -98,7 +98,7 @@ export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.Game[]>> = ({ slide
             </Box>
             <Transitions
                 variant={imgIndex === 0 ? "fade-in-slide-out" : "none"}
-                component={<InfoPanels slide={data[gameIndex]} index={imgIndex} applyStyle={!isSwitchingWithinSlide} />}
+                component={<InfoPanels game={data[gameIndex]} index={imgIndex} applyStyle={!isSwitchingWithinSlide} />}
             />
             <SlideNavigation activeItemIndex={imgIndex} onClick={handleSlideNavigationItemClick} />
         </>

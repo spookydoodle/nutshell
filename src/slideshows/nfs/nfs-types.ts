@@ -18,6 +18,7 @@ export type Developer =
     | "Quicklime Games"
     | "EA Singapore"
     | "Criterion Games"
+    | "Codemasters"
     | "Straight Right"
     | "Ghost Games"
     | "Firemonkeys Studios";
@@ -41,6 +42,7 @@ export type Platform =
     | "Xbox"
     | "Xbox 360"
     | "Xbox One"
+    | "Xbox Series X/S"
     | "Wii"
     | "Wii U"
     | "Mobile"
@@ -127,21 +129,27 @@ export interface Game {
     label: string;
     franchise: Dimension;
     year: Year;
-    developers: Array<Developer>;
-    platforms: Array<Platform>;
+    developers: Developer[];
+    platforms: Platform[];
     logo?: string;
     cover: string;
-    background: Array<string>;
+    background: string[];
     video: string;
-    cars: Array<CarDataItem>;
+    cars: Car[];
     revenue: Measure;
     qty: Measure;
-    rating?: number;
+    metacritic: Rating;
 }
 
-export interface CarDataItem {
+export interface Car {
     game: Dimension;
     name: Dimension;
     url: string;
     price?: Measure;
+}
+
+export interface Rating {
+    url: string;
+    critic: number;
+    user?: number;
 }
