@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import { imgPerSlide } from "../nfs-data";
+import { NfsSlideshow } from "../nfs-slideshow";
 
 const useStyles = makeStyles((_theme: Theme) =>
     createStyles({
@@ -44,7 +44,7 @@ export const SlideNavigation: React.FC<Props> = ({ activeItemIndex, onClick }) =
 
     return (
         <div className={classes.container}>
-            {new Array(imgPerSlide).fill(null).map((_el, i) => (
+            {new Array(NfsSlideshow.imgPerSlide).fill(null).map((_el, i) => (
                 <span
                     key={i}
                     className={classNames(classes.item, { [classes.active]: i === activeItemIndex })}

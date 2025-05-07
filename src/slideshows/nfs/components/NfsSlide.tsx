@@ -2,10 +2,10 @@ import React, { useCallback, useState } from "react";
 import * as rxjs from 'rxjs';
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Theme } from '@mui/material';
+import { NfsSlideshow } from "../nfs-slideshow";
 import { SlideComponentProps } from "../../../logic/slideshow/slideshow";
 import { Background } from "./Background";
 import { Transitions } from "../../../components/metrics-dashboard/Transitions";
-import { imgPerSlide } from "../nfs-data";
 import { SlideNavigation } from "./SlideNavigation";
 import { InfoPanels } from "./InfoPanels";
 import * as Hooks from '../../../hooks';
@@ -22,7 +22,7 @@ const useStyles = makeStyles((_theme: Theme) =>
     })
 );
 
-export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.NutshellData>> = ({ slideshow, data }) => {
+export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.Game[]>> = ({ slideshow, data }) => {
     const classes = useStyles();
     const [slideIndex, setSlideIndex] = Hooks.useSubjectState(slideshow.slideIndex$);
     const [prevSlideIndex, setPrevSlideIndex] = useState(0);
@@ -40,17 +40,17 @@ export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.NutshellData>> = ({
     }, []);
 
     const gameIndex = React.useMemo(
-        () => Math.floor(slideIndex / imgPerSlide),
+        () => Math.floor(slideIndex / NfsSlideshow.imgPerSlide),
         [slideIndex]
     );
 
     const prevGameIndex = React.useMemo(
-        () => Math.floor(prevSlideIndex / imgPerSlide),
+        () => Math.floor(prevSlideIndex / NfsSlideshow.imgPerSlide),
         [prevSlideIndex]
     );
 
     const imgIndex = React.useMemo(
-        () => slideIndex % imgPerSlide,
+        () => slideIndex % NfsSlideshow.imgPerSlide,
         [slideIndex]
     );
 
@@ -65,12 +65,12 @@ export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.NutshellData>> = ({
     );
 
     const isSwitchingToEarlierSlide = React.useMemo(
-        () => !isSwitchingWithinSlide && (slideIndex < prevSlideIndex || (prevSlideIndex === 0 && slideIndex === data.games.length * imgPerSlide - 1)),
-        [isSwitchingWithinSlide, slideIndex, prevSlideIndex, data.games.length]
+        () => !isSwitchingWithinSlide && (slideIndex < prevSlideIndex || (prevSlideIndex === 0 && slideIndex === data.length * NfsSlideshow.imgPerSlide - 1)),
+        [isSwitchingWithinSlide, slideIndex, prevSlideIndex, data.length]
     );
 
     const backgroundSrc = React.useMemo(
-        () => data.games[gameIndex].background[imgIndex],
+        () => data[gameIndex].background[imgIndex],
         [data, gameIndex, imgIndex]
     );
 
@@ -79,7 +79,7 @@ export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.NutshellData>> = ({
             if (i === imgIndex) {
                 return;
             }
-            setSlideIndex((prev: number) => prev - (prev % imgPerSlide) + i);
+            setSlideIndex((prev: number) => prev - (prev % NfsSlideshow.imgPerSlide) + i);
         },
         [imgIndex]
     );
@@ -98,7 +98,7 @@ export const NfsSlide: React.FC<SlideComponentProps<NfsTypes.NutshellData>> = ({
             </Box>
             <Transitions
                 variant={imgIndex === 0 ? "fade-in-slide-out" : "none"}
-                component={<InfoPanels slide={data.games[gameIndex]} index={imgIndex} applyStyle={!isSwitchingWithinSlide} />}
+                component={<InfoPanels slide={data[gameIndex]} index={imgIndex} applyStyle={!isSwitchingWithinSlide} />}
             />
             <SlideNavigation activeItemIndex={imgIndex} onClick={handleSlideNavigationItemClick} />
         </>

@@ -80,6 +80,38 @@ export type Year =
     | "2019"
     | "2020";
 
+export type IndexNr =
+    | "01"
+    | "02"
+    | "03"
+    | "04"
+    | "05"
+    | "06"
+    | "07"
+    | "08"
+    | "09"
+    | "10"
+    | "11"
+    | "12"
+    | "13"
+    | "14"
+    | "15"
+    | "16"
+    | "17"
+    | "18"
+    | "19"
+    | "20"
+    | "21"
+    | "22"
+    | "23"
+    | "24"
+    | "25"
+    | "26"
+    | "27"
+    | "28"
+    | "29"
+    | "30";
+
 export interface Dimension {
     key: string;
     text: string;
@@ -90,8 +122,7 @@ export interface Measure {
     unit?: string;
 }
 
-// GameDataItem and CarDataItem should share the game column
-export interface GameDataItem {
+export interface Game {
     game: Dimension; // key
     label: string;
     franchise: Dimension;
@@ -108,17 +139,9 @@ export interface GameDataItem {
     rating?: number;
 }
 
-export type GameData = Array<GameDataItem>;
-
 export interface CarDataItem {
-    game: Dimension; // key
+    game: Dimension;
     name: Dimension;
     url: string;
     price?: Measure;
 }
-
-export type CarData = Array<CarDataItem>;
-
-export type NutshellData = {
-    games: GameData;
-};

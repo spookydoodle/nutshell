@@ -15,7 +15,7 @@ const unknownTx = [
 ];
 
 interface Props {
-    slide: Types.GameDataItem;
+    slide: Types.Game;
     index: number;
     applyStyle?: boolean;
 }
