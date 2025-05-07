@@ -61,6 +61,8 @@ export class NfsSlideshow extends Slideshow<NfsTypes.Game[]> {
         return data.length * NfsSlideshow.imgPerSlide
     };
 
+    public rotatePlayerLabels = true;
+    
     public getPlayerLabels = (data: NfsTypes.Game[]): { label: string; sequenceName?: string; }[] => {
         return data.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
     };

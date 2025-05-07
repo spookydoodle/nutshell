@@ -219,6 +219,11 @@ export abstract class Slideshow<T = unknown> {
     public abstract getSlidesLength: (data: T, { isLgUp }: SlideshowBreakpoint) => number;
 
     /**
+     * Whether labels on player ticks should be rotated 45 deg.
+     */
+    public rotatePlayerLabels?: boolean;
+
+    /**
      * Function which returns the index for the bottom Player component.
      */
     public abstract getPlayerIndex: (slideIndex: number, playerLabelsLength: number) => number;
