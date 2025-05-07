@@ -25,7 +25,7 @@ export const Rating: React.FC<Props> = ({ url, rating }) => {
         return null;
     }
     return (
-        <Box component="fieldset" mb={3} borderColor="transparent">
+        <Box component="fieldset" mb={3} borderColor="transparent" padding="2px 0" marginLeft="-4px">
             <Tooltip title="Metacritic Rating" arrow>
                 <a href={url} target="_blank">
                     <StyledRating name="metacritic-rating-10" defaultValue={rating / 10} max={10} precision={0.1} readOnly />
