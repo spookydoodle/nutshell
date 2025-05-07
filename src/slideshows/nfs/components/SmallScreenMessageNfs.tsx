@@ -2,10 +2,10 @@ import { AnimatedComponent, SpringRef, useSpring, config, useSpringRef, useChain
 import classNames from "classnames";
 import { Typography, Theme } from '@mui/material';
 import { makeStyles, createStyles } from '@mui/styles';
-import { NutshellData } from "../nfs-types";
 import { SmallScreenComponentProps } from "../../../logic/slideshow/slideshow";
 import { NFSPanel } from "../../../components/metrics-dashboard/NFSPanel";
 import { TVIcon } from "../../../icons/TVIcon";
+import * as NfsTypes from "../nfs-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -62,7 +62,7 @@ const useAnimation = (newRef: SpringRef): Style => {
     return spring;
 };
 
-export const SmallScreenMessageNfs: React.FC<SmallScreenComponentProps<NutshellData>> = ({ slideshow }) => {
+export const SmallScreenMessageNfs: React.FC<SmallScreenComponentProps<NfsTypes.Game[]>> = () => {
     const classes = useStyles();
 
     const ref = useSpringRef();

@@ -19,7 +19,7 @@ const PlayerSlider = withStyles((theme: Theme) => ({
     markLabel: {
         fontSize: "12px",
         color: "rgba(255, 255, 255, .87) !important",
-        transform: "translateX(-80%) rotate(-45deg)",
+        transform: (props: { rotateLabels?: boolean }) => props.rotateLabels ? "translateX(-80%) rotate(-45deg) !important" : 'none',
         textAlign: "right",
         textTransform: "uppercase",
         [theme.breakpoints.down("md")]: {
@@ -39,7 +39,7 @@ export interface PlayerLabel {
 interface Props {
     slideshow: Slideshow
     index: number;
-    playerLabels: PlayerLabel[]
+    playerLabels: PlayerLabel[];
 }
 
 export const Slider: React.FC<Props> = ({
@@ -89,15 +89,14 @@ export const Slider: React.FC<Props> = ({
                 min={1}
                 max={playerLabels.length}
                 step={1}
-                marks={marks ? marks : true}
+                marks={marks}
                 aria-labelledby="discrete-slider-restrict"
                 valueLabelDisplay="auto"
-                valueLabelFormat={(value: number) =>
-                    playerLabels ? playerLabels[value - 1].label : value
-                }
+                valueLabelFormat={(value: number) => playerLabels[value - 1].label}
                 onChange={(_event: object, value: number | number[]) =>
                     slideshow.onPlayerIndexChange(Number(value) - 1, playerLabels.length)
                 }
+                rotateLabels={slideshow.rotatePlayerLabels}
                 className={classes.slider}
             />
         </Grid>

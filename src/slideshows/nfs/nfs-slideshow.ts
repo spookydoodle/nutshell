@@ -1,14 +1,15 @@
 import { ThemeOptions } from "@mui/material";
 import * as Types from "../../types";
-import { NutshellData } from "./nfs-types";
 import { Slideshow } from "../../logic/slideshow/slideshow";
 import { IMG_SERVER } from "../../img/cmd";
-import { NEED_FOR_SPEED, imgPerSlide } from "./nfs-data";
 import { SmallScreenMessageNfs } from "./components/SmallScreenMessageNfs";
 import { ImagePreloadWrapper } from "./components/ImagePreloadWrapper";
 import { NfsSlide } from "./components/NfsSlide";
+import * as MetricTypes from "../../components/metrics-dashboard/metric-types";
+import * as NfsTypes from "./nfs-types";
+import nfsData from "./nfs-data.json";
 
-export class NfsSlideshow extends Slideshow<NutshellData> {
+export class NfsSlideshow extends Slideshow<NfsTypes.Game[]> {
     public path = '/need-for-nutshell';
     public name = '_NEED_FOR_NUTSHELL';
     public shortName = '_NFS';
@@ -21,8 +22,27 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
         "https://en.wikipedia.org/wiki/Need_for_Speed"
     ];
 
-    public fetchData = async (abortSignal: AbortSignal, onLoadProgress: (value: number) => void): Promise<NutshellData> => {
-        const imagesToPreload = NEED_FOR_SPEED.games.map(({ background }) => background).flat(1);
+    public static imgNames = ["0_cover", "0_garage", "0_ui", "1", "2", "3"];
+    public static imgPerSlide = this.imgNames.length;
+    
+    /**
+     * https://vgsales.fandom.com/wiki/Need_for_Speed
+     * https://en.wikipedia.org/wiki/Need_for_Speed
+     */
+    public fetchData = async (abortSignal: AbortSignal, onLoadProgress: (value: number) => void): Promise<NfsTypes.Game[]> => {
+        const imagesToPreload: string[] = [];
+        const data = nfsData as ((Omit<NfsTypes.Game, 'background' | 'franchise'> & { background: string; franchise: string; })[]);
+        const effectiveData: NfsTypes.Game[] = data.map(({ background, franchise, ...game }) => {
+            const backgroundImages = NfsSlideshow.imgNames.map((el) => `${IMG_SERVER}/nfs/${background}_${el}.jpg`);
+            imagesToPreload.push(...backgroundImages);
+
+            return {
+                ...game,
+                franchise: { key: "NFS", text: "Need For Speed" },
+                background: backgroundImages
+            };
+        });
+        
         let progress = 0;
         await Promise.all(imagesToPreload.map((url) => {
             return fetch(url, { signal: abortSignal }).then(() => {
@@ -30,27 +50,29 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
                 onLoadProgress(result);
             });
         }));
-        return NEED_FOR_SPEED;
+        return effectiveData;
     };
 
     public getAutoIncrementInterval = (duration: number): number => {
-        return duration / imgPerSlide;
+        return duration / NfsSlideshow.imgPerSlide;
     };
 
-    public getSlidesLength = (data: NutshellData): number => {
-        return data.games.length * imgPerSlide
+    public getSlidesLength = (data: NfsTypes.Game[]): number => {
+        return data.length * NfsSlideshow.imgPerSlide
     };
 
-    public getPlayerLabels = (data: NutshellData): { label: string; sequenceName?: string; }[] => {
-        return data.games.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
+    public rotatePlayerLabels = true;
+    
+    public getPlayerLabels = (data: NfsTypes.Game[]): { label: string; sequenceName?: string; }[] => {
+        return data.map((game) => ({ label: game.year, sequenceName: 'Timeline' }))
     };
 
     public getPlayerIndex = (slideIndex: number, _playerLabelsLength: number): number => {
-        return Math.floor(slideIndex / imgPerSlide);
+        return Math.floor(slideIndex / NfsSlideshow.imgPerSlide);
     };
 
     public onPlayerIndexChange = (index: number, _playerLabelsLength: number) => {
-        this.slideIndex$.next(index * imgPerSlide)
+        this.slideIndex$.next(index * NfsSlideshow.imgPerSlide)
     };
 
     public getPlayerSecondaryIndex = (slideIndex: number, _playerLabelsLength: number): number => {
@@ -58,11 +80,11 @@ export class NfsSlideshow extends Slideshow<NutshellData> {
     };
 
     public onPlayerSecondaryPreviousButtonClick = (playerLabelsLength: number) => {
-        this.slideIndex$.next(this.slideIndex$.value > 0 ? this.slideIndex$.value - 1 : playerLabelsLength * imgPerSlide - 1)
+        this.slideIndex$.next(this.slideIndex$.value > 0 ? this.slideIndex$.value - 1 : playerLabelsLength * NfsSlideshow.imgPerSlide - 1)
     };
 
     public onPlayerSecondaryNextButtonClick = (playerLabelsLength: number) => {
-        this.slideIndex$.next(this.slideIndex$.value < playerLabelsLength * imgPerSlide - 1 ? this.slideIndex$.value + 1 : 0)
+        this.slideIndex$.next(this.slideIndex$.value < playerLabelsLength * NfsSlideshow.imgPerSlide - 1 ? this.slideIndex$.value + 1 : 0)
     };
 
     public loadingComponent = ImagePreloadWrapper;

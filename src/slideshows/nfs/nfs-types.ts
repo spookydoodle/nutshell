@@ -18,6 +18,7 @@ export type Developer =
     | "Quicklime Games"
     | "EA Singapore"
     | "Criterion Games"
+    | "Codemasters"
     | "Straight Right"
     | "Ghost Games"
     | "Firemonkeys Studios";
@@ -41,6 +42,7 @@ export type Platform =
     | "Xbox"
     | "Xbox 360"
     | "Xbox One"
+    | "Xbox Series X/S"
     | "Wii"
     | "Wii U"
     | "Mobile"
@@ -80,6 +82,38 @@ export type Year =
     | "2019"
     | "2020";
 
+export type IndexNr =
+    | "01"
+    | "02"
+    | "03"
+    | "04"
+    | "05"
+    | "06"
+    | "07"
+    | "08"
+    | "09"
+    | "10"
+    | "11"
+    | "12"
+    | "13"
+    | "14"
+    | "15"
+    | "16"
+    | "17"
+    | "18"
+    | "19"
+    | "20"
+    | "21"
+    | "22"
+    | "23"
+    | "24"
+    | "25"
+    | "26"
+    | "27"
+    | "28"
+    | "29"
+    | "30";
+
 export interface Dimension {
     key: string;
     text: string;
@@ -90,35 +124,32 @@ export interface Measure {
     unit?: string;
 }
 
-// GameDataItem and CarDataItem should share the game column
-export interface GameDataItem {
+export interface Game {
     game: Dimension; // key
     label: string;
     franchise: Dimension;
     year: Year;
-    developers: Array<Developer>;
-    platforms: Array<Platform>;
+    developers: Developer[];
+    platforms: Platform[];
     logo?: string;
     cover: string;
-    background: Array<string>;
+    background: string[];
     video: string;
-    cars: Array<CarDataItem>;
+    cars: Car[];
     revenue: Measure;
     qty: Measure;
-    rating?: number;
+    metacritic: Rating;
 }
 
-export type GameData = Array<GameDataItem>;
-
-export interface CarDataItem {
-    game: Dimension; // key
+export interface Car {
+    game: Dimension;
     name: Dimension;
     url: string;
     price?: Measure;
 }
 
-export type CarData = Array<CarDataItem>;
-
-export type NutshellData = {
-    games: GameData;
-};
+export interface Rating {
+    url: string;
+    critic: number;
+    user?: number;
+}
