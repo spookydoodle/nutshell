@@ -26,7 +26,7 @@ export const InfoPanels: React.FC<Props> = ({ game, index, applyStyle }) => {
             const r = Math.floor(Math.random());
 
             if (Number(game.qty.value) > 0) {
-                return `${Utils.Formats.formatNumber(game.qty.value, { scaling: 1000000, decimals: 1 })} M ${game.qty.unit}`
+                return `${Utils.Formats.formatNumber(game.qty.value, { scaling: 1000000, decimals: 1 })} ${game.qty.unit}`
             }
 
             return unknownTx[r * unknownTx.length];
@@ -37,7 +37,7 @@ export const InfoPanels: React.FC<Props> = ({ game, index, applyStyle }) => {
     return (
         <TitlePanels
             primary={{ name: `#${index + 1}`, body: game.game.text }}
-            primaryContent={<Rating rating={game.metacritic.critic} />}
+            primaryContent={<Rating url={game.metacritic.url} rating={game.metacritic.user ?? game.metacritic.critic} />}
             secondary={{ name: "Year", body: game.year }}
             tertiary={{ name: "Sales", body: salesAmount }}
             quaternary={{ name: "Developers", body: game.developers.join(", ") }}

@@ -7,26 +7,29 @@ const StyledRating = withStyles((theme: Theme) => ({
         color: theme.palette.primary.main,
     },
     iconHover: {
-        color: theme.palette.primary.main,
+        color: theme.palette.secondary.main,
     },
     iconEmpty: {
-        color: theme.palette.primary.main,
+        color: theme.palette.primary.main + ' !important',
         opacity: 0.4,
     },
 }))(MuiRating);
 
 interface Props {
-    rating?: number;
+    url: string;
+    rating: number;
 }
 
-export const Rating: React.FC<Props> = ({ rating }) => {
+export const Rating: React.FC<Props> = ({ url, rating }) => {
     if (rating === undefined) {
         return null;
     }
     return (
-        <Box style={{ marginTop: ".4vh" }} component="fieldset" mb={3} borderColor="transparent"    >
+        <Box component="fieldset" mb={3} borderColor="transparent">
             <Tooltip title="Metacritic Rating" arrow>
-                <StyledRating name="metacritic-rating-10" defaultValue={rating / 10} max={10} precision={0.1} readOnly />
+                <a href={url} target="_blank">
+                    <StyledRating name="metacritic-rating-10" defaultValue={rating / 10} max={10} precision={0.1} readOnly />
+                </a>
             </Tooltip>
         </Box>
     );
