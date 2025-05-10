@@ -253,7 +253,7 @@ export abstract class Slideshow<T = unknown> {
     /**
      * Returns data needed to render bottom ticker.
      */
-    public getTickerData?: (data: T) => MetricTypes.TickerStateData | undefined;
+    public getTickerData?: (data: T, abortSignal: AbortSignal) => Promise<MetricTypes.TickerStateData | undefined>;
 
     /**
      * If index should be incremented with a custom interval than selected `duration` value.

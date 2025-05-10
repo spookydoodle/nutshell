@@ -100,7 +100,7 @@ export class CoinflowSlideshow extends Slideshow<CoinflowTypes.Data> {
         return CoinflowSlideshow.getTotalSlidesLength(sequenceLabels);
     };
 
-    public getTickerData = (data: CoinflowTypes.Data): MetricTypes.TickerStateData | undefined => {
+    public getTickerData = async (data: CoinflowTypes.Data): Promise<MetricTypes.TickerStateData | undefined> => {
         return new Map(
             CoinflowSlideshow.sequenceItems.map((timebox): [string, MetricTypes.TickerData] => [
                 timebox,

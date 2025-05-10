@@ -21,9 +21,6 @@ interface Props {
 }
 
 export const Rating: React.FC<Props> = ({ url, rating }) => {
-    if (rating === undefined) {
-        return null;
-    }
     return (
         <Box component="fieldset" mb={3} borderColor="transparent" padding="2px 0" marginLeft="-4px">
             <Tooltip title="Metacritic Rating" arrow>

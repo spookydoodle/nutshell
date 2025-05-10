@@ -178,7 +178,11 @@ export interface SlideDataItem<TCategory extends string> {
  */
 export type TickerStateData = Map<string, TickerData>; 
 
+export interface TickerDatum extends Omit<Datum, 'primary' | 'primaryFormatted'> {
+    primary?: number;
+    primaryFormatted?: string;
+};
 /**
  * Keys of the map are sub sections of main sections, for example a region value
  */
-export type TickerData = Map<string, Datum[]>;
+export type TickerData = Map<string,TickerDatum[]>;

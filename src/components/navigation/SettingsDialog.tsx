@@ -135,7 +135,7 @@ export const SettingsDialog: React.FC<Props> = ({
                             Ticker options
                         </Typography>
                         <FormControlLabel
-                            control={ <Checkbox checked={showTicker} onChange={onTickerChange} name="ticker-setting" color="primary" />}
+                            control={<Checkbox checked={showTicker} onChange={onTickerChange} name="ticker-setting" color="primary" />}
                             label="Show"
                         />
                     </Box>

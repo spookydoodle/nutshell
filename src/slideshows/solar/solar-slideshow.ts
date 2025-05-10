@@ -10,6 +10,7 @@ import * as Types from "../../types";
 import * as SolarTypes from './solar-types';
 import * as SolarUtils from "./solar-data-utils";
 import solarData from "./solar-data.json";
+import axios from "axios";
 
 export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
     public path = '/solar';
@@ -153,8 +154,24 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
         this.slideIndex$.next(index);
     };
 
-    public getTickerData = (data: SolarTypes.SolarData): MetricTypes.TickerStateData | undefined => {
-        return SolarUtils.getTickerData(data.metrics);
+    public getTickerData = async (data: SolarTypes.SolarData, abortSignal: AbortSignal): Promise<MetricTypes.TickerStateData | undefined> => {
+        const baseUrl = process.env.NODE_ENV === 'development' ? '/felidae' : 'https://felidae.spookydoodle.com';
+        const planets = Object.keys(data.planets) as SolarTypes.Planet[];
+        const result = await Promise.allSettled(
+            planets.map((planet) => axios.get<SolarTypes.NewsHeadline[]>(`${baseUrl}/news/${planet.toLowerCase()}?sortBy=id desc&lang=en&items=10`, { signal: abortSignal }))
+        );
+        const resultsData = result.reduce<Map<SolarTypes.Planet, SolarTypes.NewsHeadline[]>>((acc, result, i) => {
+            if (result.status !== 'fulfilled') {
+                return acc;
+            }
+            return acc.set(planets[i], result.value.data);
+        }, new Map());
+        
+        if (!resultsData || resultsData.size === 0) {
+            return;
+        }
+        
+        return SolarUtils.getNewsHeadlinesTickerData(resultsData);
     };
 
     public slideComponent = SolarSlide;
