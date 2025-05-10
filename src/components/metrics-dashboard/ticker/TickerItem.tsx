@@ -3,7 +3,7 @@ import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
 import { fontSizes } from "../../../styles/themes";
-import { Datum } from "../metric-types";
+import * as MetricTypes from "../metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -54,7 +54,7 @@ interface Props {
     itemIndex: number;
     primaryCategory: string;
     secondaryCategory: string;
-    value: Datum;
+    value: MetricTypes.TickerDatum;
 }
 
 export const TickerItem: React.FC<Props> = ({ categoryIndex, itemIndex, primaryCategory, secondaryCategory, value }) => {
@@ -84,7 +84,7 @@ export const TickerItem: React.FC<Props> = ({ categoryIndex, itemIndex, primaryC
                 </span>
             )}
 
-            {`${value.name}: `}
+            {`${value.name}${value.primary !== undefined ? ': ' : ''}`}
 
             {value?.primary ? (
                 <span className={classNames(classes.KPI, classes.tickerText)}>

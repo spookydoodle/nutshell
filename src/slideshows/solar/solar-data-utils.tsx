@@ -50,3 +50,21 @@ export const getTickerData = (metricsData: SolarTypes.MetricsData): MetricTypes.
         ],
     ]);
 };
+
+export const getNewsHeadlinesTickerData = (data: Map<SolarTypes.Planet, SolarTypes.NewsHeadline[]>): MetricTypes.TickerStateData => {
+    const entries = [...data.entries()] as [SolarTypes.Planet, SolarTypes.NewsHeadline[]][];
+    
+    return new Map([
+        [
+            "Solar System News",
+            new Map(
+                entries.map(([planet, newsHeadlines]): [string, MetricTypes.TickerDatum[]] => [
+                    planet[0].toUpperCase() + planet.substring(1),
+                    newsHeadlines.map(({ headline, provider }): MetricTypes.TickerDatum => {
+                        return { name: `${headline} (${provider})` };
+                    }),
+                ])
+            ),
+        ],
+    ]);
+};

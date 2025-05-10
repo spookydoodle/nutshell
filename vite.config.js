@@ -50,6 +50,12 @@ export default defineConfig(({ command, mode, isSsrBuild, isPreview }) => {
                     changeOrigin: true,
                     rewrite: (path) => path.replace(/^\/api/, ""),
                 },
+                "/felidae": {
+                    target: "https://felidae.spookydoodle.com",
+                    changeOrigin: true,
+                    rewrite: (path) => path.replace(/^\/felidae/, ""),
+                    secure: false,
+                },
             },
         },
         preview: {

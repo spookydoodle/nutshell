@@ -58,3 +58,22 @@ export interface SolarData {
     metrics: MetricsData;
     planets: PlanetsData;
 }
+
+export interface NewsHeadline {
+    id: number;
+    /**
+     * Planet name (lowercase)
+     */
+    category: string;
+    country: string;
+    lang: string;
+    headline: string;
+    provider: string;
+    url: string;
+    img: string;
+    age: string;
+    /**
+     * ISO UTC string
+     */
+    timestamp: string;
+}
