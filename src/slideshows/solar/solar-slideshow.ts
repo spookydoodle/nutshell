@@ -156,9 +156,15 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
 
     public getTickerData = async (data: SolarTypes.SolarData, abortSignal: AbortSignal): Promise<MetricTypes.TickerStateData | undefined> => {
         const baseUrl = process.env.NODE_ENV === 'development' ? '/felidae' : 'https://felidae.spookydoodle.com';
+        const graphQuery = '{headlines(sortby:"id desc",lang:"en",items:10){headline,provider}}';
         const planets = Object.keys(data.planets) as SolarTypes.Planet[];
         const result = await Promise.allSettled(
-            planets.map((planet) => axios.get<SolarTypes.NewsHeadline[]>(`${baseUrl}/news/${planet.toLowerCase()}?sortBy=id desc&lang=en&items=10`, { signal: abortSignal }))
+            planets.map((planet) => axios.get<SolarTypes.NewsHeadline[]>(`${baseUrl}/news/${planet.toLowerCase()}/graphql?query=${graphQuery}`, {
+                signal: abortSignal,
+                headers: {
+                    'Cache-Control': 'max-age=3600'
+                }
+            }))
         );
         const resultsData = result.reduce<Map<SolarTypes.Planet, SolarTypes.NewsHeadline[]>>((acc, result, i) => {
             if (result.status !== 'fulfilled') {
