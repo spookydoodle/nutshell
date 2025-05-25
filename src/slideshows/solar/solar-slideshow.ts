@@ -159,7 +159,7 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
         const graphQuery = '{headlines(sortby:id_desc,lang:en,items:10){headline,provider}}';
         const planets = Object.keys(data.planets) as SolarTypes.Planet[];
         const result = await Promise.allSettled(
-            planets.map((planet) => axios.get<SolarTypes.NewsHeadline[]>(`${baseUrl}/news/${planet.toLowerCase()}/graphql?query=${graphQuery}`, {
+            planets.map((planet) => axios.get<{ headlines: SolarTypes.NewsHeadline[] }>(`${baseUrl}/news/${planet.toLowerCase()}/graphql?query=${graphQuery}`, {
                 signal: abortSignal,
                 headers: {
                     'Cache-Control': 'max-age=3600'
@@ -170,7 +170,7 @@ export class SolarSlideshow extends Slideshow<SolarTypes.SolarData> {
             if (result.status !== 'fulfilled') {
                 return acc;
             }
-            return acc.set(planets[i], result.value.data);
+            return acc.set(planets[i], result.value.data.headlines);
         }, new Map());
         
         if (!resultsData || resultsData.size === 0) {
