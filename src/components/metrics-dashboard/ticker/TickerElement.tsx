@@ -60,7 +60,7 @@ export const TickerElement: React.FC<Props> = ({ pause, index, onNext, element, 
             } else {
                 increaseOffset();
             }
-        }, 1);
+        }, 10);
 
         return () => {
             clearInterval(interval);
