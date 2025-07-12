@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
             borderRadius: "4px 4px 0 0",
         },
         tabstrip: {
+            paddingTop: '60px',
             marginTop: theme.spacing(2),
         },
         tabHeaders: {
