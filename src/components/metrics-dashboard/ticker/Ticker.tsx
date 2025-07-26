@@ -34,9 +34,8 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
         title: {
-            minWidth: "100vw",
-            display: 'block',
-            textAlign: "center"
+            paddingRight: "200px",
+            display: 'block'
         },
         tickerText: {
             fontSize: fontSizes.h2,
