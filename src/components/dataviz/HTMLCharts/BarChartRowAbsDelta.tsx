@@ -54,6 +54,7 @@ export const BarChartRowAbsDelta: React.FC<BarProps> = ({
                     <Typography
                         component="span"
                         noWrap
+                        title={`${i + 1}. ${category}`}
                         className={classNames(classes.labels, textClassName)}
                     >
                         <Typography

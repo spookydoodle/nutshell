@@ -1,9 +1,9 @@
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import { animations, fontSizes } from "../../../styles";
+import { animations } from "../../../styles";
 
-export const rowHeight = 20;
-export const rowGap = 2;
+export const rowHeight = 3.25;
+export const rowGap = 0.2;
 export const maxBars = 12;
 
 export const useStyles = makeStyles((theme: Theme) =>
@@ -13,7 +13,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         container: {
             width: "100%",
-            maxHeight: `${(rowHeight + rowGap) * maxBars - rowGap / 2}px`,
+            maxHeight: `${(rowHeight + rowGap) * maxBars - rowGap / 2}vh`,
             padding: "0 20px",
             overflowY: "scroll",
             overflowX: "hidden",
@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme: Theme) =>
             },
         },
         containerSm: {
-            maxHeight: `${(rowHeight + rowGap) * maxBars - rowGap / 2}px`,
+            maxHeight: `${(rowHeight + rowGap) * maxBars - rowGap / 2}vh`,
             width: "100%",
             padding: "0 10px",
             overflowY: "scroll",
@@ -41,7 +41,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         bars: {
             display: 'grid',
-            rowGap: `${rowGap}px`
+            rowGap: `${rowGap}vh`
         },
         fadeOutIn: {
             animation: `$fade-out-in 2s ease-in-out`,
@@ -53,7 +53,7 @@ export const useStyles = makeStyles((theme: Theme) =>
             animation: `$fade-in 1s ease-in-out`,
         },
         row: {
-            height: `${rowHeight}px`,
+            height: `${rowHeight}vh`,
             display: 'block'
         },
         hide: {
@@ -61,16 +61,16 @@ export const useStyles = makeStyles((theme: Theme) =>
         },
         labels: {
             "&$textMd": {
-                fontSize: fontSizes.h5,
+                fontSize: "2.25vh",
                 textTransform: "uppercase",
                 [theme.breakpoints.down("sm")]: {
-                    fontSize: fontSizes.h6,
+                    fontSize: "2vh",
                 },
             },
             "&$textSm": {
-                fontSize: fontSizes.h6,
+                fontSize: "1.75vh",
                 [theme.breakpoints.down("sm")]: {
-                    fontSize: fontSizes.h7,
+                    fontSize: "1.5vh",
                 },
                 textTransform: "uppercase",
             },
@@ -84,9 +84,9 @@ export const useStyles = makeStyles((theme: Theme) =>
                 fontWeight: "bold"
             },
             "&$deltaMax": {
-                fontSize: `calc(${fontSizes.h6} - 2px)`,
+                fontSize: '2.25vh',
                 [theme.breakpoints.down("sm")]: {
-                    fontSize: `calc(${fontSizes.h7} - 2px)`,
+                    fontSize: '2vh',
                 },
             },
             "&$rank": {
@@ -112,7 +112,7 @@ export const useStyles = makeStyles((theme: Theme) =>
         borderRight: {},
         borderLeft: {},
         bar: {
-            height: `${rowHeight}px`,
+            height: `${rowHeight}vh`,
             borderRadius: "1px",
             "&$marginLeft": {
                 marginLeft: "5px",
