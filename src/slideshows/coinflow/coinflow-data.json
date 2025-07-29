@@ -2165,6 +2165,86 @@
                 },
                 {
                     "columnName": {
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
+                    },
+                    "characteristicValue": {
+                        "key": "B21",
+                        "text": "ProAether",
+                        "shortText": "BUS_21"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 32678901,
+                                "QTD": 6809012,
+                                "MTD": 2255678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": -42.3,
+                                "QTD": -2.9,
+                                "MTD": -70.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1234567,
+                                "QTD": 395678,
+                                "MTD": 56789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
+                    },
+                    "characteristicValue": {
+                        "key": "B21",
+                        "text": "ProAether",
+                        "shortText": "BUS_21"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 41678901,
+                                "QTD": 5809012,
+                                "MTD": 3155678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": -42.3,
+                                "QTD": -2.9,
+                                "MTD": -70.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1234567,
+                                "QTD": 395678,
+                                "MTD": 56789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
                         "key": "The AetherNet Emporium",
                         "text": "The AetherNet Emporium"
                     },
@@ -2440,8 +2520,8 @@
                 },
                 {
                     "columnName": {
-                        "key": "The AetherNet Emporium",
-                        "text": "The AetherNet Emporium"
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
                     },
                     "characteristicValue": {
                         "key": "B9",
@@ -2453,6 +2533,84 @@
                                 "YTD": 51678901,
                                 "QTD": 6789012,
                                 "MTD": 2345678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 12.3,
+                                "QTD": 2.9,
+                                "MTD": -10.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1234567,
+                                "QTD": 345678,
+                                "MTD": 56789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
+                    },
+                    "characteristicValue": {
+                        "key": "B9",
+                        "text": "Whirligig Labs"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 36678901,
+                                "QTD": 5289012,
+                                "MTD": 2145678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 12.3,
+                                "QTD": 2.9,
+                                "MTD": -10.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1134567,
+                                "QTD": 335678,
+                                "MTD": 55789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
+                    },
+                    "characteristicValue": {
+                        "key": "B9",
+                        "text": "Whirligig Labs"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 50678901,
+                                "QTD": 6889012,
+                                "MTD": 2445678
                             },
                             "showUnitBefore": true,
                             "scaling": 1000,
@@ -2552,6 +2710,86 @@
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
+                    },
+                    "characteristicValue": {
+                        "key": "B3",
+                        "text": "EmpLabs",
+                        "shortText": "BUS_9"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 37678901,
+                                "QTD": 4789012,
+                                "MTD": 1645678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 12.3,
+                                "QTD": 2.9,
+                                "MTD": -10.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1134567,
+                                "QTD": 335678,
+                                "MTD": 55789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
+                    },
+                    "characteristicValue": {
+                        "key": "B3",
+                        "text": "EmpLabs",
+                        "shortText": "BUS_9"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 45678901,
+                                "QTD": 6589012,
+                                "MTD": 2145678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 12.3,
+                                "QTD": 2.9,
+                                "MTD": -10.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 934567,
+                                "QTD": 295678,
+                                "MTD": 48789
                             },
                             "unit": "pc"
                         }

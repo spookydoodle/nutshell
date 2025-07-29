@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         slideUp: {
             opacity: 0,
-            animation: `$no-transform 2s 4s cubic-bezier(0, .5, 0, 1) forwards`,
+            animation: `$no-transform .75s 2.25s cubic-bezier(0, .5, 0, 1) forwards`,
         },
         ...animations,
     })

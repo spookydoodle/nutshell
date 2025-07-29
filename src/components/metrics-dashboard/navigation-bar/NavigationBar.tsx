@@ -16,7 +16,7 @@ const useStyles = makeStyles(() =>
             color: "rgba(255, 255, 255, .6)",
             opacity: 0,
             transform: "translateY(2em)",
-            animation: `$no-transform 2s 3s cubic-bezier(0, .5, 0, 1) forwards`,
+            animation: `$no-transform .75s 2.25s cubic-bezier(0, .5, 0, 1) forwards`,
         },
         ...animations,
     })

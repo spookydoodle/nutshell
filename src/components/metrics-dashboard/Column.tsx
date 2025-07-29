@@ -27,13 +27,13 @@ const useStyles = makeStyles((theme: Theme) =>
             "&$tiles": {
                 height: "15vh",
                 borderRadius: "4px 4px 0 0",
-                animation: `$no-transform 2s 2s cubic-bezier(0, .5, 0, 1) forwards`,
+                animation: `$no-transform .75s .75s cubic-bezier(0, .5, 0, 1) forwards`,
             },
             "&$charts": {
                 height: "55vh",
                 marginTop: ".5vh",
                 borderRadius: "0 0 2px 2px",
-                animation: `$no-transform 2s 3s cubic-bezier(0, .5, 0, 1) forwards`,
+                animation: `$no-transform .75s 1.5s cubic-bezier(0, .5, 0, 1) forwards`,
             },
         },
         tiles: {},

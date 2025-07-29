@@ -28,7 +28,7 @@ const useStyles = makeStyles((_theme: Theme) =>
             transformStyle: "preserve-3d",
             overflow: "hidden",
             transform: "translateY(-64px)",
-            animation: `$no-transform 2s .5s cubic-bezier(0, .5, 0, 1) forwards`,
+            animation: `$no-transform 1s .5s cubic-bezier(0, .5, 0, 1) forwards`,
             border: "none",
             "&::after": {
                 content: "''",
