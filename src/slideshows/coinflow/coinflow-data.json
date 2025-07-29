@@ -1294,6 +1294,279 @@
                 },
                 {
                     "columnName": {
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
+                    },
+                    "characteristicValue": {
+                        "key": "R35",
+                        "text": "Brassclad Dominion"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1656789,
+                                "QTD": 1210890,
+                                "MTD": 11045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 557890,
+                                "QTD": 133456,
+                                "MTD": 46678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
+                    },
+                    "characteristicValue": {
+                        "key": "R35",
+                        "text": "Brassclad Dominion"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1756789,
+                                "QTD": 1210890,
+                                "MTD": 11045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 557890,
+                                "QTD": 113456,
+                                "MTD": 44678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
+                    },
+                    "characteristicValue": {
+                        "key": "R35",
+                        "text": "Brassclad Dominion"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1856789,
+                                "QTD": 1310890,
+                                "MTD": 12045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 567890,
+                                "QTD": 123456,
+                                "MTD": 45678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
+                    },
+                    "characteristicValue": {
+                        "key": "R36",
+                        "text": "Ironhold"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1856789,
+                                "QTD": 1310890,
+                                "MTD": 12045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 567890,
+                                "QTD": 123456,
+                                "MTD": 45678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The Cogwheel Bazaar",
+                        "text": "The Cogwheel Bazaar"
+                    },
+                    "characteristicValue": {
+                        "key": "R36",
+                        "text": "Ironhold"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1656789,
+                                "QTD": 1010890,
+                                "MTD": 9045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 567890,
+                                "QTD": 123456,
+                                "MTD": 45678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "The AetherNet Emporium",
+                        "text": "The AetherNet Emporium"
+                    },
+                    "characteristicValue": {
+                        "key": "R36",
+                        "text": "Ironhold"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1956789,
+                                "QTD": 1210890,
+                                "MTD": 13045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 567890,
+                                "QTD": 123456,
+                                "MTD": 45678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
+                    },
+                    "characteristicValue": {
+                        "key": "R37",
+                        "text": "The Cindervault Union"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1556789,
+                                "QTD": 910890,
+                                "MTD": 10045677
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 32.1,
+                                "QTD": 22.3,
+                                "MTD": -23.1
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 497890,
+                                "QTD": 73456,
+                                "MTD": 41678
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
                         "key": "The Cogwheel Bazaar",
                         "text": "The Cogwheel Bazaar"
                     },
@@ -2288,45 +2561,6 @@
                         "text": "The AetherNet Emporium"
                     },
                     "characteristicValue": {
-                        "key": "B12",
-                        "text": "Emporium B12"
-                    },
-                    "measures": {
-                        "primaryMeasure": {
-                            "valueBySequence": {
-                                "YTD": 3878901,
-                                "QTD": 6129012,
-                                "MTD": 2065678
-                            },
-                            "showUnitBefore": true,
-                            "scaling": 1000,
-                            "decimals": 0,
-                            "unit": "ᘐ"
-                        },
-                        "primaryMeasureDelta": {
-                            "unit": "%",
-                            "valueBySequence": {
-                                "YTD": -62.3,
-                                "QTD": 2.9,
-                                "MTD": 90.2
-                            }
-                        },
-                        "secondaryMeasure": {
-                            "valueBySequence": {
-                                "YTD": 1234567,
-                                "QTD": 345678,
-                                "MTD": 56789
-                            },
-                            "unit": "pc"
-                        }
-                    }
-                },
-                {
-                    "columnName": {
-                        "key": "The AetherNet Emporium",
-                        "text": "The AetherNet Emporium"
-                    },
-                    "characteristicValue": {
                         "key": "B2",
                         "text": "ChronoWorks",
                         "shortText": "BUS_2"
@@ -2335,46 +2569,6 @@
                         "primaryMeasure": {
                             "valueBySequence": {
                                 "YTD": 5678901,
-                                "QTD": 4889012,
-                                "MTD": 1835678
-                            },
-                            "showUnitBefore": true,
-                            "scaling": 1000,
-                            "decimals": 0,
-                            "unit": "ᘐ"
-                        },
-                        "primaryMeasureDelta": {
-                            "unit": "%",
-                            "valueBySequence": {
-                                "YTD": 12.3,
-                                "QTD": -2.9,
-                                "MTD": -50.2
-                            }
-                        },
-                        "secondaryMeasure": {
-                            "valueBySequence": {
-                                "YTD": 1234567,
-                                "QTD": 345678,
-                                "MTD": 56789
-                            },
-                            "unit": "pc"
-                        }
-                    }
-                },
-                {
-                    "columnName": {
-                        "key": "The AetherNet Emporium",
-                        "text": "The AetherNet Emporium"
-                    },
-                    "characteristicValue": {
-                        "key": "B2",
-                        "text": "Aether Propulsion1",
-                        "shortText": "BUS_11"
-                    },
-                    "measures": {
-                        "primaryMeasure": {
-                            "valueBySequence": {
-                                "YTD": 12678901,
                                 "QTD": 4889012,
                                 "MTD": 1835678
                             },
@@ -2520,8 +2714,8 @@
                 },
                 {
                     "columnName": {
-                        "key": "The Cogwheel Bazaar",
-                        "text": "The Cogwheel Bazaar"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                     "characteristicValue": {
                         "key": "B9",
@@ -2677,8 +2871,8 @@
                 },
                 {
                     "columnName": {
-                        "key": "The AetherNet Emporium",
-                        "text": "The AetherNet Emporium"
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
                     },
                     "characteristicValue": {
                         "key": "B3",
@@ -2868,6 +3062,45 @@
                                 "YTD": 1234567,
                                 "QTD": 345678,
                                 "MTD": 56789
+                            },
+                            "unit": "pc"
+                        }
+                    }
+                },
+                {
+                    "columnName": {
+                        "key": "PneumaPost Catalogue",
+                        "text": "PneumaPost Catalogue"
+                    },
+                    "characteristicValue": {
+                        "key": "B8",
+                        "text": "Smoke Rail"
+                    },
+                    "measures": {
+                        "primaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 44678901,
+                                "QTD": 6989012,
+                                "MTD": 2445678
+                            },
+                            "showUnitBefore": true,
+                            "scaling": 1000,
+                            "decimals": 0,
+                            "unit": "ᘐ"
+                        },
+                        "primaryMeasureDelta": {
+                            "unit": "%",
+                            "valueBySequence": {
+                                "YTD": 12.3,
+                                "QTD": 2.9,
+                                "MTD": -10.2
+                            }
+                        },
+                        "secondaryMeasure": {
+                            "valueBySequence": {
+                                "YTD": 1334567,
+                                "QTD": 355678,
+                                "MTD": 58789
                             },
                             "unit": "pc"
                         }

@@ -1,6 +1,5 @@
 import { makeStyles, createStyles } from '@mui/styles';
 import { Box, Typography, Tooltip, Theme } from '@mui/material';
-import { fontSizes } from "../../styles/themes";
 import { Datum } from "./metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -15,23 +14,23 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         title: {
             fontWeight: "bold",
-            fontSize: fontSizes.h2,
+            fontSize: "2.5vh !important",
             [theme.breakpoints.down("sm")]: {
-                fontSize: fontSizes.h3,
+                fontSize: "2.25vh !important",
             },
         },
         value: {
             fontWeight: "bold",
-            fontSize: fontSizes.h1,
+            fontSize: "2.5vh !important",
             [theme.breakpoints.down("sm")]: {
-                fontSize: fontSizes.h2,
+                fontSize: "2.5vh !important",
             },
         },
         delta: {
             fontWeight: "bold",
-            fontSize: fontSizes.h3,
+            fontSize: "2.25vh !important",
             [theme.breakpoints.down("sm")]: {
-                fontSize: fontSizes.h4,
+                fontSize: "2vh !important",
             },
         },
         deltaPos: {
