@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme, Box, Typography } from '@mui/material';
-import { fontSizes } from "../../../styles/themes";
 import { TickerElement } from "./TickerElement";
 import { TickerItem } from "./TickerItem";
 import { TickerStateData } from "../metric-types";
@@ -14,13 +13,14 @@ const useStyles = makeStyles((theme: Theme) =>
             position: "fixed",
             bottom: "0",
             height: "12.5vh",
+            paddingBottom: "1vh",
             color: "rgba(255, 255, 255, .87)",
             display: 'flex',
             justifyContent: 'flex-start',
             alignItems: 'center',
             overflowX: 'hidden',
             "& p": {
-                fontSize: fontSizes.h2,
+                fontSize: "4vh !important",
             },
             "&::before": {
                 content: "''",
@@ -38,9 +38,9 @@ const useStyles = makeStyles((theme: Theme) =>
             display: 'block'
         },
         tickerText: {
-            fontSize: fontSizes.h2,
+            fontSize: "4vh !important",
             [theme.breakpoints.down("sm")]: {
-                fontSize: fontSizes.h3,
+                fontSize: "3.5vh !important",
             },
         },
         textContainer: {

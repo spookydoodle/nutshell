@@ -2,7 +2,6 @@ import React from "react";
 import classNames from "classnames";
 import { makeStyles, createStyles } from '@mui/styles';
 import { Theme } from '@mui/material';
-import { fontSizes } from "../../../styles/themes";
 import * as MetricTypes from "../metric-types";
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -14,9 +13,9 @@ const useStyles = makeStyles((theme: Theme) =>
             display: "inline-block",
         },
         tickerText: {
-            fontSize: fontSizes.h2,
+            fontSize: "4vh !important",
             [theme.breakpoints.down("sm")]: {
-                fontSize: fontSizes.h3,
+                fontSize:"3.5vh !important",
             },
         },
         characteristic1: {
