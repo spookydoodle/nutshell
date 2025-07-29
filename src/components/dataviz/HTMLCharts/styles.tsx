@@ -112,7 +112,8 @@ export const useStyles = makeStyles((theme: Theme) =>
         borderRight: {},
         borderLeft: {},
         bar: {
-            height: `${rowHeight}vh`,
+            marginTop: ".5vh",
+            height: `${rowHeight - .4}vh`,
             borderRadius: "1px",
             "&$marginLeft": {
                 marginLeft: "5px",
